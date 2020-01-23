@@ -28,8 +28,8 @@ browser.get("https://www.accuplacer.org/api/home.html#/customReports")
 #Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
 username = browser.find_element_by_id("sessionTimeoutUsername")
 password = browser.find_element_by_id("sessionTimeoutPassword")
-username.send_keys("richard.barrett")
-password.send_keys("Energy2020!")
+username.send_keys("USERNAME")
+password.send_keys("PASSWORD")
 #browser.send_keys(Keys.ENTER)
 #browser.send_keys(Keys.RETURN)
 
