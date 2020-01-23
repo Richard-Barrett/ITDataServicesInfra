@@ -1,0 +1,1 @@
+# Notes on how to use vagrant to set up virtualization within a Linux and Windows Server.
