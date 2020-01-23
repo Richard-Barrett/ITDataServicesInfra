@@ -1,0 +1,1156 @@
+
+<!DOCTYPE html>
+<html ng-app="cat" lang="en">
+
+<head>
+<title>ACCUPLACER Platform for Institutions – The College Board</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Cache-Control" content="no-store,no-cache,must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="shortcut icon" type="image/png" href="assets/images/favicon.ico">
+
+<!-- Style-CSS -->
+<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
+<link rel="stylesheet" href="assets/styles/font-awesome.min.css" media="screen">
+
+<!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+<link rel="stylesheet" href="assets/styles/ui/cat_theme.css" media="screen">
+<link rel="stylesheet" href="assets/styles/ui/cat_theme_skin.css" media="screen">
+<link rel="stylesheet" href="assets/styles/footable.core.min.css" media="screen">
+<link rel="stylesheet" href="assets/styles/cat.css" media="screen">
+<link rel="stylesheet" href="assets/styles/lockscreen.css" media="screen">
+<link rel="stylesheet" href="assets/styles/angular-csp.css" media="screen">
+
+<link rel="stylesheet" href="assets/bower_components/angular-ui-select/dist/select.min.css" media="screen">
+
+<link rel="stylesheet" href="assets/styles/print.css" media="print">
+<!-- phase 10 -->
+<link rel="stylesheet" type="text/css" href="assets/bower_components/jqplot-bower/dist/jquery.jqplot.css" />
+<!-- phase 10 -->
+<link rel="stylesheet" type="text/css" href="assets/bower_components/ng-sortable/dist/ng-sortable.css" />
+<link rel="stylesheet" type="text/css" href="assets/bower_components/ng-sortable/dist/ng-sortable.style.css" />
+<!-- GOOGLE FONT -->
+<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700"> -->
+<!-- <script src="@routes.Assets.at("js/lib/require.js")" type="text/javascript" data-main="assets/js/cat/main"></script>
+ -->
+
+<!--[if IE 7]>
+   <link rel="stylesheet" href="css/ui/font-awesome-ie7.min.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+   <link rel="stylesheet" href="css/ui/ace-ie.min.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+   <script src="@routes.Assets.at("js/lib/ui/html5shiv.js")" type="text/javascript"></script>
+   <script src="@routes.Assets.at("js/lib/ui/respond.min.js")" type="text/javascript"></script>
+<![endif]-->
+<!-- Common JS -->
+<!-- <script type='text/javascript' src="assets/scripts/lib/d3Pie/d3.min.js"></script>
+<script type='text/javascript' src="assets/scripts/lib/d3Pie/d3pie.min.js"></script> -->
+<script src="assets/scripts/newrelic.js"></script>
+<script data-main="assets/scripts/main" src="assets/bower_components/requirejs/require.js"></script>
+<script>
+(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+</script>
+
+
+
+
+</head>
+
+<body ng-controller="MainCtrl" class="fixed-header fixed-ribbon noprint">
+   <header class="catHeader">
+   
+      <div id="logo-group">
+         <!-- PLACE YOUR LOGO HERE -->
+
+         <span id="logo">
+            <img src="assets/images/logo.png" alt="{{'app.name' | translate}}" class="login-page">
+         </span>
+            <!-- collapse menu button -->
+            <div id="hide-menu" ng-show="!instProfilePrompt" class="btn-header pull-right menuIcon" role="button">
+                <span>
+                    <a href="javascript:void(0);" rel="tooltip" data-placement="bottom" data-original-title="Menu" title="Menu" aria-label="Toggle Menu Side Bar">
+                        <i class="fa fa-reorder fa-lg"></i>
+                    </a>
+                </span>
+            </div>
+            <div id="hide-menu-instProfile" ng-if="instProfilePrompt" class="btn-header pull-right menuIcon" ng-cloak role="button">
+                <span>
+                    <a href="javascript:void(0);" rel="tooltip" data-placement="bottom" data-original-title="Menu" title="Menu" aria-label="Toggle Menu Side Bar">
+                        <i class="fa fa-reorder fa-lg"></i>
+                    </a>
+                </span>
+            </div>
+            <!-- end collapse menu -->
+
+         <!-- END LOGO PLACEHOLDER -->
+         <!-- Note: The activity badge color changes when clicked and resets the number to 0
+            Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
+        </div>
+
+        <!-- pulled right: nav area -->
+        <div class="pull-right ng-cloak ie-header-shift" ng-cloak>
+            <!-- logout button -->
+            <div id="logout" class="btn-header pull-right" role="button">
+                <span>
+                    <a href="/api/logout" rel="tooltip" data-placement="bottom" data-html="true" data-original-title="Sign<br>Out" aria-label="Sign Out">
+                        <i class="fa fa-sign-out fa-lg"></i>
+                    </a>
+                </span>
+            </div>
+            <!-- end logout button -->
+            <!--   <div class="pull-right">
+               <span class="label popover-trigger-element dropdown-toggle"><i class="fa fa-caret-down"></i></span>
+               </div> -->
+            <div ng-hide="instProfilePrompt || (core.acl['567'] && core.acl['567']!='N')" id="project-context" class="transparent pull-right" dropdown style="cursor: pointer;">
+                <div class="label popover-trigger-element" dropdown-toggle>
+                    <span ng-bind="core.user.firstName"></span>
+                    <span class="inst-style" ng-bind="core.user.institution.name"></span>
+                    <span class="inst-style"> <span ng-bind="core.user.roleMaster.roleName"> </span>
+                        <i class="fa fa-caret-down pull-right"></i>
+                    </span>
+                </div>
+
+                <!-- Suggestion: populate this list with fetch and push technique -->
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a ng-click="reloadRoute()" href="#/changePassword">Change Password</a>
+                    </li>
+                    <li>
+                        <a href="" id="profileLink" data-toggle="modal" ng-click="loadMyProfile();">Profile</a>
+                    </li>
+                </ul>
+                <!-- end dropdown-menu-->
+            </div>
+
+            <div ng-if="instProfilePrompt || (core.acl['567'] && core.acl['567']!='N')" id="project-context" class="transparent pull-right">
+                <span class="label popover-trigger-element">
+                    <span ng-bind="core.user.firstName"></span>
+                    <span class="inst-style" ng-bind="core.user.institution.name"></span>
+                    <span class="inst-style" ng-bind="core.user.roleMaster.roleName"></span>
+                </span>
+            </div>
+
+            <div id="activity" style="cursor: pointer;" class="btn-header pull-right dropdown">
+            <span style="cursor: pointer;" class="popover-trigger-element dropdown-toggle">
+               <a href="" style="cursor: pointer;" class="big-user-ico">
+                  <i style="cursor: pointer;" class="fa fa-user fa-lg"></i>
+               </a>
+            </span>
+
+            <ul class="dropdown-menu dropdown-menu-right">
+               <li>
+                  <a ng-click="showPasswordPage()" href="">Change Password</a>
+               </li>
+               <li>
+                  <a href="" id="profileLinkMobile" data-toggle="modal" ng-click="loadMyProfile();">Profile</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- end pulled right: nav area -->
+
+   </header>
+   <!-- END HEADER -->
+
+    <aside id="left-panel" ng-hide="instProfilePrompt">
+
+      <!-- User info -->
+
+      <!-- end user info -->
+
+      <!-- NAVIGATION : This navigation is also responsive
+
+         To make this navigation dynamic please make sure to link the node
+         (the reference to the nav > ul) after page load. Or the navigation
+         will not initialize.
+         -->
+      <nav id="leftNav" class="hidden">
+         <!-- NOTE: Notice the gaps after each icon usage <i></i>..
+            Please note that these links work a bit different than
+            traditional hre="" links. See documentation for details.
+            -->
+         <ul>
+            <li ng-class="{active:isLocation('/homeContent')}">
+               <a href="#/homeContent">
+                  <i class="fa fa-lg fa-fw fa-home"></i>
+                  <span class="menu-item-parent" translate='home.home' ng-click="loadKaidara('home_tab');"></span>
+               </a>
+            </li>
+            
+            <li ng-show="(core.roleId == 4 || core.roleId == 8 || core.roleId ==12 || core.roleId ==16 ||core.roleId == 18 || core.roleId == 19 || core.roleId ==20 || core.roleId ==21)">
+               <a href="#">
+                  <i class="fa fa-lg fa-fw fa-certificate verticalAlign50"></i>
+                  <span class="menu-item-parent width80" translate='home.User_certification_Test'></span>
+               </a>
+                <ul>
+                    <li ng-show="(core.acl['567'] && core.acl['567']!='N') || showCertificationMesg == 'YES'" ng-class="{active:isLocation('/certificationTest')}">
+                        <a href="#certificationTest" translate='home.certificationTest'>
+                            <span class="menu-item-parent" translate='home.certificationTest'></span>
+                        </a>
+                    </li>
+
+                    <li ng-class="{active:isLocation('/downloadCertificationTest')}">
+                        <a href="#/downloadCertificationTest" translate='home.downloadcertificationtest'>
+                            <span class="menu-item-parent" translate='home.downloadcertificationtest'></span>
+                        </a>
+                    </li>
+                </ul>
+                </li> 
+				<!-- Phase 10 Dash Board Starts -->
+            <li ng-show="core.acl['505']!='N'">
+               <a href="#">
+                  <i class="fa fa-lg fa-fw fa-dashboard"></i>
+                  <span class="menu-item-parent" translate='common.lbl.dashboard' ng-click="loadKaidara('dashboard_tab');"></span>
+               </a>
+               <ul>
+                  <li ng-show="core.acl['172'] != 'N'" ng-class="{active:isLocation('/testCenterManagement')}">
+                     <a href="#/testCenterManagement">
+                        <span class="menu-item-parent" translate='home.tsm'></span>
+                     </a>
+                  </li>
+                  <li ng-show="core.acl['506'] != 'N'" ng-class="{active:isLocation('/summaryLevelDashboard')}">
+                     <a href="#/summaryLevelDashboard">
+                        <span class="menu-item-parent" translate='home.sd'></span>
+                     </a>
+                  </li>
+               </ul>
+            </li>
+            <!-- Phase 10 Dash Board Ends -->
+            <li ng-show="core.acl['179']!='N'">
+               <a href="#">
+                  <i class="fa fa-lg fa-fw fa-group"></i>
+                  <span class="menu-item-parent" translate='common.lbl.users' ng-click="loadKaidara('users_tab');"></span>
+               </a>
+               <ul>
+                  <li ng-show="core.acl['516']!='N'">
+                     <a href="#">
+                        <span class="menu-item-parent">Manage Profiles</span>
+                        <b class="arrow fa fa-angle-down"></b>
+                     </a>
+                     <ul>
+                        <!-- Institution Profile Starts -->
+                        <li ng-show="core.acl['194']!='N'" ng-class="{active:isLocation('/institutionProfile')}">
+                           <a href="#/institutionProfile" translate='home.Users.InstitutionProfile'></a>
+                        </li>
+                        <li ng-show="core.acl['193']!='N'" ng-class="{active:isLocation('/editInstitutionProfile')}">
+                           <a href="#/editInstitutionProfile" translate='home.Users.InstitutionProfile'></a>
+                        </li>
+                        <!-- Institution Profile Ends -->
+
+                        <!-- Site Profile Starts -->
+                        <!-- <li ng-class="{active:isLocation('/editSiteProfile')}">
+                        <a href="#/editSiteProfile" translate='home.siteprofiles'></a>
+                        </li> -->
+                        <li ng-show="core.acl['191']!='N'" ng-class="{active:isLocation('/editSiteProfile_edit')}">
+                           <a href="#/editSiteProfile_edit" translate='home.siteprofiles.edit'></a>
+                        </li>
+                        <!-- <li>
+                              <a href="#/editSiteProfile_create" translate='home.siteprofiles.create'></a>
+                           </li> -->
+                        <li ng-show="core.acl['192']!='N'"
+                           ng-class="{active:isLocation('/editSiteProfile_search') || isLocation('/editSiteProfile_edit') || isLocation('/editSiteProfile_create')}">
+                           <a href="#/editSiteProfile_search" translate='home.siteprofiles.search'></a>
+                        </li>
+                        <!-- <li ng-class="{active:isLocation('/manageCourseId')}" ng-hide="core.acl.roleId == '14'">
+                              <a href="#/manageCourseId" translate='home.managecourseIds'></a>
+                           </li> -->
+                        <!-- Site Profile Ends -->
+
+                        <!-- User Profile Starts -->
+                        <li ng-show="core.acl['185']!='N'" ng-class="{active:isLocation('/users')}">
+                           <a href="#/users" translate='home.userprofiles'></a>
+                        </li>
+                        <!-- User Profile Starts -->
+
+                        <!-- Bulk User Upload Starts -->
+                        <li ng-show="core.acl['184']!='N'" ng-class="{active:isLocation('/usersBulkUpload')}">
+                           <a href="#/usersBulkUpload" translate='home.bulkUserUpload'></a>
+                        </li>
+                        <!-- Bulk User Upload Ends -->
+
+                        <!-- Student Profile Starts -->
+                        <li ng-show="core.acl['186']!='N'" ng-class="{active:isLocation('/studentProfiles')}">
+                           <a href="#/studentProfiles" translate='home.studentprofiles'></a>
+                        </li>
+                        <!-- Student Profile Starts -->
+
+                        <!-- Group Profile -->
+
+                        <li ng-show="core.acl['195']!='N'" ng-class="{active:isLocation('/groupProfile')}">
+                           <a href="#/groupProfile" translate='home.users.group'></a>
+                        </li>
+                        
+						<!-- Virtual Vendor Profile Starts -->
+                        <li ng-show="core.acl['195']!='N'" ng-class="{active:isLocation('/virtualVendorProfile')}">
+                           <a href="#/virtualVendorProfile" translate='home.users.virtualVendorProfile'></a>
+                        </li>
+                        <!-- Virtual Vendor Ends -->
+
+                     </ul>
+                  </li>
+
+                  <li ng-show="core.acl['187']!='N'" ng-class="{active:isLocation('/systemConfiguration')}">
+                     <a href="#/systemConfiguration" translate='common.lbl.systemconfig'></a>
+                  </li>
+
+                  <li ng-show="core.acl['188']!='N'" ng-class="{active:isLocation('/initCustomMessages')}">
+                     <a href="#/initCustomMessages" translate='home.Users.customMessages'></a>
+                  </li>
+
+                  <!-- Transfer test units  Starts -->
+                  <li ng-show="core.acl['189']!='N'" ng-class="{active:isLocation('/transferTestUnits')}">
+                     <a href="#/transferTestUnits" translate='home.users.create_edit_testing_site.transferunits'></a>
+                  </li>
+
+                  <li ng-show="core.acl['190']!='N'" ng-class="{active:isLocation('/searchAddTestingUnits') || isLocation('/addTestingUnits')}">
+                     <a href="#/searchAddTestingUnits" translate='home.users.create_edit_testing_site.transferunits_CBA'></a>
+                  </li>
+                  <!-- Transfer test units Ends -->
+               </ul>
+            </li>
+            <li ng-show="core.acl['196']!='N'">
+               <a href='#'>
+                  <i class="fa fa-lg fa-fw fa-tag"></i>
+                  <span class="menu-item-parent" translate='home.vouchers' ng-click="loadKaidara('administertest_tab');"></span>
+               </a>
+               <ul>
+                  <li ng-show="core.acl['197']!='N'" ng-class="{active:isLocation('/studentPreRegistration')}">
+                     <a href="#/studentPreRegistration" translate='home.student.preregistration'></a>
+                  </li>
+                  
+                  <li ng-show="core.acl['198']!='N'" ng-class="{active:isLocation('/generateVouchers')}">
+                     <a href="#/generateVouchers" translate='administerTest.GenerateVouchers'></a>
+                  </li>
+                  <li ng-show="core.acl['199']!='N' || core.acl['201']!='N'" ng-class="{active:isLocation('/manageVouchers')}">
+                    <a href="#/manageVouchers" translate='administerTest.manageVouchers.title'></a>
+                  </li>
+                  <li ng-show="core.acl['202']!='N'" ng-class="{active:isLocation('/voucherAdministration')}">
+                     <a href="#/voucherAdministration" translate='home.voucherAdministration'></a>
+                  </li>
+               </ul>
+            </li>
+            
+            <li  ng-show="core.acl['562'] && (core.acl['562']!='N' || (core.roleId == 17 && core.acl['562'] == 'N')) && (core.roleId == 1 || ( (core.roleId ==4 && core.conversionFlag=='Y') || (core.roleId ==8 && core.conversionFlag=='Y') || (core.roleId ==14 && core.conversionFlag=='Y') || (core.roleId == 17 && core.conversionFlag=='N')))">
+                    <a href="#">
+                         <i class="fa fa-lg fa-fw fa-clone convertToNGTabIcon"></i>
+                       <span class="menu-item-parent convertToNGTab" translate='testSetup.convertToNG'></span>
+                      <!--  <b class="arrow fa fa-angle-down"></b> -->
+                    </a>
+                    <ul>
+                     <li ng-show="core.acl['563'] && core.acl['563']!='N' && (core.roleId ==1 || ( (core.roleId ==4 && core.conversionFlag=='Y') || (core.roleId ==8 && core.conversionFlag=='Y') || (core.roleId ==14 && core.conversionFlag=='Y')))" ng-class="{active:isLocation('/convertBranchingProfile')}">
+	                     <a href="#/convertBranchingProfile" translate='testSetup.convertBranchingProfiles'></a>
+	                </li>
+	                 
+                     <li ng-show="core.acl['565'] && core.acl['565']!='N' && (core.roleId !=1 || ( (core.roleId ==4 && core.conversionFlag=='Y') || (core.roleId ==8 && core.conversionFlag=='Y') || (core.roleId ==14 && core.conversionFlag=='Y')))" ng-class="{active:isLocation('/convertCompositeScores')}">
+	                     <a href="#/convertCompositeScores" translate='testSetup.convertCompositeScores'></a>
+	                 </li>
+	                 
+                     <li ng-show="core.acl['564'] && core.acl['564']!='N' &&  (core.roleId !=1 || ( (core.roleId ==4 && core.conversionFlag=='Y') || (core.roleId ==8 && core.conversionFlag=='Y') || (core.roleId ==14 && core.conversionFlag=='Y')))" ng-class="{active:isLocation('/convertPlacementRules')}">
+	                     <a href="#/convertPlacementRules" translate='testSetup.convertPlacementRules'></a>
+	                </li>
+
+                    <li ng-show="(core.roleId == 17) || (core.acl['566'] && core.acl['566']!='N' &&  (core.roleId == 1 || ( (core.roleId == 4 && core.conversionFlag=='Y') || (core.roleId ==8 && core.conversionFlag=='Y') || (core.roleId ==14 && core.conversionFlag=='Y'))))"
+                        ng-class="{active:isLocation('/conversionDashboard')}">
+                        <a href="#/conversionDashboard" translate='testSetup.conversionDashboard'></a>
+                    </li>
+                    
+                    <li ng-show="core.roleId == 17"  class="dropLine" ng-class="{active:isLocation('/automaticBulkConversion')}">
+                        <a href="#/automaticBulkConversion" translate='testSetup.automatic.bulk.conversion'></a>
+                    </li>
+                    </ul>
+             </li>
+             
+                <li ng-show="core.acl['177']!='N'">
+               <a href="#">
+                  <i class="fa fa-lg fa-fw fa-cog"></i>
+                  <span class="menu-item-parent" translate='home.testsetup' ng-click="loadKaidara('testsetup_tab');"></span>
+               </a>
+               <ul>
+                  <li ng-show="core.acl['203']!='N'" ng-class="{active:isLocation('/testSetting') || isLocation('/editTestSettings')}">
+                     <a href="#/testSetting" translate='placementrules.testSetting'></a>
+                  </li>
+                  <li ng-show="core.acl['541']!='N'" ng-class="{active:isLocation('/isrTheme') || isLocation('/isrThemeAdd')}">
+                     <a href="#/isrTheme" translate='isrTheme.heading'></a>
+                  </li>
+                  <li ng-show="core.acl['571']!='N'" ng-class="{active:isLocation('/academicFactors') || isLocation('/academicFactorsGroupCreateEdit')}">
+                     <a href="#/academicFactors" translate='home.AcademicFactorsGroups'></a>
+                  </li>
+                  <li ng-show="core.acl['204']!='N'">
+                     <a href="#">
+                        <span class="menu-item-parent" translate='bgqgroup.questions'></span>
+                        <b class="arrow fa fa-angle-down"></b>
+                     </a>
+                     <ul>
+                        <li ng-show="core.acl['205']!='N'"
+                           ng-class="{active:isLocation('/backgroundQuestion') || isLocation('/editBackgroundQuestion')}"
+                           class="menu-overflow">
+                           <a href="#/backgroundQuestion" translate='home.localBackgroundQuestionQuestions'></a>
+                        </li>
+                        <li ng-show="core.acl['206']!='N'"
+                           ng-class="{active:isLocation('/backgroundQuestionGroups') || isLocation('/backgroundQuestionGroupCreateEdit')}">
+                           <a href="#/backgroundQuestionGroups" translate='home.localBackgroundQuestionQuestionsGroups'></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li ng-show="core.acl['207']!='N'" ng-class="{active:isLocation('/writePlacer')}" ng-click="navigationMenuLinkClicked('writeplacer_setting')">
+                     <a href="#/writePlacer" translate='writePlacer.testSetting'></a>
+                  </li>
+                  <li ng-show="core.acl['208']!='N'" ng-class="{active:isLocation('/branchingProfile')}">
+                     <a href="#/branchingProfile" translate='home.branchingProfile'></a>
+                  </li>
+
+
+      <!--  <li ng-show="core.acl['207']!='N'" ng-class="{active:isLocation('/PreAssignedAnswerSheet')}">
+                     <a href="#/PreAssignedAnswerSheet" translate='home.preAssignedAnswerSheet'></a>
+                  </li>
+   -->
+
+                  <li ng-show="core.acl['209']!='N'">
+                     <a href="#">
+                        <span class="menu-item-parent" translate='home.parentMenu.localtest'></span>
+                        <b class="arrow fa fa-angle-down"></b>
+                     </a>
+                     <ul>
+                        <li ng-show="core.acl['212']!='N'" ng-class="{active:isLocation('/localTestCategory')}">
+                           <a href="#/localTestCategory" translate='home.localTest.Question.Categories'></a>
+                        </li>
+
+                        <li ng-show="core.acl['211']!='N'" ng-class="{active:isLocation('/passage')}">
+                           <a href="#/passage" translate='home.localTest.Question.Passages'></a>
+                        </li>
+
+                        <li ng-show="core.acl['210']!='N'" ng-class="{active:isLocation('/localTestQuestion')}">
+                           <a href="#/localTestQuestion" translate='localtestquestion.home'></a>
+                        </li>
+
+                        <li ng-show="core.acl['213']!='N'" ng-class="{active:isLocation('/localtest')}">
+                           <a href="#/localtest" translate='localtest'></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li ng-show="core.acl['214']!='N'" ng-class="{active:isLocation('/testConfig')}">
+                     <a href="#/testConfig" translate='testconfig.home'></a>
+                  </li>
+                  <li ng-show="core.acl['215']!='N'" ng-class="{active:isLocation('/groupTestMapping')}">
+                     <a href="#/groupTestMapping" translate='group.test.heading'></a>
+                  </li>
+
+                  <li ng-show="core.acl['216']!='N'" ng-class="{active:isLocation('/itemBank')}">
+                     <a href="#/itemBank" translate='itemBank.home'></a>
+                  </li>
+
+                  <li ng-show="core.acl['488']!='N'" ng-class="{active:isLocation('/retestLimit')}">
+                     <a href="#/retestLimit" translate='testSetup.retestLimit'></a>
+                  </li>
+                  
+                  <li ng-show="core.acl['518']!='N'" ng-class="{active:isLocation('/searchConfigureTest')}">
+                     <a href="#/searchConfigureTest" translate='testSetup.ConfigureTest'></a>
+                  </li>
+                  
+                  <li ng-show="core.acl['557']!='N'" ng-class="{active:isLocation('/writePlacerPrompt')}" ng-click="navigationMenuLinkClicked('writeplacer_prompt')">
+                     <a href="#/writePlacerPrompt" translate='wp.prompt.title'></a>
+                  </li>
+
+                 
+               </ul>
+            </li>
+
+            <li ng-show="core.acl['178']!='N'">
+               <a href="#">
+                  <i class="fa fa-lg fa-fw fa-mortar-board"></i>
+                  <span class="menu-item-parent" translate='home.placement.setup' ng-click="loadKaidara('testsetup_tab');"></span>
+               </a>
+               <ul>
+
+                  <li ng-show="core.acl['218']!='N'" ng-class="{active:isLocation('/courseGroup')}">
+                     <a href="#/courseGroup" translate='placementrules.courseGroup'></a>
+                  </li>
+
+                  <li ng-show="core.acl['219']!='N'" ng-class="{active:isLocation('/courses')}">
+                     <a href="#/courses" translate='placementrules.courses'></a>
+                  </li>
+
+                  <li ng-show="core.acl['220']!='N'" ng-class="{active:isLocation('/majors')}">
+                     <a href="#/majors" translate='common.lbl.majors'></a>
+                  </li>
+
+                  <li ng-show="core.acl['221']!='N'" ng-class="{active:isLocation('/userDefinedFields')}">
+                     <a href="#/userDefinedFields" translate='placementrules.userDefinedFields'></a>
+                  </li>
+
+                  <li ng-show="core.acl['222']!='N'" ng-class="{active:isLocation('/compositeScore')}">
+                     <a href="#/compositeScore" translate='home.compositescore.heading'></a>
+                  </li>
+                  
+                  <li ng-show="core.acl['217']!='N'" ng-class="{active:isLocation('/placementRule')}">
+                     <a href="#/placementRule" translate='home.placementrule.heading'></a>
+                  </li>
+
+                  <li ng-show="core.acl['249']!='N'" ng-class="{active:isLocation('/diagnosticMessage')}">
+                     <a href="#/diagnosticMessage" translate='home.diagnosticmessage.heading'></a>
+                  </li>
+
+               </ul>
+            </li>
+            <li ng-show="core.acl['223']!='N'">
+               <a href="#">
+                  <i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
+                  <span class="menu-item-parent" translate='home.administertest' ng-click="loadKaidara('administertest_tab');"></span>
+               </a>
+               <ul>
+                  <li ng-show="core.acl['224']!='N'" ng-class="{active:isLocation('/administerTest')}">
+                     <a href="#/administerTest" translate='administertest.testsession'></a>
+                  </li>
+                  <li ng-show="core.acl['225']!='N'" ng-class="{active:isLocation('/ManageSessionSearch')}">
+                     <a href="#/ManageSessionSearch" translate='administerTest.ManageSessionSearch.search.title'></a>
+                  </li>
+              </ul>
+            </li>
+             
+            <li ng-show="core.acl['556']!='N'">
+            	<a href="#">
+                  <i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
+                  <span class="menu-item-parent" translate='home.companiontest' ng-click="loadKaidara('companiontest_tab');"></span>
+               	</a>
+               	<ul>
+               	    <li ng-show="core.acl['532']!='N'" ng-class="{active:isLocation('/companionForm')}" ng-click="navigationMenuLinkClicked('companion_form')">
+	                     <a href="#/companionForm" translate='home.companionFormUpload'></a>
+	                </li>
+                   <li ng-show="core.acl['532']!='N'" ng-class="{active:isLocation('/companionBulkAnswerDocuments')}" ng-click="navigationMenuLinkClicked('companion_bulk_answer_documents')">
+                         <a href="#/companionBulkAnswerDocuments" translate='companiontest.companionBulkAnswerDocuments'></a>
+                    </li>                    
+	                <li ng-show="core.acl['547']!='N'" ng-class="{active:isLocation('/PaperTestUpload')}">
+                         <a href="#/PaperTestUpload"  translate='companiontest.companionAnswerUpload'></a>
+                    </li>
+                    <li  ng-class="{active:isLocation('/ManageScores')}">
+                         <a href="#/ManageScores" translate='companiontest.companionManageScore'></a>
+                    </li>
+				</ul>
+            </li>
+            
+            <li ng-show="core.acl['226']!='N'">
+               <a href="#">
+                  <i class="fa fa-lg fa-fw fa-bar-chart-o"></i>
+                  <span class="menu-item-parent" translate='home.reports' ng-click="loadKaidara('reports_tab');"></span>
+               </a>
+               <ul>
+                  <li ng-show="core.acl['227']!='N'"
+                     ng-class="{active:isLocation('/IndividualScoreReportSearch')||isLocation('/IndividualScoreReport')}">
+                     <a href="#/IndividualScoreReportSearch" translate='reports.IndividualScoreReportSearch.title'></a>
+                  </li>
+                  
+				  <li ng-show="(core.acl['568'] && core.acl['568']!='N' && core.roleId == 1)" ng-class="{active:isLocation('/userCertificationTestReport')}">
+                     <a href="#/userCertificationTestReport" translate='reports.userCertificationTestReport.title'></a>
+                  </li>
+
+                  <li ng-show="core.acl['511']!='N'" ng-class="{active:isLocation('/reportScheduler')}">
+                     <a href="#/reportScheduler" translate='reports.scheduler'></a>
+                  </li>
+                  <li ng-show="core.acl['229']!='N'">
+                     <a href="#">
+                        Roster Reports
+                        <b class="arrow fa fa-angle-down"></b>
+                     </a>
+                     <ul>
+                        <li ng-show="core.acl['230']!='N'" ng-class="{active:isLocation('/PlacementRosterReportSearch')}">
+                           <a href="#/PlacementRosterReportSearch" translate='reports.PlacementRosterReport.title'></a>
+                        </li>
+                        <li ng-show="core.acl['231']!='N'" ng-class="{active:isLocation('/courseRosterSearch')||isLocation('/courseRoster')}">
+                           <a href="#/courseRosterSearch" translate='reports.CourseRosterReport.title'></a>
+                        </li>
+
+                        <li ng-show="core.acl['232']!='N'" ng-class="{active:isLocation('/scoreRosterReport')}">
+                           <a href="#/scoreRosterReport" translate='reports.ScoreRosterReport.title'></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li ng-show="core.acl['233']!='N'">
+                     <a href="#">
+                        Demographic Reports
+                        <b class="arrow fa fa-angle-down"></b>
+                     </a>
+                     <ul>
+                        <li ng-show="core.acl['234']!='N'"
+                           ng-class="{active:isLocation('/backgroundOverviewReportSearch')||isLocation('/backgroundOverviewReport')}">
+                           <a href="#/backgroundOverviewReportSearch" ng-class="{active:isLocation('/backgroundOverviewReportSearch')}"
+                              translate='reports.DemographicBackgroundOverviewReport.title'></a>
+                        </li>
+                        <li ng-show="core.acl['235']!='N'"
+                           ng-class="{active:isLocation('/searchBDReport')||isLocation('/searchResultBDReport')}">
+                           <a href="#/searchBDReport" translate='reports.DemographicBackgroundDetailReport.title'></a>
+                        </li>
+                        <li ng-show="core.acl['236']!='N'"
+                           ng-class="{active:isLocation('/searchStudentAddressReport')||isLocation('/searchResultStudentAddressReport')}">
+                           <a href="#/searchStudentAddressReport" translate='reports.DemographicStudentAddressReport.title'></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li ng-show="core.acl['237']!='N'"
+                     ng-class="{active:isLocation('/searchWritePlacerResponseRpt')||isLocation('/WritePlacerResponseRpt')}">
+                     <a href="#/searchWritePlacerResponseRpt" translate='reports.WritePlacerResponseReport.title'></a>
+                  </li>
+                  <li ng-show="core.acl['238']!='N'">
+                     <a href="#">
+                        Diagnostic Test Reports
+                        <b class="arrow fa fa-angle-down"></b>
+                     </a>
+                     <ul>
+                        <li ng-show="core.acl['239']!='N'" ng-class="{active:isLocation('/diagnosticScoreRosterReport')}">
+                           <a href="#/diagnosticScoreRosterReport" translate='reports.DiagnosticTestScoreRosterReport.title'></a>
+                        </li>
+                        <li ng-show="core.acl['240']!='N'"
+                           ng-class="{active:isLocation('/diagnosticTestSummarySearch')||isLocation('/diagnosticTestSummaryReport')}">
+                           <a href="#/diagnosticTestSummarySearch" translate='reports.DiagnosticTestSummaryReport.title'></a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li ng-show="core.acl['241']!='N'">
+                     <a href="#">
+                        <span translate='reports.TestUnitReports.title'></span>
+                        <b class="arrow fa fa-angle-down"></b>
+                     </a>
+                     <ul>
+                        <li ng-show="core.acl['242'] != 'N'"
+                           ng-class="{active:isLocation('/testActivityReport')||isLocation('/searchTestActivityResult')}">
+                           <a href="#/testActivityReport" translate='reports.TestActivityReport.title'></a>
+                        </li>
+                        <li ng-show="core.acl['253'] != 'N'" ng-class="{active:isLocation('/offlineTestActivityReport')}">
+                           <a href="#/offlineTestActivityReport" translate='reports.TestActivityReport.title'></a>
+                        </li>
+                        <li ng-show="core.acl['243'] != 'N'" ng-class="{active:isLocation('/unitHistoryReport')}">
+                           <a href="#/unitHistoryReport" translate='reports.UnitHistoryReports.title'></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li ng-show="core.acl['244']!='N'" ng-class="{active:isLocation('/customReports')}">
+                     <a href="#/customReports" translate='reports.CustomReports.title'></a>
+                  </li>
+                  <li ng-show="core.acl['245'] != 'N'" ng-class="{active:isLocation('/listEnterUDFData')||isLocation('/searchUDFResult')}">
+                     <a href="#/listEnterUDFData" translate='reports.ListandEnterUserDefinedFieldsData.title'></a>
+                  </li>
+                  <li ng-show="core.acl['246'] != 'N'" ng-class="{active:isLocation('/AccuplacerUnitUsage')}">
+                     <a href="#/AccuplacerUnitUsage" translate='reports.ACCUPLACERUnitUsageReport.title'></a>
+                  </li>
+                  <li ng-show="core.acl['531'] != 'N'" ng-class="{active:isLocation('/LocalTestReport')}">
+                     <a href="#/LocalTestReport" translate='reports.localTestReport.title'></a>
+                  </li>
+                  <li
+                     ng-show="((core.acl['247']!='N') && (core.acl.roleId == 1)) || ((core.acl['247']!='N') && (core.user.institution.mflRemediationStatus == 1))"
+                     ng-class="{active:isLocation('/learningPath')}">
+                     <a href="#/learningPath" translate='reports.LearningPathReport.title'></a>
+                  </li>
+                  <li ng-show="core.acl['248'] != 'N'" ng-class="{active:isLocation('/CrossISRReport')}">
+                     <a href="#/CrossISRReport" translate='reports.CrossISRReport.title'></a>
+                  </li>
+                  <li ng-show="core.acl['507'] !='N'" ng-class="{active:isLocation('/accuplacerCPReport')}">
+                     <a href="#/accuplacerCPReport" translate='reports.ACCUPLACERConstituentProfileReport.title'></a>
+                  </li>
+                  
+                  <li ng-show="core.acl['539'] != 'N'" ng-class="{active:isLocation('/ncountReport')}">
+                     <a href="#/ncountReport" translate='reports.ncountReport.title'></a>
+                  </li>
+
+                  <li ng-show="(core.acl['568'] && core.acl['568']!='N' && core.roleId == 4)" ng-class="{active:isLocation('/userCertificationTestReport')}">
+                     <a href="#/userCertificationTestReport" translate='reports.userCertificationTestReport.title'></a>
+                  </li>
+                  
+                  <li ng-show="core.acl['228']!='N'" ng-class="{active:isLocation('/reportQueue')}">
+                     <a href="#/reportQueue" translate='reports.queue'></a>
+                  </li>
+                  
+                  <li ng-show="core.acl['560']!='N'" ng-class="{active:isLocation('/unitBalanceReport')}">
+                     <a href="#/unitBalanceReport" translate='reports.unitBalanceReport.title'></a>
+                  </li>
+               </ul>
+            </li>
+            
+            
+             <li ng-show="core.acl['540']!='N'"  ng-class="{active:isLocation('/appManagementController')}">
+               <a href="#/appManagementController">
+                  <i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
+                  <span class="menu-item-parent" translate='home.appManagement' ng-click="loadKaidara('appManagement_tab');"></span>
+               </a>
+            </li>
+            
+            <li ng-show="core.acl['561']=='W'"  ng-class="{active:isLocation('/loadAndValidate')}">
+               <a href="#/loadAndValidate">
+                  <i class="fa fa-lg fa-fw fa-tag"></i>
+                  <span class="menu-item-parent" translate='home.loadAndValidate' ng-click="loadKaidara('appManagement_tab');"></span>
+               </a>
+            </li>
+            
+            <li>
+               <a href="#">
+                  <i class="fa fa-lg fa-fw fa-book"></i>
+                  <span class="menu-item-parent" translate='home.resources' ng-click="loadKaidara('resources_tab');"></span>
+               </a>
+               <ul>
+                  <li ng-class="{active:isLocation('/resources')}">
+                     <a href="#/resources" translate='home.resources'></a>
+                  </li>
+               </ul>
+            </li>
+       
+            
+            <li ng-show="core.acl['559']!='N'" ng-class="{active:isLocation('/ordertest') || isLocation('/policiesProcedures')}">
+               <a href="#/ordertest">
+                  <i class="fa fa-lg fa-fw fa-shopping-cart"></i>
+                  <span class="menu-item-parent" translate='home.ordertests' ng-click="loadKaidara('ordertest_tab');"></span>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <i class="fa fa-lg fa-fw fa-question-circle"></i>
+                  <span class="menu-item-parent">Help & Information</span>
+               </a>
+               <ul>
+                  <li ng-class="{active:isLocation('/whatsNew')}">
+                     <a href="#/whatsNew">What's New</a>
+                  </li>         
+                   <li  ng-class="{active:isLocation('/kbnew')}">
+                     <a href="#/kbnew">Knowledge Base</a>
+                  </li>                  
+                  <li ng-class="{active:isLocation('/SystemRequirement')}">
+                     <a href="#/systemRequirement">System Requirements</a>
+                  </li>
+                  <li ng-class="{active:isLocation('/livechat')}">  
+                    <a id="liveagent_button_online_57336000000LGA3_1" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('57336000000LGA3')">
+						Participate in a Live Chat
+					</a>
+					<a id="liveagent_button_offline_57336000000LGA3_1" href="javascript:void(0)" style="display: none;" ng-click="openWebToCase()">
+	                Submit a support ticket
+	               </a>               
+                  </li>
+                  <li>
+                     <a href="" ng-click="openHelpWindow();">Help</a>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+         <!-- @common.version() -->
+
+         <div class="version" ng-show="core.version">
+            <div class="col-xs-12 col-md-12 text-center text-muted">
+               <b>
+                  <small>Build Details</small>
+               </b>
+               <br />
+               <div class="text-left">
+                  <small>Version# : {{core.version.appVersion}}</small>
+                  <br />
+                  <small>Sprint# : {{core.version.sprint}}</small>
+                  <br />
+                  <small>Time Stamp : {{core.version.time}}</small>
+                  <br />
+                  <small>Git code : {{core.version.git}}</small>
+               </div>
+            </div>
+         </div>
+         <!-- Version Details -->
+      </nav>
+      <span class="minifyme">
+         <i class="fa fa-arrow-circle-left hit"></i>
+      </span>
+
+
+
+   </aside>
+   <!-- END NAVIGATION -->
+
+   <div id="content">
+      <!-- Removed class fixed-navigation to support long left navigation entries-->
+      <!-- @form(routes.Login.home()) { @CSRF.formField } -->
+      <!-- CSRF Field -->
+      <input type="hidden" name="X-XSRF-TOKEN" value="NONE" />
+      
+      <!-- MAIN PANEL -->
+      <div id="main" role="main"  ng-class="{'hideLeftNavigation': instProfilePrompt }">
+         <div>
+            <div id="overlay">
+               <div id="loading">
+                  <h3>
+                     <span class="ie-spinner-black" ng-show="traceIE">Loading data...</span>
+                     <span ng-show="!traceIE">
+                        <i class="fa fa-refresh fa-spin fa-lg"></i>
+                        &nbsp;Loading data...
+                     </span>
+                  </h3>
+               </div>
+            </div>
+            <div id="cover" ng-class="{'coverOverModal': modalLodaingCover }"></div>
+
+				<div id="table-overlay">
+					<div id="table-loading">
+						<h3>
+							<span class="ie-spinner-black" ng-show="traceIE">Loading
+								data...</span> <span ng-show="!traceIE"> <i
+								class="fa fa-refresh fa-spin fa-lg"></i> &nbsp;Loading data...
+							</span>
+						</h3>
+					</div>
+				</div>
+				<div id="table-cover"></div>
+
+
+				<div id="view-body">
+               <div id="main-container" style="min-height: 870px;">
+                  <div ng-view anim-class class="view"></div>
+                  <div class="clearfix hspacer-20"></div>
+               </div>
+               <div class="footer">
+                  <div class="text-center">
+                   
+                        <small class="text-muted">
+                        	<span> version: {{appVersion}} {{chromeAppVersion}}<i class="fa fa-ellipsis-v"></i> </span>
+                           For immediate support*, please contact 866-607-5223.  
+               					<a title="Accuplacer Support" href="javascript:void(0)" ng-click="openWebToCase()">  Click here to submit a support ticket </a>    
+               					<span id="liveagent_button_online_57336000000LGA3Or" style="display: none;" > or </span> 
+                 
+				               <a id="liveagent_button_online_57336000000LGA3" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('57336000000LGA3')">
+									Click here to participate in a Live Chat*
+								</a>
+				              
+				               <span id="liveagent_button_offline_57336000000LGA3" style="display: none;">
+				                -  Live Chat* currently unavailable
+				               </span> 
+                           <span>&copy; {{footerDate | date: 'yyyy'}} The College Board</span>
+                        </small>
+                     
+                  </div>
+                  
+					<div class="text-center">
+				        
+				            <small class="text-muted">
+				            <span>
+				            * ACCUPLACER Technical Support Hours: Mon-Fri: 7:00 a.m. – 9:00 p.m. (EST) and Sat: 8:00 a.m. – 5:00 p.m. (EST)
+				            </span>
+				            </small>
+				            
+	      			</div>
+               </div>
+            </div>
+
+         </div>
+         <!-- END MAIN CONTENT -->
+      </div>
+
+      <!-- END MAIN PANEL -->
+
+      <!-- Modal -->
+      <span id="myprofile-div" my-profile></span>
+      <div id="login" class="modal "  role="dialog" aria-labelledby="myModalLabel">
+         <div class="">
+            <div role="main" class="lockscreen animated flipInY ">
+               <div class="logo"></div>
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+                  <div class="alert alert-info">
+                     <small> {{'administertest.instruction.text' | translate}} </small>
+                  </div>
+                  <div class="alert alert-warning" ng-show="loginUser.isAdministerTest">
+                     <i class="fa-fw fa fa-exclamation-circle"></i>
+                     <small> {{'administertest.popup.text' | translate}}</small>
+                  </div>
+
+
+
+                  <div style="width: 120px; height: 120px; float: left;" class="hidden-mobile">
+                     <i class="fa fa-user" style="font-size: 10em; color: #eeeeee;"></i>
+                  </div>
+                  <form autocomplete="off">
+                     <fieldset>
+                        <div style="padding-bottom: 5px;">
+                           <h1>
+                              <small>
+                                 <i class="fa fa-lock text-muted"></i>
+                                 &nbsp;Locked
+                              </small>
+                           </h1>
+                           <!-- <p class="text-muted">
+              Username: userName
+               <input class="form-control"   name="username" type="hidden" value="@userName">
+            </p> -->
+                           <div class="input-group">
+                              <!-- <input class="form-control" type="password" placeholder="Password"> -->
+                              <input class="form-control" id="sessionTimeoutUsername" name="username" placeholder="username" ng-model="loginUser.username" type="text" value=""
+                                 ng-disabled='!loginUser.clickHere'>
+                              <div class="input-group-btn">
+                                 <button class="btn btn-default" ng-disabled='true'>
+                                    <i class="fa fa-user"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <br />
+
+                           <div class="input-group">
+                              <input class="form-control" id="sessionTimeoutPassword" name="password" placeholder="password" ng-model="loginUser.password" type="password" value=""
+                                 placeholder="Password" ng-keypress="loginEnter($event)" autofocus>
+                              <div class="input-group-btn">
+                                 <button class="btn btn-default" ng-disabled='true'>
+                                    <i class="fa fa-key"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <br />
+                        </div>
+                        <div class="alert alert-danger hidden" id="sessionError">
+                           <button type="button" class="login-close close" aria-hidden="true" ng-click="clearSessionError()">&times;</button>
+                           <div>
+                              <p class="text-left">
+                                 <i class="fa-fw fa fa-exclamation-circle"></i>
+                                 <small>{{'error.session' | translate}}</small>
+                              </p>
+                           </div>
+                           <!--  <p ng-show="errors.session" class="text-left">
+                                    <i class="fa-fw fa fa-exclamation-circle"></i>
+                                    <small>{{error.session | translate}}</small>
+                                </p> -->
+                        </div>
+                        <div class="alert alert-danger " ng-show="loginUser.errorFlag">
+                           <button type="button" class="login-close close" ng-click="clearMessages1();" aria-hidden="true">&times;</button>
+                           <div ng-repeat="obj in loginError">
+                              <p class="text-left">
+                                 <i class="fa-fw fa fa-exclamation-circle"></i>
+                                 <small>{{obj}}</small>
+                              </p>
+                           </div>
+                           <!--  <p ng-show="errors.session" class="text-left">
+                                    <i class="fa-fw fa fa-exclamation-circle"></i>
+                                    <small>{{error.session | translate}}</small>
+                                </p> -->
+                           <p ng-show="errors.username.length" class="text-left">
+                              <i class="fa-fw fa fa-exclamation-circle"></i>
+                              <small>{{errors.username}}</small>
+                           </p>
+                           <p ng-show="errors.password.length" class="text-left">
+                              <i class="fa-fw fa fa-exclamation-circle"></i>
+                              <small>{{errors.password}}</small>
+                           </p>
+                           <p ng-show="errors.username1.length" class="text-left">
+                              <i class="fa-fw fa fa-exclamation-circle"></i>
+                              <small>
+                                 If you don't remember your password, please click
+                                 <a href="#" title="Forgot My Password" data-ng-click="openPasswordModal()">here</a>
+                                 , or the Forgot My Password link below.
+                              </small>
+                           </p>
+                           <p ng-show="errors.username2.length" class="text-left">
+                              <i class="fa-fw fa fa-exclamation-circle"></i>
+                              <small>{{errors.username2}}</small>
+                           </p>
+                           <p ng-show="errors.username3.length" class="text-left">
+                              <i class="fa-fw fa fa-exclamation-circle"></i>
+                              <small>{{errors.username3}}</small>
+                           </p>
+                           <p ng-show="errors.unlockAccount.length" class="text-left">
+                              <i class="fa-fw fa fa-exclamation-circle"></i>
+                              <small>
+                                 Your account has been locked, please click
+                                 <a href="" data-ng-click="unlockAccount()">here</a>
+                                 for directions to unlock your account and establish a new password.
+                              </small>
+                           </p>
+                           <p ng-show="errors.unlock.length" class="text-left">
+                              <i class="fa-fw fa fa-exclamation-circle"></i>
+                              <small>
+                                 Your account has been locked, please click
+                                 <a href="" data-ng-click="unlockAccount()">here</a>
+                                 for directions to unlock your account.
+                              </small>
+                           </p>
+
+                           <p ng-show="error.permanentLock.length" class="text-left">
+                              <i class="fa-fw fa fa-exclamation-circle"></i>
+                              <small>{{error.permanentLock}}</small>
+                           </p>
+                        </div>
+                     </fieldset>
+
+                     <div class="widget-footer">
+                        <div class="row">
+                           <div class="col-lg-12 col-md-12 col-sm-12 ">
+                              <span class="pull-left">
+                                 <p class="no-margin margin-top-5">
+                                    Logged in as someone else?
+                                    <a href="" ng-click="loginClickHere();" type="button" oncontextmenu="return false">Click here</a>
+
+                                 </p>
+                              </span>
+                              <span class="pull-right">
+                                 <button ng-click="login()" class="btn btn-sm btn-primary" ng-disabled="loginUser.loginDisable">
+                                    <span class="fa fa-refresh fa-spin" ng-show="loginUser.unlockSpin"></span>
+                                    Unlock
+                                 </button>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <p class="font-xs margin-top-5">&copy; {{footerDate | date: 'yyyy'}} The College Board</p>
+               <!--  </form>   -->
+            </div>
+         </div>
+      </div>
+
+
+      <div id="rptWidget" class='hidden' ng-show="repWidg.show">
+         <div id="rpt" class="rptWidgt animated fadeInRight rptWidgtZIndex">
+            <div id="rptd" class="btn-group">
+               <div class="btn-group" ng-switch='repWidg.status'>
+                  <span ng-switch-when='0' >
+                     <i class="fa fa-warning fa-2x"></i>
+                     &nbsp;{{repWidg.name}} {{'rpt.msgToolong' |translate}}
+                  </span>
+                  <span ng-switch-when='1'>
+                     <i class="fa fa-warning         fa-2x "></i>
+                     &nbsp;{{repWidg.name}} {{'rpt.msgFailed' |translate}}
+                  </span>
+                  <span ng-switch-when='2'>
+                     <i class="fa fa-refresh fa-spin fa-2x"></i>
+                     &nbsp;{{repWidg.name}} {{'rpt.msgProgress' |translate}}
+                  </span>
+                  <span ng-switch-when='3'>
+                     <i class="fa fa-info         fa-2x"></i>
+                     &nbsp;{{repWidg.name}} {{'rpt.msgNorecords' |translate}}
+                  </span>
+                  <span ng-switch-when='4'>
+                     <i class="fa fa-check         fa-2x"></i>
+                     &nbsp;{{repWidg.name}} {{'rpt.msgCompleted' |translate}}
+                  </span>
+                  <span ng-switch-when='6'>
+                     <i class="fa fa-warning         fa-2x"></i>
+                     &nbsp;{{repWidg.name}} {{'reports.download.tomanyrecords' |translate}}
+                  </span>
+               </div>
+               <i class="btnClose fa fa-times pull-right" ng-click="showRepWidgToggle()"></i>
+               <!-- <div ng-show="repWidg.status==4"> -->
+               <div class="btn-group dropup" ng-show="(repWidg.type=='offline' && repWidg.status==4)">
+                <a href="/api/exportAllReportFile/{{repWidg.filename}}.{{repWidg.format}}?X-XSRF-TOKEN={{csrf}}"
+                     class='btn btn-default onlineABut'>
+                     <i class="fa fa-download"></i>
+                     Download
+                  </a>
+               </div>
+                <div class="btn-group dropup" ng-show="(repWidg.type=='studentprereg' && repWidg.status==4 && repWidg.filename !='')">
+               <a href="{{repWidg.filename}}" 
+                     class='btn btn-default onlineABut' target="_blank">
+                     <i class="fa fa-download"></i>
+                     Download
+                  </a>
+               </div>
+               <div class="btn-group" ng-show="(repWidg.type=='online' && repWidg.status==4)">
+
+                  <a href="/api/exportAllReportFile/{{repWidg.filename}}.{{repWidg.format}}?X-XSRF-TOKEN={{csrf}}"
+                     class='btn btn-default onlineABut'>
+                     <i class="fa fa-download"></i>
+                     Download
+                  </a>
+
+               </div>
+               <div class="btn-group" ng-show="(repWidg.type=='export' && repWidg.status==4)">
+
+                  <a href="/api/exportAllFile/{{repWidg.filename}}?X-XSRF-TOKEN={{csrf}}"
+                     class='btn btn-default onlineABut'>
+                     <i class="fa fa-download"></i>
+                     Download
+                  </a>
+
+               </div>
+               <div class="btn-group" ng-show="(repWidg.type=='exportVouchers' && repWidg.status==4)">
+                  <a href="/api/exportVoucherFile/{{repWidg.filename}}?X-XSRF-TOKEN={{csrf}}"
+                     class='btn btn-default onlineABut'>
+                     <i class="fa fa-download"></i>
+                     Download
+                  </a>
+               </div>
+
+                  <a href="/api/exportCompanionBatchSummary/{{repWidg.filename}}?X-XSRF-TOKEN={{csrf}}"
+                     ng-show="(repWidg.type =='exportBatchSummary' && repWidg.status == 4 && !repWidg.hideButton && !disableDownloadButton)" 
+                     ng-click="repWidg.hideButton = true"
+                     class='btn btn-default onlineABut' download>
+                     <i class="fa fa-download"></i>
+                     Download
+                  </a>
+               
+                  <a href="" 
+                     ng-show="(repWidg.type =='downloadBatchSummary' && repWidg.status == 4 && !repWidg.hideButton && disableDownloadButton)"
+                     ng-class="{'disabledAnchorTag' : disableDownloadButton}" 
+                     class='btn btn-default onlineABut'>
+                     <i class="fa fa-download"></i>
+                     Download
+                  </a>
+                  
+                  <a href="/api/downloadCompanionBatchSummary/{{repWidg.filename}}?X-XSRF-TOKEN={{csrf}}" 
+                     ng-show="(repWidg.type =='downloadBatchSummary' && repWidg.status == 4 && !repWidg.hideButton && !disableDownloadButton)"
+                     ng-click="repWidg.hideButton = true"
+                     class='btn btn-default onlineABut' download>
+                     <i class="fa fa-download"></i>
+                     Download
+                  </a>
+                              
+            </div>
+         </div>
+      </div>
+
+      <!-- Session Logout Warning -->
+      <!-- ng-show="sessionData.warnFlag" -->
+      <div id='sessionLogoutDialog' class="modal fade" index="0">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header dialog-header-confirm">
+                  <button type="button" class="close" ng-click="warnClose()">&times;</button>
+                  <h4 class="modal-title">
+                     <span class="glyphicon glyphicon-check"></span>
+                     Session expire
+                  </h4>
+               </div>
+               <div class="modal-body">Your session will be logged out in a minute. Do you want to continue?</div>
+               <div class="modal-footer ">
+                  <button type="button" class="btn btn-default ng-binding" ng-click="warnYes()">Yes</button>
+                  <button type="button" class="btn btn-primary ng-binding" ng-click="warnNo()">No</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+
+
+</body>
+<script type="text/javascript">
+	if (!window._laq) { window._laq = []; }
+	window._laq.push(function(){
+		liveagent.showWhenOnline('57336000000LGA3', document.getElementById('liveagent_button_online_57336000000LGA3'));
+		liveagent.showWhenOffline('57336000000LGA3', document.getElementById('liveagent_button_offline_57336000000LGA3'));
+		
+		liveagent.showWhenOnline('57336000000LGA3', document.getElementById('liveagent_button_online_57336000000LGA3Or'));
+		
+		liveagent.showWhenOnline('57336000000LGA3', document.getElementById('liveagent_button_online_57336000000LGA3_1'));
+		liveagent.showWhenOffline('57336000000LGA3', document.getElementById('liveagent_button_offline_57336000000LGA3_1'));
+	});
+</script>
+<script type='text/javascript' src='https://c.la1-c1-ia2.salesforceliveagent.com/content/g/js/46.0/deployment.js'></script>
+<script type='text/javascript'>
+		liveagent.addCustomDetail('buttonId','57336000000LGA3');
+		liveagent.init('https://d.la1-c1-ia2.salesforceliveagent.com/chat', '57236000000LFCN', '00D36000000rBJo');
+</script>
+
+</html>
+
