@@ -3,6 +3,7 @@
 You can access Documentation by navigating to the following URLS within the Repository Public Wiki:
 - [Documentation](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki)
 - [Purpose](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/ITDataServicesInfra-Purpose)
+- [Directories](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/Directories)
 
 ## Getting Started
 
@@ -22,5 +23,5 @@ Web scraping is a mean in which you can automate a lot of your data export and i
 ## Understanding The Repository 
 
 The [Purpose](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/ITDataServicesInfra-Purpose) will help you centralize a lot of your data interactions for exporting and importing data from third party websites and interacting with your local database for Imports. 
-The repository has Directories, each Directory has a README.txt on how to use the directory. Furthermore, the Directories page on our Wiki will give you a thourough understanding in how each directory is used and how you can use it to fit your own Entity's/Organization's needs.
+The repository has [Directories](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/Directories), each Directory has a README.txt on how to use the directory. Furthermore, the [Directories](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/Directories) page on our Wiki will give you a thourough understanding in how each directory is used and how you can use it to fit your own Entity's/Organization's needs.
 
