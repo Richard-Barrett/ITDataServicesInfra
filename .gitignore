@@ -8,6 +8,7 @@ sites/site*/public/setup/
 sites/site*/public/theme/
 textpattern/
 *.yaml
+*.yml
 HISTORY.txt
 README.txt
 
