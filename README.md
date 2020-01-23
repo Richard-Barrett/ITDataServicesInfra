@@ -27,3 +27,15 @@ The repository has [Directories](https://github.com/Richard-Barrett/ITDataServic
 
 ## Virtualization Set Up
 If you want to use this repository in a virtualized environment, you can also look at the **Virtualization** directory within the repository. In this directory you can virtualize a lot of the processes as well as spin up infrastructure quick and easy. Please refer to your local policies within your entity and/or organization before continuing down this path. Basically you can containerize, or you can spin up a cloud on-premises option.
+
+## Installing & Using Ruby
+
+## Installing & Using Python
+
+## Installing & Using Node.js and React.js 
+
+## Installing & Using Chocalatey
+
+## Installing & Using Brew
+
+
