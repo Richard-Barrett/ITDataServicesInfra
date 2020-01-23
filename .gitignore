@@ -9,6 +9,7 @@ sites/site*/public/theme/
 textpattern/
 *.yaml
 *.yml
+*.csv
 HISTORY.txt
 README.txt
 
