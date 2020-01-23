@@ -15,5 +15,6 @@ To get started with using this repository you will need to first have Git Instal
 - `git clone https://github.com/Richard-Barrett/ITDataServicesInfra.git`
 
 ## Web Scraping
-Web scraping is a mean in which you can automate a lot of your data export and imports. What this means is that you can use the repository in the following manner to help aid you in this process. Please see the following image o understand how Web Scraping works in terms of the overall process flow. 
+Web scraping is a mean in which you can automate a lot of your data export and imports. What this means is that you can use the repository in the following manner to help aid you in this process. Please see the following image to understand how Web Scraping works in terms of the overall process flow. 
+
 ![Image](https://www.lucidchart.com/publicSegments/view/55833c2f-f932-4b14-8d16-9748c609e03e/image.jpeg)
