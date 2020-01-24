@@ -47,7 +47,7 @@
         ["xpath=//form[@id='mainForm']/fieldset/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "richard.barrett"
+      "value": "USERNAME"
     }, {
       "id": "35ab2cfa-6df8-4a6e-b483-512d8d05a0f5",
       "comment": "",
@@ -75,7 +75,7 @@
         ["xpath=//form[@id='mainForm']/fieldset[2]/input", "xpath:idRelative"],
         ["xpath=//fieldset[2]/input", "xpath:position"]
       ],
-      "value": "Energy2020!"
+      "value": "PASSWORD"
     }, {
       "id": "295d88ad-2c10-4e4a-b7d2-af2ac3c720b5",
       "comment": "",
