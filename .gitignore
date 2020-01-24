@@ -15,3 +15,5 @@ README.txt
 
 # Additional File Paths for Git Ignore for Added Security
 ITDataServicesInfra/Python/Collegeboard/TSI/secrets.yaml
+ITDataServicesInfra/Scripts/*
+ITDataServicesInfra/Projects/*
