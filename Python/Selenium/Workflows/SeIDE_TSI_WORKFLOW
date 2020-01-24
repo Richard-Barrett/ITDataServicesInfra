@@ -48,8 +48,8 @@
         ["xpath=//section[2]/label/input", "xpath:position"]
       ],
       "value": "PASSWORD"
-    }, {
-      "id": "1853db59-98d2-4a1d-829a-8a81d0bff0d0",
+     }, {
+      "id": "a8a08162-3eb5-43da-8504-7ad610e2949a",
       "comment": "",
       "command": "click",
       "target": "css=.btn-lg",
@@ -62,21 +62,19 @@
       ],
       "value": ""
     }, {
-      "id": "63c2008a-2e1f-4ac5-ace1-84cacd681d70",
+      "id": "7325625f-4104-49ab-a95e-9e38e3762840",
       "comment": "",
       "command": "click",
-      "target": "linkText=Reports",
+      "target": "css=li:nth-child(11) .menu-item-parent",
       "targets": [
-        ["linkText=Reports", "linkText"],
-        ["css=ul:nth-child(1) > li:nth-child(11) > a", "css:finder"],
-        ["xpath=//nav[@id='leftNav']/ul/li[11]/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '#')])[71]", "xpath:href"],
-        ["xpath=//nav/ul/li[11]/a", "xpath:position"],
-        ["xpath=//a[contains(.,' Reports')]", "xpath:innerText"]
+        ["css=li:nth-child(11) .menu-item-parent", "css:finder"],
+        ["xpath=//nav[@id='leftNav']/ul/li[11]/a/span", "xpath:idRelative"],
+        ["xpath=//li[11]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Reports')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "fee14a03-30c6-4e83-8e48-d460c988af36",
+      "id": "84db09ed-2fd1-4933-aaf5-05f2794681e8",
       "comment": "",
       "command": "click",
       "target": "linkText=Custom Reports",
@@ -91,7 +89,7 @@
       ],
       "value": ""
     }, {
-      "id": "1426c0cb-a122-4e19-b49d-61f29d3f9e97",
+      "id": "837ce306-41a6-4f96-a2f3-bc6659cefa71",
       "comment": "",
       "command": "click",
       "target": "id=loadSavedQueryCustomReport",
@@ -105,14 +103,14 @@
       ],
       "value": ""
     }, {
-      "id": "cf5a1e9f-beba-423c-85bd-325af7f007cd",
+      "id": "31fc4b7e-83e0-45c5-adf4-8d399016332a",
       "comment": "",
       "command": "select",
       "target": "id=loadSavedQueryCustomReport",
       "targets": [],
       "value": "label=All TSI Scores 2020"
     }, {
-      "id": "b3134893-3516-4b63-a73f-4ca46785c284",
+      "id": "cbedd7f6-e179-45da-8c03-33ea3a0a4d70",
       "comment": "",
       "command": "click",
       "target": "id=loadSavedQueryCustomReport",
@@ -126,59 +124,7 @@
       ],
       "value": ""
     }, {
-      "id": "38a8b0ef-2b2f-490b-8845-332514eb2ab2",
-      "comment": "",
-      "command": "click",
-      "target": "id=reportDescriptionCustomReport",
-      "targets": [
-        ["id=reportDescriptionCustomReport", "id"],
-        ["css=#reportDescriptionCustomReport", "css:finder"],
-        ["xpath=//input[@id='reportDescriptionCustomReport']", "xpath:attributes"],
-        ["xpath=//form[@id='customForm']/div[2]/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "ae52ddae-8661-43bb-8da2-423fcf09faf1",
-      "comment": "",
-      "command": "click",
-      "target": "id=reportDescriptionCustomReport",
-      "targets": [
-        ["id=reportDescriptionCustomReport", "id"],
-        ["css=#reportDescriptionCustomReport", "css:finder"],
-        ["xpath=//input[@id='reportDescriptionCustomReport']", "xpath:attributes"],
-        ["xpath=//form[@id='customForm']/div[2]/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "8a35cf11-fa0c-4b38-9ebe-40ed737fe356",
-      "comment": "",
-      "command": "doubleClick",
-      "target": "id=reportDescriptionCustomReport",
-      "targets": [
-        ["id=reportDescriptionCustomReport", "id"],
-        ["css=#reportDescriptionCustomReport", "css:finder"],
-        ["xpath=//input[@id='reportDescriptionCustomReport']", "xpath:attributes"],
-        ["xpath=//form[@id='customForm']/div[2]/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "39379a8e-e89c-42d6-ac82-f0882ccd8894",
-      "comment": "",
-      "command": "type",
-      "target": "id=reportDescriptionCustomReport",
-      "targets": [
-        ["id=reportDescriptionCustomReport", "id"],
-        ["css=#reportDescriptionCustomReport", "css:finder"],
-        ["xpath=//input[@id='reportDescriptionCustomReport']", "xpath:attributes"],
-        ["xpath=//form[@id='customForm']/div[2]/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/input", "xpath:position"]
-      ],
-      "value": "TSI_Scores_Current"
-    }, {
-      "id": "804fa438-d347-4d3f-b003-ea365f679164",
+      "id": "59dee8e2-db8c-4f57-b515-aa8e9c016dbd",
       "comment": "",
       "command": "click",
       "target": "linkText=* Step 1 - Select Fields",
@@ -192,7 +138,67 @@
       ],
       "value": ""
     }, {
-      "id": "06b52319-e3d5-41a4-9956-2d1989097984",
+      "id": "661875dd-022b-45d0-8fcd-9dba095dc432",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Step 2 - Filter by Criteria",
+      "targets": [
+        ["linkText=Step 2 - Filter by Criteria", "linkText"],
+        ["css=.panel:nth-child(2) .collapsed", "css:finder"],
+        ["xpath=//div[@id='rptSearchCollapsible']/div[2]/div/h3/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '')])[122]", "xpath:href"],
+        ["xpath=//div[2]/div/h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Step 2 - Filter by Criteria')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e1a8254-b0fc-40d0-9a07-74e72cf854b6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.col-md-4:nth-child(3) .btn",
+      "targets": [
+        ["css=.col-md-4:nth-child(3) .btn", "css:finder"],
+        ["xpath=//div[@id='collapseFour-1']/div/fieldset/import-date-select/div/div[3]/div/span/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e50a14ed-0836-4be1-87db-72b47d152f61",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.col-md-4:nth-child(3) .btn",
+      "targets": [
+        ["css=.col-md-4:nth-child(3) .btn", "css:finder"],
+        ["xpath=//div[@id='collapseFour-1']/div/fieldset/import-date-select/div/div[3]/div/span/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c4bb138-0c86-446c-b46a-4398c835ee06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-4:nth-child(3) .btn",
+      "targets": [
+        ["css=.col-md-4:nth-child(3) .btn", "css:finder"],
+        ["xpath=//div[@id='collapseFour-1']/div/fieldset/import-date-select/div/div[3]/div/span/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c82b2a55-59f5-4d95-b56b-a8ce032717d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active:nth-child(1)",
+      "targets": [
+        ["css=.active:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='button'])[37]", "xpath:attributes"],
+        ["xpath=//td[@id='datepicker-298-89-26']/button", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'24')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c60f6277-490e-4f16-82d6-37ead7287965",
       "comment": "",
       "command": "mouseOver",
       "target": "css=.btn-success",
@@ -205,7 +211,7 @@
       ],
       "value": ""
     }, {
-      "id": "997c8eec-a3d4-4eac-a95d-6fe5741b5151",
+      "id": "86fa183e-7e37-496a-9624-11544b353a91",
       "comment": "",
       "command": "click",
       "target": "css=.btn-success",
@@ -218,7 +224,7 @@
       ],
       "value": ""
     }, {
-      "id": "72c550bc-4f63-4f7b-8aab-3f6c34453d7a",
+      "id": "ae4c3be6-a6e6-4987-81fb-c444ed6f6c62",
       "comment": "",
       "command": "mouseOut",
       "target": "css=.btn-success",
@@ -231,14 +237,7 @@
       ],
       "value": ""
     }, {
-      "id": "4a3f81a9-5760-4e6b-b1db-3fbe94970e96",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "10db5582-7ec6-4e7a-b68a-bdfe9aeb382e",
+      "id": "d7c332dd-4c7d-4df7-bc0f-b8e413537ea2",
       "comment": "",
       "command": "click",
       "target": "linkText=Download",
@@ -246,7 +245,7 @@
         ["linkText=Download", "linkText"],
         ["css=.btn-group:nth-child(3) > .btn", "css:finder"],
         ["xpath=//div[@id='rptd']/div[2]/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/api/exportAllReportFile/TSI_Scores_Current_01_23_2020_22_06_01_richardbarrett.csv?X-XSRF-TOKEN=902dbf6f9795730f8aa78fe476955f0c3fc75897-1579817104083-65856378a6dc2e63d5660dad')]", "xpath:href"],
+        ["xpath=//a[contains(@href, '/api/exportAllReportFile/Custom_01_24_2020_18_26_07_richardbarrett.csv?X-XSRF-TOKEN=18055c1fa6467892bb5fe78c96532d52e1a38eaf-1579890321623-aa178803e8fad177f73fcac6')]", "xpath:href"],
         ["xpath=//div[2]/a", "xpath:position"],
         ["xpath=//a[contains(.,' Download')]", "xpath:innerText"]
       ],
@@ -254,12 +253,12 @@
     }]
   }],
   "suites": [{
-    "id": "3966e334-2f51-4e48-8a7b-ea7ad1bcd905",
+    "id": "2bed98c6-d7d4-49a3-a2b9-f12d150cdbd1",
     "name": "Default Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["62d63902-2304-4649-9917-7d8f509e1102"]
+    "tests": ["c35d369e-1df2-4f3f-900c-75fee19950c5"]
   }],
   "urls": ["https://www.accuplacer.org/"],
   "plugins": []
