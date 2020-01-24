@@ -1,4 +1,4 @@
-## Welcome to ITDateServicesInfra
+## Welcome to ITDataServicesInfra
 
 You can access Documentation by navigating to the following URLS within the Repository Public Wiki:
 - [Documentation](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki)
