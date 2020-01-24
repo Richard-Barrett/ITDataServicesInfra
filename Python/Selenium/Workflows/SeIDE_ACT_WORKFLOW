@@ -1,0 +1,139 @@
+{
+  "id": "5ddcd76a-0c9a-4d2c-ae6d-10f0dbe4b209",
+  "version": "2.0",
+  "name": "ACT Scores Export",
+  "url": "https://success.act.org",
+  "tests": [{
+    "id": "75eafef8-aa60-4a87-a2fb-dff8558f183b",
+    "name": "ACT Export Simulation",
+    "commands": [{
+      "id": "807449e0-d940-45f8-81ae-21f642816020",
+      "comment": "",
+      "command": "open",
+      "target": "/s/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52caae1c-22b3-4dc3-a46e-b8ac910f5ef6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1292x1410",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6405e65d-5b0a-4545-817f-74a2b5733638",
+      "comment": "",
+      "command": "click",
+      "target": "id=input-19",
+      "targets": [
+        ["id=input-19", "id"],
+        ["css=#input-19", "css:finder"],
+        ["xpath=//input[@id='input-19']", "xpath:attributes"],
+        ["xpath=//div[@id='sfdc_username_container']/span/lightning-input/div/input", "xpath:idRelative"],
+        ["xpath=//lightning-input/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17a93853-3754-4af2-bdeb-a50c7ac78870",
+      "comment": "",
+      "command": "click",
+      "target": "css=.slds-box:nth-child(4) b",
+      "targets": [
+        ["css=.slds-box:nth-child(4) b", "css:finder"],
+        ["xpath=//div[@id='CustomerPortalTemplate']/div[2]/div/div[2]/div/div/div/section/div[2]/div/div[2]/a/p/b", "xpath:idRelative"],
+        ["xpath=//p/b", "xpath:position"],
+        ["xpath=//b[contains(.,'ACT Test Scores and Reports')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1294",
+      "windowTimeout": 2000
+    }, {
+      "id": "da697386-6e53-4bb4-8c33-24acecece6e2",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win1294}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9622870-5450-485c-ba55-bef5cbe84a92",
+      "comment": "",
+      "command": "click",
+      "target": "css=.left .description",
+      "targets": [
+        ["css=.left .description", "css:finder"],
+        ["xpath=//div[@id='tabContentPanel']/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af64d310-2325-46e3-8fcc-ee21f0e38b61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.orgtree-body-normal-checkbar span",
+      "targets": [
+        ["css=.orgtree-body-normal-checkbar span", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[3]/div[2]/div[4]/div[2]/div/div/div/div[3]/div/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'DEL VALLE INDEPENDENT SCHL DISTRICT')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6812fae-4584-4bb8-b1a2-b9aacd66a1bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[3]/div[2]/div[4]/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Get Report')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c76edf8-5100-464a-bad3-f27c47d34434",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item:nth-child(2) .font-icon",
+      "targets": [
+        ["css=.item:nth-child(2) .font-icon", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[3]/div/div/div[2]/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b744915-0254-47df-8e1e-b26ddecf197f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.di-form > .di-form-group .em-checkbox:nth-child(2)",
+      "targets": [
+        ["css=.di-form > .di-form-group .em-checkbox:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div/div/div/div/label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'CSV')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae39a845-0271-4c05-a6de-6d1e22e7d4dc",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .btn:nth-child(2)",
+      "targets": [
+        ["css=div:nth-child(1) > .btn:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Download')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1b909b85-5936-4887-b4fc-ef11b2c385e0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["75eafef8-aa60-4a87-a2fb-dff8558f183b"]
+  }],
+  "urls": ["https://success.act.org/"],
+  "plugins": []
+}
