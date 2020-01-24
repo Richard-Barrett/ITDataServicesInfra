@@ -45,37 +45,23 @@ password.send_keys("PASSWORD")
 #browser.send_keys(Keys.ENTER)
 #browser.send_keys(Keys.RETURN)
 
-#submit.click()
-browser.find_element_by_css_selector('.btn.btn-lg.btn-primary').click()
+# Authentication submit.click()
+element = WebDriverWait(browser, 20).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, ".btn.btn-lg.btn-primary.pull-left")))
+element.click();
 
-#Navigate to CustomReports XPATH=//*[@id="leftNav"]/ul/li[11]/ul/li[9]/a
-#browser.find_element_by_xpath('//*[@id="leftNav"]/ul/li[11]').click()
-browser.find_element_by_partial_link_text("Custom Reports").click()
+# Navigate to Report
+element = WebDriverWait(browser, 20).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "Reports")))
+element.click();
 
-login_element = WebDriverWait(browser, 20).until(
-EC.element_to_be_clickable((By.CSS_SELECTOR, ".btn.btn-lg.btn-primary.pull-left")))
-login_element.click();
-
-custom_report_element = WebDriverWait(browser, 20).until(
-EC.element_to_be_clickable(By.XPATH, "//a[contains(@href, '/customReports')]"))
-custom_report_element.click();
-
-
-#element.send_keys(password)
-#element.send_keys(Keys.RETURN)
-#element.close()
-#Setting the value of email input field
-#driver.execute_script(f'var element = document.getElementById("email"); element.value = "{username}";')
-
-#Setting the value of password input field
-#driver.execute_script(f'var element = document.getElementById("password"); element.value = "{password}";')
-
-#Submitting the form or click the login button also
-#driver.execute_script(f'document.getElementsByClassName("login_form")[0].submit();')
-
-#print(driver.page_source)
+element = WebDriverWait(browser, 20).until(
+                EC.element_to_be_clickable((By.LINK_TEXT, "Custom Reports")))
+element.click();
 
 #Make the report
+
+
 
 #NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 #browser.get("https://www.accuplacer.org/api/home.html#/customReports")
