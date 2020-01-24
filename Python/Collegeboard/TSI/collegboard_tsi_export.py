@@ -42,8 +42,6 @@ username = browser.find_element_by_id("login")
 password = browser.find_element_by_id("password")
 username.send_keys("USERNAME")
 password.send_keys("PASSWORD")
-#browser.send_keys(Keys.ENTER)
-#browser.send_keys(Keys.RETURN)
 
 # Authentication submit.click()
 element = WebDriverWait(browser, 20).until(
