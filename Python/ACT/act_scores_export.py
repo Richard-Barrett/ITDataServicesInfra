@@ -40,5 +40,25 @@ password = browser.find_element_by_id("input-15")
 username.send_keys("USERNAME")
 password.send_keys("PASSWORD")
 
-# Select ACT Test Scores and Reports
+# Authentication Login Button Click
+element = WebDriverWait(browser, 20).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, ".slds-button.slds-button_neutral.sfdc_button")))
+element.click();
 
+# Select ACT Test Scores and Reports
+# By CSS SELECTOR
+element = WebDriverWait(browser, 20).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, ".slds-box:nth-child(4) b")))
+element.click();
+
+# Click Student Scores (District)
+# By XPATH //*[@id="app"]/div[1]/div[3]/div[2]/div[4]/div[2]/div/div/div[1]/div[3]/div/div[1]/div/label/span
+element = WebDriverWait(browser, 20).until(
+        EC.element_to_be_clickable((By.XPATH, "//*[@id="app"]/div[1]/div[3]/div[2]/div[4]/div[2]/div/div/div[1]/div[3]/div/div[1]/div/label/span")))
+element.click();
+
+# Click Get Report Button
+# By CSS SELECTOR .btn.btn-primary
+element = WebDriverWait(browser, 20).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, ".btn.btn-primary")))
+element.click();
