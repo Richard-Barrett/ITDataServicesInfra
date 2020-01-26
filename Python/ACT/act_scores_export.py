@@ -26,11 +26,19 @@ from selenium.webdriver.support.ui import WebDriverWait
 # find_elements_by_class_name
 # find_elements_by_css_selector
 
+# Authentication submit.click()
+
 # Define Driver Path
+browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 
 # Define Parent URL
+browser.get("https://success.act.org/s/")
 
 # Define Login Process
+username = browser.find_element_by_id("input-14")
+password = browser.find_element_by_id("input-15")
+username.send_keys("USERNAME")
+password.send_keys("PASSWORD")
 
 # Select ACT Test Scores and Reports
 
