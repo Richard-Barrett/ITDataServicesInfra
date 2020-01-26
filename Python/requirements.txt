@@ -31,7 +31,7 @@ cmd2==0.8.9
 configparser==4.0.2
 constantly==15.1.0
 contextlib2==0.6.0
-cryptography==2.2.2
+cryptography==2.3
 cssselect==1.0.3
 cycler==0.10.0
 dash==1.1.1
