@@ -28,14 +28,22 @@ The repository has [Directories](https://github.com/Richard-Barrett/ITDataServic
 ## Virtualization Set Up
 If you want to use this repository in a virtualized environment, you can also look at the **Virtualization** directory within the repository. In this directory you can virtualize a lot of the processes as well as spin up infrastructure quick and easy. Please refer to your local policies within your entity and/or organization before continuing down this path. Basically you can containerize, or you can spin up a cloud on-premises option.
 
-## Installing & Using Ruby
+## Installing Ruby
+Ruby is a great dev tool. If you want to install it for your Virtual Machine, Local, or Cloud Based Instance. Please follow the following steps and guidelines to install Ruby. 
+1. [Linux Ubuntu](https://www.thoughtco.com/instal-ruby-on-linux-2908370)
+- **`sudo apt-get install ruby-full`**
+2. [Windows 10 with Chocolatey](https://chocolatey.org/docs/installation)
+- **`choco install ruby`**
+3. [MacOS with Brew](https://docs.brew.sh/Installation)
+- **`brew install ruby`**
 
-## Installing & Using Python
+## Installing Python
 
-## Installing & Using Node.js and React.js 
+## Installing Node.js and React.js 
+
+## Installing & Using Brew
 
 ## Installing & Using Chocalatey
 
-## Installing & Using Brew
 
 
