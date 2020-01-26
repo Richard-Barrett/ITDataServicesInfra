@@ -163,7 +163,7 @@ qrcode==6.1
 qrtools==0.0.2
 queuelib==1.5.0
 rebulk==0.9.0
-requests==2.19.1
+requests==2.20.0
 requests-cache==0.4.13
 requests-oauthlib==1.2.0
 requestsexceptions==1.4.0
