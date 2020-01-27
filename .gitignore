@@ -14,11 +14,21 @@ HISTORY.txt
 README.txt
 
 # Additional File Paths for Git Ignore for Added Security
+# If Yaml Files are Chosen to Hold Secrets
 ITDataServicesInfra/Python/ACT/secrets.yaml
 ITDataServicesInfra/Python/Collegeboard/AP/secrets.yaml
 ITDataServicesInfra/Python/Collegeboard/PSAT/secrets.yaml
 ITDataServicesInfra/Python/Collegeboard/SAT/secrets.yaml
 ITDataServicesInfra/Python/Collegeboard/TSI/secrets.yaml
 ITDataServicesInfra/Python/Skyward/secrets.yaml
+
+# If JSON files are Chosen to Hold Secrets
+ITDataServicesInfra/Python/ACT/secrets.json
+ITDataServicesInfra/Python/Collegeboard/AP/secrets.json
+ITDataServicesInfra/Python/Collegeboard/PSAT/secrets.json
+ITDataServicesInfra/Python/Collegeboard/SAT/secrets.json
+ITDataServicesInfra/Python/Collegeboard/TSI/secrets.json
+ITDataServicesInfra/Python/Skyward/secrets.yaml
+
 ITDataServicesInfra/Scripts/*
 ITDataServicesInfra/Projects/*
