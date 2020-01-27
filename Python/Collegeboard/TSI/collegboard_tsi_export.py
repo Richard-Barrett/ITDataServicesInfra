@@ -16,6 +16,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
+from datetime import date
 
 import json
 with open('secrets.json','r') as f:
@@ -29,6 +30,10 @@ with open('secrets.json','r') as f:
 # find_elements_by_tag_name
 # find_elements_by_class_name
 # find_elements_by_css_selector
+
+# System Variables
+today = date.today()
+date = today.strftime("%m/%d/%Y")
 
 # URL Variables 
 login_url = 'https://www.accuplacer.org/'
@@ -92,9 +97,9 @@ element.click();
 # Set Variable for OS_DATE to be in Format MM/DD/YYYY
 # For Powershell $(Get-Date -UFormat %D)
 # //*[@id='createdTo']/option[text()='01/27/2020']
-#element = WebDriverWait(browser, 20).until(
-#                                EC.element_to_be_clickable((By.XPATH,"//*[@id='createdTo']/option[text()='01/27/2020']")))
-#element.click();
+element = WebDriverWait(browser, 20).until(
+                                EC.element_to_be_clickable((By.XPATH,"//*[@id='createdTo']/option[text()='print(date)']")))
+element.click();
 
 #NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 #browser.get("https://www.accuplacer.org/api/home.html#/customReports")
