@@ -17,27 +17,28 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait 
 
-#Definitions
-#find_elements_by_name
-#find_elements_by_xpath
-#find_elements_by_link_text
-#find_elements_by_partial_link_text
-#find_elements_by_tag_name
-#find_elements_by_class_name
-#find_elements_by_css_selector
+# Definitions
+# find_elements_by_name
+# find_elements_by_xpath
+# find_elements_by_link_text
+# find_elements_by_partial_link_text
+# find_elements_by_tag_name
+# find_elements_by_class_name
+# find_elements_by_css_selector
 
-#URL Variables 
+# URL Variables 
 login_url = 'https://www.accuplacer.org/'
 redirect_url = 'https://www.accuplacer.org/api/home.html#/'
 reports_scheduler_url = 'https://www.accuplacer.org/api/home.html#/reportScheduler'
 custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 
-#WebDriver Path
+# WebDriver Path
 browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
-#Parent URL
+
+# Parent URL
 browser.get("https://www.accuplacer.org")
 
-#Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
+# Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
 username = browser.find_element_by_id("login")
 password = browser.find_element_by_id("password")
 username.send_keys("USERNAME")
@@ -57,12 +58,54 @@ element = WebDriverWait(browser, 20).until(
                 EC.element_to_be_clickable((By.LINK_TEXT, "Custom Reports")))
 element.click();
 
-#Make the report
+# Make the Report
+# Step 1 - Click Dropdown Menu and Load Current Year Query
+element = WebDriverWait(browser, 20).until(
+                        EC.element_to_be_clickable((By.XPATH, "//*[@id='loadSavedQueryCustomReport']/option[text()='All TSI Scores 2020']")))
+element.click();
+
+# Step 2 - Create and Load Dynamic Name for Custom Report with System Call to $Date Dependent on OS in Format of TSI_SCORES_$YEAR_$DATE_LAST_RUN
+# Powershell Variable = $(Get-Date -Format "yyyy")
+# Linux & Mac Variable = $(date +%F)
+# Element XPATH = //*[@id="reportDescriptionCustomReport"]
+description = browser.find_element_by_id('reportDescriptionCustomReport')
+description.send_keys("NameNeedsFormatting")
 
 
+# Step 3 - Filter by Criteria
+# Click Plus Button on Index(1)
+element = WebDriverWait(browser, 20).until(
+                EC.element_to_be_clickable((By.XPATH, "//*[@id='rptSearchCollapsible']/div[2]/div[1]/h3/a/i[1]")))
+element.click();
+
+# Click Calendar Icon
+# Element XPATH = //*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/span/button/i
+element = WebDriverWait(browser, 20).until(
+                        EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/span/button/i")))
+element.click();
+
+# Select Current Date
+# Set Variable for OS_DATE to be in Format MM/DD/YYYY
+# For Powershell $(Get-Date -UFormat %D)
+# //*[@id='createdTo']/option[text()='01/27/2020']
+#element = WebDriverWait(browser, 20).until(
+#                                EC.element_to_be_clickable((By.XPATH,"//*[@id='createdTo']/option[text()='01/27/2020']")))
+#element.click();
 
 #NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 #browser.get("https://www.accuplacer.org/api/home.html#/customReports")
-#Download the report 
+#Download the report
+# Click Submit Button
+element = WebDriverWait(browser, 20).until(
+                EC.element_to_be_clickable((By.XPATH, "//*[@id='rptSearchCollapsible']/div[5]/div/button")))
+element.click();
 
-#Close the Webbrowser
+# Click Download Button
+# Element XPTAH = //*[@id='rptd']/div[2]/a
+element = WebDriverWait(browser, 30).until(
+                                EC.element_to_be_clickable((By.XPATH, "//*[@id='rptd']/div[2]/a")))
+element.click();
+
+# NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
+# Quit the Webbrowser
+browser.quit()
