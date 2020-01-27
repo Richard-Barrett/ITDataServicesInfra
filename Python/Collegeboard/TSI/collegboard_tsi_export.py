@@ -17,6 +17,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 
+import json
+with open('secrets.json','r') as f:
+      config = json.load(f)
+
 # Definitions
 # find_elements_by_name
 # find_elements_by_xpath
@@ -41,8 +45,8 @@ browser.get("https://www.accuplacer.org")
 # Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
 username = browser.find_element_by_id("login")
 password = browser.find_element_by_id("password")
-username.send_keys("USERNAME")
-password.send_keys("PASSWORD")
+username.send_keys(config['user']['name'])
+password.send_keys(config['user']['password'])
 
 # Authentication submit.click()
 element = WebDriverWait(browser, 20).until(
