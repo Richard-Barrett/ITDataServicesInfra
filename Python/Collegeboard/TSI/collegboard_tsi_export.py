@@ -97,9 +97,9 @@ element.click();
 # Set Variable for OS_DATE to be in Format MM/DD/YYYY
 # For Powershell $(Get-Date -UFormat %D)
 # //*[@id='createdTo']/option[text()='01/27/2020']
-element = WebDriverWait(browser, 20).until(
-                                EC.element_to_be_clickable((By.XPATH,"//*[@id='createdTo']/option[text()='print(date)']")))
-element.click();
+#element = WebDriverWait(browser, 20).until(
+#                                EC.element_to_be_clickable((By.XPATH,"//*[@id='createdTo']/option[text()='print(date)']")))
+#element.click();
 
 #NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 #browser.get("https://www.accuplacer.org/api/home.html#/customReports")
