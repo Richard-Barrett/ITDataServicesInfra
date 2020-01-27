@@ -117,4 +117,5 @@ element.click();
 
 # NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 # Quit the Webbrowser
+time.sleep(5)
 browser.quit()
