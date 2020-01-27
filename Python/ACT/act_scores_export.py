@@ -17,6 +17,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait 
 
+import json
+with open('secrets.json','r') as f:
+      config = json.load(f)
+
 # Definitions
 # find_elements_by_name
 # find_elements_by_xpath
