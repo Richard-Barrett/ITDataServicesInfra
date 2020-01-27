@@ -41,8 +41,8 @@ browser.get("https://success.act.org/s/")
 # Define Login Process
 username = browser.find_element_by_id("input-14")
 password = browser.find_element_by_id("input-15")
-username.send_keys("USERNAME")
-password.send_keys("PASSWORD")
+username.send_keys(config['user']['name'])
+password.send_keys(config['user']['password'])
 
 # Authentication Login Button Click
 element = WebDriverWait(browser, 20).until(
