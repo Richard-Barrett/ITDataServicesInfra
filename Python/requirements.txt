@@ -203,7 +203,7 @@ Theano==1.0.2
 tornado==5.0.2
 traitlets==4.3.2
 tvdb-api==2.0
-Twisted==18.4.0
+Twisted==19.7.0
 typing==3.6.4
 ua-parser==0.8.0
 unicodecsv==0.14.1
