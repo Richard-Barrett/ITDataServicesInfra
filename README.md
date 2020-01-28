@@ -15,13 +15,24 @@ To get started with using this repository you will need to first have Git Instal
 3. Clone the repository by using the following Git Clone command after folliing installation instructions within [Documentation](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki)
 - **`git clone https://github.com/Richard-Barrett/ITDataServicesInfra.git`**
 
+For **Windows Users** please make sure that you make the directory **Git** and **`git clone`** the repository so your working directory looks the following:
+1. Local Machine for Remote Pushing and Change Management
+- **`C:\Users\richard.barrett\Git\ITDataServicesInfra\`**
+2. For Serving and Storing the Repository on a Server/VM as the **Master Branch** for data interaction.
+- **`C:\Git\ITDataServicesInfra\`**
+
+For **Linux/Mac Users** please make sure that you make the directory **Git** and **`git clone`** the repository so your working directory looks the following:
+1. Local Machine for Remote Pushing and Change Management
+- **`/home/richard.barrett/Git/ITDataServicesInfra`**
+2. For Serving and Storing the Repository on a Server/VM as the **Master Branch** Under the **Service_Account and/or Root User** for data interaction:
+- **`/srv/Git/ITDataServicesInfra/`**
+
 ## Web Scraping
 Web scraping is a mean in which you can automate a lot of your data export and imports. What this means is that you can use the repository in the following manner to help aid you in this process. Please see the following image to understand how Web Scraping works in terms of the overall process flow. 
 
 ![Image](https://www.lucidchart.com/publicSegments/view/55833c2f-f932-4b14-8d16-9748c609e03e/image.jpeg)
 
 ## Understanding The Repository 
-
 The [Purpose](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/ITDataServicesInfra-Purpose) will help you centralize a lot of your data interactions for exporting and importing data from third party websites and interacting with your local database for Imports. 
 The repository has [Directories](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/Directories), each Directory has a README.txt on how to use the directory. Furthermore, the [Directories](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/Directories) page on our Wiki will give you a thourough understanding in how each directory is used and how you can use it to fit your own Entity's/Organization's needs.
 
