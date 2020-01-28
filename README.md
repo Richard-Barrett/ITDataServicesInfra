@@ -61,8 +61,6 @@ Python is the primary mode here in terms of interacting with all of the componen
 3. [MacOS with Brew](https://docs.python-guide.org/starting/install3/osx/)
 - **`brew install python`**
 
-## Installing Node.js and React.js 
-
 ## Installing & Using Brew
 If you want a better experience with MacOS you can download the package manager for MacOS by following the link below and using the instructions to help you install and initialize Homebrew.
 1. [Brew The MacOS Package Manager](https://brew.sh/)
