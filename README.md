@@ -70,6 +70,12 @@ If you want a better experience with MacOS you can download the package manager 
 - **`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`**
 
 ## Installing & Using Chocalatey
+If you want to use a package manager for **Windows 10** and **Windows Server** it is recommended that you use Chocolatey. You can install Chocolatey by making sure you fullfill the following requriements:
+- **Windows 7+ / Windows Server 2003+**
+- **PowerShell v2+ (Not PowerShell Core yet though)**
+- **.NET Framework 4+ (the installation will attempt to install .NET 4.0 if you do not have it installed)**
+To get the package manager installed on your local Windows Machine or Server, open Powershell by Clicking Run as Admin and enter the following on the prompt:
+- **`Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`**
 
 
 
