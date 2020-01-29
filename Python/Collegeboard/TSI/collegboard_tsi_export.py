@@ -8,6 +8,8 @@
 # ===========================================================
 
 import selenium
+import shutil
+import xlsxwriter
 import os
 import unittest
 import requests
