@@ -54,3 +54,9 @@ with open('secrets.json','r') as f:
           password = browser.find_element_by_id("password")
           username.send_keys(config['user']['name'])
           password.send_keys(config['user']['password'])
+          
+          # Authentication submit.click()
+          # For XPATH = //*[@id='qa-button-login']
+          element = WebDriverWait(browser, 20).until(
+                          EC.element_to_be_clickable((By.XPATH, "//*[@id='qa-button-login']")))
+          element.click();
