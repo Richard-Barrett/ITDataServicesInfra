@@ -47,7 +47,7 @@ with open('secrets.json','r') as f:
           browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 
           # Parent URL
-          browser.get("https://login.frontlineeducation.com/login?signin=d5549b9f95fab5102b235b61100cd585&productId=estarV3&clientId=estarV3#/login")
+          browser.get("")
 
           # Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
           username = browser.find_element_by_id("Username")
