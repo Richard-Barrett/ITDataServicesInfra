@@ -8,14 +8,22 @@
 # ===========================================================
 
 import selenium
+import shutil
+import xlsxwriter
 import os
 import unittest
 import requests
+import getpass
 import time 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
+from datetime import date
+
+import json
+with open('secrets.json','r') as f:
+      config = json.load(f)
 
 import json
 with open('secrets.json','r') as f:
@@ -30,13 +38,18 @@ with open('secrets.json','r') as f:
 # find_elements_by_class_name
 # find_elements_by_css_selector
 
+# System Variables
+today = date.today()
+date = today.strftime("%m/%d/%Y")
+username = getpass.getuser()
+
 # URL Variables 
 login_url = 'https://www.accuplacer.org/'
 redirect_url = 'https://www.accuplacer.org/api/home.html#/'
 reports_scheduler_url = 'https://www.accuplacer.org/api/home.html#/reportScheduler'
 custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 
-# WebDriver Path
+# WebDriver Path for Windows 10 
 browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 
 # Parent URL
@@ -89,13 +102,13 @@ element = WebDriverWait(browser, 20).until(
                         EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/span/button/i")))
 element.click();
 
-# Select Current Date
+# Select Current Date !!!NOTE ISSUE ON CURRENT DATE BEING SET!!!
 # Set Variable for OS_DATE to be in Format MM/DD/YYYY
 # For Powershell $(Get-Date -UFormat %D)
 # //*[@id='createdTo']/option[text()='01/27/2020']
 #element = WebDriverWait(browser, 20).until(
-#                                EC.element_to_be_clickable((By.XPATH,"//*[@id='createdTo']/option[text()='01/27/2020']")))
-#element.click();
+#                EC.element_to_be_clickable((By.XPATH,"//input[@id='createdTo']")))
+#element.send_keys(date);
 
 #NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 #browser.get("https://www.accuplacer.org/api/home.html#/customReports")
@@ -113,4 +126,5 @@ element.click();
 
 # NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 # Quit the Webbrowser
+time.sleep(5)
 browser.quit()

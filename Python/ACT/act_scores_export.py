@@ -17,6 +17,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait 
 
+import json
+with open('secrets.json','r') as f:
+      config = json.load(f)
+
 # Definitions
 # find_elements_by_name
 # find_elements_by_xpath
@@ -37,8 +41,8 @@ browser.get("https://success.act.org/s/")
 # Define Login Process
 username = browser.find_element_by_id("input-14")
 password = browser.find_element_by_id("input-15")
-username.send_keys("USERNAME")
-password.send_keys("PASSWORD")
+username.send_keys(config['user']['name'])
+password.send_keys(config['user']['password'])
 
 # Authentication Login Button Click
 element = WebDriverWait(browser, 20).until(

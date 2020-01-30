@@ -15,15 +15,29 @@ To get started with using this repository you will need to first have Git Instal
 3. Clone the repository by using the following Git Clone command after folliing installation instructions within [Documentation](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki)
 - **`git clone https://github.com/Richard-Barrett/ITDataServicesInfra.git`**
 
+For **Windows Users** please make sure that you make the directory **Git** and **`git clone`** the repository so your working directory looks the following:
+1. Local Machine for Remote Pushing and Change Management
+- **`C:\Users\richard.barrett\Git\ITDataServicesInfra\`**
+2. For Serving and Storing the Repository on a Server/VM as the **Master Branch** for data interaction.
+- **`C:\Git\ITDataServicesInfra\`**
+
+For **Linux/Mac Users** please make sure that you make the directory **Git** and **`git clone`** the repository so your working directory looks the following:
+1. Local Machine for Remote Pushing and Change Management
+- **`/home/richard.barrett/Git/ITDataServicesInfra`**
+2. For Serving and Storing the Repository on a Server/VM as the **Master Branch** Under the **Service_Account and/or Root User** for data interaction:
+- **`/srv/Git/ITDataServicesInfra/`**
+
 ## Web Scraping
 Web scraping is a mean in which you can automate a lot of your data export and imports. What this means is that you can use the repository in the following manner to help aid you in this process. Please see the following image to understand how Web Scraping works in terms of the overall process flow. 
 
 ![Image](https://www.lucidchart.com/publicSegments/view/55833c2f-f932-4b14-8d16-9748c609e03e/image.jpeg)
 
 ## Understanding The Repository 
-
 The [Purpose](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/ITDataServicesInfra-Purpose) will help you centralize a lot of your data interactions for exporting and importing data from third party websites and interacting with your local database for Imports. 
 The repository has [Directories](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/Directories), each Directory has a README.txt on how to use the directory. Furthermore, the [Directories](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki/Directories) page on our Wiki will give you a thourough understanding in how each directory is used and how you can use it to fit your own Entity's/Organization's needs.
+
+**Common Workflow**
+![Image](https://www.lucidchart.com/publicSegments/view/91a39f7e-e9be-4c20-b819-4d2974bdc93a/image.jpeg)
 
 ## Virtualization Set Up
 If you want to use this repository in a virtualized environment, you can also look at the **Virtualization** directory within the repository. In this directory you can virtualize a lot of the processes as well as spin up infrastructure quick and easy. Please refer to your local policies within your entity and/or organization before continuing down this path. Basically you can containerize, or you can spin up a cloud on-premises option.
@@ -47,8 +61,6 @@ Python is the primary mode here in terms of interacting with all of the componen
 3. [MacOS with Brew](https://docs.python-guide.org/starting/install3/osx/)
 - **`brew install python`**
 
-## Installing Node.js and React.js 
-
 ## Installing & Using Brew
 If you want a better experience with MacOS you can download the package manager for MacOS by following the link below and using the instructions to help you install and initialize Homebrew.
 1. [Brew The MacOS Package Manager](https://brew.sh/)
@@ -59,6 +71,12 @@ If you want a better experience with MacOS you can download the package manager 
 - **`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`**
 
 ## Installing & Using Chocalatey
+If you want to use a package manager for **Windows 10** and **Windows Server** it is recommended that you use Chocolatey. You can install Chocolatey by making sure you fullfill the following requriements:
+- **Windows 7+ / Windows Server 2003+**
+- **PowerShell v2+ (Not PowerShell Core yet though)**
+- **.NET Framework 4+ (the installation will attempt to install .NET 4.0 if you do not have it installed)**
+To get the package manager installed on your local Windows Machine or Server, open Powershell by Clicking Run as Admin and enter the following on the prompt:
+- **`Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`**
 
 
 
