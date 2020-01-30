@@ -50,7 +50,13 @@ with open('secrets.json','r') as f:
           browser.get("https://login.frontlineeducation.com/login?signin=d5549b9f95fab5102b235b61100cd585&productId=estarV3&clientId=estarV3#/login")
 
           # Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
-          username = browser.find_element_by_id("login")
-          password = browser.find_element_by_id("password")
+          username = browser.find_element_by_id("Username")
+          password = browser.find_element_by_id("Password")
           username.send_keys(config['user']['name'])
           password.send_keys(config['user']['password'])
+
+          # Authentication submit.click()
+          # For XPATH = //*[@id='qa-button-login']
+          element = WebDriverWait(browser, 20).until(
+                          EC.element_to_be_clickable((By.XPATH, "//*[@id='qa-button-login']")))
+          element.click();
