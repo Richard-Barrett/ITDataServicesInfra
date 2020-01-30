@@ -25,10 +25,6 @@ import json
 with open('secrets.json','r') as f:
       config = json.load(f)
 
-import json
-with open('secrets.json','r') as f:
-      config = json.load(f)
-
 # Definitions
 # find_elements_by_name
 # find_elements_by_xpath
@@ -60,6 +56,8 @@ username = browser.find_element_by_id("login")
 password = browser.find_element_by_id("password")
 username.send_keys(config['user']['name'])
 password.send_keys(config['user']['password'])
+
+# UI Container Handle for Notifications Window that Pops Up. 
 
 # Authentication submit.click()
 # For XPATH = //*[@id='loginContainer']/form/footer/button
