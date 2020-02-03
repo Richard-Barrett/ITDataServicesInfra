@@ -71,13 +71,13 @@ element = WebDriverWait(browser, 20).until(
 element.click();
 
 element = WebDriverWait(browser, 20).until(
-                EC.element_to_be_clickable((By.LINK_TEXT, "Custom Reports")))
+        EC.element_to_be_clickable((By.LINK_TEXT, "Custom Reports")))
 element.click();
 
 # Make the Report
 # Step 1 - Click Dropdown Menu and Load Current Year Query
 element = WebDriverWait(browser, 20).until(
-                        EC.element_to_be_clickable((By.XPATH, "//*[@id='loadSavedQueryCustomReport']/option[text()='All TSI Scores 2020']")))
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='loadSavedQueryCustomReport']/option[text()='All TSI Scores 2020']")))
 element.click();
 
 # Step 2 - Create and Load Dynamic Name for Custom Report with System Call to $Date Dependent on OS in Format of TSI_SCORES_$YEAR_$DATE_LAST_RUN
@@ -91,19 +91,19 @@ description.send_keys("NameNeedsFormatting")
 # Step 3 - Filter by Criteria
 # Click Plus Button on Index(1)
 element = WebDriverWait(browser, 20).until(
-                EC.element_to_be_clickable((By.XPATH, "//*[@id='rptSearchCollapsible']/div[2]/div[1]/h3/a/i[1]")))
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='rptSearchCollapsible']/div[2]/div[1]/h3/a/i[1]")))
 element.click();
 
 # Click Calendar Icon
 # Element XPATH = //*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/span/button/i
 element = WebDriverWait(browser, 20).until(
-                        EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/span/button/i")))
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/span/button/i")))
 element.click();
 
 # Click Today Button on Calendar
 # Element XPATH = //*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/ul/li[2]/span/button[1]
 element = WebDriverWait(browser, 20).until(
-                                EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/ul/li[2]/span/button[1]")))
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/ul/li[2]/span/button[1]")))
 element.click();
 time.sleep(2)
 
@@ -112,13 +112,13 @@ time.sleep(2)
 #Download the report
 # Click Submit Button
 element = WebDriverWait(browser, 20).until(
-                EC.element_to_be_clickable((By.XPATH, "//*[@id='rptSearchCollapsible']/div[5]/div/button")))
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='rptSearchCollapsible']/div[5]/div/button")))
 element.click();
 
 # Click Download Button
 # Element XPTAH = //*[@id='rptd']/div[2]/a
 element = WebDriverWait(browser, 30).until(
-                                EC.element_to_be_clickable((By.XPATH, "//*[@id='rptd']/div[2]/a")))
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='rptd']/div[2]/a")))
 element.click();
 
 # NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
