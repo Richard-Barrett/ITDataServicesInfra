@@ -39,10 +39,6 @@ with open('secrets.json','r') as f:
           date = today.strftime("%m/%d/%Y")
           username = getpass.getuser()
 
-          # URL Variables 
-          login_url = ''
-          redirect_url = ''
-
           # WebDriver Path for Windows 10 
           browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 
@@ -50,29 +46,34 @@ with open('secrets.json','r') as f:
           #browser.get("https://www.texasassessment.com/administrators/")
           
           # Click on STAAR Portal
-          #element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//div[@class='link-group']//a[contains(.,'STAAR System')]")))
-          #element.click();
-
-          # Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
-          #username = browser.find_element_by_id("userid")
-          #password = browser.find_element_by_id("pass")
-          #username.send_keys(config['user']['name'])
-          #password.send_keys(config['user']['password'])
-          #browser = webdriver.Chrome()
           browser.get("https://www.texasassessment.com/administrators/")
           element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//div[@class='link-group']//a[contains(.,'STAAR System')]")))
           element.click()
+          
+          # Browser Switches to Window
           WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
           browser.switch_to.window(browser.window_handles[-1])
+          
+          # Credential Passoff 
           username =WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.ID,"userid")))
           password =WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.ID,"pass")))
           username.send_keys(config['user']['name'])
           password.send_keys(config['user']['password'])
+          
+          # Authentication submit.click()
+          # Login Button XPATH = "//input[@class='loginButton']"
           element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//input[@class='loginButton']")))
           element.click()
 
-          # Authentication submit.click()
-          # For XPATH = //*[@id='qa-button-login']
-          #element = WebDriverWait(browser, 20).until(
-          #                EC.element_to_be_clickable((By.XPATH, "//*[@id='qa-button-login']")))
-          #element.click();
+          # Click on Reports+ Menu Button
+          # Report+ XPATH = //*[@id='topNav']/ul/div/li[4]/a
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='topNav']/ul/div/li[4]/a")))
+          element.click();
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='topNav']/ul/div/li[4]/a")))
+          element.click();
+
+          # Click on Report Access Link
+          # Report Access XPATH = //*[@id='subReports']/li[6]/a
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='subReports']/li[6]/a")))
+          element.click();
+
