@@ -105,6 +105,7 @@ element.click();
 element = WebDriverWait(browser, 20).until(
                                 EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/ul/li[2]/span/button[1]")))
 element.click();
+time.sleep(2)
 
 #NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 #browser.get("https://www.accuplacer.org/api/home.html#/customReports")
