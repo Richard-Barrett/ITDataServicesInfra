@@ -47,16 +47,32 @@ with open('secrets.json','r') as f:
           browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 
           # Parent URL
-          browser.get("https://tx-login.ets.org/oaam_server/login.do")
+          #browser.get("https://www.texasassessment.com/administrators/")
+          
+          # Click on STAAR Portal
+          #element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//div[@class='link-group']//a[contains(.,'STAAR System')]")))
+          #element.click();
 
           # Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
-          username = browser.find_element_by_id("Username")
-          password = browser.find_element_by_id("Password")
+          #username = browser.find_element_by_id("userid")
+          #password = browser.find_element_by_id("pass")
+          #username.send_keys(config['user']['name'])
+          #password.send_keys(config['user']['password'])
+          #browser = webdriver.Chrome()
+          browser.get("https://www.texasassessment.com/administrators/")
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//div[@class='link-group']//a[contains(.,'STAAR System')]")))
+          element.click()
+          WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
+          browser.switch_to.window(browser.window_handles[-1])
+          username =WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.ID,"userid")))
+          password =WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.ID,"pass")))
           username.send_keys(config['user']['name'])
           password.send_keys(config['user']['password'])
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//input[@class='loginButton']")))
+          element.click()
 
           # Authentication submit.click()
           # For XPATH = //*[@id='qa-button-login']
-          element = WebDriverWait(browser, 20).until(
-                          EC.element_to_be_clickable((By.XPATH, "//*[@id='qa-button-login']")))
-          element.click();
+          #element = WebDriverWait(browser, 20).until(
+          #                EC.element_to_be_clickable((By.XPATH, "//*[@id='qa-button-login']")))
+          #element.click();
