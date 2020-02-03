@@ -125,3 +125,5 @@ element.click();
 # Quit the Webbrowser
 time.sleep(5)
 browser.quit()
+
+# Format Downloaded File to District Specifications
