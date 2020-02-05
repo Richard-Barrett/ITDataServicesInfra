@@ -11,6 +11,7 @@ textpattern/
 *.yaml
 *.yml
 *.csv
+*.gpg
 HISTORY.txt
 README.txt
 
