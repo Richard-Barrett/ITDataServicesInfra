@@ -25,8 +25,6 @@ from datetime import date
 decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
 returned_value = subprocess.call(decrypt, shell=True)
 
-remove = "rm .\secrets_test.json" 
-
 import json
 with open('secrets_test.json','r') as f:
       config = json.load(f)
@@ -132,7 +130,7 @@ element.click();
 time.sleep(5)
 
 # Delete the Encrypted File
-returned_value = subprocess.call(remove, shell=True)
+os.remove("secrets_test.json")
 browser.quit()
 
 # Format Downloaded File to District Specifications
