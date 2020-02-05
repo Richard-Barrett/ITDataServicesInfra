@@ -61,6 +61,7 @@ futures==3.2.0
 gast==0.2.0
 gensim==3.5.0
 git-review==1.28.0
+gnupg==2.3.1
 google-api-python-client==1.7.11
 google-auth==1.6.3
 google-auth-httplib2==0.0.3
