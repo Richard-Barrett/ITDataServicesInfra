@@ -25,7 +25,7 @@ from datetime import date
 decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
 returned_value = subprocess.call(decrypt, shell=True)
 
-remove = "rm secrets_test.json" 
+remove = "rm .\secrets_test.json" 
 
 import json
 with open('secrets_test.json','r') as f:
