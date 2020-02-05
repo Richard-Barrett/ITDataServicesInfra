@@ -21,7 +21,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from datetime import date
 
-decrypt = os.system(gpg --output secrets_test.json decrypt secrets.gpg) 
+decrypt = os.system(gpg --output secrets_test.json --decrypt secrets.gpg) 
 decrypt
 
 remove = os.system(rm secrets_test.json) 
