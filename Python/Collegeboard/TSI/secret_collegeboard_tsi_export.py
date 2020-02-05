@@ -25,7 +25,7 @@ from datetime import date
 decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
 returned_value = subprocess.call(decrypt, shell=True)
 
-remove = "Remove-Item .\secrets_test.json" 
+remove = "rm .\secrets_test.json" 
 
 import json
 with open('secrets_test.json','r') as f:
@@ -130,7 +130,9 @@ element.click();
 # NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 # Quit the Webbrowser
 time.sleep(5)
+
+# Delete the Encrypted File
+returned_value = subprocess.call(remove, shell=True)
 browser.quit()
 
 # Format Downloaded File to District Specifications
-returned_value = subprocess.call(remove, shell=True)
