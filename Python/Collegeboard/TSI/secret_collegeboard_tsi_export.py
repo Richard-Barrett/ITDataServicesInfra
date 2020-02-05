@@ -21,13 +21,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from datetime import date
 
-decrypt = os.system(gpg --output secrets.json decrypt secrets.gpg) 
+decrypt = os.system(gpg --output secrets_test.json decrypt secrets.gpg) 
 decrypt
 
-remove = os.system(rm secrets.json) 
+remove = os.system(rm secrets_test.json) 
 
 import json
-with open('secrets.json','r') as f:
+with open('secrets_test.json','r') as f:
       config = json.load(f)
 
 # Definitions
