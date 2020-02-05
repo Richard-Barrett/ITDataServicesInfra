@@ -21,10 +21,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from datetime import date
 
-decrypt = os.system(gpg --output secrets_test.json --decrypt secrets.gpg) 
-decrypt
+decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
+returned_value = subprocess.call(decrypt, shell=True)
 
-remove = os.system(rm secrets_test.json) 
+remove = "rm secrets_test.json" 
 
 import json
 with open('secrets_test.json','r') as f:
@@ -132,4 +132,4 @@ time.sleep(5)
 browser.quit()
 
 # Format Downloaded File to District Specifications
-remove
+returned_value = subprocess.call(remove, shell=True)
