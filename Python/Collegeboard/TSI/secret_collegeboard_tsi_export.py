@@ -85,6 +85,7 @@ password.send_keys(config['user']['password'])
 element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='loginContainer']/form/footer/button")))
 element.click();
+print("Logging into Collegeboard Accuplacer System")
 
 # Navigate to Report
 element = WebDriverWait(browser, 20).until(
@@ -94,12 +95,14 @@ element.click();
 element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.LINK_TEXT, "Custom Reports")))
 element.click();
+print("Custom Reports Navigation Selected")
 
 # Make the Report
 # Step 1 - Click Dropdown Menu and Load Current Year Query
 element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='loadSavedQueryCustomReport']/option[text()='All TSI Scores 2020']")))
 element.click();
+print("Current Year Query has been selected!")
 
 # Step 2 - Create and Load Dynamic Name for Custom Report with System Call to $Date Dependent on OS in Format of TSI_SCORES_$YEAR_$DATE_LAST_RUN
 # Powershell Variable = $(Get-Date -Format "yyyy")
@@ -107,7 +110,7 @@ element.click();
 # Element XPATH = //*[@id="reportDescriptionCustomReport"]
 description = browser.find_element_by_id('reportDescriptionCustomReport')
 description.send_keys("NameNeedsFormatting")
-
+print("Report has been named and staged for submission")
 
 # Step 3 - Filter by Criteria
 # Click Plus Button on Index(1)
@@ -120,6 +123,7 @@ element.click();
 element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/span/button/i")))
 element.click();
+print("Calendar Selection being made...")
 
 # Click Today Button on Calendar
 # Element XPATH = //*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/ul/li[2]/span/button[1]
@@ -127,6 +131,7 @@ element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/ul/li[2]/span/button[1]")))
 element.click();
 time.sleep(2)
+print("Date is selected as current date.")
 
 #NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 #browser.get("https://www.accuplacer.org/api/home.html#/customReports")
@@ -135,12 +140,14 @@ time.sleep(2)
 element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='rptSearchCollapsible']/div[5]/div/button")))
 element.click();
+print("Query submission successful!")
 
 # Click Download Button
 # Element XPATH = //*[@id='rptd']/div[2]/a
 element = WebDriverWait(browser, 30).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='rptd']/div[2]/a")))
 element.click();
+print("Download button was pressed!")
 
 # NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 # Quit the Webbrowser
@@ -149,9 +156,11 @@ time.sleep(5)
 # Delete the Encrypted File
 if os.path.exists("secrets_test.json"):
   os.remove("secrets_test.json")
+  print("The file was removed and everything is clean!")
 else:
   print("The file does not exist")
 
+print("The download was successfull!")
 browser.quit()
 
 # Format Downloaded File to District Specifications
