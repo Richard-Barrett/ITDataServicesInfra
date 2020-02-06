@@ -15,12 +15,16 @@ import unittest
 import requests
 import subprocess
 import getpass
+import platform
+import logging
 import time 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from datetime import date
+
+system = platform.system()
 
 decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
 returned_value = subprocess.call(decrypt, shell=True)
@@ -49,9 +53,17 @@ redirect_url = 'https://www.accuplacer.org/api/home.html#/'
 reports_scheduler_url = 'https://www.accuplacer.org/api/home.html#/reportScheduler'
 custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 
-# WebDriver Path for Windows 10 
-browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
-
+# WebDriver Path for System
+#if platform.system('Windows'):
+      browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
+#elif platform.system('Linux'):
+#      broswer = webdriver.Chrome("PATH")
+#elif platform.system('Darwin'):
+#      browser = webdriver("PATH")
+#else:
+#      print("Are you sure you have the Selenium Webdriver installed in the correct path?")
+#      continue
+      
 # Parent URL
 browser.get("https://www.accuplacer.org")
 
