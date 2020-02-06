@@ -25,8 +25,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from datetime import date
 
 decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
-returned_value = subprocess.call(decrypt, shell=True)
 
+if os.path.exists("secrets.gpg"):
+      returned_value = subprocess.call(decrypt, shell=True)
+else:
+        print("The file does not exist")
+            
 import json
 with open('secrets_test.json','r') as f:
       config = json.load(f)
