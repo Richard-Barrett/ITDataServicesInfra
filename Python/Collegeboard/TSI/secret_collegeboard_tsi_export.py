@@ -62,17 +62,6 @@ elif platform.system() == ('Darwin'):
     browser = webdriver(executable_path='~/Drivers/Google/Chrome/chromedriver_mac64')
 else:
     print("Are you sure you have the Selenium Webdriver installed in the correct path?")
-
-
-#if system = 'Windows':
-#      browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
-#elif system = 'Linux':
-#      broswer = webdriver.Chrome("~/Drivers/Google/Chrome/chromedriver_linux64")
-#elif system = 'Darwin':
-#      browser = webdriver("PATH")
-#else:
-#      print("Are you sure you have the Selenium Webdriver installed in the correct path?")
-#      continue
       
 # Parent URL
 browser.get("https://www.accuplacer.org")
