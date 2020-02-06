@@ -24,8 +24,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from datetime import date
 
-system = platform.system()
-
 decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
 returned_value = subprocess.call(decrypt, shell=True)
 
@@ -43,8 +41,9 @@ with open('secrets_test.json','r') as f:
 # find_elements_by_css_selector
 
 # System Variables
-today = date.today()
 date = today.strftime("%m/%d/%Y")
+system = platform.system()
+today = date.today()
 username = getpass.getuser()
 
 # URL Variables 
@@ -54,11 +53,11 @@ reports_scheduler_url = 'https://www.accuplacer.org/api/home.html#/reportSchedul
 custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 
 # WebDriver Path for System
-#if platform.system('Windows'):
+#if system = 'Windows':
       browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
-#elif platform.system('Linux'):
+#elif system = 'Linux':
 #      broswer = webdriver.Chrome("~/Drivers/Google/Chrome/chromedriver_linux64")
-#elif platform.system('Darwin'):
+#elif system = 'Darwin':
 #      browser = webdriver("PATH")
 #else:
 #      print("Are you sure you have the Selenium Webdriver installed in the correct path?")
