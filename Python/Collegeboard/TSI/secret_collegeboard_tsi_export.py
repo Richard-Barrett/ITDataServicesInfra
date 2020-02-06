@@ -120,7 +120,7 @@ element = WebDriverWait(browser, 20).until(
 element.click();
 
 # Click Download Button
-# Element XPTAH = //*[@id='rptd']/div[2]/a
+# Element XPATH = //*[@id='rptd']/div[2]/a
 element = WebDriverWait(browser, 30).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='rptd']/div[2]/a")))
 element.click();
@@ -130,7 +130,11 @@ element.click();
 time.sleep(5)
 
 # Delete the Encrypted File
-os.remove("secrets_test.json")
+if os.path.exists("secrets_test.json"):
+  os.remove("secrets_test.json")
+else:
+  print("The file does not exist")
+
 browser.quit()
 
 # Format Downloaded File to District Specifications
