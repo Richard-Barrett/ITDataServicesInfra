@@ -41,9 +41,9 @@ with open('secrets_test.json','r') as f:
 # find_elements_by_css_selector
 
 # System Variables
+today = date.today()
 date = today.strftime("%m/%d/%Y")
 system = platform.system()
-today = date.today()
 username = getpass.getuser()
 
 # URL Variables 
@@ -53,8 +53,19 @@ reports_scheduler_url = 'https://www.accuplacer.org/api/home.html#/reportSchedul
 custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 
 # WebDriver Path for System
+# WebDriver Path for System
+if platform.system() == ('Windows'):
+    browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
+elif platform.system() == ('Linux'):
+    browser = webdriver.Chrome(executable_path='/home/rbarrett/Drivers/Google/Chrome/chromedriver_linux64')
+elif platform.system() == ('Darwin'):
+    browser = webdriver(executable_path='~/Drivers/Google/Chrome/chromedriver_mac64')
+else:
+    print("Are you sure you have the Selenium Webdriver installed in the correct path?")
+
+
 #if system = 'Windows':
-      browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
+#      browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 #elif system = 'Linux':
 #      broswer = webdriver.Chrome("~/Drivers/Google/Chrome/chromedriver_linux64")
 #elif system = 'Darwin':
