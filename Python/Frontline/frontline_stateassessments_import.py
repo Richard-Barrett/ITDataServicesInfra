@@ -50,8 +50,16 @@ with open('secrets.json','r') as f:
           login_url = ''
           redirect_url = ''
 
-          # WebDriver Path for Windows 10 
-          browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
+          # WebDriver Path for System
+          # WebDriver Path for System
+          if platform.system() == ('Windows'):
+            browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
+          elif platform.system() == ('Linux'):
+            browser = webdriver.Chrome(executable_path='/home/rbarrett/Drivers/Google/Chrome/chromedriver_linux64/chromedriver')
+          elif platform.system() == ('Darwin'):
+            browser = webdriver(executable_path='~/Drivers/Google/Chrome/chromedriver_mac64/chromedriver')
+          else:
+            print("Are you sure you have the Selenium Webdriver installed in the correct path?")
 
           # Parent URL
           browser.get("https://login.frontlineeducation.com/login?signin=d5549b9f95fab5102b235b61100cd585&productId=estarV3&clientId=estarV3#/login")
