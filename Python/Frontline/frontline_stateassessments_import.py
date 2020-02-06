@@ -13,6 +13,7 @@ import xlsxwriter
 import os
 import unittest
 import requests
+import json
 import getpass
 import time 
 from selenium import webdriver
@@ -21,7 +22,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from datetime import date
 
-import json
+decrypt = "gpg --output secrets.json --decrypt secrets.gpg" 
+
+if os.path.exists("secrets.gpg"):
+      returned_value = subprocess.call(decrypt, shell=True)
+else:
+        print("The file does not exist")
+
 with open('secrets.json','r') as f:
           config = json.load(f)
 
