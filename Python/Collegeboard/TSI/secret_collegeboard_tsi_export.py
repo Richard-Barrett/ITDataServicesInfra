@@ -85,7 +85,7 @@ password.send_keys(config['user']['password'])
 element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='loginContainer']/form/footer/button")))
 element.click();
-print("Logging into Collegeboard Accuplacer System")
+print("Logging into Collegeboard Accuplacer System!")
 
 # Navigate to Report
 element = WebDriverWait(browser, 20).until(
@@ -95,14 +95,14 @@ element.click();
 element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.LINK_TEXT, "Custom Reports")))
 element.click();
-print("Custom Reports Navigation Selected")
+print("Custom Reports Navigation Selected...")
 
 # Make the Report
 # Step 1 - Click Dropdown Menu and Load Current Year Query
 element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='loadSavedQueryCustomReport']/option[text()='All TSI Scores 2020']")))
 element.click();
-print("Current Year Query has been selected!")
+print("Current Year Query has been selected...")
 
 # Step 2 - Create and Load Dynamic Name for Custom Report with System Call to $Date Dependent on OS in Format of TSI_SCORES_$YEAR_$DATE_LAST_RUN
 # Powershell Variable = $(Get-Date -Format "yyyy")
@@ -110,7 +110,7 @@ print("Current Year Query has been selected!")
 # Element XPATH = //*[@id="reportDescriptionCustomReport"]
 description = browser.find_element_by_id('reportDescriptionCustomReport')
 description.send_keys("NameNeedsFormatting")
-print("Report has been named and staged for submission")
+print("Report has been named and staged for submission...")
 
 # Step 3 - Filter by Criteria
 # Click Plus Button on Index(1)
@@ -131,7 +131,7 @@ element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='collapseFour-1']/div/fieldset/import-date-select/div[1]/div[3]/div/ul/li[2]/span/button[1]")))
 element.click();
 time.sleep(2)
-print("Date is selected as current date.")
+print("Date is selected as current date...")
 
 #NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
 #browser.get("https://www.accuplacer.org/api/home.html#/customReports")
