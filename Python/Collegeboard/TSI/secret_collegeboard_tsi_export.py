@@ -47,8 +47,10 @@ with open('secrets_test.json','r') as f:
 # System Variables
 today = date.today()
 date = today.strftime("%m/%d/%Y")
+node = platform.node()
 system = platform.system()
 username = getpass.getuser()
+version = platform.version()
 
 # URL Variables 
 login_url = 'https://www.accuplacer.org/'
