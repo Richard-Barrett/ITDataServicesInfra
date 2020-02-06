@@ -61,9 +61,9 @@ custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 if platform.system() == ('Windows'):
     browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 elif platform.system() == ('Linux'):
-    browser = webdriver.Chrome(executable_path='/home/rbarrett/Drivers/Google/Chrome/chromedriver_linux64')
+    browser = webdriver.Chrome(executable_path='/home/rbarrett/Drivers/Google/Chrome/chromedriver_linux64/chromedriver')
 elif platform.system() == ('Darwin'):
-    browser = webdriver(executable_path='~/Drivers/Google/Chrome/chromedriver_mac64')
+    browser = webdriver(executable_path='~/Drivers/Google/Chrome/chromedriver_mac64/chromedriver')
 else:
     print("Are you sure you have the Selenium Webdriver installed in the correct path?")
       
