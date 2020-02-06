@@ -57,7 +57,7 @@ custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 #if platform.system('Windows'):
       browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 #elif platform.system('Linux'):
-#      broswer = webdriver.Chrome("PATH")
+#      broswer = webdriver.Chrome("~/Drivers/Google/Chrome/chromedriver_linux64")
 #elif platform.system('Darwin'):
 #      browser = webdriver("PATH")
 #else:
