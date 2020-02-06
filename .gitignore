@@ -10,6 +10,12 @@ textpattern/
 *.json
 *.yaml
 *.yml
+*.doc
+*.pdf
+*.xlsx
+*.xlsm
+*.xltx
+*.xltm
 *.csv
 *.gpg
 HISTORY.txt
@@ -34,3 +40,5 @@ ITDataServicesInfra/Python/Skyward/secrets.yaml
 
 ITDataServicesInfra/Scripts/*
 ITDataServicesInfra/Projects/*
+
+# Specific File Extensions That Should Alway be ignored
