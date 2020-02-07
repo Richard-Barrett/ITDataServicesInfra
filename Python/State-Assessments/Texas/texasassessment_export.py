@@ -74,6 +74,59 @@ with open('secrets.json','r') as f:
 
           # Click on Report Access Link
           # Report Access XPATH = //*[@id='subReports']/li[6]/a
-          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='subReports']/li[6]/a")))
+          #element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='subReports']/li[6]/a")))
+          #element.click();
+
+          # Click on Results Access Link
+          # Results XPATH = //*[@id='subReports']/li[5]/a
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='subReports']/li[5]/a")))
           element.click();
+          time.sleep(5)
+
+          # Need a Function to Go through and Click the Drop Down Menu and Select Each Score
+          # Click on Reporting Admin Drop Down Menu
+          # Reporting Admin Drop Down Menu XPATH = //*[@id='reportingAdminCode']
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='reportingAdminCode']")))
+          element.click();
+          time.sleep(5)
+
+          # List out Available Indicies, Index ID, & Index Values 
+          # Choose First Index 
+          # Index First XPath = //*[@id='reportingAdminCode']/option[2]
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='reportingAdminCode']/option[2]")))
+          element.click();
+          time.sleep(3)
+
+          # List out available Report Indicies, Report Types, & Report Values
+          # Click on Report and Select First Index
+          # First Click Drop Down XPATH = //*[@id='reportTypeSelected']
+          # Student Data File (Complete) Index 4 NEEDED FOR REPORT XPATH = //*[@id='reportTypeSelected']/option[5]
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='reportTypeSelected']/option[5]")))
+          element.click();
+          time.sleep(3)
+
+          # Click on Search Button
+          # Search Button XPATH = //*[@id='fetchCountsSearchBtn']
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='fetchCountsSearchBtn']")))
+          element.click();
+          time.sleep(5)
+
+          # Parse Results and Count How Many Are Available
+          # List Out Links for Download
+          # Download Final Student Data File (Complete) XPATH = //*[@id='resultsTable']/tbody[2]/tr/td[4]/a
+          element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='resultsTable']/tbody[2]/tr/td[4]/a")))
+          element.click();
+          
+          print("Download Successful!")
+          print("Please Check the specified folder for the download...")
+          time.sleep(10)
+
+          # Delete the Encrypted File
+          #if os.path.exists("secrets_test.json"):
+          #      os.remove("secrets_test.json")
+          #      print("The file was removed and everything is clean!")
+          #else:
+          #      print("The file does not exist")
+
+          browser.quit()
 
