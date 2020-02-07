@@ -77,6 +77,8 @@ If you want to use a package manager for **Windows 10** and **Windows Server** i
 - **.NET Framework 4+ (the installation will attempt to install .NET 4.0 if you do not have it installed)**
 To get the package manager installed on your local Windows Machine or Server, open Powershell by Clicking Run as Admin and enter the following on the prompt:
 - **`Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`**
-
+- **A.** [Installing Chocalatey](https://chocolatey.org/docs/installation)
+- **B.** [Chocalatey Documentation](https://chocolatey.org/docs/)
+- **C.** [Chocolatey Packages](https://chocolatey.org/packages)
 
 
