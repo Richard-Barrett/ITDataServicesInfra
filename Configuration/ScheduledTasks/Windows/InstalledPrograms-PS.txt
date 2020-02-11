@@ -1,0 +1,546 @@
+DisplayName                                                                              DisplayVersion   Publisher                   InstallDate
+-----------                                                                              --------------   ---------                   -----------
+Visual Studio Community 2019                                                             16.3.29519.87    Microsoft Corporation       20191202   
+Visual Studio Community 2017                                                             15.9.28307.423   Microsoft Corporation       20190221   
+Adobe Flash Player 32 NPAPI                                                              32.0.0.321       Adobe                                  
+                                                                                                                                                 
+FileZilla Client 3.46.0                                                                  3.46.0           Tim Kosse                              
+GNU Privacy Guard                                                                        2.2.17           The GnuPG Project                      
+Google Chrome                                                                            80.0.3987.100    Google LLC                  20200211   
+Gpg4win (3.1.10)                                                                         3.1.10           The Gpg4win Project                    
+Microsoft Azure Storage Emulator - v5.7                                                  5.7.18218.1723   Microsoft Corporation       2/21/2019  
+Microsoft Help Viewer 2.2                                                                2.2.23107        Microsoft Corporation                  
+Microsoft SQL Server 2017                                                                                                                        
+Microsoft SQL Server 2017                                                                                 Microsoft Corporation                  
+JetBrains PyCharm Community Edition 2018.3.4                                             183.5429.31      JetBrains s.r.o.                       
+JetBrains PyCharm Community Edition with Anaconda plugin 2019.1.3                        191.7479.30      JetBrains s.r.o.                       
+RStudio                                                                                  1.2.5019         RStudio                                
+JetBrains RubyMine 2019.2.4                                                              192.7142.37      JetBrains s.r.o.                       
+Swift for Windows 1.9.1                                                                  1.9.1                                                   
+TeamViewer                                                                               15.0.8397        TeamViewer                             
+                                                                                                                                                 
+Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.23.27820                              14.23.27820      Microsoft Corporation       20191120   
+crystalreports.cpp.cractivexviewer-4.0-core-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio 2015 Shell (Minimum)                                             14.0.23107       Microsoft Corporation       20190116   
+Microsoft Visual Studio Tools for Applications 2015 Language Support - ENU Language Pack 14.0.23107.20    Microsoft Corporation       20190116   
+tp.apache.derby.classes-10.2.2.0-core-nu                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+tools.boe.wstk-4.0-core-32                                                               14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.universe-4.0-en-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+platform.library.common.authentication.siebel-4.0-en-32                                  14.1.6.1702      SAP BusinessObjects         20190424   
+Realtek USB Ethernet Controller All-In-One Windows Driver                                10.33.419.2019   Realtek                     20191118   
+shared.tp.aurora.apache.rampart-4.0-core-nu                                              14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2dnotes-4.0-en-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501                             12.0.30501.0     Microsoft Corporation                  
+Intel(R) Trusted Connect Services Client                                                 1.56.87.0        Intel Corporation                      
+platform.library.common.authentication.jdedwards-4.0-core-32                             14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.partner.shared.java.siebel-4.0-core-nu                                    14.1.6.1702      SAP BusinessObjects         20190424   
+Python 3.7.2 Utility Scripts (32-bit)                                                    3.7.2150.0       Python Software Foundation  20190221   
+crystalreports.cpp.exporting.u2frec-4.0-en-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+platform.services.ras21.clientsdk_shared_bundle-4.0-core-nu                              14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.sap-4.0-core-nu                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.sforce-4.0-en-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.neoview.odbc.config-4.0-core-nu                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.access-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.javalibs.bundle-4.0-core-nu                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+informationengine.qt.drivers.neoview.odbc.config-4.0-core-nu                             14.1.6.1702      SAP BusinessObjects         20190424   
+informationengine.qt.drivers.mysql.odbc.config-4.0-core-nu                               14.1.6.1702      SAP BusinessObjects         20190424   
+Realtek USB Audio                                                                        6.3.9600.215     Realtek Semiconductor Corp. 20191118   
+crystalreports.dataaccess.driver.oracle-4.0-en-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.derby-10.2.2.0-core-nu                                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.btrieve-4.0-en-32                                       14.1.6.1702      SAP BusinessObjects         20190424   
+tp.azalea-5.5-core-32                                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+tp.xpp3.boe-1.1.3.8-core-nu                                                              14.1.6.1702      SAP BusinessObjects         20190424   
+Python 3.7.2 pip Bootstrap (32-bit)                                                      3.7.2150.0       Python Software Foundation  20190221   
+crystalreports.cpp.exporting.u2dmapi-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.db2-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.querybuilder-4.0-core-32                                       14.1.6.1702      SAP BusinessObjects         20190424   
+cvom.java-4.0-en-nu                                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio 2015 XAML Designer                                               14.0.23107       Microsoft Corporation       20190116   
+Microsoft .NET Core SDK 2.1.504 (x64)                                                    2.1.504          Microsoft Corporation                  
+crystalreports.dataaccess.driver.db2-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+platform.client.java.helper.supportability-4.0-core-nu                                   14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fwordw-4.0-en-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio Tools for Applications 2015 x86 Hosting Support                  14.0.23829       Microsoft Corporation       20190116   
+icecap_collectionresourcesx64                                                            15.8.27924       Microsoft Corporation       20190221   
+tp.mapinfo.mapx.cpp-3.5-core-32                                                          14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.wic-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.wic-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.locale_fallback.cpp-4.0-core-32                                               14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.netezza.odbc-4.0-core-32                           14.1.6.1702      SAP BusinessObjects         20190424   
+tools.i18n4j-4.0-core-nu                                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.keycode.defn-4.0-core-nu                                              14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.runtimeshare-4.0-core-32                                              14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.jdbc-4.0-core-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+ Tools for .Net 3.5                                                                      3.11.50727       Microsoft Corporation       20190116   
+tp.apache.log4j.bundle-1.2.6_sap.1-core-nu                                               14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.repoaccess_plugins_webi.binfiles-4.0-core-32                                  14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.fielddef-4.0-core-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+vcpp_crt.redist.clickonce                                                                14.16.27012      Microsoft Corporation       20190221   
+platform.library.common.authentication.siebel-4.0-core-32                                14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.ooc.java.boe-4.0-core-nu                                                14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft .NET Framework 4.5.1 SDK                                                       4.5.51641        Microsoft Corporation       20190116   
+tp.apache.xalan.java.classes-2.5.2-core-nu                                               14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft .NET Framework 4.5.2 Multi-Targeting Pack                                      4.5.51651        Microsoft Corporation       20190221   
+crystalreports.cpp.exporting.u2fodbc-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+vs_tipsmsi                                                                               15.0.27005       Microsoft Corporation       20190221   
+connectivity.connectionserver.drivers.informix.odbc.config-4.0-core-nu                   14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.bcm.java-4.0-core-nu                                                          14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.threedgraphics.pgsdk.cpp-4.0-en-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.teradata.jdbc-4.0-en-nu                            14.1.6.1702      SAP BusinessObjects         20190424   
+product.shared.langpackreg-4.0-core-nu                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+informationengine.qt.drivers.teradata.jdbc-4.0-core-nu                                   14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2ddisk-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.filesystem-4.0-core-32                                  14.1.6.1702      SAP BusinessObjects         20190424   
+tp.xpp3-1.1.3.8-core-nu                                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Azure Storage Emulator - v5.7                                                  5.7.18218.1723   Microsoft Corporation       20190221   
+crystalreports.cpp.erom-4.0-core-32                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+shared.library.keycode.decoder.cpp-4.0-core-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.p2dbase-4.0-core-32                                     14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.xml-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.xml-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+tp.rsa.crypto-6.3-core-32                                                                14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft SQL Server 2017 Policies                                                       14.0.1000.169    Microsoft Corporation       20190116   
+crystalreports.cpp.exporting.u2dvim-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.jde-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.parameterprompt-4.0-core-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.share-4.0-core-32                                              14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft .NET Framework Cumulative Intellisense Pack for Visual Studio (ENU)            4.7.02558        Microsoft Corporation       20190221   
+Microsoft SQL Server 2014 Management Objects                                             12.0.2000.8      Microsoft Corporation       20190116   
+crystalreports.cpp.exporting.u2fxml-4.0-en-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.abdera.bundle.biprs-1.1.2-core-nu                                              14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft .NET Framework 4.5.2 Multi-Targeting Pack (ENU)                                4.5.51209        Microsoft Corporation       20190116   
+shared.library.keycode.licmgr-4.0-en-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.querybuilder-4.0-en-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.boe-4.0-core-nu                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.xalan.cpp-1.10.0-core-32                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+tools.boe.wstk.java-4.0-core-nu                                                          14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft .NET Framework 4.6 Targeting Pack                                              4.6.00081        Microsoft Corporation       20190221   
+Update for Microsoft Visual Studio 2015 (KB3095681)                                      14.0.23317       Microsoft Corporation                  
+platform.library.common.authentication.jdedwards-4.0-en-32                               14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft .NET Framework 4.6.1 SDK                                                       4.6.01055        Microsoft Corporation       20190221   
+crystalreports.dataaccess.driver.oracle-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.odbc-4.0-en-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+Thunderbolt™ Software                                                                    17.4.79.510      Intel Corporation           20200206   
+Required Runtimes                                                                        13.0.0.0         SAP BusinessObjects         20190116   
+OpenEdge 11.7 (64-bit)                                                                   11.07.000        PSC                         20190116   
+crystalreports.dataaccess.driver.p2bbde-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2frdef-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.filedialog-4.0-en-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+cvom.java-4.0-core-nu                                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.bo_storage-4.0-core-32                                                        14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.jdedwards-4.0-core-nu                                              14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.sybase.ctlib.config-4.0-core-nu                    14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.odbc.core-4.0-core-32                              14.1.6.1702      SAP BusinessObjects         20190424   
+Python 3.7.2 Tcl/Tk Support (32-bit)                                                     3.7.2150.0       Python Software Foundation  20190221   
+crystalreports.cpp.exporting.u2frec-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+McAfee WebAdvisor                                                                        4.1.1.67         McAfee, LLC.                           
+shared.library.keycode.defn-4.0-core-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.olap-4.0-en-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+tp.pkware.cpp-1.0-core-32                                                                14.1.6.1702      SAP BusinessObjects         20190424   
+tp.eclipse.aspectj-1.6.5-core-nu                                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.businessview.sdk-4.0-en-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+informationengine.qt.drivers.netezza.odbc.config-4.0-core-nu                             14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.designers.java.launcher-4.0-core-32                                       14.1.6.1702      SAP BusinessObjects         20190424   
+SAP Crystal Reports 2013 SP6                                                             14.1.6.1702      SAP                                    
+Python 3.7.2 Core Interpreter (32-bit)                                                   3.7.2150.0       Python Software Foundation  20190221   
+crystalreports.cpp.exporting.u2dvim-4.0-en-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.bundles-4.0-core-nu                                                14.1.6.1702      SAP BusinessObjects         20190424   
+vs_minshellinteropmsi                                                                    15.8.27825       Microsoft Corporation       20190221   
+crystalreports.cpp.saptoolbar-4.0-core-32                                                14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2015 x86 Debug Runtime - 14.0.23026                                 14.0.23026       Microsoft Corporation       20190116   
+TypeScript SDK                                                                           3.1.2.0          Microsoft Corporation       20190221   
+crystalreports.dataaccess.driver.act-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.sybase-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.openssl-4.0-core-32                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+OpenEdge 11.7 (32-bit)                                                                   11.07.000        PSC                         20190116   
+shared.library.keycode.licmgr-4.0-core-32                                                14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.commons.java.boe-3.1-core-nu                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.ado-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+vs_communitymsires                                                                       15.0.26621       Microsoft Corporation       20190221   
+repoaccess.repo_proxy.cpp-4.0-core-32                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.siebel-4.0-core-nu                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.mysql.jdbc-4.0-core-nu                             14.1.6.1702      SAP BusinessObjects         20190424   
+tp.rsa.crypto.cpp-3.2.1.2-core-32                                                        14.1.6.1702      SAP BusinessObjects         20190424   
+platform.library.common.authentication.jdedwards.java-4.0-core-nu                        14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.odbc.core.config-4.0-core-nu                       14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.tracelog.java.boe-4.0-core-nu                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.tools.cscheck-4.0-en-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fpdf-4.0-en-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2ftext-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio 2015 Shell (Minimum) Interop Assemblies                          14.0.23107       Microsoft Corporation       20190116   
+Microsoft Visual Studio 2015 Shell (Isolated) Resources                                  14.0.23107       Microsoft Corporation       20190116   
+Microsoft Visual C++ 2015-2019 Redistributable (x86) - 14.23.27820                       14.23.27820.0    Microsoft Corporation                  
+Intel(R) Chipset Device Software                                                         10.1.18019.8144  Intel(R) Corporation                   
+crystalreports.cpp.exporting.u2ddisk-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.access-4.0-en-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2frtf-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2dapp-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+icecap_collectionresources                                                               15.8.27924       Microsoft Corporation       20190221   
+crystalreports.rptpubwiz.cpp.help-4.0-core-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.fielddef-4.0-en-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.designer-4.0-core-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.cslib-4.0-core-32                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.act-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.sap-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+platform.library.common.authentication.oracle-4.0-core-32                                14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.registrywrapper-4.0-core-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.com.core-4.0-core-32                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.filedialog-4.0-core-32                                                14.1.6.1702      SAP BusinessObjects         20190424   
+tp.rosette-4.2.1-core-32                                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.sforce-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.curl.cpp-4.0-core-32                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+tp.utexasaustin.hoard-3.7.1-core-32                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+tp.sap.ljs.passport.classes-0.8.0-core-nu                                                14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.ras.bv-4.0-en-32                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.designer-4.0-en-32                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+platform.library.common.authentication.siebel.java-4.0-core-nu                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.share-4.0-en-32                                                14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.rptpubwiz.cpp-4.0-core-32                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+Wondershare Helper Compact 2.5.3                                                         2.5.3            Wondershare                 20200131   
+platform.sdk.boe.com-4.0-en-32                                                           14.1.6.1702      SAP BusinessObjects         20190424   
+VS Immersive Activate Helper                                                             16.0.95.0        Microsoft Corporation       20190221   
+repoaccess.cdztools-4.0-core-32                                                          14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.teradata.odbc.config-4.0-en-nu                     14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.partner.shared.java.jde-4.0-core-nu                                       14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fxml-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft .NET Framework 4.5 Multi-Targeting Pack                                        4.5.50710        Microsoft Corporation       20190116   
+Microsoft Help Viewer 2.2                                                                2.2.23107        Microsoft Corporation       20181106   
+vs_SQLClickOnceBootstrappermsi                                                           15.0.27005       Microsoft Corporation       20190221   
+product.crystalreports.actions-4.0-core-32                                               14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.derby.boe-10.2.2.0-core-nu                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+platform.library.common-4.0-core-32                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.ebs-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+Roslyn Language Services - x86                                                           14.0.23107       Microsoft Corporation       20190116   
+Realtek Card Reader                                                                      10.0.14393.21292 Realtek Semiconductor Corp.            
+tp.apache.xalan.java.boe-2.5.2-core-nu                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.ooc.java.classes-4.0-core-nu                                            14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.apache.axis2-4.0-core-nu                                                14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.charthelp-4.0-en-32                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.netezza.jdbc-4.0-core-nu                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.query-4.0-en-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+Google Update Helper                                                                     1.3.35.441       Google LLC                  20200204   
+crystalreports.cpp.exporting.u2dnotes-4.0-core-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40660                             12.0.40660.0     Microsoft Corporation                  
+tp.rsa.crypto.java.boe-4.1-core-nu                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.libssh2.cpp-4.0-core-32                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.cdztools.oldregistry-4.0-core-32                                              14.1.6.1702      SAP BusinessObjects         20190424   
+informationengine.qt.drivers.sybase.ctlib.config-4.0-core-nu                             14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.jdbc.core-4.0-core-nu                              14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft System CLR Types for SQL Server vNext CTP1.6                                   15.0.600.33      Microsoft Corporation       20190221   
+shared.tp.aurora.apache.axis2.bundle-4.0-core-nu                                         14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.bcm.java.bundle-4.0-core-nu                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+Intel(R) Dynamic Platform and Thermal Framework                                          8.3.10209.6897   Intel Corporation                      
+SQL Server 2017 Management Studio Extensions                                             14.0.3026.27     Microsoft Corporation       20190116   
+crystalreports.cpp.exporting.u2fcr-4.0-en-32                                             14.1.6.1702      SAP BusinessObjects         20190424   
+Python 3.7.2 Standard Library (32-bit)                                                   3.7.2150.0       Python Software Foundation  20190221   
+crystalreports.dataaccess.driver.siebel-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+product.shared.installiverse.reg-4.0-core-nu                                             14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.p2dbase-4.0-en-32                                       14.1.6.1702      SAP BusinessObjects         20190424   
+vs_minshellmsi                                                                           15.9.28302       Microsoft Corporation       20190221   
+vs_FileTracker_Singleton                                                                 16.3.29209       Microsoft Corporation       20191202   
+tp.sap.rfcsdku-70-core-32                                                                14.1.6.1702      SAP BusinessObjects         20190424   
+olap.analysis.implementation.cpp.activex-4.0-core-32                                     14.1.6.1702      SAP BusinessObjects         20190424   
+tp.xpp3.classes-1.1.3.8-core-nu                                                          14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft .NET Framework 4.5.1 Multi-Targeting Pack                                      4.5.50932        Microsoft Corporation       20190116   
+vs_clickoncesigntoolmsi                                                                  15.0.27005       Microsoft Corporation       20190221   
+connectivity.foundation.cpp-4.0-core-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.erom-4.0-en-32                                                        14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.tracelog.java.classes-4.0-core-nu                                             14.1.6.1702      SAP BusinessObjects         20190424   
+tp.azalea.fonts-5.5-core-nu                                                              14.1.6.1702      SAP BusinessObjects         20190424   
+vs_minshellmsi                                                                           16.3.29230       Microsoft Corporation       20191202   
+tp.eclipse.aspectj.boe-1.6.5-core-nu                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.neoview.odbc-4.0-core-32                           14.1.6.1702      SAP BusinessObjects         20190424   
+Roslyn Language Services - x86                                                           14.0.23107       Microsoft Corporation       20190116   
+shared.tp.aurora.sap.nwrfc-4.0-core-32                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.container.admintool.java-4.0-core-nu                                          14.1.6.1702      SAP BusinessObjects         20190424   
+SQL Server 2017 Common Files                                                             14.0.1000.169    Microsoft Corporation       20190116   
+Microsoft Visual Studio 2015 Shell (Isolated)                                            14.0.23107       Microsoft Corporation       20190116   
+informationengine.qt.drivers.mysql.jdbc-4.0-core-nu                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.java-4.0-core-nu                                        14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.teradata.odbc-4.0-core-32                          14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fodbc-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2dpost-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.help-4.0-core-32                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2005 Redistributable                                                8.0.61001        Microsoft Corporation       20190116   
+tp.sourceforge.libpng.cpp-1.0.30-core-32                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+vs_communitymsi                                                                          15.9.28307       Microsoft Corporation       20190221   
+Microsoft System CLR Types for SQL Server 2014                                           12.0.2402.11     Microsoft Corporation       20190116   
+crystalreports.dataaccess.share.registry-4.0-core-nu                                     14.1.6.1702      SAP BusinessObjects         20190424   
+Teams Machine-Wide Installer                                                             1.2.0.24753      Microsoft Corporation       20191205   
+Microsoft NetStandard SDK                                                                15.0.51105       Microsoft Corporation       20190221   
+product.crystalreports.langpackproperty-4.0-en-nu                                        14.1.6.1702      SAP BusinessObjects         20190424   
+tp.ibm.icu.java-3.8.1-core-nu                                                            14.1.6.1702      SAP BusinessObjects         20190424   
+tp.shared.pvlocale.pvlocale-4.0-core-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.odbc-4.0-core-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.sybase.ctlib.config-4.0-en-nu                      14.1.6.1702      SAP BusinessObjects         20190424   
+tp.sun.classes-1.1-core-nu                                                               14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.bcm.java.boe-4.0-core-nu                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.commons.java-3.1-core-nu                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+tp.xpp3.bundle-1.1.3.8-core-nu                                                           14.1.6.1702      SAP BusinessObjects         20190424   
+platform.library.common.instrumentation-4.0-core-nu                                      14.1.6.1702      SAP BusinessObjects         20190424   
+shared.library.cxlib.cxlib-4.0-core-32                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.filesystem-4.0-en-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2dpost-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fsepv-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.cdztools.oldregistry-4.0-en-32                                                14.1.6.1702      SAP BusinessObjects         20190424   
+Windows Phone SDK 8.0 Assemblies for Visual Studio 2017                                  15.0.28302       Microsoft Corporation       20190221   
+Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40660                            12.0.40660       Microsoft Corporation       20191118   
+Python Launcher                                                                          3.8.6860.0       Python Software Foundation  20191118   
+crystalreports.cpp.help-4.0-en-32                                                        14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.netezza.odbc.config-4.0-en-nu                      14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio 2015 Shell (Minimum) Resources                                   14.0.23107       Microsoft Corporation       20190116   
+shared.tp.aurora.threedgraphics.pgsdk.cpp-4.0-core-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.javalibs.classes-4.0-core-nu                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft SQL Server Data-Tier Application Framework (x86)                               14.0.4127.1      Microsoft Corporation       20190116   
+shared.tp.aurora.sap.ncs-4.0-core-32                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Portable Library Multi-Targeting Pack                                          15.0.26621.02    Microsoft Corporation       20190221   
+tp.apache.xbean-2.1.0-core-nu                                                            14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.businessview.clients.crw-4.0-en-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.log4j-1.2.6_sap.1-core-nu                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.crystalcommon.cpp.crlogger-4.0-core-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+setup.engine.sharedregistry-4.0-core-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2015-2019 Redistributable (x64) - 14.23.27820                       14.23.27820.0    Microsoft Corporation                  
+platform.library.common.authentication.sap-4.0-core-32                                   14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.ooc.cpp-4.0-core-32                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.poco-4.0-core-32                                                        14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio Tools for Applications 2015 Language Support                     14.0.23107.20    Microsoft Corporation       20190116   
+shared.tp.aurora.datadirect.cpp-4.0-core-32                                              14.1.6.1702      SAP BusinessObjects         20190424   
+Vagrant                                                                                  2.2.6            HashiCorp                   20191118   
+Crystal Offline Viewer (English)                                                         11.0.0.2266      Business Objects, Inc.      20190502   
+shared.tp.aurora.ooc.java.bundle-4.0-core-nu                                             14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.peoplesoft-4.0-core-nu                                             14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2019 X86 Additional Runtime - 14.23.27820                           14.23.27820      Microsoft Corporation       20191120   
+tp.microsoft.mssdk-10.0-core-32                                                          14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.expmod-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+product.crystalreports.eula-4.0-core-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.mysql.odbc.config-4.0-en-nu                        14.1.6.1702      SAP BusinessObjects         20190424   
+informationengine.qt.drivers.teradata.odbc.config-4.0-core-nu                            14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft .NET Framework 4.6.1 Targeting Pack                                            4.6.01055        Microsoft Corporation       20190221   
+crystalreports.cpp.ras.bv-4.0-core-32                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+tp.pervasive.db.btrieve-3.0-core-32                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java-4.0-core-nu                                                        14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.informix.odbc.config-4.0-en-nu                     14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.simba.sfdc.odbc-4.0-core-32                                             14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.informix-4.0-en-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.p2soutlk-4.0-en-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+shared.library.content-4.0-en-32                                                         14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft SQL Server Management Studio - 17.9.1                                          14.0.17289.0     Microsoft Corporation                  
+vs_clickoncebootstrappermsires                                                           15.0.27005       Microsoft Corporation       20190221   
+Microsoft Visual Studio Services Hub                                                     1.0.23107.00     Microsoft Corporation       20190116   
+crystalreports.dataaccess.driver.sybase-4.0-en-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.olap-4.0-core-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+tp.netscape.ldap.cpp-6.0.5-core-32                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.pbds-4.0-core-nu                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.bcm.java.classes-4.0-core-nu                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.businessview.clients.crw-4.0-core-32                                  14.1.6.1702      SAP BusinessObjects         20190424   
+Prey Anti-Theft                                                                          1.6.6            Prey, Inc.                  20181105   
+platform.sdk.boe.com.instrumentation-4.0-core-nu                                         14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.helpers.cpp-4.0-core-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.share.registry-4.0-core-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.p2slog-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fsepv-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+tp.ibm.icu.cpp-3.0.1-core-32                                                             14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.javabeans-4.0-core-32                                   14.1.6.1702      SAP BusinessObjects         20190424   
+tools.astools.cpp-4.0-core-32                                                            14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.javalibs-4.0-core-nu                                                          14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.mysql.odbc-4.0-core-32                             14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.cractivexviewer-4.0-en-32                                             14.1.6.1702      SAP BusinessObjects         20190424   
+ST Microelectronics 3 Axis Digital Accelerometer Solution                                4.10.0079        ST Microelectronics         20181026   
+connectivity.connectionserver.tools.cscheck-4.0-core-32                                  14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.log4j.classes-1.2.6_sap.1-core-nu                                              14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.xerces.cpp-2.7.0-core-32                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.boe.connectsrv.client.httpxir3.cpp-4.0-core-32                              14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.btrieve-4.0-core-32                                     14.1.6.1702      SAP BusinessObjects         20190424   
+Python 3.7.2 Add to Path (32-bit)                                                        3.7.2150.0       Python Software Foundation  20190221   
+crystalreports.crystalcommon.cpp.crlang-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+Python 3.7.2 Development Libraries (32-bit)                                              3.7.2150.0       Python Software Foundation  20190221   
+olap.analysis.implementation.cpp.sofa-4.0-core-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Azure Mobile App SDK V3.0                                                      3.0.50407.0      Microsoft Corporation       20190221   
+connectivity.connectionserver.drivers.odbc.core.config-4.0-en-nu                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fwordw-4.0-core-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.netezza.odbc.config-4.0-core-nu                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.informix-4.0-core-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+icecap_collection_neutral                                                                15.8.27906       Microsoft Corporation       20190221   
+Microsoft ASP.NET Diagnostic Pack for Visual Studio                                      15.9.40035.56132 Microsoft Corporation       20190221   
+tp.microsoft.office.stdole-11.0-core-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.threedgraphics.pgsdk.cpp.runtime-4.0-core-32                            14.1.6.1702      SAP BusinessObjects         20190424   
+informationengine.qt.drivers.netezza.jdbc-4.0-core-nu                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.crystalcommon.dotnet-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+vs_clickoncebootstrappermsi                                                              15.0.27005       Microsoft Corporation       20190221   
+Microsoft Build Tools Language Resources 14.0 (x86)                                      14.0.23107       Microsoft Corporation       20190116   
+crystalreports.dataaccess.driver.p2soutlk-4.0-core-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+tools.srvtools-4.0-core-32                                                               14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.universe-4.0-core-32                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fxml2-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.sdk.java.repository-4.0-core-nu                                           14.1.6.1702      SAP BusinessObjects         20190424   
+cvom.java.ui_helpers-4.0-core-nu                                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.partner.shared.cpp.pvlmapping-4.0-core-32                                 14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2frdef-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.netezza.jdbc-4.0-en-nu                             14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio Tools for Applications 2015                                      14.0.23829       Microsoft Corporation                  
+platform.sdk.boe.com.slplugins.binfiles-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft TestPlatform SDK Local Feed                                                    15.9.0.2096950   Microsoft                   20190221   
+tp.apache.cxf.bundle.biprs-2.3.8-core-nu                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.javabeans-4.0-en-32                                     14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.teradata.odbc.config-4.0-core-nu                   14.1.6.1702      SAP BusinessObjects         20190424   
+Dell Display Manager                                                                     1.50.1996        EnTech Taiwan               20200130   
+Adobe Refresh Manager                                                                    1.8.0            Adobe Systems Incorporated  20191118   
+Adobe Acrobat 2017                                                                       17.011.30158     Adobe Systems Incorporated  20200211   
+Adobe Acrobat Reader DC                                                                  19.021.20061     Adobe Systems Incorporated  20191220   
+IntelliTraceProfilerProxy                                                                15.0.17289.01    Microsoft Corporation       20190221   
+vs_filehandler_x86                                                                       16.3.29209       Microsoft Corporation       20191202   
+connectivity.connectionserver.drivers.mysql.odbc.config-4.0-core-nu                      14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.jdbc.core.config-4.0-en-nu                         14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.teradata.jdbc-4.0-core-nu                          14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.commons.java.classes-3.1-core-nu                                               14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft VC++ redistributables repacked.                                                12.0.0.0         Intel Corporation           20200116   
+tp.eclipse.aspectj.classes-1.6.5-core-nu                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.psenterprise-4.0-core-32                                14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.container-4.0-core-32                                                         14.1.6.1702      SAP BusinessObjects         20190424   
+platform.library.common.authentication.peoplesoft-4.0-core-32                            14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft ASP.NET Web Tools Packages 15.0 - ENU                                          1.0.30615.0      Microsoft Corporation       20190221   
+tp.cup-0.11-core-nu                                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Windows Communication Foundation Diagnostic Pack for x86                       15.0.27005       Microsoft                   20190221   
+foundation.tracelog.java-4.0-core-nu                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.async_scheduling-4.0-core-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.jdbc.core.config-4.0-core-nu                       14.1.6.1702      SAP BusinessObjects         20190424   
+Entity Framework 6.2.0 Tools  for Visual Studio 2017                                     6.2.61807.0      Microsoft Corporation       20190221   
+Microsoft Portable Library Multi-Targeting Pack Language Pack - enu                      15.0.26621.02    Microsoft Corporation       20190221   
+crystalreports.dataaccess.driver.adoplus-4.0-core-32                                     14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.javalibs.boe-4.0-core-nu                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.xerces.cpp-2.1.0-core-32                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio Tools for Applications 2015 Language Support                     14.0.23107.20    Microsoft Corporation                  
+tp.apache.cxf.license-2.3.8-core-nu                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+tp.sap.ljs.passport.boe-0.8.0-core-nu                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio Tools for Applications 2015 Language Support Finalizer           14.0.23107.20    Microsoft Corporation       20190116   
+connectivity.connectionserver.tools.cscheck.config-4.0-core-nu                           14.1.6.1702      SAP BusinessObjects         20190424   
+vs_devenvmsi                                                                             15.0.26621       Microsoft Corporation       20190221   
+crystalreports.dataaccess.driver.p2sexchange-4.0-core-32                                 14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.com.slplugins.pinfiles-4.0-core-nu                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.parameterprompt-4.0-en-32                                             14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.adodotnetinterop-4.0-core-32                            14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fcr-4.0-core-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.rptpubwiz.cpp-4.0-en-32                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.xerces.java-2.6.2-core-nu                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.businessview.sdk-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.boe.sdkplugins.java.crlov-4.0-core-nu                                     14.1.6.1702      SAP BusinessObjects         20190424   
+vs_BlendMsi                                                                              15.0.27205       Microsoft Corporation       20190221   
+tp.rsa.crypto.java-4.1-core-nu                                                           14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.neoview.odbc.config-4.0-en-nu                      14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.abdera.license-1.1.2-core-nu                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.classes-4.0-core-nu                                                14.1.6.1702      SAP BusinessObjects         20190424   
+Intel(R) Trusted Connect Service Client x86                                              1.56.87.0        Intel Corporation           20200116   
+informationengine.qt.drivers.informix.odbc.config-4.0-core-nu                            14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.log4j.nteventlogappender-1.2.6_sap.1-core-32                                   14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.ado-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.cdztools.jshell-4.0-core-nu                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+tp.sun-1.1-core-nu                                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+Browser for SQL Server 2017                                                              14.0.1000.169    Microsoft Corporation       20191122   
+Microsoft .NET Framework 4 Multi-Targeting Pack                                          4.0.30319        Microsoft Corporation       20190116   
+Update for  (KB2504637)                                                                  1                Microsoft Corporation                  
+repoaccess.container.java-4.0-core-nu                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+tp.sun.boe-1.1-core-nu                                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Build Tools 14.0 (x86)                                                         14.0.23107       Microsoft Corporation       20190116   
+SQL Server 2017 Common Files                                                             14.0.1000.169    Microsoft Corporation       20190116   
+shared.tp.aurora.threedgraphics.pgsdk.cpp.chartsupport-4.0-core-nu                       14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.sap-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+ClickOnce Bootstrapper Package for Microsoft .NET Framework                              4.7.03083        Microsoft Corporation       20190221   
+Microsoft Visual Studio 2015 Shell (Isolated)                                            14.0.23107.10    Microsoft Corporation                  
+shared.library.content-4.0-core-32                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+Python 3.7.2 Documentation (32-bit)                                                      3.7.2150.0       Python Software Foundation  20190221   
+Microsoft .NET Framework 4.5.1 Multi-Targeting Pack (ENU)                                4.5.50932        Microsoft Corporation       20190116   
+crystalreports.boe.sdkplugins.java.managedreports-4.0-core-nu                            14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.webreporting.common-4.0-en-nu                                             14.1.6.1702      SAP BusinessObjects         20190424   
+foundation.tracelog.cpp-4.0-core-32                                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.boe.sdkplugins.java-4.0-core-nu                                           14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.com-4.0-core-32                                                         14.1.6.1702      SAP BusinessObjects         20190424   
+Dell Precision Optimizer Application                                                     6.2.3            Dell Inc.                   20191118   
+Python 3.7.2 Executables (32-bit)                                                        3.7.2150.0       Python Software Foundation  20190221   
+connectivity.boe.ccis.cpp-4.0-core-32                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.connectionserver.drivers.informix.odbc-4.0-core-32                          14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.oracle-4.0-core-nu                                                 14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.xerces.java.classes-2.6.2-core-nu                                              14.1.6.1702      SAP BusinessObjects         20190424   
+tp.netegrity.siteminder.cpp.smagent-6.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.log4j.boe-1.2.6_sap.1-core-nu                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.cdztools.java-4.0-core-nu                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.saptoolbar-4.0-en-32                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+vs_filehandler_amd64                                                                     16.3.29209       Microsoft Corporation       20191202   
+Microsoft ASP.NET MVC 2                                                                  2.0.60926.0      Microsoft Corporation       20190108   
+crystalreports.dataaccess.driver.com-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.sun.jre-4.0-core-32                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.boe.sdkplugins.java-4.0-en-nu                                             14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.p2bbde-4.0-en-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio 2015 XAML Designer - ENU                                         14.0.23107       Microsoft Corporation       20190116   
+foundation.bcm.cpp-4.0-core-32                                                           14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40660                               12.0.40660       Microsoft Corporation       20191118   
+crystalreports.partner.shared.cpp-4.0-en-32                                              14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.printcontrol-4.0-en-32                                                14.1.6.1702      SAP BusinessObjects         20190424   
+repoaccess.async_scheduling-4.0-en-32                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fxls-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+Asmedia USB Host Controller Driver                                                       1.16.59.1        Asmedia Technology          20191118   
+Microsoft .NET Core 1.0.1 - SDK 1.0.0 Preview 2-003133 (x64)                             1.0.0.3133       Microsoft Corporation                  
+tp.libxml2-2.0-core-32                                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2013 x86 Debug Runtime - 12.0.21005                                 12.0.21005       Microsoft Corporation       20190116   
+tp.rsa.crypto.java.classes-4.1-core-nu                                                   14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fhtml-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+Qualcomm 11ac Wireless LAN&Bluetooth Installer                                           11.0.0.10505     Qualcomm                    20191118   
+shared.tp.aurora.threedgraphics.pgsdk.cpp.runtime-4.0-en-32                              14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.p2sevt-4.0-en-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+tp.gzip-1.2.3-core-32                                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.share-4.0-core-32                                                     14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.p2slog-4.0-en-32                                        14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2frtf-4.0-en-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+platform.services.ras21.clientsdk.java-4.0-core-nu                                       14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.jdbc-4.0-en-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fxml2-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+connectivity.boe.connectsrv.client.http.cpp-4.0-core-32                                  14.1.6.1702      SAP BusinessObjects         20190424   
+ClassLinkAgent 6.9                                                                       6.9              ClassLink Inc.              20200108   
+vs_minshellmsires                                                                        16.0.28329       Microsoft Corporation       20191202   
+SAP Crystal Reports runtime engine for .NET Framework (32-bit)                           13.0.18.2192     SAP                         20191119   
+crystalreports.cpp.exporting.u2fhtml-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.com-4.0-en-32                                           14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.xerces.java.boe-2.6.2-core-nu                                                  14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio Setup Configuration                                              2.3.2200.14893   Microsoft Corporation       20191202   
+connectivity.connectionserver.drivers.mysql.jdbc-4.0-en-nu                               14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40660                             12.0.40660.0     Microsoft Corporation                  
+crystalreports.dataaccess.driver.adoplus-4.0-en-32                                       14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.partner.shared.cpp-4.0-core-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+SQL Server 2017 Management Studio Extensions                                             14.0.3026.27     Microsoft Corporation       20190116   
+Python 3.7.2 Test Suite (32-bit)                                                         3.7.2150.0       Python Software Foundation  20190221   
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219                              10.0.40219       Microsoft Corporation       20191121   
+                                                                                                                                                 
+                                                                                                                                                 
+                                                                                                                                                 
+                                                                                                                                                 
+                                                                                                                                                 
+                                                                                                                                                 
+                                                                                                                                                 
+Intel(R) Processor Graphics                                                              26.20.100.7263   Intel Corporation                      
+Realtek High Definition Audio Driver                                                     6.0.1.8622       Realtek Semiconductor Corp. 20191118   
+connectivity.connectionserver.drivers.sybase.ctlib-4.0-core-32                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.p2sevt-4.0-core-32                                      14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.share-4.0-en-32                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+tp.sap.ljs.passport-0.8.0-core-nu                                                        14.1.6.1702      SAP BusinessObjects         20190424   
+platform.services.ras21.clientsdk.java.pbd-4.0-core-nu                                   14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Analysis Services OLE DB Provider                                              15.0.800.90      Microsoft Corporation       20190116   
+crystalreports.cpp.exporting.u2dmapi-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2dapp-4.0-en-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.printcontrol-4.0-core-32                                              14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501                             12.0.30501.0     Microsoft Corporation                  
+connectivity.connectionserver.core.helpers.cpp-4.0-core-32                               14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2ftext-4.0-core-32                                         14.1.6.1702      SAP BusinessObjects         20190424   
+platform.sdk.boe.java.pbds_full-4.0-core-nu                                              14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fxls-4.0-en-32                                            14.1.6.1702      SAP BusinessObjects         20190424   
+Microsoft Visual Studio Tools for Applications 2015 Finalizer                            14.0.23829       Microsoft Corporation       20190116   
+crystalreports.sdk.java.sdkcommon-4.0-core-nu                                            14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.webreporting.common-4.0-core-nu                                           14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.exporting.u2fpdf-4.0-core-32                                          14.1.6.1702      SAP BusinessObjects         20190424   
+tp.ibm.icu.cpp-4.2.1-core-32                                                             14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.query-4.0-core-32                                       14.1.6.1702      SAP BusinessObjects         20190424   
+shared.tp.aurora.ooc.java-4.0-core-nu                                                    14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.dataaccess.driver.p2sexchange-4.0-en-32                                   14.1.6.1702      SAP BusinessObjects         20190424   
+product.crystalreports.arp.icon-4.0-core-32                                              14.1.6.1702      SAP BusinessObjects         20190424   
+crystalreports.cpp.runtimeshare-4.0-en-32                                                14.1.6.1702      SAP BusinessObjects         20190424   
+tp.apache.xalan.java-2.5.2-core-nu                                                       14.1.6.1702      SAP BusinessObjects         20190424   
+
+
