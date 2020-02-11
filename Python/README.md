@@ -1,7 +1,7 @@
 ## Welcome to ITDataServicesInfra Python
 
 ## What is Python
-![Image](https://www.python.org/)
+![Image](https://www.python.org/static/img/python-logo@2x.png)
 
 ## What are Modules
 
