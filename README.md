@@ -1,4 +1,5 @@
 ## Welcome to ITDataServicesInfra
+![Image](https://triking-creative.s3.amazonaws.com/Logos/ITDataServicesInfra/ITDataServicesInfra.PNG)
 
 You can access Documentation by navigating to the following URLS within the Repository Public Wiki:
 - [Documentation](https://github.com/Richard-Barrett/ITDataServicesInfra/wiki)
