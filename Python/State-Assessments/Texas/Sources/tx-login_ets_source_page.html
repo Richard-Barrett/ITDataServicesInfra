@@ -1,0 +1,79 @@
+#Elements that Dictate Report Selection:
+<select name="reportingAdminCode" id="reportingAdminCode" onchange="validate();" class="required dropdown" style="width:300px;">
+              <option value="" selected="selected">-- Select Reporting Admin --</option>
+                                              	                                 	                                 	                                 	                                 	                                      	<option value="2019 STAAR EOC DEC A1-BI-E1-E2-US">2019 DEC STAAR EOC</option>
+                               	                                      	<option value="2019 STAAR INT 3-8 NOV MA-RE-SC-SS">2019-20 INT 3-8 Spring (RE, SC, SS and Op2 MA)</option>
+                               	                                      	<option value="2019 STAAR INT EOC NOV A1-E1-E2-BI-US">2019-20 INT EOC Spring (BI, US and Op2 A1, E1, E2)</option>
+                               	                                      	<option value="2019 AUG STAAR ALG II-ENG III">2019 MAY STAAR ALG II-ENG III</option>
+                               	                                      	<option value="2019 STAAR INT 3-8 AUG MA">2019-20 INT 3-8 Fall (Op1 MA)</option>
+                               	                                      	<option value="2019 STAAR INT EOC AUG A1-E1-E2">2019-20 INT EOC Fall (Op1 A1, E1, E2)</option>
+                               	                                      	<option value="2019 STAAR 5-8 JUN RET MA-RE">2019 JUN STAAR GR 5&amp;8 MA-RE Retest</option>
+                               	                                      	<option value="2019 STAAR EOC JUN A1-BI-E1-E2-US">2019 JUN STAAR EOC</option>
+                               	                                      	<option value="2019 STAAR 3-8 MAY MA-RE-SC-SS-WR">2019 SPR STAAR GR 3-8</option>
+                               	                                      	<option value="2019 STAAR 5-8 MAY RET MA-RE">2019 MAY STAAR GR 5&amp;8 MA-RE Retest</option>
+                               	                                      	<option value="2019 STAAR EOC MAY A1-BI-E1-E2-US">2019 SPR STAAR EOC</option>
+                               	                                      	<option value="2019 STAAR 5-8 APR MA-RE">2019 APR STAAR GR 5&amp;8 MA-RE</option>
+                               	                                 	                                 	                                      	<option value="2019 STAAR INT 3-8 FEB MA-RE">2019 INT 3-8 Opportunity 2</option>
+                               	                                      	<option value="2019 STAAR INT EOC FEB A1-E1-E2">2019 INT EOC Opportunity 2</option>
+                               	                                      	<option value="2018 STAAR EOC DEC A1-BI-E1-E2-US">2018 DEC STAAR EOC</option>
+                               	                                      	<option value="2018 AUG STAAR ALG II-ENG III">2018 AUG STAAR ALG II-ENG III</option>
+                               	                                      	<option value="2018 STAAR INT 3-8 AUG MA-RE">2018 INT 3-8 Opportunity 1</option>
+                               	                                      	<option value="2018 STAAR INT EOC AUG A1-E1-E2">2018 INT EOC Opportunity 1</option>
+                               	                                      	<option value="2018 STAAR 5-8 JUN RET MA-RE">2018 STAAR 5-8 JUN RET MA-RE</option>
+                               	                                      	<option value="2018 STAAR EOC JUN A1-BI-E1-E2-US">2018 STAAR EOC JUN A1-BI-E1-E2-US</option>
+                               	                                      	<option value="2018 STAAR 5-8 MAY RET MA-RE">2018 STAAR 5-8 MAY RET MA-RE</option>
+                               	                                      	<option value="2018 STAAR 3-8 MAY MA-RE-SC-SS-WR">2018 STAAR 3-8 MAY MA-RE-SC-SS-WR</option>
+                               	                                      	<option value="2018 STAAR EOC MAY A1-BI-E1-E2-US">2018 STAAR EOC MAY A1-BI-E1-E2-US</option>
+                               	                                      	<option value="2018 STAAR 5-8 APR MA-RE">2018 STAAR 5-8 APR MA-RE</option>
+                               	                                      	<option value="2018 JAN STAAR INT GR 3-8">2018 JAN STAAR INT GR 3-8</option>
+                               	                                      	<option value="2017 DEC STAAR EOC">2017 DEC STAAR EOC</option>
+                               	                                      	<option value="17 STAAR 5-8 JUN RET MA-RE">17 STAAR 5-8 JUN RET MA-RE</option>
+                               	                                      	<option value="17 STAAR EOC JUN A1-BI-E1-E2-US">17 STAAR EOC JUN A1-BI-E1-E2-US</option>
+                               	                                      	<option value="17 STAAR 5-8 MAY RET MA-RE">17 STAAR 5-8 MAY RET MA-RE</option>
+                               	              </select>
+#Values Change Every Year periodically
+# XPATH for Above
+//*[@id='reportingAdminCode']
+
+# Element for Report Selection Even though I only care about 1 in particular
+<div class="addStudentInfo"><label for="reportTypeSelected">Report<span class="required" id="reportTypeRequiredSpan" style="display: none;">*</span></label><br>
+						<select id="reportTypeSelected" name="reportTypeSelected" class="dropdown required" style="width:300px;margin-bottom: 20px;"><option value="" selected="">All (CAF &amp; Substitute Assessment Excluded)</option><option value="DISTRICT_STUDENT_CAF_DATA_FILE">Consolidated Accountability File</option><option value="DISTRICT_ITEM_ANALYSIS_SUMMARY_7">Item Analysis Summary Report - District</option><option value="SUPER_ZIP">STAAR Report Cards (SRCs)</option><option value="DISTRICT_STUDENT_DATA_FILE">Student Data File (Complete)</option><option value="DISTRICT_STUDENT_DATA_FILE_DELTA">Student Data File (Updated Records Only)</option><option value="SUBSTITUTE_ASSESSMENT">Substitute Assessment Report</option><option value="DISTRICT_SUMMARY_10">Summary Reports (Standard)</option></select>
+
+									</div>
+
+# Search Results are Bound within a Table:
+<table class="table" id="resultsTable"><caption>Table has sortable columns and provides information for line numbers, report, date, and the ability to perform actions on the row data</caption>
+					<thead>
+					<tr>
+						<th width="5%"><span class="sr-text">Result</span> #</th>
+						<th width="55%">Report</th>
+						<th width="20%">Date</th>
+						<th width="20%">Actions</th>
+					</tr>
+					</thead>
+																<tbody>
+							<tr>
+							        <td>1</td> 							        <td>Final Student Data File (Complete)</td>
+								    <td><script> convertDateToLocalDate('Fri Jan 31 08:10:29 EST 2020', 'mmm d, yyyy')</script>Jan 31, 2020</td>
+									<td><a href="/mt/reports/pdf/downloadFile.htm?path=RU9DMTIyMDE5Ui8xMjE5LzIyNy85MTAwMDAvMjI3OTEwX0VPQzEyMjAxOVJfMTIxOV9GX1NUQUFSX0VPQ19SUFRHXzIwMjAwMTI3MDM0MDQ4NTYzLmNzdg"><span class="sprite icn actions csv" title="Download File" aria-label="Download File"></span></a></td>
+						</tr>
+											</tbody><tbody>
+							<tr>
+							        <td>2</td> 							        <td>Final Student Data File (Complete)</td>
+								    <td><script> convertDateToLocalDate('Fri Jan 31 08:10:29 EST 2020', 'mmm d, yyyy')</script>Jan 31, 2020</td>
+									<td><a href="/mt/reports/pdf/downloadFile.htm?path=RU9DMTIyMDE5Ui8xMjE5LzIyNy85MTAwMDAvMjI3OTEwX0VPQzEyMjAxOVJfMTIxOV9GX1NUQUFSX0VPQ19SUFRHXzIwMjAwMTI3MDIyNzQwNDY5LnR4dA"><span class="sprite icn actions txt" title="Download File" aria-label="Download File"></span></a></td>
+						</tr>
+											</tbody><tbody>
+							<tr>
+							        <td>3</td> 							        <td>Student Data File (Complete)</td>
+								    <td><script> convertDateToLocalDate('Wed Jan 15 16:05:00 EST 2020', 'mmm d, yyyy')</script>Jan 15, 2020</td>
+									<td><a href="/mt/reports/pdf/downloadFile.htm?path=RU9DMTIyMDE5Ui8xMjE5LzIyNy85MTAwMDAvMjI3OTEwX0VPQzEyMjAxOVJfMTIxOV9JX1NUQUFSX0VPQ19SUFRHXzIwMjAwMTA5MDQ0NTM0MDMxLmNzdg"><span class="sprite icn actions csv" title="Download File" aria-label="Download File"></span></a></td>
+						</tr>
+											</tbody><tbody>
+							<tr>
+							        <td>4</td> 							        <td>Student Data File (Complete)</td>
+								    <td><script> convertDateToLocalDate('Wed Jan 15 16:05:00 EST 2020', 'mmm d, yyyy')</script>Jan 15, 2020</td>
+									<td><a href="/mt/reports/pdf/downloadFile.htm?path=RU9DMTIyMDE5Ui8xMjE5LzIyNy85MTAwMDAvMjI3OTEwX0VPQzEyMjAxOVJfMTIxOV9JX1NUQUFSX0VPQ19SUFRHXzIwMjAwMTA4MTEzNDQxODQ4LnR4dA"><span class="sprite icn actions txt" title="Download File" aria-label="Download File"></span></a></td>
+						</tr>
+									</tbody>
+				</table>

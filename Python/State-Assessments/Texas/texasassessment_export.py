@@ -77,12 +77,14 @@ with open('secrets.json','r') as f:
           #element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='subReports']/li[6]/a")))
           #element.click();
 
+          # Step 1. 
           # Click on Results Access Link
           # Results XPATH = //*[@id='subReports']/li[5]/a
           element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='subReports']/li[5]/a")))
           element.click();
           time.sleep(5)
 
+          # Step 2. 
           # Need a Function to Go through and Click the Drop Down Menu and Select Each Score
           # Click on Reporting Admin Drop Down Menu
           # Reporting Admin Drop Down Menu XPATH = //*[@id='reportingAdminCode']
@@ -90,6 +92,7 @@ with open('secrets.json','r') as f:
           element.click();
           time.sleep(5)
 
+          # Step 3. 
           # List out Available Indicies, Index ID, & Index Values 
           # Choose First Index 
           # Index First XPath = //*[@id='reportingAdminCode']/option[2]
@@ -97,6 +100,7 @@ with open('secrets.json','r') as f:
           element.click();
           time.sleep(3)
 
+          # Step 4. 
           # List out available Report Indicies, Report Types, & Report Values
           # Click on Report and Select First Index
           # First Click Drop Down XPATH = //*[@id='reportTypeSelected']
@@ -105,12 +109,14 @@ with open('secrets.json','r') as f:
           element.click();
           time.sleep(3)
 
+          # Step 5. 
           # Click on Search Button
           # Search Button XPATH = //*[@id='fetchCountsSearchBtn']
           element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='fetchCountsSearchBtn']")))
           element.click();
           time.sleep(5)
 
+          # Step 6. 
           # Parse Results and Count How Many Are Available
           # List Out Links for Download
           # Download Final Student Data File (Complete) XPATH = //*[@id='resultsTable']/tbody[2]/tr/td[4]/a
