@@ -1,0 +1,616 @@
+Name                                                                                                     
+----                                                                                                     
+Office 16 Click-to-Run Extensibility Component                                                           
+Office 16 Click-to-Run Localization Component                                                            
+Office 16 Click-to-Run Licensing Component                                                               
+Microsoft Visio Viewer 2016                                                                              
+SQL Server 2017 Integration Services Scale Out Management Portal                                         
+crystalreports.dataaccess.driver.com-4.0-en-32                                                           
+Microsoft .NET Framework 4.5.1 Multi-Targeting Pack                                                      
+Python 3.6.6 Test Suite (64-bit symbols)                                                                 
+foundation.bcm.cpp-4.0-core-32                                                                           
+Intel(R) Management Engine Components                                                                    
+connectivity.connectionserver.drivers.mysql.odbc.config-4.0-core-nu                                      
+Python 3.8.0 Tcl/Tk Support (64-bit)                                                                     
+ClassLinkAgent 6.9                                                                                       
+Microsoft .NET Framework 4.5.2 Multi-Targeting Pack (ENU)                                                
+olap.analysis.implementation.cpp.activex-4.0-core-32                                                     
+connectivity.connectionserver.drivers.jdbc.core.config-4.0-en-nu                                         
+crystalreports.dataaccess.driver.jdbc-4.0-core-32                                                        
+connectivity.connectionserver.drivers.sybase.ctlib.config-4.0-core-nu                                    
+SQL Server 2017 Shared Management Objects Extensions                                                     
+Intel(R) Management Engine Components                                                                    
+platform.library.common.authentication.peoplesoft-4.0-core-32                                            
+crystalreports.cpp.exporting.u2fpdf-4.0-en-32                                                            
+crystalreports.cpp.printcontrol-4.0-en-32                                                                
+crystalreports.dataaccess.driver.query-4.0-en-32                                                         
+platform.sdk.boe.com-4.0-en-32                                                                           
+connectivity.connectionserver.drivers.teradata.jdbc-4.0-en-nu                                            
+shared.tp.aurora.poco-4.0-core-32                                                                        
+shared.tp.aurora.ooc.java-4.0-core-nu                                                                    
+foundation.tracelog.java-4.0-core-nu                                                                     
+WMI Exporter                                                                                             
+Microsoft Visual Studio 2015 Shell (Isolated) Resources                                                  
+Microsoft .NET Framework 4.6.1 SDK                                                                       
+olap.analysis.implementation.cpp.sofa-4.0-core-32                                                        
+connectivity.connectionserver.drivers.teradata.odbc.config-4.0-en-nu                                     
+Microsoft Visual Studio 2015 XAML Designer - ENU                                                         
+crystalreports.dataaccess.driver.sforce-4.0-en-32                                                        
+tp.xpp3.classes-1.1.3.8-core-nu                                                                          
+tp.apache.xalan.java.classes-2.5.2-core-nu                                                               
+setup.engine.sharedregistry-4.0-core-32                                                                  
+SQL Server 2017 Common Files                                                                             
+crystalreports.dataaccess.driver.adoplus-4.0-en-32                                                       
+Microsoft .NET Core 1.0.1 - Host (x64)                                                                   
+crystalreports.dataaccess.share.registry-4.0-core-nu                                                     
+VS JIT Debugger                                                                                          
+Microsoft Web Deploy 4.0                                                                                 
+connectivity.foundation.cpp-4.0-core-32                                                                  
+Microsoft .NET Framework 4.5 Multi-Targeting Pack                                                        
+Python 3.8.0 Development Libraries (64-bit)                                                              
+Microsoft Visual Studio Team Foundation Server 2017 Update 9 Office Integration Language Pack (x64) - ENU
+SQL Server Management Studio for Reporting Services                                                      
+platform.library.common.authentication.jdedwards-4.0-core-32                                             
+crystalreports.cpp.exporting.u2dmapi-4.0-en-32                                                           
+platform.sdk.boe.java.pbds-4.0-core-nu                                                                   
+connectivity.connectionserver.drivers.jdbc.core-4.0-core-nu                                              
+crystalreports.cpp.exporting.u2dapp-4.0-en-32                                                            
+SQL Server 2017 Batch Parser                                                                             
+tools.boe.wstk-4.0-core-32                                                                               
+Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40660                                               
+SSMS Post Install Tasks                                                                                  
+crystalreports.cpp.exporting.u2dmapi-4.0-core-32                                                         
+crystalreports.cpp.businessview.sdk-4.0-en-32                                                            
+Microsoft Build Tools 14.0 (x86)                                                                         
+vcpp_crt.redist.clickonce                                                                                
+crystalreports.dataaccess.driver.siebel-4.0-core-32                                                      
+Dell Command | Update for Windows 10                                                                     
+platform.sdk.boe.java.bundles-4.0-core-nu                                                                
+connectivity.connectionserver.drivers.informix.odbc-4.0-core-32                                          
+tp.apache.log4j.classes-1.2.6_sap.1-core-nu                                                              
+connectivity.connectionserver.drivers.teradata.jdbc-4.0-core-nu                                          
+connectivity.connectionserver.drivers.netezza.odbc-4.0-core-32                                           
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219                                              
+Python 3.8.0 Add to Path (64-bit)                                                                        
+platform.sdk.boe.java.peoplesoft-4.0-core-nu                                                             
+connectivity.connectionserver.drivers.netezza.odbc.config-4.0-en-nu                                      
+connectivity.connectionserver.helpers.cpp-4.0-core-32                                                    
+connectivity.boe.connectsrv.client.http.cpp-4.0-core-32                                                  
+crystalreports.cpp.exporting.u2fxls-4.0-en-32                                                            
+shared.tp.aurora.simba.sfdc.odbc-4.0-core-32                                                             
+crystalreports.dataaccess.driver.java-4.0-core-nu                                                        
+SQL Server 2017 Shared Management Objects Extensions                                                     
+foundation.javalibs.bundle-4.0-core-nu                                                                   
+crystalreports.cpp.exporting.u2ftext-4.0-en-32                                                           
+Microsoft SQL Server 2017 Setup (English)                                                                
+tp.apache.xerces.java.classes-2.6.2-core-nu                                                              
+repoaccess.cdztools-4.0-core-32                                                                          
+crystalreports.dataaccess.driver.access-4.0-core-32                                                      
+cvom.java-4.0-core-nu                                                                                    
+connectivity.connectionserver.tools.cscheck-4.0-core-32                                                  
+Microsoft .NET Framework 4.5.1 Multi-Targeting Pack (ENU)                                                
+Python 3.6.6 Core Interpreter (64-bit)                                                                   
+shared.tp.aurora.threedgraphics.pgsdk.cpp.runtime-4.0-en-32                                              
+connectivity.connectionserver.drivers.neoview.odbc.config-4.0-core-nu                                    
+shared.library.content-4.0-en-32                                                                         
+DiagnosticsHub_CollectionService                                                                         
+crystalreports.dataaccess.driver.wic-4.0-en-32                                                           
+64 Bit HP CIO Components Installer                                                                       
+connectivity.connectionserver.drivers.teradata.odbc-4.0-core-32                                          
+Microsoft Visual C++ 2019 X64 Minimum Runtime - 14.23.27820                                              
+Maxx Audio Installer (x64)                                                                               
+SQL Server 2017 Client Tools Extensions                                                                  
+crystalreports.dataaccess.querybuilder-4.0-en-32                                                         
+platform.sdk.boe.java.sap-4.0-core-nu                                                                    
+connectivity.boe.ccis.cpp-4.0-core-32                                                                    
+crystalreports.cpp.erom-4.0-en-32                                                                        
+tp.sun-1.1-core-nu                                                                                       
+crystalreports.cpp.share-4.0-core-32                                                                     
+Microsoft Visual C++ 2013 x86 Debug Runtime - 12.0.21005                                                 
+crystalreports.partner.shared.java.siebel-4.0-core-nu                                                    
+tools.i18n4j-4.0-core-nu                                                                                 
+platform.sdk.boe.com.slplugins.binfiles-4.0-core-32                                                      
+shared.tp.aurora.curl.cpp-4.0-core-32                                                                    
+Visual Studio 2015 Prerequisites - ENU Language Pack                                                     
+crystalreports.cpp.registrywrapper-4.0-core-32                                                           
+repoaccess.async_scheduling-4.0-en-32                                                                    
+SQL Server 2017 DMF                                                                                      
+SAP Crystal Reports runtime engine for .NET Framework (32-bit)                                           
+platform.sdk.boe.com-4.0-core-32                                                                         
+tp.rsa.crypto.java.classes-4.1-core-nu                                                                   
+vs_minshellmsi                                                                                           
+repoaccess.repoaccess_plugins_webi.binfiles-4.0-core-32                                                  
+crystalreports.partner.shared.cpp-4.0-en-32                                                              
+crystalreports.dataaccess.driver.ado-4.0-core-32                                                         
+SQL Server 2017 Integration Services Scale Out Management Portal                                         
+tp.apache.xbean-2.1.0-core-nu                                                                            
+foundation.tracelog.java.classes-4.0-core-nu                                                             
+Microsoft Visual Studio Services Hub                                                                     
+tp.apache.xerces.cpp-2.7.0-core-32                                                                       
+repoaccess.container.java-4.0-core-nu                                                                    
+crystalreports.dataaccess.driver.btrieve-4.0-en-32                                                       
+repoaccess.container-4.0-core-32                                                                         
+tp.apache.xalan.java.boe-2.5.2-core-nu                                                                   
+tp.ibm.icu.java-3.8.1-core-nu                                                                            
+connectivity.connectionserver.drivers.informix.odbc.config-4.0-en-nu                                     
+Microsoft SQL Server 2017 T-SQL Language Service                                                         
+tp.apache.log4j.boe-1.2.6_sap.1-core-nu                                                                  
+connectivity.connectionserver.drivers.mysql.jdbc-4.0-core-nu                                             
+crystalreports.cpp.ras.bv-4.0-en-32                                                                      
+Intel® Optane™ Pinning Explorer Extensions                                                               
+crystalreports.dataaccess.share-4.0-en-32                                                                
+vs_FileTracker_Singleton                                                                                 
+crystalreports.cpp.exporting.u2fhtml-4.0-en-32                                                           
+tp.apache.cxf.license-2.3.8-core-nu                                                                      
+Microsoft MPI (7.1.12437.25)                                                                             
+tp.eclipse.aspectj-1.6.5-core-nu                                                                         
+Microsoft ASP.NET Core Module for IIS Express                                                            
+Microsoft ASP.NET MVC 2                                                                                  
+product.crystalreports.eula-4.0-core-32                                                                  
+shared.tp.aurora.apache.axis2.bundle-4.0-core-nu                                                         
+Python 3.6.6 Standard Library (64-bit symbols)                                                           
+connectivity.connectionserver.tools.cscheck-4.0-en-32                                                    
+connectivity.connectionserver.drivers.mysql.odbc.config-4.0-en-nu                                        
+crystalreports.dataaccess.driver.filesystem-4.0-core-32                                                  
+connectivity.connectionserver.drivers.sybase.ctlib-4.0-core-32                                           
+SQL Server 2017 Shared Management Objects                                                                
+crystalreports.rptpubwiz.cpp-4.0-en-32                                                                   
+crystalreports.dataaccess.share-4.0-core-32                                                              
+Intel(R) Chipset Device Software                                                                         
+Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.23.27820                                              
+crystalreports.dataaccess.driver.db2-4.0-en-32                                                           
+Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.40660                                            
+crystalreports.cpp.exporting.u2dnotes-4.0-core-32                                                        
+vs_communitymsires                                                                                       
+Microsoft Visual Studio Tools for Applications 2015 Language Support Finalizer                           
+vs_clickoncebootstrappermsi                                                                              
+IIS 10.0 Express                                                                                         
+platform.services.ras21.clientsdk_shared_bundle-4.0-core-nu                                              
+crystalreports.cpp.charthelp-4.0-en-32                                                                   
+Microsoft Visual Studio Setup Configuration                                                              
+connectivity.connectionserver.drivers.netezza.jdbc-4.0-core-nu                                           
+SQL Server Management Studio for Analysis Services                                                       
+tp.rosette-4.2.1-core-32                                                                                 
+                                                                                                         
+tp.rsa.crypto.java-4.1-core-nu                                                                           
+SQL Server 2017 Database Engine Shared                                                                   
+crystalreports.cpp.saptoolbar-4.0-core-32                                                                
+informationengine.qt.drivers.mysql.jdbc-4.0-core-nu                                                      
+platform.sdk.boe.com.core-4.0-core-32                                                                    
+foundation.javalibs.classes-4.0-core-nu                                                                  
+Microsoft System CLR Types for SQL Server 2017                                                           
+Python 3.8.0 Standard Library (64-bit)                                                                   
+platform.sdk.boe.com.slplugins.pinfiles-4.0-core-nu                                                      
+ESET Management Agent                                                                                    
+crystalreports.dataaccess.driver.psenterprise-4.0-core-32                                                
+Microsoft Visual Studio 2015 Shell (Minimum) Interop Assemblies                                          
+Java SE Development Kit 8 Update 231 (64-bit)                                                            
+crystalreports.cpp.runtimeshare-4.0-core-32                                                              
+tp.sun.boe-1.1-core-nu                                                                                   
+shared.tp.aurora.sap.ncs-4.0-core-32                                                                     
+crystalreports.boe.sdkplugins.java.crlov-4.0-core-nu                                                     
+SQL Server Management Studio                                                                             
+Intel(R) Trusted Connect Service Client x86                                                              
+Intel(R) Trusted Connect Service Client x64                                                              
+crystalreports.cpp.exporting.u2ddisk-4.0-en-32                                                           
+VS Script Debugging Common                                                                               
+tp.utexasaustin.hoard-3.7.1-core-32                                                                      
+MySQL Connector/ODBC 5.3                                                                                 
+crystalreports.dataaccess.driver.jdbc-4.0-en-32                                                          
+crystalreports.cpp.filedialog-4.0-core-32                                                                
+Microsoft R Client                                                                                       
+shared.tp.aurora.ooc.java.boe-4.0-core-nu                                                                
+Windows Phone SDK 8.0 Assemblies for Visual Studio 2017                                                  
+UpdateAssistant                                                                                          
+crystalreports.cpp.exporting.u2dvim-4.0-core-32                                                          
+SAP Crystal Reports runtime engine for .NET Framework (64-bit)                                           
+Microsoft Visual C++ 2015 x64 Debug Runtime - 14.0.23026                                                 
+Active Directory Authentication Library for SQL Server                                                   
+crystalreports.cpp.businessview.sdk-4.0-core-32                                                          
+crystalreports.dataaccess.driver.p2sevt-4.0-en-32                                                        
+Microsoft System CLR Types for SQL Server 2014                                                           
+vs_clickoncesigntoolmsi                                                                                  
+crystalreports.dataaccess.driver.sap-4.0-en-32                                                           
+crystalreports.cpp.printcontrol-4.0-core-32                                                              
+Microsoft Visual Studio 2015 Shell (Minimum)                                                             
+informationengine.qt.drivers.neoview.odbc.config-4.0-core-nu                                             
+Intel(R) ME UninstallLegacy                                                                              
+tp.apache.abdera.license-1.1.2-core-nu                                                                   
+vs_clickoncebootstrappermsires                                                                           
+crystalreports.cpp.exporting.u2fsepv-4.0-core-32                                                         
+crystalreports.cpp.exporting.u2fodbc-4.0-en-32                                                           
+tp.apache.abdera.bundle.biprs-1.1.2-core-nu                                                              
+crystalreports.dataaccess.driver.javabeans-4.0-core-32                                                   
+Microsoft Analysis Services OLE DB Provider                                                              
+crystalreports.cpp.keycode.defn-4.0-core-nu                                                              
+tp.netegrity.siteminder.cpp.smagent-6.0-core-32                                                          
+SQL Server 2017 Connection Info                                                                          
+informationengine.qt.drivers.teradata.jdbc-4.0-core-nu                                                   
+platform.sdk.boe.com.instrumentation-4.0-core-nu                                                         
+crystalreports.cpp.designer-4.0-en-32                                                                    
+Python 3.8.0 Executables (64-bit)                                                                        
+crystalreports.cpp.exporting.u2fpdf-4.0-core-32                                                          
+SQL Server 2017 SQL Diagnostics                                                                          
+shared.library.keycode.licmgr-4.0-en-32                                                                  
+tp.sap.ljs.passport-0.8.0-core-nu                                                                        
+shared.tp.aurora.threedgraphics.pgsdk.cpp.chartsupport-4.0-core-nu                                       
+platform.sdk.boe.java.oracle-4.0-core-nu                                                                 
+Python 3.6.6 Test Suite (64-bit)                                                                         
+crystalreports.dataaccess.driver.p2bbde-4.0-core-32                                                      
+repoaccess.bo_storage-4.0-core-32                                                                        
+crystalreports.cpp.exporting.u2frec-4.0-en-32                                                            
+Microsoft Visual Studio 2015 Shell (Minimum) Resources                                                   
+tp.xpp3.bundle-1.1.3.8-core-nu                                                                           
+ Tools for .Net 3.5                                                                                      
+tp.ibm.icu.cpp-4.2.1-core-32                                                                             
+vs_minshellmsires                                                                                        
+product.shared.langpackreg-4.0-core-nu                                                                   
+tp.pkware.cpp-1.0-core-32                                                                                
+crystalreports.cpp.exporting.u2dpost-4.0-en-32                                                           
+Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161                                           
+crystalreports.cpp.parameterprompt-4.0-en-32                                                             
+platform.sdk.boe.java.boe-4.0-core-nu                                                                    
+Adobe Acrobat 2017                                                                                       
+Adobe Refresh Manager                                                                                    
+Adobe Acrobat Reader DC                                                                                  
+Python 3.6.6 Utility Scripts (64-bit)                                                                    
+cvom.java-4.0-en-nu                                                                                      
+Vagrant                                                                                                  
+crystalreports.sdk.java.sdkcommon-4.0-core-nu                                                            
+Browser for SQL Server 2017                                                                              
+shared.library.cxlib.cxlib-4.0-core-32                                                                   
+crystalreports.cpp.exporting.u2frtf-4.0-en-32                                                            
+Microsoft Azure Libraries for .NET – v2.9                                                                
+tp.gzip-1.2.3-core-32                                                                                    
+shared.tp.aurora.sap.nwrfc-4.0-core-32                                                                   
+shared.tp.aurora.apache.axis2-4.0-core-nu                                                                
+crystalreports.webreporting.common-4.0-core-nu                                                           
+crystalreports.dataaccess.driver.p2slog-4.0-en-32                                                        
+crystalreports.cpp.ras.bv-4.0-core-32                                                                    
+shared.tp.aurora.openssl-4.0-core-32                                                                     
+crystalreports.dataaccess.driver.btrieve-4.0-core-32                                                     
+crystalreports.partner.shared.cpp.pvlmapping-4.0-core-32                                                 
+crystalreports.cpp.exporting.expmod-4.0-core-32                                                          
+Microsoft Build Tools Language Resources 14.0 (amd64)                                                    
+crystalreports.cpp.parameterprompt-4.0-core-32                                                           
+connectivity.connectionserver.drivers.informix.odbc.config-4.0-core-nu                                   
+platform.library.common.authentication.sap-4.0-core-32                                                   
+tp.apache.xerces.java-2.6.2-core-nu                                                                      
+ESET Endpoint Antivirus                                                                                  
+vs_filehandler_amd64                                                                                     
+crystalreports.cpp.exporting.u2fcr-4.0-core-32                                                           
+crystalreports.dataaccess.driver.sforce-4.0-core-32                                                      
+tp.apache.commons.java-3.1-core-nu                                                                       
+Microsoft Visual Studio Team Foundation Server 2017 Update 9 Office Integration (x64)                    
+connectivity.connectionserver.drivers.jdbc.core.config-4.0-core-nu                                       
+Microsoft .NET Core Host - 2.1.8 (x64)                                                                   
+crystalreports.dataaccess.driver.p2dbase-4.0-core-32                                                     
+IntelliTraceProfilerProxy                                                                                
+Microsoft Visual Studio Tools for Applications 2015 x64 Hosting Support                                  
+SQL Server 2017 Management Studio Extensions                                                             
+crystalreports.cpp.cractivexviewer-4.0-en-32                                                             
+Python 3.6.6 Development Libraries (64-bit)                                                              
+Qualcomm Atheros Setup                                                                                   
+Microsoft SQL Server 2012 Command Line Utilities                                                         
+crystalreports.cpp.exporting.u2dapp-4.0-core-32                                                          
+crystalreports.webreporting.common-4.0-en-nu                                                             
+crystalreports.dataaccess.driver.p2slog-4.0-core-32                                                      
+platform.services.ras21.clientsdk.java-4.0-core-nu                                                       
+tp.apache.cxf.bundle.biprs-2.3.8-core-nu                                                                 
+tp.sap.rfcsdku-70-core-32                                                                                
+foundation.tracelog.cpp-4.0-core-32                                                                      
+Required Runtimes                                                                                        
+crystalreports.dataaccess.driver.query-4.0-core-32                                                       
+platform.sdk.boe.java.siebel-4.0-core-nu                                                                 
+tp.netscape.ldap.cpp-6.0.5-core-32                                                                       
+platform.library.common-4.0-core-32                                                                      
+Microsoft VC++ redistributables repacked.                                                                
+Microsoft .NET Core 1.0.1 - Runtime (x64)                                                                
+Microsoft .NET Framework 4.6 Targeting Pack                                                              
+Dell Command | Power Manager                                                                             
+Microsoft Azure Storage Emulator - v5.7                                                                  
+crystalreports.dataaccess.driver.jde-4.0-core-32                                                         
+Microsoft NetStandard SDK                                                                                
+tp.apache.log4j.bundle-1.2.6_sap.1-core-nu                                                               
+Python 3.6.6 Documentation (64-bit)                                                                      
+crystalreports.crystalcommon.cpp.crlang-4.0-core-32                                                      
+crystalreports.cpp.exporting.u2fodbc-4.0-core-32                                                         
+tp.shared.pvlocale.pvlocale-4.0-core-32                                                                  
+foundation.bcm.java.classes-4.0-core-nu                                                                  
+Roslyn Language Services - x86                                                                           
+Microsoft .NET Framework Cumulative Intellisense Pack for Visual Studio (ENU)                            
+crystalreports.cpp.exporting.u2fsepv-4.0-en-32                                                           
+Microsoft Visual C++ 2013 x64 Debug Runtime - 12.0.21005                                                 
+Microsoft System CLR Types for SQL Server vNext CTP1.6                                                   
+Crystal Offline Viewer (English)                                                                         
+crystalreports.dataaccess.driver.p2soutlk-4.0-core-32                                                    
+connectivity.connectionserver.drivers.netezza.jdbc-4.0-en-nu                                             
+Microsoft Build Tools Language Resources 14.0 (x86)                                                      
+crystalreports.cpp.help-4.0-en-32                                                                        
+shared.tp.aurora.ooc.java.bundle-4.0-core-nu                                                             
+platform.sdk.boe.java-4.0-core-nu                                                                        
+Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40660                                            
+icecap_collection_neutral                                                                                
+crystalreports.cpp.exporting.u2dvim-4.0-en-32                                                            
+tp.rsa.crypto-6.3-core-32                                                                                
+foundation.bcm.java-4.0-core-nu                                                                          
+Microsoft ASP.NET Core Module V2 for IIS Express                                                         
+connectivity.connectionserver.drivers.netezza.odbc.config-4.0-core-nu                                    
+crystalreports.partner.shared.java.jde-4.0-core-nu                                                       
+IntelliTraceProfilerProxy                                                                                
+Microsoft SQL Server Data-Tier Application Framework (x86)                                               
+SQL Server 2017 Management Studio Extensions                                                             
+tp.azalea-5.5-core-32                                                                                    
+repoaccess.cdztools.java-4.0-core-nu                                                                     
+crystalreports.cpp.filedialog-4.0-en-32                                                                  
+connectivity.boe.connectsrv.client.httpxir3.cpp-4.0-core-32                                              
+tp.apache.commons.java.classes-3.1-core-nu                                                               
+Microsoft .NET Framework 4 Multi-Targeting Pack                                                          
+platform.library.common.authentication.oracle-4.0-core-32                                                
+Microsoft System CLR Types for SQL Server vNext CTP1.6                                                   
+crystalreports.cpp.cslib-4.0-core-32                                                                     
+shared.tp.aurora.ooc.cpp-4.0-core-32                                                                     
+Microsoft Visual C++ 2015 x86 Debug Runtime - 14.0.23026                                                 
+crystalreports.cpp.exporting.u2fxml2-4.0-core-32                                                         
+TypeScript SDK                                                                                           
+shared.tp.aurora.threedgraphics.pgsdk.cpp.runtime-4.0-core-32                                            
+crystalreports.dataaccess.driver.wic-4.0-core-32                                                         
+SQL Server 2017 Common Files                                                                             
+connectivity.connectionserver.core.helpers.cpp-4.0-core-32                                               
+tp.rsa.crypto.cpp-3.2.1.2-core-32                                                                        
+tp.microsoft.office.stdole-11.0-core-32                                                                  
+tp.eclipse.aspectj.classes-1.6.5-core-nu                                                                 
+Microsoft Azure Authoring Tools - v2.9.6                                                                 
+crystalreports.cpp.share.registry-4.0-core-32                                                            
+shared.library.keycode.decoder.cpp-4.0-core-32                                                           
+vs_communitymsi                                                                                          
+Asmedia USB Host Controller Driver                                                                       
+tp.apache.log4j.nteventlogappender-1.2.6_sap.1-core-32                                                   
+informationengine.qt.drivers.teradata.odbc.config-4.0-core-nu                                            
+platform.library.common.authentication.siebel-4.0-core-32                                                
+Dell SupportAssist                                                                                       
+Microsoft TestPlatform SDK Local Feed                                                                    
+Microsoft .NET Framework 4.5.2 Multi-Targeting Pack                                                      
+crystalreports.dataaccess.driver.olap-4.0-en-32                                                          
+Intel(R) Rapid Storage Technology                                                                        
+Python 3.6.6 Standard Library (64-bit)                                                                   
+shared.tp.aurora.apache.rampart-4.0-core-nu                                                              
+tp.xpp3-1.1.3.8-core-nu                                                                                  
+crystalreports.crystalcommon.dotnet-4.0-core-32                                                          
+connectivity.connectionserver.drivers.mysql.jdbc-4.0-en-nu                                               
+informationengine.qt.drivers.sybase.ctlib.config-4.0-core-nu                                             
+                                                                                                         
+VS Immersive Activate Helper                                                                             
+Microsoft Azure PowerShell - April 2018                                                                  
+vs_filehandler_x86                                                                                       
+ClickOnce Bootstrapper Package for Microsoft .NET Framework                                              
+Microsoft SQL Server 2017 Policies                                                                       
+Microsoft VSS Writer for SQL Server 2017                                                                 
+Microsoft .NET Framework 4.6.1 Targeting Pack                                                            
+crystalreports.cpp.help-4.0-core-32                                                                      
+Microsoft Visual C++ 2019 X86 Additional Runtime - 14.23.27820                                           
+crystalreports.boe.sdkplugins.java-4.0-en-nu                                                             
+Microsoft ASP.NET Diagnostic Pack for Visual Studio                                                      
+Microsoft SQL Server 2017 RsFx Driver                                                                    
+crystalreports.dataaccess.driver.informix-4.0-en-32                                                      
+Python 3.6.6 Core Interpreter (64-bit symbols)                                                           
+tools.boe.wstk.java-4.0-core-nu                                                                          
+Google Update Helper                                                                                     
+platform.client.java.helper.supportability-4.0-core-nu                                                   
+informationengine.qt.drivers.netezza.odbc.config-4.0-core-nu                                             
+GlobalProtect                                                                                            
+SQL Server 2017 Shared Management Objects                                                                
+Microsoft Visual Studio 2015 XAML Designer                                                               
+platform.sdk.boe.java.jdedwards-4.0-core-nu                                                              
+tp.apache.xalan.java-2.5.2-core-nu                                                                       
+Microsoft SQL Server 2016 LocalDB                                                                        
+tp.apache.xerces.cpp-2.1.0-core-32                                                                       
+icecap_collection_x64                                                                                    
+platform.library.common.instrumentation-4.0-core-nu                                                      
+Prey Anti-Theft                                                                                          
+crystalreports.dataaccess.driver.p2bbde-4.0-en-32                                                        
+tp.azalea.fonts-5.5-core-nu                                                                              
+Python 3.8.0 Utility Scripts (64-bit)                                                                    
+tp.sap.ljs.passport.boe-0.8.0-core-nu                                                                    
+tp.sun.classes-1.1-core-nu                                                                               
+crystalreports.cpp.exporting.u2fcr-4.0-en-32                                                             
+tp.apache.log4j-1.2.6_sap.1-core-nu                                                                      
+informationengine.qt.drivers.netezza.jdbc-4.0-core-nu                                                    
+Microsoft Help Viewer 2.2                                                                                
+informationengine.qt.drivers.mysql.odbc.config-4.0-core-nu                                               
+crystalreports.cpp.cractivexviewer-4.0-core-32                                                           
+product.crystalreports.actions-4.0-core-32                                                               
+Python 3.8.0 Documentation (64-bit)                                                                      
+icecap_collectionresourcesx64                                                                            
+SQL Server 2017 Common Files                                                                             
+Teams Machine-Wide Installer                                                                             
+crystalreports.cpp.exporting.u2frec-4.0-core-32                                                          
+SQL Server 2017 Database Engine Services                                                                 
+foundation.bcm.java.boe-4.0-core-nu                                                                      
+Microsoft .NET Core Runtime - 2.1.8 (x64)                                                                
+Python 3.6.6 Tcl/Tk Support (64-bit)                                                                     
+SQL Server 2017 Database Engine Services                                                                 
+Microsoft Portable Library Multi-Targeting Pack Language Pack - enu                                      
+crystalreports.cpp.exporting.u2dpost-4.0-core-32                                                         
+platform.sdk.boe.java.pbds_full-4.0-core-nu                                                              
+crystalreports.designers.java.launcher-4.0-core-32                                                       
+cvom.java.ui_helpers-4.0-core-nu                                                                         
+crystalreports.crystalcommon.cpp.crlogger-4.0-core-32                                                    
+crystalreports.dataaccess.driver.odbc-4.0-en-32                                                          
+Microsoft Visual Studio Tools for Applications 2015 Language Support - ENU Language Pack                 
+Microsoft .NET Core 1.0.1 - SDK 1.0.0 Preview 2-003133 (x64)                                             
+Microsoft Visual C++ 2019 X64 Additional Runtime - 14.23.27820                                           
+platform.sdk.boe.java.classes-4.0-core-nu                                                                
+tp.cup-0.11-core-nu                                                                                      
+platform.library.common.authentication.jdedwards.java-4.0-core-nu                                        
+Microsoft ASP.NET Core 2.1.8 Shared Framework (x64)                                                      
+Python 3.8.0 Test Suite (64-bit)                                                                         
+Python 3.6.6 Executables (64-bit)                                                                        
+Microsoft Build Tools 14.0 (amd64)                                                                       
+crystalreports.dataaccess.driver.javabeans-4.0-en-32                                                     
+crystalreports.dataaccess.driver.sap-4.0-core-32                                                         
+crystalreports.dataaccess.driver.oracle-4.0-en-32                                                        
+tp.pervasive.db.btrieve-3.0-core-32                                                                      
+crystalreports.dataaccess.driver.odbc-4.0-core-32                                                        
+crystalreports.dataaccess.driver.adodotnetinterop-4.0-core-32                                            
+tp.apache.commons.java.boe-3.1-core-nu                                                                   
+shared.tp.aurora.libssh2.cpp-4.0-core-32                                                                 
+Roslyn Language Services - x86                                                                           
+foundation.javalibs-4.0-core-nu                                                                          
+crystalreports.cpp.exporting.u2fwordw-4.0-core-32                                                        
+foundation.locale_fallback.cpp-4.0-core-32                                                               
+repoaccess.cdztools.oldregistry-4.0-en-32                                                                
+Intel(R) Management Engine Driver                                                                        
+tp.microsoft.mssdk-10.0-core-32                                                                          
+Microsoft ASP.NET Web Tools Packages 15.0 - ENU                                                          
+tp.apache.derby.boe-10.2.2.0-core-nu                                                                     
+crystalreports.dataaccess.driver.p2sevt-4.0-core-32                                                      
+vs_devenvmsi                                                                                             
+connectivity.connectionserver.drivers.sybase.ctlib.config-4.0-en-nu                                      
+crystalreports.dataaccess.driver.db2-4.0-core-32                                                         
+shared.tp.aurora.ooc.java.classes-4.0-core-nu                                                            
+Visual Studio 2015 Prerequisites                                                                         
+tp.ibm.icu.cpp-3.0.1-core-32                                                                             
+Microsoft Visual C++ 2005 Redistributable                                                                
+Microsoft ODBC Driver 13 for SQL Server                                                                  
+VS WCF Debugging                                                                                         
+crystalreports.dataaccess.driver.p2dbase-4.0-en-32                                                       
+foundation.bcm.java.bundle-4.0-core-nu                                                                   
+platform.library.common.authentication.jdedwards-4.0-en-32                                               
+foundation.javalibs.boe-4.0-core-nu                                                                      
+foundation.tracelog.java.boe-4.0-core-nu                                                                 
+crystalreports.cpp.exporting.u2ftext-4.0-core-32                                                         
+platform.library.common.authentication.siebel-4.0-en-32                                                  
+crystalreports.cpp.exporting.u2fxml2-4.0-en-32                                                           
+shared.tp.aurora.sun.jre-4.0-core-32                                                                     
+crystalreports.dataaccess.driver.informix-4.0-core-32                                                    
+SQL Server 2017 XEvent                                                                                   
+shared.tp.aurora.threedgraphics.pgsdk.cpp-4.0-en-32                                                      
+crystalreports.boe.sdkplugins.java-4.0-core-nu                                                           
+tp.apache.xalan.cpp-1.10.0-core-32                                                                       
+Python 3.6.6 Executables (64-bit symbols)                                                                
+crystalreports.cpp.exporting.u2frdef-4.0-core-32                                                         
+crystalreports.rptpubwiz.cpp.help-4.0-core-32                                                            
+repoaccess.cdztools.oldregistry-4.0-core-32                                                              
+SQL Server Management Studio                                                                             
+crystalreports.dataaccess.driver.universe-4.0-en-32                                                      
+Microsoft AS OLE DB Provider for SQL Server 2016                                                         
+crystalreports.cpp.exporting.u2frtf-4.0-core-32                                                          
+shared.tp.aurora.threedgraphics.pgsdk.cpp-4.0-core-32                                                    
+crystalreports.dataaccess.driver.sybase-4.0-core-32                                                      
+crystalreports.rptpubwiz.cpp-4.0-core-32                                                                 
+shared.library.keycode.defn-4.0-core-32                                                                  
+crystalreports.cpp.exporting.u2fxml-4.0-core-32                                                          
+Oracle VM VirtualBox 6.0.16                                                                              
+Microsoft Portable Library Multi-Targeting Pack                                                          
+tp.apache.derby.classes-10.2.2.0-core-nu                                                                 
+crystalreports.cpp.share-4.0-en-32                                                                       
+tp.libxml2-2.0-core-32                                                                                   
+Microsoft Azure Mobile App SDK V3.0                                                                      
+Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.40660                                               
+Microsoft Analysis Services OLE DB Provider                                                              
+crystalreports.cpp.saptoolbar-4.0-en-32                                                                  
+Intel(R) Management Engine Components                                                                    
+connectivity.connectionserver.drivers.odbc.core.config-4.0-en-nu                                         
+Python 3.6.6 pip Bootstrap (64-bit)                                                                      
+vs_minshellinteropmsi                                                                                    
+vs_tipsmsi                                                                                               
+SQL Server 2017 Common Files                                                                             
+tp.mapinfo.mapx.cpp-3.5-core-32                                                                          
+connectivity.connectionserver.drivers.neoview.odbc.config-4.0-en-nu                                      
+crystalreports.dataaccess.driver.universe-4.0-core-32                                                    
+crystalreports.cpp.businessview.clients.crw-4.0-en-32                                                    
+SQL Server 2017 Client Tools Extensions                                                                  
+platform.library.common.authentication.siebel.java-4.0-core-nu                                           
+Python 3.8.0 Core Interpreter (64-bit)                                                                   
+Microsoft .NET Framework 4.5.1 SDK                                                                       
+shared.library.keycode.licmgr-4.0-core-32                                                                
+Python Launcher                                                                                          
+crystalreports.cpp.runtimeshare-4.0-en-32                                                                
+crystalreports.dataaccess.driver.sybase-4.0-en-32                                                        
+crystalreports.dataaccess.driver.access-4.0-en-32                                                        
+SQL Server 2017 XEvent                                                                                   
+crystalreports.cpp.erom-4.0-core-32                                                                      
+crystalreports.boe.sdkplugins.java.managedreports-4.0-core-nu                                            
+tp.apache.xerces.java.boe-2.6.2-core-nu                                                                  
+tools.astools.cpp-4.0-core-32                                                                            
+crystalreports.cpp.exporting.u2fxls-4.0-core-32                                                          
+Microsoft Visual Studio Tools for Applications 2015 Finalizer                                            
+connectivity.connectionserver.drivers.mysql.odbc-4.0-core-32                                             
+crystalreports.cpp.exporting.u2fhtml-4.0-core-32                                                         
+crystalreports.cpp.exporting.u2fxml-4.0-en-32                                                            
+crystalreports.cpp.exporting.u2fwordw-4.0-en-32                                                          
+vs_minshellmsi                                                                                           
+vs_SQLClickOnceBootstrappermsi                                                                           
+crystalreports.dataaccess.driver.com-4.0-core-32                                                         
+crystalreports.dataaccess.driver.fielddef-4.0-core-32                                                    
+Update for Windows 10 for x64-based Systems (KB4023057)                                                  
+informationengine.qt.drivers.informix.odbc.config-4.0-core-nu                                            
+connectivity.connectionserver.tools.cscheck.config-4.0-core-nu                                           
+crystalreports.dataaccess.driver.fielddef-4.0-en-32                                                      
+SQL Server 2017 Database Engine Shared                                                                   
+repoaccess.repo_proxy.cpp-4.0-core-32                                                                    
+Microsoft VC++ redistributables repacked.                                                                
+Microsoft Visual Studio 2015 Shell (Isolated)                                                            
+connectivity.connectionserver.drivers.odbc.core.config-4.0-core-nu                                       
+Microsoft Visual Studio Tools for Applications 2015 x86 Hosting Support                                  
+Microsoft .NET Core SDK 2.1.504 (x64)                                                                    
+tp.rsa.crypto.java.boe-4.1-core-nu                                                                       
+crystalreports.cpp.exporting.u2frdef-4.0-en-32                                                           
+tp.eclipse.aspectj.boe-1.6.5-core-nu                                                                     
+Microsoft .NET Core 1.0.1 - Host FX Resolver (x64)                                                       
+crystalreports.dataaccess.driver.xml-4.0-en-32                                                           
+crystalreports.dataaccess.driver.ebs-4.0-core-32                                                         
+Microsoft .NET Core Host FX Resolver - 2.1.8 (x64)                                                       
+crystalreports.cpp.businessview.clients.crw-4.0-core-32                                                  
+crystalreports.dataaccess.driver.filesystem-4.0-en-32                                                    
+crystalreports.cpp.designer-4.0-core-32                                                                  
+crystalreports.dataaccess.driver.act-4.0-en-32                                                           
+crystalreports.dataaccess.driver.xml-4.0-core-32                                                         
+Python 3.6.6 Tcl/Tk Support (64-bit symbols)                                                             
+crystalreports.sdk.java.repository-4.0-core-nu                                                           
+Microsoft SQL Server 2017 T-SQL Language Service                                                         
+crystalreports.dataaccess.driver.oracle-4.0-core-32                                                      
+product.shared.installiverse.reg-4.0-core-nu                                                             
+shared.library.content-4.0-core-32                                                                       
+Microsoft Azure Compute Emulator - v2.9.6                                                                
+Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.17                                             
+product.crystalreports.arp.icon-4.0-core-32                                                              
+Microsoft Visual Studio Tools for Applications 2015 Language Support                                     
+repoaccess.container.admintool.java-4.0-core-nu                                                          
+vs_BlendMsi                                                                                              
+crystalreports.cpp.exporting.u2dnotes-4.0-en-32                                                          
+connectivity.connectionserver.drivers.teradata.odbc.config-4.0-core-nu                                   
+crystalreports.partner.shared.cpp-4.0-core-32                                                            
+repoaccess.cdztools.jshell-4.0-core-nu                                                                   
+crystalreports.dataaccess.driver.p2sexchange-4.0-core-32                                                 
+crystalreports.dataaccess.querybuilder-4.0-core-32                                                       
+crystalreports.dataaccess.driver.act-4.0-core-32                                                         
+SQL Server 2017 Connection Info                                                                          
+Entity Framework 6.2.0 Tools  for Visual Studio 2017                                                     
+tp.sourceforge.libpng.cpp-1.0.30-core-32                                                                 
+crystalreports.dataaccess.driver.adoplus-4.0-core-32                                                     
+Microsoft SQL Server 2014 Management Objects                                                             
+Microsoft Windows Communication Foundation Diagnostic Pack for x86                                       
+crystalreports.cpp.exporting.u2ddisk-4.0-core-32                                                         
+Thunderbolt™ Software                                                                                    
+shared.tp.aurora.datadirect.cpp-4.0-core-32                                                              
+VMware Workstation                                                                                       
+crystalreports.dataaccess.driver.p2soutlk-4.0-en-32                                                      
+crystalreports.dataaccess.driver.olap-4.0-core-32                                                        
+connectivity.connectionserver.drivers.neoview.odbc-4.0-core-32                                           
+tp.sap.ljs.passport.classes-0.8.0-core-nu                                                                
+product.crystalreports.langpackproperty-4.0-en-nu                                                        
+SQL Server 2017 DMF                                                                                      
+repoaccess.async_scheduling-4.0-core-32                                                                  
+Node.js                                                                                                  
+icecap_collectionresources                                                                               
+tools.srvtools-4.0-core-32                                                                               
+tp.xpp3.boe-1.1.3.8-core-nu                                                                              
+tp.apache.derby-10.2.2.0-core-nu                                                                         
+connectivity.connectionserver.drivers.odbc.core-4.0-core-32                                              
+crystalreports.dataaccess.driver.p2sexchange-4.0-en-32                                                   
+Microsoft SQL Server 2012 Native Client                                                                  
+platform.services.ras21.clientsdk.java.pbd-4.0-core-nu                                                   
+Python 3.8.0 pip Bootstrap (64-bit)                                                                      
+crystalreports.dataaccess.driver.ado-4.0-en-32                                                           
