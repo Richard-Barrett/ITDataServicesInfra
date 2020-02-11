@@ -1,7 +1,7 @@
 ## Welcome to ITDataServicesInfra Python
 
 ## What is Python
-![Image](https://www.google.com/imgres?imgurl=https%3A%2F%2Fgetcodify.com%2Fwp-content%2Fuploads%2F2016%2F10%2FPython_logo-600x335.jpg&imgrefurl=https%3A%2F%2Fgetcodify.com%2Fintegration-sendinblue-traansactional-email-using-python%2F&tbnid=cDiHye73kFOIVM&vet=12ahUKEwjF87TokMrnAhXNaKwKHVY8CqEQMyhHegUIARDHAQ..i&docid=7qVxCayzbeZf-M&w=600&h=335&q=python&hl=en&safe=active&ved=2ahUKEwjF87TokMrnAhXNaKwKHVY8CqEQMyhHegUIARDHAQ)
+![Image](https://www.python.org/)
 
 ## What are Modules
 
