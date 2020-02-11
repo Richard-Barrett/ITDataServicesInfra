@@ -44,6 +44,9 @@ The repository has [Directories](https://github.com/Richard-Barrett/ITDataServic
 If you want to use this repository in a virtualized environment, you can also look at the **Virtualization** directory within the repository. In this directory you can virtualize a lot of the processes as well as spin up infrastructure quick and easy. Please refer to your local policies within your entity and/or organization before continuing down this path. Basically you can containerize, or you can spin up a cloud on-premises option.
 
 ## Installing Ruby
+
+![Image](https://chocolatey.org/content/packageimages/ruby.2.7.0.1.svg)
+
 Ruby is a great dev tool. If you want to install it for your Virtual Machine, Local, or Cloud Based Instance. Please follow the following steps and guidelines to install Ruby. 
 1. [Linux Ubuntu](https://www.thoughtco.com/instal-ruby-on-linux-2908370)
 - **`sudo apt-get install ruby-full`**
@@ -53,6 +56,9 @@ Ruby is a great dev tool. If you want to install it for your Virtual Machine, Lo
 - **`brew install ruby`**
 
 ## Installing Python
+
+![Image](https://www.python.org/static/img/python-logo@2x.png)
+
 Python is the primary mode here in terms of interacting with all of the components. You definitely need to download it, furthermore if you are starting with Python you might want to know that 2020 is the deprecation timeframe for Python2.7 so we are using Python3.6 here. 
 1. [Linux Ubuntu](https://docs.python-guide.org/starting/install3/linux/)
 - **`sudo apt-get update`**
@@ -63,6 +69,9 @@ Python is the primary mode here in terms of interacting with all of the componen
 - **`brew install python`**
 
 ## Installing & Using Brew
+
+![Image](https://brew.sh/assets/img/homebrew-256x256.png)
+
 If you want a better experience with MacOS you can download the package manager for MacOS by following the link below and using the instructions to help you install and initialize Homebrew.
 1. [Brew The MacOS Package Manager](https://brew.sh/)
 2. [Brew Tutorials](https://www.datacamp.com/community/tutorials/homebrew-install-use)
@@ -72,6 +81,9 @@ If you want a better experience with MacOS you can download the package manager 
 - **`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`**
 
 ## Installing & Using Chocolatey
+
+![Image](https://chocolatey.org/content/images/logo_square.svg)
+
 If you want to use a package manager for **Windows 10** and **Windows Server** it is recommended that you use Chocolatey. You can install Chocolatey by making sure you fullfill the following requriements:
 - **Windows 7+ / Windows Server 2003+**
 - **PowerShell v2+ (Not PowerShell Core yet though)**
