@@ -58,7 +58,8 @@ redirect_url = 'https://www.accuplacer.org/api/home.html#/'
 reports_scheduler_url = 'https://www.accuplacer.org/api/home.html#/reportScheduler'
 custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 
-# WebDriver Path for System
+# Check for Version of Chrome
+
 # WebDriver Path for System
 if platform.system() == ('Windows'):
     browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
