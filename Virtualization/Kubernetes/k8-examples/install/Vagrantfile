@@ -1,0 +1,96 @@
+# Base copied from https://gist.github.com/rezroo/9ff580761a52fbff52ab463df2c8d0ba
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.require_version ">= 1.6.0"
+
+baseip="192.168.187"
+
+boxes = [
+    {
+        :name => "master",
+        :eth1 => "#{baseip}.#{10}",
+        :mem =>  "2048",
+        :cpu =>  "2"
+    },
+    {
+        :name => "node1",
+        :eth1 => "#{baseip}.#{11}",
+        :mem =>  "1024",
+        :cpu =>  "1"
+    },
+    {
+        :name => "node2",
+        :eth1 => "#{baseip}.#{12}",
+        :mem =>  "1024",
+        :cpu =>  "1"
+    }
+]
+
+numnodes=boxes.size
+username="ubuntu"
+
+#global script
+$global = <<SCRIPT
+
+#check for private key for vm-vm comm
+[ -f /vagrant/id_rsa ] || {
+  ssh-keygen -t rsa -f /vagrant/id_rsa -q -N '' -C k8s@master
+}
+
+#deploy key
+[ -f ${HOME}/.ssh/id_rsa ] || {
+    cp /vagrant/id_rsa ${HOME}/.ssh/id_rsa
+    chmod 0600 ${HOME}/.ssh/id_rsa
+}
+
+#allow ssh passwordless
+grep 'k8s@master' ~/.ssh/authorized_keys &>/dev/null || {
+  cat /vagrant/id_rsa.pub >> ~/.ssh/authorized_keys
+  chmod 0600 ~/.ssh/authorized_keys
+}
+
+#exclude node* from host checking
+cat > ~/.ssh/config <<EOF
+Host node*
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
+EOF
+
+#populate /etc/hosts
+for x in {11..#{10+numnodes-1}}; do
+  grep #{baseip}.${x} /etc/hosts &>/dev/null || {
+      echo #{baseip}.${x} node${x##?} | sudo tee -a /etc/hosts &>/dev/null
+  }
+done
+
+#end script
+SCRIPT
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.provision "shell", privileged: false, inline: $global
+  prefix="node"
+  #node box
+  boxes.each do |opts|
+    vm_name = opts[:name]
+    config.vm.define vm_name do |node|
+      node.vm.hostname = vm_name
+      ip=opts[:eth1]
+      node.vm.network "private_network", ip: ip
+      config.vm.provider "vmware_fusion" do |v|
+          v.vmx["memsize"] = opts[:mem]
+          v.vmx["numvcpus"] = opts[:cpu]
+      end
+      config.vm.provider "virtualbox" do |v|
+          v.customize ["modifyvm", :id, "--memory", opts[:mem]]
+          v.customize ["modifyvm", :id, "--cpus", opts[:cpu]]
+      end
+      if vm_name == "master" then
+        node.vm.provision "shell",
+        inline: "git clone --recursive https://bitbucket.org/mirantis-training/k8s-examples.git"
+        node.vm.post_up_message = "Use \"vagrant ssh master\" to login"
+      end
+    end
+  end
+end
