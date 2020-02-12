@@ -57,17 +57,19 @@ Git gives you the capability to see what changes were made, check the status, ma
 Git has the ability to ignore certain files for commit. 
 What this means is that certain files that have certain extensions defined within the **`.gitignore`** file will not be added into the repository. They do not exist within the repository. These files instead exist on the local machine. If they are defined within the **`.gitignore`** file, then they are never staged to be commited to the repository. Certain file extensions have been specifically ignored for this repository with security in mind. The following files are set to be ignored:
 
-- **`.csv`**
-- **`.doc`**
-- **`.gpg`**
-- **`.json`**
-- **`.pdf`**
-- **`.rpt`**
-- **`.txt`**
-- **`.xlsm`**
-- **`.xlsx`**
-- **`.xltm`**
-- **`.xltx`**
+- **`.csv`** - Comma Separated Value Files
+- **`.doc`** - Word Procesing Document
+- **`.gpg`** - GNU Privacy Guard **(GnuPG)** File 
+- **`.json`** - JavaScript Object Notation File
+- **`.pdf`** - Portable Document Format Files
+- **`.rpt`** - Crystal Report Files
+- **`.txt`** - Text Files
+- **`.xlsm`** - Microsoft Exel File Format
+- **`.xlsx`** - Microsoft Exel File Format
+- **`.xltm`** - Microsoft Exel File Format
+- **`.xltx`** - Microsoft Exel File Format
+
+Other file extensions will be added overtime and will be defined within the **`.gitignore`** file. 
 
 Microsoft Office files for Documents and/or Spreadsheets containing sensitive information are set to be ignored by default. 
 Text Files and JSON files are also set to be ignored for security reasons if you are using flatfiles on your local to passoff credentials. Furthermore, if you are implementing GPG Encryption for files containing secret and secure information, all such files are also set to be ignored on the system. In **Git** you should never store and/or commit information that is secure and needs to be hidden. This repository also assumes that you understand how to work with **Git** and accepts no liability for any security breaches incurred. 
