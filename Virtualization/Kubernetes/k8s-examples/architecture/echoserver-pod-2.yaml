@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echoserver
+spec:
+  nodeSelector:             # Define a node selector for the pod
+    apptype: echoserver     # that selects nodes with the specified label and value
+  containers:
+  - name: echoserver
+    image: gcr.io/google_containers/echoserver:1.4
+    ports:
+    - containerPort: 8080
