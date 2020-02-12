@@ -1,0 +1,14 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: web-cache
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: web-cache
+    spec:
+      containers:
+      - name: redis-server
+        image: redis:3.2-alpine
