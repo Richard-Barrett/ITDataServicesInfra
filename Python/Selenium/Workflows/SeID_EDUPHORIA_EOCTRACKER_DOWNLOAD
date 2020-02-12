@@ -1,0 +1,161 @@
+{
+  "id": "f1d48ed2-a346-436a-b9fc-371de85fc39a",
+  "version": "2.0",
+  "name": "Download EOC Tracker",
+  "url": "https://eduphoria.del-valle.k12.tx.us",
+  "tests": [{
+    "id": "fa7c7276-56bd-4ff3-9ee3-628383dfb78a",
+    "name": "EOC TestTracker Download",
+    "commands": [{
+      "id": "68da80a9-f778-4ed8-bc8b-706ff630ec9e",
+      "comment": "",
+      "command": "open",
+      "target": "/authdistrict/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9eb57b44-cfcb-406c-b995-8244aaad66b8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1293x1050",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f146e26-947f-4ac8-a3a0-ff859a86fa88",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-email",
+      "targets": [
+        ["id=login-email", "id"],
+        ["name=email", "name"],
+        ["css=#login-email", "css:finder"],
+        ["xpath=//input[@id='login-email']", "xpath:attributes"],
+        ["xpath=//form[@id='mainForm']/fieldset/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "username"
+    }, {
+      "id": "bcc8e4c1-6f79-4698-9720-f68903f89f6e",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-password",
+      "targets": [
+        ["id=login-password", "id"],
+        ["name=password", "name"],
+        ["css=#login-password", "css:finder"],
+        ["xpath=//input[@id='login-password']", "xpath:attributes"],
+        ["xpath=//form[@id='mainForm']/fieldset[2]/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/input", "xpath:position"]
+      ],
+      "value": "password"
+    }, {
+      "id": "5813cbfe-708d-4907-b409-1cb8f02ca98f",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign-in",
+      "targets": [
+        ["id=sign-in", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign-in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign-in']", "xpath:attributes"],
+        ["xpath=//form[@id='mainForm']/footer/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[4]", "xpath:href"],
+        ["xpath=//form/footer/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "562aaea2-7ec4-4804-9c36-2c17cebda0b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Aware > .appName",
+      "targets": [
+        ["css=.Aware > .appName", "css:finder"],
+        ["xpath=//form[@id='mainForm']/section[2]/ul/li/div", "xpath:idRelative"],
+        ["xpath=//section[2]/ul/li/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "541347f3-2724-43a1-a35f-7594d8db2e16",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=1",
+      "targets": [
+        ["index=1"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4bc4c74-24e5-4ad3-ac99-7f53024d1d9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#TreeView1_item_17_cell td",
+      "targets": [
+        ["css=#TreeView1_item_17_cell td", "css:finder"],
+        ["xpath=//div[@id='TreeView1_item_17_cell']/nobr/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//table[5]/tbody/tr/td[2]/div/nobr/table/tbody/tr/td", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f2af410-c95d-48fe-b0e4-df186e4ce980",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd07ffd5-6dac-4475-8092-09e993b36d1c",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=4",
+      "targets": [
+        ["index=4"]
+      ],
+      "value": ""
+    }, {
+      "id": "3362e08e-11f2-41f8-8642-d9206e92bf8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container:nth-child(4) .col-xs-4:nth-child(4) .img-responsive",
+      "targets": [
+        ["css=.container:nth-child(4) .col-xs-4:nth-child(4) .img-responsive", "css:finder"],
+        ["xpath=//img[@title='EOC Test Tracker']", "xpath:img"],
+        ["xpath=//form[@id='form1']/div[2]/div/div/div[4]/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[4]/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2753286-f2d0-47ab-9b7c-aaeb618868c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=imgPrint",
+      "targets": [
+        ["id=imgPrint", "id"],
+        ["css=#imgPrint", "css:finder"],
+        ["xpath=//img[@id='imgPrint']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div/img", "xpath:idRelative"],
+        ["xpath=//div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f68640a-e10a-4167-adfe-dc5e527e3258",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "96832956-348f-477d-aca1-78cac89b3fbe",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fa7c7276-56bd-4ff3-9ee3-628383dfb78a"]
+  }],
+  "urls": ["https://eduphoria.del-valle.k12.tx.us/"],
+  "plugins": []
+}
