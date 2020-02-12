@@ -9,8 +9,8 @@
 
 import pandas as pd
 
-df1 = pd.read_excel('C:\Users\richard.barrett\Documents\Projects\Automation\Find Missing EOC Student Data\EOCTestTrackerReport (2).xls')
-df2 = pd.read_excel('C:\Users\richard.barrett\Documents\Projects\Automation\Find Missing EOC Student Data\SKR3437679V0A1Y4N1321699.xlsx')
+df1 = pd.read_excel('EOCTestTrackerReport (2).xls')
+df2 = pd.read_excel('SKR3437679V0A1Y4N1321699.xlsx')
 
 difference = df1[df1!=df2]
-print difference
+print(difference)
