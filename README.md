@@ -70,7 +70,6 @@ What this means is that certain files that have certain extensions defined withi
 - **`.xltx`** - Microsoft Exel File Format
 
 Other file extensions will be added overtime and will be defined within the **`.gitignore`** file. 
-
 Microsoft Office files for Documents and/or Spreadsheets containing sensitive information are set to be ignored by default. 
 Text Files and JSON files are also set to be ignored for security reasons if you are using flatfiles on your local to passoff credentials. Furthermore, if you are implementing GPG Encryption for files containing secret and secure information, all such files are also set to be ignored on the system. In **Git** you should never store and/or commit information that is secure and needs to be hidden. This repository also assumes that you understand how to work with **Git** and accepts no liability for any security breaches incurred. 
 
