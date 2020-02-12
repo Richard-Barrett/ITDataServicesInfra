@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: echoserver
+  labels:
+    name: echoserver
+spec:
+  template:
+    metadata:
+      labels:
+        name: echoserver
+    spec:
+      containers:
+      - name: echoserver
+        image: gcr.io/google_containers/echoserver:1.4
+        ports:
+        - containerPort: 8080
