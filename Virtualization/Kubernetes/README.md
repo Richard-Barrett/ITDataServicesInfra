@@ -1,3 +1,3 @@
 ## Kubedeploy
 
-## k8-samples
+## k8-examples
