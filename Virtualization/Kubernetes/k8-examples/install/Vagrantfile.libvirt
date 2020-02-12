@@ -1,0 +1,121 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.require_version ">= 1.6.0"
+
+baseip="192.168.50"
+
+vms = {
+  master: {
+    is_master: "1",
+    cpus: 2,
+    ram: 4096,
+    ips: [
+      "#{baseip}.#{10}",   # access
+    ]
+  },
+  node1: {
+    cpus: 2,
+    ram: 4096,
+    ips: [
+      "#{baseip}.#{11}",   # access
+    ]
+  },
+  node2: {
+    cpus: 2,
+    ram: 4096,
+    ips: [
+      "#{baseip}.#{12}",   # access
+    ]
+  }
+}
+
+numnodes=vms.size
+domain = "k8s.local"
+
+$global = <<SCRIPT
+#check for private key for vm-vm comm
+[ -f /vagrant/id_rsa ] || {
+  ssh-keygen -t rsa -f /vagrant/id_rsa -q -N '' -C k8s@master
+}
+
+#deploy key
+[ -f ${HOME}/.ssh/id_rsa ] || {
+    cp /vagrant/id_rsa ${HOME}/.ssh/id_rsa
+    chmod 0600 ${HOME}/.ssh/id_rsa
+}
+
+#allow ssh passwordless
+grep 'k8s@master' ~/.ssh/authorized_keys &>/dev/null || {
+  cat /vagrant/id_rsa.pub >> ~/.ssh/authorized_keys
+  chmod 0600 ~/.ssh/authorized_keys
+}
+
+#exclude node* from host checking
+cat > ~/.ssh/config <<EOF
+Host node*
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
+EOF
+
+#populate /etc/hosts
+for x in {11..#{10+numnodes-1}}; do
+  grep #{baseip}.${x} /etc/hosts &>/dev/null || {
+      echo #{baseip}.${x} node${x##?} | sudo tee -a /etc/hosts &>/dev/null
+  }
+done
+
+# enable serial console on the nodes
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl start serial-getty@ttyS0.service
+
+#K8s requires swap to be off
+sudo swapoff -a
+
+#Good practice
+sudo apt-get -y update
+
+#end script
+SCRIPT
+
+# RELEASE = "ubuntu/xenial64"
+RELEASE = "nrclark/xenial64-minimal-libvirt"
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = RELEASE
+  config.vm.box_url = "http://192.168.121.10/boxes/xenial64-minimal-libvirt/versions/1.1.1/providers/libvirt.box"
+  
+# config.vm.synced_folder "data/", "/srv/data"
+  config.vm.synced_folder ".", "/vagrant"
+  config.vm.provision "shell", privileged: false, inline: $global
+
+  vms.each do |vm_name, vm_body|
+    config.vm.define vm_name do |vm|
+      vm.vm.host_name = vm_name.to_s + "." + domain
+      vm_body[:ips].each do |ip|
+        vm.vm.network "private_network", :ip => ip
+      end
+
+      vm.vm.provider :libvirt do |vb|
+        vb.memory = vm_body[:ram]
+        vb.cpus = vm_body[:cpus]
+        vb.nested = true
+        vb.management_network_address = "10.254.254.0/24"
+      end
+
+      if vm_name == "master.k8s.local" then
+        node.vm.provision "shell",
+        inline: "git clone --recursive https://bitbucket.org/mirantis-training/k8s-examples.git"
+        node.vm.post_up_message = "Use \"vagrant ssh master\" to login"
+      end
+
+      config.vm.provision "file", source: "~/.ssh", destination: "/tmp"
+
+#     vm.vm.provision "shell", :path => "data/install-docker.sh"
+#     vm.vm.provision "shell", :path => "data/install-k8s.sh",
+#       :args => ["master", vm_body.fetch(:is_master, "0"), "ip", vm_body.fetch(:ips).at(0)]
+
+    end
+  end
+end
