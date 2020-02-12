@@ -30,9 +30,47 @@ For **Linux/Mac Users** please make sure that you make the directory **Git** and
 
 ## Using Git 
 
+You can add files to git within your terminal, while you are coding. 
+As you can imagine it makes life a lot easier. You can use whatever in-line text editor you want to use: Vim, Nano, Vi, etc.
+
+Make a change:
+- **`vim test`**
+
+Add All Changes for a Commit:
+- **`git add -A`**
+
+Commit All Changes Added:
+- **`git commit -a`**
+
+Make sure you put some note as to what the change is, otherwise there is no description and/or notes regarding what was changed.
+
+Review and/or Push the Change:
+- **`git review`**
+- **`git push`**
+
 ## Working with Git
 
+Git gives you the capability to see what changes were made, check the status, make branches to develop, checkout different branches, and look at what changes were added to specifc commits. 
+
 ## Understanding Git Security
+
+Git has the ability to ignore certain files for commit. 
+What this means is that certain files that have certain extensions defined within the **`.gitignore`** file will not be added into the repository. They do not exist within the repository. These files instead exist on the local machine. If they are defined within the **`.gitignore`** file, then they are never staged to be commited to the repository. Certain file extensions have been specifically ignored for this repository with security in mind. The following files are set to be ignored:
+
+- **`.csv`**
+- **`.doc`**
+- **`.gpg`**
+- **`.json`**
+- **`.pdf`**
+- **`.rpt`**
+- **`.txt`**
+- **`.xlsm`**
+- **`.xlsx`**
+- **`.xltm`**
+- **`.xltx`**
+
+Microsoft Office files for Documents and/or Spreadsheets containing sensitive information are set to be ignored by default. 
+Text Files and JSON files are also set to be ignored for security reasons if you are using flatfiles on your local to passoff credentials. Furthermore, if you are implementing GPG Encryption for files containing secret and secure information, all such files are also set to be ignored on the system. In **Git** you should never store and/or commit information that is secure and needs to be hidden. This repository also assumes that you understand how to work with **Git** and accepts no liability for any security breaches incurred. 
 
 ## Understanding the `.gitignore` File
 
