@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: echoserver
+  labels:
+    name: echoserver
+spec:
+  template:
+    metadata:
+      labels:
+        name: echoserver
+    spec:
+      tolerations:                              # Add these 3 lines to define a new toleration
+      - key: node-role.kubernetes.io/master     # The 'tolerations' key should be in the pod's spec
+        operator: Exists                        # With the same indentation as, for example, the 'containers' key
+      containers:
+      - name: echoserver
+        image: gcr.io/google_containers/echoserver:1.4
+        ports:
+        - containerPort: 8080
