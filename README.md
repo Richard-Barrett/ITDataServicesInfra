@@ -28,6 +28,14 @@ For **Linux/Mac Users** please make sure that you make the directory **Git** and
 2. For Serving and Storing the Repository on a Server/VM as the **Master Branch** Under the **Service_Account and/or Root User** for data interaction:
 - **`/srv/Git/ITDataServicesInfra/`**
 
+## Using Git 
+
+## Working with Git
+
+## Understanding Git Security
+
+## Understanding the `.gitignore` File
+
 ## Web Scraping
 Web scraping is a mean in which you can automate a lot of your data export and imports. What this means is that you can use the repository in the following manner to help aid you in this process. Please see the following image to understand how Web Scraping works in terms of the overall process flow. 
 
