@@ -16,15 +16,17 @@ GnuPGP can be installed on Linux, Mac, or Windows.
 If you are unable to use encryption that's fine, the code will still look and use the JSON file you specify with the directory. 
 If you wat to use a specific module you must have a **`secrets.gpg`** file within each working directory for you to automate processes and procedures on integrated platforms. 
 
-- **How to create secret**
-- 1. Download and install GPG 
-- 2. Make a secrets.json file using the following template
-- 3. Make a passwordless encryption key with gpg at 2048 or 4096 bit encryption
-- 4. Encrypt the secrets.json with a passwordless encryption key
+**How to create secret**
+1. Download and install GPG 
+2. Make a secrets.json file using the following template
+3. Make a passwordless encryption key with gpg at 2048 or 4096 bit encryption
+4. Encrypt the secrets.json with a passwordless encryption key
 - **`gpg --output secrets.json --encrypt secrets.json`**
-- 5. Remove the secrets.json file, if you are using encryption. 
+5. Remove the secrets.json file, if you are using encryption. 
+- **`rm secerets.json`**
 
 **NOTE SECRETS ARE EXPLICITLY IGNORED WITHIN THE REPO!!!**
+
 ## What are the Key Modules
 
 ## How is Security Managed
