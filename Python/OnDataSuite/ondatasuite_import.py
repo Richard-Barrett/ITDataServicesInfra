@@ -61,6 +61,7 @@ reports_scheduler_url = ''
 custom_reports_url = ''
 
 # Check for Version of Chrome
+              
 
 # WebDriver Path for System
 if platform.system() == ('Windows'):
@@ -75,7 +76,19 @@ else:
 # Parent URL
 browser.get("https://227910.ondatasuite.com/index.php/gate/login/")
 
+# Credentials NEEDS UNIT TEST
+username = browser.find_element_by_id("uname")
+password = browser.find_element_by_id("password")
+username.send_keys(config['user']['name'])
+password.send_keys(config['user']['password'])
 
+# Authentication submit.click()
+# For XPATH = //*[@id='submit1']
+element = WebDriverWait(browser, 20).until(
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='submit1']")))
+element.click();
+print("Logging into OnDataSuite!")
+              
 # Delete Unencrypted JSON File
 if os.path.exists("secrets_test.json"):
   os.remove("secrets_test.json")
