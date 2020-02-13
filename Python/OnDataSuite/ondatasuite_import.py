@@ -99,5 +99,5 @@ else:
   print("The download was successfull!")
 
               
-# Close Browser Sessio Gracefully              
+# Close Browser Session Gracefully              
 browser.quit()
