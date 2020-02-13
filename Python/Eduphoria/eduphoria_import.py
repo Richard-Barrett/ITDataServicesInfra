@@ -77,17 +77,17 @@ else:
 browser.get("https://eduphoria.del-valle.k12.tx.us/authdistrict/login")
 
 # Credentials NEEDS UNIT TEST
-username = browser.find_element_by_id("uname")
-password = browser.find_element_by_id("password")
+username = browser.find_element_by_id("login-name")
+password = browser.find_element_by_id("login-password")
 username.send_keys(config['user']['name'])
 password.send_keys(config['user']['password'])
 
 # Authentication submit.click()
-# For XPATH = //*[@id='submit1']
+# For XPATH = //*[@id='sign-in']
 element = WebDriverWait(browser, 20).until(
-        EC.element_to_be_clickable((By.XPATH, "//*[@id='submit1']")))
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='sign-in']")))
 element.click();
-print("Logging into OnDataSuite!")
+print("Logging into Eduphoria!")
 print("Authenticated")
 
 # Delete Unencrypted JSON File
