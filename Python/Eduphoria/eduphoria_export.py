@@ -87,7 +87,7 @@ password.send_keys(config['user']['password'])
 element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='sign-in']")))
 element.click();
-print("Logging into OnDataSuite!")
+print("Logging into Eduphoria!")
 print("Authenticated")
 
 # Delete Unencrypted JSON File
