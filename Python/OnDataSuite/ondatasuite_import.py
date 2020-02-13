@@ -29,7 +29,9 @@ decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg"
 if os.path.exists("secrets.gpg"):
       returned_value = subprocess.call(decrypt, shell=True)
 else:
-        print("The file does not exist")
+        print("The file does not exist!")
+        print("You should probably create a secret!"
+        print("gpg --output filename.gpg --encrypt filename.json")
             
 import json
 with open('secrets_test.json','r') as f:
@@ -72,3 +74,17 @@ else:
       
 # Parent URL
 browser.get("https://227910.ondatasuite.com/index.php/gate/login/")
+
+
+# Delete Unencrypted JSON File
+if os.path.exists("secrets_test.json"):
+  os.remove("secrets_test.json")
+  print("The file was removed and everything is clean!")
+elif:
+  print("The file does not exist")
+else:
+  print("The download was successfull!")
+
+              
+# Close Browser Sessio Gracefully              
+browser.quit()
