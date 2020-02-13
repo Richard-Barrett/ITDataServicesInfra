@@ -53,10 +53,10 @@ username = getpass.getuser()
 version = platform.version()
 
 # URL Variables 
-login_url = 'https://www.accuplacer.org/'
-redirect_url = 'https://www.accuplacer.org/api/home.html#/'
-reports_scheduler_url = 'https://www.accuplacer.org/api/home.html#/reportScheduler'
-custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
+login_url = ''
+redirect_url = ''
+reports_scheduler_url = ''
+custom_reports_url = ''
 
 # Check for Version of Chrome
 
@@ -66,7 +66,7 @@ if platform.system() == ('Windows'):
 elif platform.system() == ('Linux'):
     browser = webdriver.Chrome(executable_path='/home/rbarrett/Drivers/Google/Chrome/chromedriver_linux64/chromedriver')
 elif platform.system() == ('Darwin'):
-    browser = webdriver(executable_path='~/Drivers/Google/Chrome/chromedriver_mac64/chromedriver')
+    browser = webdriver.Chrome(executable_path='~/Drivers/Google/Chrome/chromedriver_mac64/chromedriver')
 else:
     print("Are you sure you have the Selenium Webdriver installed in the correct path?")
       
