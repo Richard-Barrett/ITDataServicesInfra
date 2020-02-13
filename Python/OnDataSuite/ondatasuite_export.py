@@ -90,8 +90,8 @@ element.click();
 print("Logging into OnDataSuite!")
               
 # Delete Unencrypted JSON File
-if os.path.exists("secrets_test.json"):
-  os.remove("secrets_test.json")
+if os.path.exists("secrets.json"):
+  os.remove("secrets.json")
   print("The file was removed and everything is clean!")
 elif:
   print("The file does not exist")
