@@ -24,7 +24,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from datetime import date
 
-decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
+decrypt = "gpg --output secrets.json --decrypt secrets.gpg" 
 
 if os.path.exists("secrets.gpg"):
       returned_value = subprocess.call(decrypt, shell=True)
@@ -34,7 +34,7 @@ else:
         print("gpg --output filename.gpg --encrypt filename.json")
             
 import json
-with open('secrets_test.json','r') as f:
+with open('secrets.json','r') as f:
       config = json.load(f)
 
 # Definitions
