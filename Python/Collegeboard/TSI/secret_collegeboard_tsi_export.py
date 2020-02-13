@@ -73,7 +73,7 @@ else:
 # Parent URL
 browser.get("https://www.accuplacer.org")
 
-# Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
+# Credentials NEEDS UNIT TEST
 username = browser.find_element_by_id("login")
 password = browser.find_element_by_id("password")
 username.send_keys(config['user']['name'])
