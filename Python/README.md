@@ -19,9 +19,17 @@ If you wat to use a specific module you must have a **`secrets.gpg`** file withi
 **How to Create A Secret**
 1. Download and install GPG 
 
-**Windows** 
+- **Linux**
 
-**`brew install gnupg4win`**
+**`sudo apt install gnupg`**
+
+- **Mac OS**
+
+**`brew install gnupg`**
+
+- **Windows** 
+
+**`choco install gnupg4win`**
 
 2. Make a secrets.json file using the following template
 ```
