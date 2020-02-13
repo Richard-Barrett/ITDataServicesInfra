@@ -1,4 +1,3 @@
-
 #!/bin/python
 # ===========================================================
 # Created By: Richard Barrett
@@ -56,7 +55,7 @@ username = getpass.getuser()
 version = platform.version()
 
 # URL Variables 
-login_url = ''
+login_url = 'https://eduphoria.del-valle.k12.tx.us/authdistrict/login'
 redirect_url = ''
 reports_scheduler_url = ''
 custom_reports_url = ''
@@ -75,7 +74,7 @@ else:
     print("Are you sure you have the Selenium Webdriver installed in the correct path?")
       
 # Parent URL
-browser.get("https://227910.ondatasuite.com/index.php/gate/login/")
+browser.get("https://eduphoria.del-valle.k12.tx.us/authdistrict/login")
 
 # Credentials NEEDS UNIT TEST
 username = browser.find_element_by_id("uname")
