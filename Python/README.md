@@ -17,6 +17,7 @@ If you are unable to use encryption that's fine, the code will still look and us
 If you wat to use a specific module you must have a **`secrets.gpg`** file within each working directory for you to automate processes and procedures on integrated platforms. 
 
 **How to Create A Secret**
+##
 1. Download and install GPG 
 
 - **Linux**
