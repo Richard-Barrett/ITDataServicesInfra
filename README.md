@@ -33,7 +33,19 @@ For **Linux/Mac Users** please make sure that you make the directory **Git** and
 You can add files to git within your terminal, while you are coding. 
 As you can imagine it makes life a lot easier. You can use whatever in-line text editor you want to use: Vim, Nano, Vi, etc.
 
-Make a change:
+If you want to see that status of you branch:
+- **`git status`**
+
+If you want to pull down any changes to your local repo:
+- **`git pull`**
+
+If you want to see a log of all commits
+- **`git log`**
+
+If you want to show the details of a particular commit within git log:
+- **`git show <commit_id>`**
+
+To Make a change:
 - **`vim test`**
 
 Add All Changes for a Commit:
@@ -45,8 +57,8 @@ Commit All Changes Added:
 Make sure you put some note as to what the change is, otherwise there is no description and/or notes regarding what was changed.
 
 Review and/or Push the Change:
-- **`git review`**
-- **`git push`**
+- **`git review`** - Optional if you are using Gerrit, Gitlab, Bitbucket, etc. for code review from peers.
+- **`git push`** - If you are the maintainer, you can push changes. 
 
 ## Working with Git
 
