@@ -30,7 +30,7 @@ if os.path.exists("secrets.gpg"):
       returned_value = subprocess.call(decrypt, shell=True)
 else:
         print("The file does not exist!")
-        print("You should probably create a secret!"
+        print("You should probably create a secret!")
         print("gpg --output filename.gpg --encrypt filename.json")
             
 import json
@@ -88,16 +88,16 @@ element = WebDriverWait(browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, "//*[@id='submit1']")))
 element.click();
 print("Logging into OnDataSuite!")
-              
+print("Authenticated")
+
 # Delete Unencrypted JSON File
 if os.path.exists("secrets.json"):
   os.remove("secrets.json")
   print("The file was removed and everything is clean!")
-elif:
-  print("The file does not exist")
 else:
-  print("The download was successfull!")
+  print("The file does not exist")
 
               
 # Close Browser Sessio Gracefully              
-browser.quit()
+print("The download was successfull!")
+#browser.quit()
