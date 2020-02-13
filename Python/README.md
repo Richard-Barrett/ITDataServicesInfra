@@ -18,7 +18,20 @@ If you wat to use a specific module you must have a **`secrets.gpg`** file withi
 
 **How to Create A Secret**
 1. Download and install GPG 
+**Windows**
+- **`brew install gnupg4win`**
+
 2. Make a secrets.json file using the following template
+```
+{
+  "user": {
+    "name": "yourname",
+    "password": "password"
+  }
+}
+
+#FILE SHOULD BE SAVED AS secrets.json and it will not be tracked. 
+```
 3. Make a passwordless encryption key with gpg at 2048 or 4096 bit encryption
 4. Encrypt the secrets.json with a passwordless encryption key
 
