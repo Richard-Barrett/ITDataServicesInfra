@@ -79,7 +79,84 @@ This means any system that has a directory within the **`~/Python`** directory w
 
 ## How is Security Managed
 
+Security is managed through the **`.gitignore`** file on the homepage of the **[ITDataServicesInfra](https://github.com/Richard-Barrett/ITDataServicesInfra)** repository. Furthermore, Secrets are explicity ignored. Scripts call the secrets from within a flatfile or **gpg** passwordless file that sits on server itself. This means that any file with a **`.gpg`**, **`.json`**, or **`.yaml`** extension are explicity ignored. You can store them within the Module directory used from each individual integration. 
+
 ## Working with Secrets in ITDataServicesInfra
+
+If you want to use **GnuGPG** you will need to create a **GPG Key** to create a key you will need to use the following method to create a key, and the desired encryption method of your choice. 
+
+1. Generate a Key
+- **`gpg --full-generate-key`**
+
+At this point you will go through a key creation process. 
+
+2. Choose RSA Key from the following prompt **Option 4**
+```
+PS C:\Users\richard.barrett\Git\ITDataServicesInfra\Python> gpg --full-generate-key
+gpg (GnuPG) 2.2.17; Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 4
+```
+
+3. Choose what type of keysize you want and hit enter:
+```
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+```
+
+4. Choose the expiration length or how long you want the key to be valid:
+```
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0)
+```
+
+If you choose (0) you will recieve a response for y/N. Enter y and click the Enter key on the keyboard.
+```
+Key does not expire at all
+Is this correct? (y/N)
+```
+
+5. Enter a Real name, which becomes the Key ID, valid email address, and a comment tag:
+```
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Passwordless
+
+Email address: user@test.com
+Comment: Test
+You selected this USER-ID:
+    "Passwordless (Test) <user@test.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit?
+```
+
+6. Enter **O** and hit enter for key generation
+
+7. Follow the prompt to generate a key:
+```
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+```
+
+**TO LIST OUT CURRENT KEYS AND MANAGE KEYS YOU CAN LIST THEM OUT IN THE FOLLOWING MANNER!!!**
+- **`gpg --list-secret-keys --keyid-format LONG`**
+
+For a complete turotial go here:
+**[Generating a New GPG Key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-gpg-key)**
 
 ## What is Selenium
 
