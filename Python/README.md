@@ -92,7 +92,7 @@ At this point you will go through a key creation process.
 
 2. Choose RSA Key from the following prompt **Option 4**
 ```
-PS C:\Users\richard.barrett\Git\ITDataServicesInfra\Python> gpg --full-generate-key
+PS C:\Users\username\Git\ITDataServicesInfra\Python> gpg --full-generate-key
 gpg (GnuPG) 2.2.17; Copyright (C) 2019 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
