@@ -61,6 +61,22 @@ If you wat to use a specific module you must have a **`secrets.gpg`** file withi
 
 ## What are the Key Modules
 
+All of the key modules are defined within **`/ITDataServidesInfra/Python/<program_directory>`**. 
+This means any system that has a directory within the **`~/Python`** directory within the **ITDataServicesInfra** repository is a module. Some of the key modules are listed below:
+
+- **[ACT](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/ACT)**
+- **[Analyses](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/Analyses)**
+- **[Cardonex](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/Cardonex)**
+- **[Colleboard](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/Collegeboard)**
+- **[Eduphoria](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/Eduphoria)**
+- **[Frontline](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/Frontline)**
+- **[OnDataSuite](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/OnDataSuite)**
+- **[SMTP](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/SMTP)**
+- **[Selenium](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/Selenium)**
+- **[Sharepoint](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/Sharepoint)**
+- **[Skyward](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/Skyward)**
+- **[State-Assessments](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/State-Assessments)** 
+
 ## How is Security Managed
 
 ## Working with Secrets in ITDataServicesInfra
