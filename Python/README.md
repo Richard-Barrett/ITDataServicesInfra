@@ -6,6 +6,11 @@
 
 ## What are Modules
 
+Python Modules are scripts that normally form one written whole script.
+As the script get longer, sometimes it is better to break up the script into specific components for the interactive compiler to call the subscripts that make the bigger whole. These are called modules. If you want to learn more about modules, you can click the link below to learn more about current implementations.
+
+- **[Python Modules](https://docs.python.org/3/tutorial/modules.html)**
+
 ## What are the Requirements
 
 Python is obviously a requirement, but a lot of the code is built in mind with security. 
