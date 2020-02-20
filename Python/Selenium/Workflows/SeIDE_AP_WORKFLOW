@@ -1,0 +1,220 @@
+{
+  "id": "a97bf10f-fd8d-4dd6-b294-ffaf130eec28",
+  "version": "2.0",
+  "name": "AP Scores Download SeIDE",
+  "url": "https://scores.collegeboard.org",
+  "tests": [{
+    "id": "5ef722d5-0213-4b93-bdc1-07186821bfc4",
+    "name": "Student AP File Download",
+    "commands": [{
+      "id": "3a9b5829-41b1-4193-a97b-61fcf5958cb8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2322c39-fb74-4bd9-b544-a65f77ec647f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eeb44444-7082-4551-af83-8c331ee54bc0",
+      "comment": "",
+      "command": "type",
+      "target": "id=userName",
+      "targets": [
+        ["id=userName", "id"],
+        ["name=username", "name"],
+        ["css=#userName", "css:finder"],
+        ["xpath=//input[@id='userName']", "xpath:attributes"],
+        ["xpath=//div[@id='cb-atlas-identity-1']/div/div[2]/div/div[2]/div/div/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "username"
+    }, {
+      "id": "cc0c0214-e52e-4fe2-8542-904a00769362",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='cb-atlas-identity-1']/div/div[2]/div/div[2]/div/div/div/div[2]/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "password"
+    }, {
+      "id": "f0de816f-439a-4398-b92c-fe4f75d90a68",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='cb-atlas-identity-1']/div/div[2]/div/div[2]/div/div/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0392355a-489a-4374-8bd7-b9afcdc85674",
+      "comment": "",
+      "command": "click",
+      "target": "id=selectOrg",
+      "targets": [
+        ["id=selectOrg", "id"],
+        ["css=#selectOrg", "css:finder"],
+        ["xpath=//select[@id='selectOrg']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "41a8b3bf-48c7-42e7-9a47-caf6c9f0e803",
+      "comment": "",
+      "command": "select",
+      "target": "id=selectOrg",
+      "targets": [],
+      "value": "label=Del Valle High School"
+    }, {
+      "id": "f8dab643-7713-493f-9826-41528bc3d6f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=selectOrg",
+      "targets": [
+        ["id=selectOrg", "id"],
+        ["css=#selectOrg", "css:finder"],
+        ["xpath=//select[@id='selectOrg']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0813a978-2ece-481e-b1e6-228ba740c1a6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d4bd7c6-4d22-4c6b-af61-13a6a08dff4a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Membership",
+      "targets": [
+        ["linkText=Membership", "linkText"],
+        ["css=.ioo9c4eGGDcU5XnL7eXMz:nth-child(2) li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membership')]", "xpath:link"],
+        ["xpath=//div[@id='cb-atlas-footer-1']/div[2]/div/div/div[2]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://membership.collegeboard.org/?navId=gf-mem')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Membership')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a8710e2-0406-4b98-a433-4be521d77d47",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Membership",
+      "targets": [
+        ["linkText=Membership", "linkText"],
+        ["css=.ioo9c4eGGDcU5XnL7eXMz:nth-child(2) li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membership')]", "xpath:link"],
+        ["xpath=//div[@id='cb-atlas-footer-1']/div[2]/div/div/div[2]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://membership.collegeboard.org/?navId=gf-mem')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Membership')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c184de9-1ff9-441f-aacd-6151423bc8d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.blue-color-button",
+      "targets": [
+        ["css=.blue-color-button", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/div[3]/div[2]/div/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2019')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0af63e6b-255b-4422-abca-5e7e0416b8f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.linkPointer > .padding-right",
+      "targets": [
+        ["css=.linkPointer > .padding-right", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/div[5]/div/ul/li/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//li/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Student Datafile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a329002-f681-4792-83f4-9a21041cf5e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) .btn-primary",
+      "targets": [
+        ["css=li:nth-child(1) .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='studentDataFileModal']/div/div/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Export Report')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6015",
+      "windowTimeout": 2000
+    }, {
+      "id": "db30a729-d9be-4f59-8cf9-d40eca03166b",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "256f5764-0474-4e50-bb74-903f0608fceb",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win6015}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69522802-91b3-4933-8e3f-ad57caa03057",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4b64eb0-14ad-4648-bd32-f6747daf43f7",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "407a5462-cd36-45f3-843a-42d6eeb381a2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5ef722d5-0213-4b93-bdc1-07186821bfc4"]
+  }],
+  "urls": ["https://scores.collegeboard.org/"],
+  "plugins": []
+}
