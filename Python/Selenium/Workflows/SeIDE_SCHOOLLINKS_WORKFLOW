@@ -1,0 +1,178 @@
+{
+  "id": "223a45bb-fae3-40f3-b420-487ddb50d6db",
+  "version": "2.0",
+  "name": "School Links Report Download",
+  "url": "https://app.schoolinks.com/login",
+  "tests": [{
+    "id": "603b240a-d46f-4fdc-9db7-8d3ac5390903",
+    "name": "Untitled",
+    "commands": [{
+      "id": "f9694656-9e8a-4699-85e0-d2f92cd98250",
+      "comment": "",
+      "command": "open",
+      "target": "https://app.schoolinks.com/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d243c80-1265-428c-b1bc-fd43b3402f3d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2003d3e0-3b25-4b46-a199-d68b26aea451",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_3WneA",
+      "targets": [
+        ["css=.\\_3WneA", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Log In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b72008fc-95a2-4ec7-b4f1-2e8ba5ea9cd6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.jss3317:nth-child(9) > .jss3325",
+      "targets": [
+        ["css=.jss3317:nth-child(9) > .jss3325", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/button[8]/span", "xpath:idRelative"],
+        ["xpath=//button[8]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "64556505-3b0c-42f3-8bd5-1133728aa9d7",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.\\_34nvO > .jss3325",
+      "targets": [
+        ["css=.\\_34nvO > .jss3325", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/button[8]/span", "xpath:idRelative"],
+        ["xpath=//button[8]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb222b25-855c-4729-a031-dc2cdb604f4e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(1) > .\\_3CPzo > div > div",
+      "targets": [
+        ["css=div:nth-child(1) > .\\_3CPzo > div > div", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a69fd5b-eb1c-4775-bf48-81241b47f3d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_3CPzo div:nth-child(2)",
+      "targets": [
+        ["css=.\\_3CPzo div:nth-child(2)", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0feed48f-abe2-43d4-a65e-ea2ac7a81ad5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_1KrQM > .jss5235",
+      "targets": [
+        ["css=.\\_1KrQM > .jss5235", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[4]/div[2]/div[2]/div/div[4]/button[5]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/button[5]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7d84add-5568-4226-97cd-54e15e29d2ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_2Vhe3 .jss5943",
+      "targets": [
+        ["css=.\\_2Vhe3 .jss5943", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "307ebf56-05ec-4bc5-a743-b151465390c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dX0qI",
+      "targets": [
+        ["css=.dX0qI", "css:finder"],
+        ["xpath=//div[@id='horizontalFilterDrawer']/div/div/div/div/div[2]/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'590 Students')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e55159e-9e53-4f99-a766-be49e1eda3d0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.jss6543:nth-child(4) .jss6506",
+      "targets": [
+        ["css=.jss6543:nth-child(4) .jss6506", "css:finder"],
+        ["xpath=(//input[@name='exportType'])[4]", "xpath:attributes"],
+        ["xpath=//label[4]/span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3c49c7a-81b0-4765-9220-ad73d74e1450",
+      "comment": "",
+      "command": "click",
+      "target": "css=.jss6591:nth-child(2)",
+      "targets": [
+        ["css=.jss6591:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Export Data')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c929970-a15f-426a-befe-88b5ed4b72d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d69XU",
+      "targets": [
+        ["css=.d69XU", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[4]/div[3]/table", "xpath:idRelative"],
+        ["xpath=//table", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53fa0734-2990-4e79-aa54-153d140e68a3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.L7pfG",
+      "targets": [
+        ["css=.L7pfG", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Course Catalog')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f3330a1-db9c-41f7-8c20-d1f7a409f946",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.L7pfG",
+      "targets": [
+        ["css=.L7pfG", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Course Catalog')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "09da31f4-270b-412d-a38e-6001f4ffe09c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["603b240a-d46f-4fdc-9db7-8d3ac5390903"]
+  }],
+  "urls": [],
+  "plugins": []
+}
