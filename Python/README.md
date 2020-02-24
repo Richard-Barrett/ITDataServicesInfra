@@ -190,8 +190,8 @@ Browser Automation is the act of running various tasks, or instances, to gather 
 
 - **[Documentation](http://www.biodesignautomation.org/browser-automation-defined.html)**
 
-## Reusable Code
-```
+## Reusable Code 
+```python
 import selenium
 import shutil
 import xlsxwriter
