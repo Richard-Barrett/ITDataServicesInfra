@@ -87,7 +87,7 @@ If you want to use **GnuGPG** you will need to create a **GPG Key** to create a 
 At this point you will go through a key creation process. 
 
 2. Choose RSA Key from the following prompt **Option 4**
-```
+```bash
 PS C:\Users\username\Git\ITDataServicesInfra\Python> gpg --full-generate-key
 gpg (GnuPG) 2.2.17; Copyright (C) 2019 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
@@ -102,13 +102,13 @@ Your selection? 4
 ```
 
 3. Choose what type of keysize you want and hit enter:
-```
+```bash
 RSA keys may be between 1024 and 4096 bits long.
 What keysize do you want? (2048)
 ```
 
 4. Choose the expiration length or how long you want the key to be valid:
-```
+```bash
 Please specify how long the key should be valid.
          0 = key does not expire
       <n>  = key expires in n days
@@ -119,13 +119,13 @@ Key is valid for? (0)
 ```
 
 If you choose (0) you will recieve a response for y/N. Enter y and click the Enter key on the keyboard.
-```
+```bash
 Key does not expire at all
 Is this correct? (y/N)
 ```
 
 5. Enter a Real name, which becomes the Key ID, valid email address, and a comment tag:
-```
+```bash
 GnuPG needs to construct a user ID to identify your key.
 
 Real name: Passwordless
@@ -141,7 +141,7 @@ Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit?
 6. Enter **O** and hit enter for key generation
 
 7. Follow the prompt to generate a key:
-```
+```bash
 We need to generate a lot of random bytes. It is a good idea to perform
 some other action (type on the keyboard, move the mouse, utilize the
 disks) during the prime generation; this gives the random number
