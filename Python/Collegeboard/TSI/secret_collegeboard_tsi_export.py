@@ -19,6 +19,7 @@ import platform
 import logging
 import time 
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
@@ -59,6 +60,10 @@ reports_scheduler_url = 'https://www.accuplacer.org/api/home.html#/reportSchedul
 custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 
 # Check for Version of Chrome
+
+# Options 
+options = Options()
+options.add_argument("--headless")
 
 # WebDriver Path for System
 if platform.system() == ('Windows'):
