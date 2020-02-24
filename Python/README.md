@@ -5,7 +5,6 @@
 ![Image](https://www.python.org/static/img/python-logo@2x.png)
 
 ## What are Modules
-
 Python Modules are scripts that normally form one written whole script.
 As the script get longer, sometimes it is better to break up the script into specific components for the interactive compiler to call the subscripts that make the bigger whole. These are called modules. If you want to learn more about modules, you can click the link below to learn more about current implementations.
 
@@ -60,7 +59,6 @@ If you wat to use a specific module you must have a **`secrets.gpg`** file withi
 **NOTE SECRETS ARE EXPLICITLY IGNORED WITHIN THE REPO!!!**
 
 ## What are the Key Modules
-
 All of the key modules are defined within **`/ITDataServidesInfra/Python/<program_directory>`**. 
 This means any system that has a directory within the **`~/Python`** directory within the **ITDataServicesInfra** repository is a module. Some of the key modules are listed below:
 
@@ -78,11 +76,9 @@ This means any system that has a directory within the **`~/Python`** directory w
 - **[State-Assessments](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Python/State-Assessments)** 
 
 ## How is Security Managed
-
 Security is managed through the **`.gitignore`** file on the homepage of the **[ITDataServicesInfra](https://github.com/Richard-Barrett/ITDataServicesInfra)** repository. Furthermore, Secrets are explicity ignored. Scripts call the secrets from within a flatfile or **gpg** passwordless file that sits on server itself. This means that any file with a **`.gpg`**, **`.json`**, or **`.yaml`** extension are explicity ignored. You can store them within the Module directory used from each individual integration. 
 
 ## Working with Secrets in ITDataServicesInfra
-
 If you want to use **GnuGPG** you will need to create a **GPG Key** to create a key you will need to use the following method to create a key, and the desired encryption method of your choice. 
 
 1. Generate a Key
@@ -159,16 +155,40 @@ For a complete turotial go here:
 **[Generating a New GPG Key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-gpg-key)**
 
 ## What is Selenium
+Selenium is a free (open source) automated testing suite for web applications across different browsers and platforms. 
+It is quite similar to HP Quick Test Pro (QTP now UFT) only that Selenium focuses on automating web-based applications. 
+Testing done using Selenium tool is usually referred as Selenium Testing.
+
+- **[Documentation](https://www.guru99.com/introduction-to-selenium.html)**
 
 ## How to Use Selenium
+You can view Documentation on how **Selenium** is used within Python at the following link:
 
-## How to Work with Selenium
+- **[Documentation](https://selenium-python.readthedocs.io/#)**
+
+The main portion is that Selenium allows you to automate Browser Sessions and Website Processes within a Webpage that do not have well documented APIs and/or any APIs existential to current workflows. You download the Selenium IDE Tool for Chrome Browser that will allow you to record the Clicks, ID's Elements, XPATHS, etc. used within your workflow to help accomplish Broswer Automation. The main thing to pay attention to within your **Inspect Tool** is to look for the following:
+# Definitions
+- **find_elements_by_name**
+- **find_elements_by_xpath**
+- **find_elements_by_link_text**
+- **find_elements_by_partial_link_text**
+- **find_elements_by_tag_name**
+- **find_elements_by_class_name**
+- **find_elements_by_css_selector**
+
+Further documentation on working Selenium IDE and Identifying Web Elements:
+- **[How to Work with Selenium IDE in Firefox](https://www.softwaretestinghelp.com/selenium-ide-script-selenium-tutorial-3/)**
+- **[How to Work with Selenium IDE in Chrome](https://testguild.com/selenium-ide-guide/)**
+- **[Idenitfying Web Elements with Inspect Tool](https://www.toolsqa.com/selenium-webdriver/inspect-elements-with-chrome-developer-tools/)**
 
 ## Setting up Selenium Drivers
 
-## What is Browser Automation
+NEED DOCUMENTATION ON HOW TO SET UP DRIVERS SHOULD DRIVER AUTOMATION AND DOWNLOAD FAIL!!!
 
-## How to Record Browser Automation
+## What is Browser Automation
+Browser Automation is the act of running various tasks, or instances, to gather insights into the functionality and performance of site pages, applications and lines of code. ... For example, upon starting a browser you need five different websites to be loaded to a specific point.
+
+- **[Documentation](http://www.biodesignautomation.org/browser-automation-defined.html)**
 
 ## Reusable Code
 ```
