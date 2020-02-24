@@ -86,6 +86,12 @@ Microsoft Office files for Documents and/or Spreadsheets containing sensitive in
 Text Files and JSON files are also set to be ignored for security reasons if you are using flatfiles on your local to passoff credentials. Furthermore, if you are implementing GPG Encryption for files containing secret and secure information, all such files are also set to be ignored on the system. In **Git** you should never store and/or commit information that is secure and needs to be hidden. This repository also assumes that you understand how to work with **Git** and accepts no liability for any security breaches incurred. 
 
 ## Understanding the `.gitignore` File
+The **`.gitignore`** file is a text file that tells Git which files or folders to ignore in a project. A local **`.gitignore`** file is usually placed in the root directory of a project. You can also create a global . gitignore file and any entries in that file will be ignored in all of your Git repositories.
+
+- **[.gitignore File Documentation](https://guide.freecodecamp.org/git/gitignore/)**
+
+## Understanding the `.dockerignore` File
+The . dockerignore file allows you to exclude files from the context like a . gitignore file allow you to exclude files from your git repository. It helps to make build faster and lighter by excluding from the context big files or repository that are not used in the build. The **`.dockerignore`** file is similar to hte **`.gitignore`** file used in Git. 
 
 ## Web Scraping
 Web scraping is a mean in which you can automate a lot of your data export and imports. What this means is that you can use the repository in the following manner to help aid you in this process. Please see the following image to understand how Web Scraping works in terms of the overall process flow. 
