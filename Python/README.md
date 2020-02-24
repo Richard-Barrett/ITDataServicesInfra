@@ -37,7 +37,7 @@ If you wat to use a specific module you must have a **`secrets.gpg`** file withi
 **`choco install gnupg4win`**
 
 2. Make a secrets.json file using the following template
-```
+```bash
 {
   "user": {
     "name": "yourname",
