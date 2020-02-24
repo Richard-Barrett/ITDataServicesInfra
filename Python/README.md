@@ -176,6 +176,20 @@ The main portion is that Selenium allows you to automate Browser Sessions and We
 - **find_elements_by_class_name**
 - **find_elements_by_css_selector**
 
+Example for the **XPATH** Code
+```python
+element = WebDriverWait(browser, 20).until(
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='submit1']")))
+element.click();
+```
+Notice the **XPATH** you can replace this with the respective component with the Defintions.
+Just make sure that you specify the correct **element_type** and the **element_value**
+```python
+element = WebDriverWait(browser, 20).until(
+        EC.element_to_be_clickable((By.<element_type>, "<element_value>")))
+```
+Furthermore, it is important to note that this project uses **browser** v. the norm **driver** to instantiate the Selenium Web Driver
+
 Further documentation on working Selenium IDE and Identifying Web Elements:
 - **[How to Work with Selenium IDE in Firefox](https://www.softwaretestinghelp.com/selenium-ide-script-selenium-tutorial-3/)**
 - **[How to Work with Selenium IDE in Chrome](https://testguild.com/selenium-ide-guide/)**
