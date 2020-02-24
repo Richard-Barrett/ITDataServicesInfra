@@ -167,7 +167,8 @@ You can view Documentation on how **Selenium** is used within Python at the foll
 - **[Documentation](https://selenium-python.readthedocs.io/#)**
 
 The main portion is that Selenium allows you to automate Browser Sessions and Website Processes within a Webpage that do not have well documented APIs and/or any APIs existential to current workflows. You download the Selenium IDE Tool for Chrome Browser that will allow you to record the Clicks, ID's Elements, XPATHS, etc. used within your workflow to help accomplish Broswer Automation. The main thing to pay attention to within your **Inspect Tool** is to look for the following:
-# Definitions
+
+**Definitions**
 - **find_elements_by_name**
 - **find_elements_by_xpath**
 - **find_elements_by_link_text**
@@ -194,6 +195,17 @@ Further documentation on working Selenium IDE and Identifying Web Elements:
 - **[How to Work with Selenium IDE in Firefox](https://www.softwaretestinghelp.com/selenium-ide-script-selenium-tutorial-3/)**
 - **[How to Work with Selenium IDE in Chrome](https://testguild.com/selenium-ide-guide/)**
 - **[Idenitfying Web Elements with Inspect Tool](https://www.toolsqa.com/selenium-webdriver/inspect-elements-with-chrome-developer-tools/)**
+
+## Logging
+Logging is a key important aspect of any application. 
+Logging is always under development, but the main logging is accomplished by debugging the code. 
+This project primarily focuses on Logging and Unit Tests.
+**Integration Testing will probably occur onces the project soldifies more and picks up momentum!!!**
+
+Documentation: 
+- **[Logging](https://docs.python.org/3/howto/logging-cookbook.html)**
+- **[Unit Tests](https://realpython.com/python-testing/#unit-tests-vs-integration-tests)**
+- **[Integration Tests](https://realpython.com/python-testing/)** 
 
 ## Setting up Selenium Drivers
 
