@@ -91,7 +91,7 @@ The **`.gitignore`** file is a text file that tells Git which files or folders t
 - **[.gitignore File Documentation](https://guide.freecodecamp.org/git/gitignore/)**
 
 ## Understanding the `.dockerignore` File
-The . dockerignore file allows you to exclude files from the context like a . gitignore file allow you to exclude files from your git repository. It helps to make build faster and lighter by excluding from the context big files or repository that are not used in the build. The **`.dockerignore`** file is similar to hte **`.gitignore`** file used in Git. 
+The **`.dockerignore`** file allows you to exclude files from the context like a **`.gitignore`** file allow you to exclude files from your git repository. It helps to make build faster and lighter by excluding from the context big files or repository that are not used in the build. The **`.dockerignore`** file is similar to hte **`.gitignore`** file used in Git. 
 
 ## Web Scraping
 Web scraping is a mean in which you can automate a lot of your data export and imports. What this means is that you can use the repository in the following manner to help aid you in this process. Please see the following image to understand how Web Scraping works in terms of the overall process flow. 
