@@ -1,0 +1,422 @@
+{
+  "id": "1534834f-8fc0-4562-836e-d7f345ee1429",
+  "version": "2.0",
+  "name": "TSI Import Automation into Skyward",
+  "url": "https://skyward-student.del-valle.k12.tx.us",
+  "tests": [{
+    "id": "1c9c7eab-f834-458f-b355-2354eca52858",
+    "name": "TSI Import",
+    "commands": [{
+      "id": "397a779e-bc42-48c2-9123-16052fac06b4",
+      "comment": "",
+      "command": "open",
+      "target": "/scripts/wsisa.dll/WService=wsEAplus/seplog01.w?nopopup=true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5628782-309f-4142-beb1-2deeb7682ab3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1292x1410",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50fe3ec9-619a-40a2-a479-f428e3625863",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d20b0f5c-ee86-4381-84cb-beb6f942b17c",
+      "comment": "",
+      "command": "type",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "USERNAME"
+    }, {
+      "id": "240cea0e-2729-4ef3-b338-cbb5f47510b4",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "PASSWORD"
+    }, {
+      "id": "309f00cb-3544-4a9b-8dfd-24416097bc89",
+      "comment": "",
+      "command": "click",
+      "target": "id=bLogin",
+      "targets": [
+        ["id=bLogin", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#bLogin", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='bLogin']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr[3]/td/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:if (cbs(\"bLogin\")) {tryLogin();}')]", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bada488-a1ac-4c2f-93a0-f1881d6087a0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=*Calendar",
+      "targets": [
+        ["linkText=*Calendar", "linkText"],
+        ["css=.dashBody > .systemItem:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'*Calendar')]", "xpath:link"],
+        ["xpath=//div[@id='m9999999999']/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:openNewWindow('qcalendar005.w', 999,999)\")]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'*Calendar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae71b9e5-c1d8-41cd-820e-18594b2920ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=em > .alt",
+      "targets": [
+        ["css=em > .alt", "css:finder"],
+        ["xpath=//img[@alt='•']", "xpath:img"],
+        ["xpath=//a[@id='nav_systems']/span/em/img", "xpath:idRelative"],
+        ["xpath=//em/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b385a1e-f1de-4132-bd48-7f40aa2d0541",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Student Management",
+      "targets": [
+        ["linkText=Student Management", "linkText"],
+        ["css=#menu_navSystems .icon_sm", "css:finder"],
+        ["xpath=//a[contains(text(),'Student Management')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"changeSystem('sm');\"]", "xpath:attributes"],
+        ["xpath=//div[@id='menu_navSystems']/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:void('Student Management');\")]", "xpath:href"],
+        ["xpath=//div[6]/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Student Management')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3de191b8-b31b-429f-9464-6c58f3a2afea",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav_Admin > span",
+      "targets": [
+        ["css=#nav_Admin > span", "css:finder"],
+        ["xpath=//a[@id='nav_Admin']/span", "xpath:idRelative"],
+        ["xpath=//a[9]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Administration')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "586a2806-2d0d-482c-84b4-a7d977273439",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav_SMADASCIIImports > span",
+      "targets": [
+        ["css=#nav_SMADASCIIImports > span", "css:finder"],
+        ["xpath=//a[@id='nav_SMADASCIIImports']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div[2]/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Imports - IM')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed04c67f-c994-4a98-86c8-99a708862153",
+      "comment": "",
+      "command": "click",
+      "target": "css=#tree1-3-link > span",
+      "targets": [
+        ["css=#tree1-3-link > span", "css:finder"],
+        ["xpath=//a[@id='tree1-3-link']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Test Score Import Wizard - TW')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5791",
+      "windowTimeout": 2000
+    }, {
+      "id": "1cb9235c-fe24-4c52-98cc-0b14d2853db2",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5791}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "683b2efd-5819-416e-b9b7-3d6829f3f9fc",
+      "comment": "",
+      "command": "click",
+      "target": "id=brTestScoreImportLookupInput",
+      "targets": [
+        ["id=brTestScoreImportLookupInput", "id"],
+        ["name=brTestScoreImportLookupInput", "name"],
+        ["css=#brTestScoreImportLookupInput", "css:finder"],
+        ["xpath=//input[@id='brTestScoreImportLookupInput']", "xpath:attributes"],
+        ["xpath=//table[@id='brTestScoreImportLookupTable']/tbody/tr/td[5]/input", "xpath:idRelative"],
+        ["xpath=//td[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15007344-00ac-4a57-a1ec-83da7883a301",
+      "comment": "",
+      "command": "type",
+      "target": "id=brTestScoreImportLookupInput",
+      "targets": [
+        ["id=brTestScoreImportLookupInput", "id"],
+        ["name=brTestScoreImportLookupInput", "name"],
+        ["css=#brTestScoreImportLookupInput", "css:finder"],
+        ["xpath=//input[@id='brTestScoreImportLookupInput']", "xpath:attributes"],
+        ["xpath=//table[@id='brTestScoreImportLookupTable']/tbody/tr/td[5]/input", "xpath:idRelative"],
+        ["xpath=//td[5]/input", "xpath:position"]
+      ],
+      "value": "TSI"
+    }, {
+      "id": "ded62d2c-0ea4-434c-9a95-cff04a46570a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=brTestScoreImportLookupInput",
+      "targets": [
+        ["id=brTestScoreImportLookupInput", "id"],
+        ["name=brTestScoreImportLookupInput", "name"],
+        ["css=#brTestScoreImportLookupInput", "css:finder"],
+        ["xpath=//input[@id='brTestScoreImportLookupInput']", "xpath:attributes"],
+        ["xpath=//table[@id='brTestScoreImportLookupTable']/tbody/tr/td[5]/input", "xpath:idRelative"],
+        ["xpath=//td[5]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "2719c2b8-2abc-4b01-b9a8-83864a10d36f",
+      "comment": "",
+      "command": "click",
+      "target": "id=bEdit",
+      "targets": [
+        ["id=bEdit", "id"],
+        ["linkText=Edit", "linkText"],
+        ["css=#bEdit", "css:finder"],
+        ["xpath=//a[@id='bEdit']", "xpath:attributes"],
+        ["xpath=//td[@id='BrowseButtons']/table/tbody/tr[6]/td/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:if (cbs('bEdit')) {PageRedirect('EditImport');}\")]", "xpath:href"],
+        ["xpath=//tr[6]/td/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5207",
+      "windowTimeout": 2000
+    }, {
+      "id": "9d80e168-6dc8-40e4-a427-98b8fc6e7139",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5207}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2193d953-a105-45d0-8e6f-7fa910863cc2",
+      "comment": "",
+      "command": "click",
+      "target": "id=file1",
+      "targets": [
+        ["id=file1", "id"],
+        ["name=file1", "name"],
+        ["css=#file1", "css:finder"],
+        ["xpath=//input[@id='file1']", "xpath:attributes"],
+        ["xpath=//div[@id='pageContentWrap']/table/tbody/tr/td/fieldset/table/tbody/tr[9]/td/fieldset/table/tbody/tr/td[2]/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td[2]/table/tbody/tr/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f5cfebb-5e97-42da-97c6-2f7880fc2ec5",
+      "comment": "",
+      "command": "type",
+      "target": "id=file1",
+      "targets": [
+        ["id=file1", "id"],
+        ["name=file1", "name"],
+        ["css=#file1", "css:finder"],
+        ["xpath=//input[@id='file1']", "xpath:attributes"],
+        ["xpath=//div[@id='pageContentWrap']/table/tbody/tr/td/fieldset/table/tbody/tr[9]/td/fieldset/table/tbody/tr/td[2]/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td[2]/table/tbody/tr/td/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\CustomNameNeedsFormatting_02_24_2020_20_14_12_richardbarrett.csv"
+    }, {
+      "id": "19f59e76-1b64-4620-8acf-b5ac89ff6ed8",
+      "comment": "",
+      "command": "click",
+      "target": "id=bUpload",
+      "targets": [
+        ["id=bUpload", "id"],
+        ["linkText=Upload", "linkText"],
+        ["css=#bUpload", "css:finder"],
+        ["xpath=//a[contains(text(),'Upload')]", "xpath:link"],
+        ["xpath=//a[@id='bUpload']", "xpath:attributes"],
+        ["xpath=//div[@id='pageContentWrap']/table/tbody/tr/td/fieldset/table/tbody/tr[9]/td/fieldset/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:if (cbs(\"bUpload\")) {Attach();}')]", "xpath:href"],
+        ["xpath=//td[2]/table/tbody/tr/td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Upload')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "88cc89f3-0694-48d4-990f-2808315a31ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=bSave",
+      "targets": [
+        ["id=bSave", "id"],
+        ["linkText=Save", "linkText"],
+        ["css=#bSave", "css:finder"],
+        ["xpath=//a[@id='bSave']", "xpath:attributes"],
+        ["xpath=//div[@id='pageContentWrap']/table/tbody/tr/td[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:if (cbs(\"bSave\")) {checkSave(\"EditImport\",\"simpthttp000.w\",\"close\");}')]", "xpath:href"],
+        ["xpath=//div[5]/table/tbody/tr/td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Save')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2479e1a-f899-4027-a6ef-5e3109786917",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c63c7e7f-3f15-4a78-926f-c638a2825d87",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5791}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2285c72-4f4d-4cce-9aa8-2418199a605d",
+      "comment": "",
+      "command": "click",
+      "target": "id=bImport",
+      "targets": [
+        ["id=bImport", "id"],
+        ["linkText=Run", "linkText"],
+        ["css=#bImport", "css:finder"],
+        ["xpath=//a[@id='bImport']", "xpath:attributes"],
+        ["xpath=//td[@id='BrowseButtons']/table/tbody/tr[2]/td/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:if (cbs('bImport')) {PageRedirect('Import','ClearDate');}\")]", "xpath:href"],
+        ["xpath=//tr[2]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Run')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8174",
+      "windowTimeout": 2000
+    }, {
+      "id": "804a4881-c583-4231-9f26-b02a8b9e4fb9",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8174}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a533ede0-08c8-4f6f-b215-731c10f8d81c",
+      "comment": "",
+      "command": "click",
+      "target": "id=bContinue",
+      "targets": [
+        ["id=bContinue", "id"],
+        ["linkText=Continue", "linkText"],
+        ["css=#bContinue", "css:finder"],
+        ["xpath=//a[@id='bContinue']", "xpath:attributes"],
+        ["xpath=//td[@id='BrowseButtons']/table/tbody/tr[2]/td/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:if (cbs('bContinue')) {CheckSave();}\")]", "xpath:href"],
+        ["xpath=//tr[2]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "336ab27c-48af-4843-9329-41699042f8b8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "378d31d3-e96e-46b3-b2c9-4fe11497ae15",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5791}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2043a3d-5f5d-4d0a-9ff9-b4c86c358bfe",
+      "comment": "",
+      "command": "click",
+      "target": "id=printMsgBtn1",
+      "targets": [
+        ["id=printMsgBtn1", "id"],
+        ["linkText=View Report", "linkText"],
+        ["css=#printMsgBtn1", "css:finder"],
+        ["xpath=//a[contains(text(),'View Report')]", "xpath:link"],
+        ["xpath=//a[@id='printMsgBtn1']", "xpath:attributes"],
+        ["xpath=//td[@id='printMsgActions']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, concat(\"javascript:if (cbs('printMsgBtn1')) {vQPSetup.cancelCheckQueue(); closeMessage(false, 'dPrintMessage'); window.open('qdirconfig002.p?destinationPage=0x0000000000392366&dwd='+document.getElementById(\",'\"dwd\").value+',\"'&pEnc=khMkvpkDkbroaaVl'+'&duserid='+encodeURIComponent(document.getElementById(\",'\"duserid\").value)+',\"'&Browser='+document.getElementById(\",'\"Browser\").value+',\"'&BrowserPlatform='+document.getElementById(\",'\"BrowserPlatform\").value +',\"'&mfwOpenAttachment=true'+'&asAttach=no',\",'\"\",\"width=\" + (screen.availWidth - 15) + \",height=\" + (screen.availHeight - 85) + \",status=0,menubar=0,toolbar=0,top=0,left=0,resizable=1\"); cancelEvent();}'))]", "xpath:href"],
+        ["xpath=//td[2]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View Report')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win9687",
+      "windowTimeout": 2000
+    }, {
+      "id": "592598d7-6d86-4c6e-be1b-4ce8c9243f19",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win9687}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f9d5963-8852-4894-b1f5-aae0a6c9db72",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afe084bc-1777-4462-8cfb-9a701e20b65b",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5791}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "871eb652-91c1-4db7-b92c-0aa81ea99f6a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1c9c7eab-f834-458f-b355-2354eca52858"]
+  }],
+  "urls": ["https://skyward-student.del-valle.k12.tx.us/"],
+  "plugins": []
+}
