@@ -62,6 +62,8 @@ custom_reports_url = ''
 
 # Check for Version of Chrome
               
+# Keys Variables
+test_upload = 'TSI'
 
 # WebDriver Path for System
 if platform.system() == ('Windows'):
@@ -85,10 +87,33 @@ password.send_keys(config['user']['password'])
 # Authentication submit.click()
 # For XPATH = //*[@id='bLogin']
 element = WebDriverWait(browser, 20).until(
-        EC.element_to_be_clickable((By.XPATH, "//*[@id='bLogin']")))
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='bLogin']")))
 element.click();
 print("Logging into <insert_program>!")
 print("Authenticated")
+
+# Click and Span Administration Options 
+# Adminsitration XPATH = //a[@id='nav_Admin']/span
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//a[@id='nav_Admin']/span")))
+element.click();
+
+# Click on Imports Under SkyBuild 
+# Imports XPATH = //*[@id='nav_SMADASCIIImports']/span
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='nav_SMADASCIIImports']/span")))
+element.click();
+
+# Click on Test Score Import Wizard - TW
+# Test Wizard XPATH = //a[@id='tree1-3-link']/span
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//a[@id='tree1-3-link']/span")))
+element.click();
+
+# Send test_upload and Send Keys
+# Field XPATH = //*[@id='brTestScoreImportLookupInput']
+test_lookup = browser.find_element_by_id("brTestScoreImportLookupInput")
+test_lookup.send_keys(test_upload)
 
 # Delete Unencrypted JSON File
 if os.path.exists("secrets.json"):
