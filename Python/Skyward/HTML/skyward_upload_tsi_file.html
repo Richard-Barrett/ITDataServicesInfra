@@ -1,0 +1,272 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- SKYWARD VERSION 010010 -->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes"><title>Skyward: Loading page... (05.20.02.00.02)</title> <style type="text/css">body {background-color:#FAFAFA;margin-left:0;margin-top:0;margin-bottom:0;margin-right:1px;font-family:arial, sans-serif;font-size:12px;}</style>
+<link rel='STYLESHEET' type='text/css' href='qfileloader.p?file=qclssbase001.css&rev=0121040520020002' /><style type='text/css' media='print'>* { filter/*\**/: none\9!important; }</style><script type='text/javascript' src='qfileloader.p?file=framework.multi2.js&rev=0121040520020002'></script>
+<script type='text/javascript'>$(function() {try {gUsrIdle.timer=window.setTimeout(gUsrIdle.trackIdleTime, gUsrIdle.freq); 
+function trackIdleC(){gUsrIdle.idleSeconds+=3;window.setTimeout(trackIdleC,3000);}window.setTimeout(trackIdleC,3000);
+}catch(ex){}});</script><script language=javascript>
+function checkSave (pAction,pProgram,pWhereTo) 
+{
+  if (finalValidate()) 
+   {
+     document.getElementById('hBlobList').value = getAttachedFileList().join(',');  /* Put list of files in hidden field for submission */
+     validateForm(pAction,pProgram,pWhereTo);
+   }
+}
+function finalValidate() 
+{
+   var sError = '';
+   if (!validateRequired("tFileID")) 
+     sError += "File ID is a required field.\n";
+   if (!validateRequired("tDescription"))
+     sError += "Description is a required field.\n";
+   if (!validateIntegerRange('tStartRow',1,99999))
+     sError += "Start at Row Must be Greater than 0.\n";
+   if (!validateRequired("tFiles"))
+     sError += "You Must Upload a File before Continuing.\n";
+   if (sError!='') 
+    {
+      message(sError);
+      return false;
+    }
+   return true;
+}
+function ViewAttach() 
+{
+  if (document.getElementById("tFiles").value != "") 
+    viewFile(document.getElementById("hCurrentBlobID").value); 
+  else
+    message("There is No File to View");
+}
+function DisplayPreview() 
+{
+  if (document.getElementById("tFiles").value != "") 
+    openNewWindow("simptedit004.w?hType=" + document.getElementById("sFileType").value + "&hDelimiter=" + document.getElementById("sDelimiter").value +
+                  "&hQualifier=" + document.getElementById("tTextQualifier").value,1000,700,0,"browse");
+  else
+    message("There is No File to View the Data Preview");
+}
+function Attach()
+{
+  if (document.getElementById("file1").value == "")
+    message("You have Not Selected a File to Upload.","No File to Upload...",0,300,30);
+  else
+   {
+     showMessage("Uploading File...");
+     document.getElementById("bSave").className = "buttonDisabled";
+     attachFile("file1");
+   }
+}
+function OnLoadFunction()
+{
+  ChangeFileType();
+  var vAttachArr = getAttachedFileList();
+  if (vAttachArr.length > 0) 
+    LastUpload(vAttachArr[0]);
+}
+function LastUpload(pBlobID)
+{
+  var vTempHour = 0; 
+  document.getElementById("hCurrentBlobID").value = pBlobID;
+  document.getElementById("bView").className = "button";
+  document.getElementById("bDataPreview").className = "button";
+  document.getElementById("tFiles").value = getFileName(pBlobID);
+  var vDateTime = getFileDate(pBlobID);
+  document.getElementById("tDateTimeUpload").value = (vDateTime.getMonth() + 1) + "/" + vDateTime.getDate() + "/" + vDateTime.getFullYear() + " - ";
+  if (vDateTime.getHours() == 0) 
+    vTempHour = 12;
+  else if (vDateTime.getHours() > 12) 
+    vTempHour = vDateTime.getHours() - 12;
+  else
+    vTempHour = vDateTime.getHours();
+  if (vTempHour.toString().length == 1)
+    document.getElementById("tDateTimeUpload").value += "0";
+  document.getElementById("tDateTimeUpload").value += vTempHour + ":";
+  if (vDateTime.getMinutes().toString().length == 1)
+    document.getElementById("tDateTimeUpload").value += "0";
+  document.getElementById("tDateTimeUpload").value += vDateTime.getMinutes() + ":";
+  if (vDateTime.getSeconds().toString().length == 1)
+    document.getElementById("tDateTimeUpload").value += "0";
+  document.getElementById("tDateTimeUpload").value += vDateTime.getSeconds() + " ";
+  if (vDateTime.getHours() >= 12) 
+    document.getElementById("tDateTimeUpload").value += "pm";
+  else
+    document.getElementById("tDateTimeUpload").value += "am";
+}
+/* Called by framework after file is successfully attached */
+function receiveNewFile(pBlobId) 
+{  
+  removeFile(document.getElementById("hCurrentBlobID").value);
+  LastUpload(pBlobId);
+  document.getElementById("bSave").className = "button";
+  hideMessage();
+}
+function ChangeFileType()
+{
+  if (document.getElementById("sFileType").value == "V")
+   {
+     document.getElementById("lDelimiter1").style.visibility = "visible";
+     document.getElementById("lDelimiter2").style.visibility = "visible";
+     document.getElementById("lDelimiter3").style.visibility = "visible";
+     document.getElementById("lDelimiter4").style.visibility = "visible";
+   }
+  else
+   {
+     document.getElementById("lDelimiter1").style.visibility = "hidden";
+     document.getElementById("lDelimiter2").style.visibility = "hidden";
+     document.getElementById("lDelimiter3").style.visibility = "hidden";
+     document.getElementById("lDelimiter4").style.visibility = "hidden";
+   }
+}
+function overwriteHelp()
+{
+    message("When the overwrite option is unchecked, an existing record for the" +
+            " student, test and date will not be updated.");
+}
+function ValidStuHelp()
+{
+  message("This option to 'Allow Correction of Invalid Student Links Prior to Import' is not available when 'Run Multiple' is used.");
+}
+</script>
+</head>
+<body onKeyDown='documentKeyPressed(event)' onload='OnLoadFunction();'>   
+<form name='detailform' id='detailform' action='' method='post'>
+<div id="brLoading" class="ui-pnotify " style="width: 250px; opacity: 0.8; display: block; right: 15px; bottom: 15px; cursor: auto;"><div class="ui-widget ui-widget-content ui-corner-all ui-pnotify-container ui-state-highlight" style="min-height: 16px;"><div id="loadingMsg" class="ui-pnotify-text">Please wait...</div></div></div><input type="hidden" name="hCompName" id="hCompName" value="" /><input type="hidden" name="hOSName" id="hOSName" value="" /><div id='pageOuterWrap' class='loading popup noheader ssmhom01'><div id='pageInnerWrap' class='modeeditimport'><div id='dMessage' style='display:none; position:absolute; top:1px; left:1px; cursor:default; z-index:300; overflow-x:display;' role='alert' aria-labelledby='msgTitle'><div id='msgBodyTable'><div id='msgTitle'></div><div id='msgBodyCol'></div><div id='msgActions' class='msgActions'><span class='msgBtnWrap'><a class='button' id='msgBtn1' tabIndex='5' href='javascript:void(0)' role='button' style='width:100px;'>&nbsp;</a></span><span class='msgBtnWrap'><a class='button' id='msgBtn2' tabIndex='6' href='javascript:void(0)' role='button' style='width:100px;'>&nbsp;</a></span><span class='msgBtnWrap'><a class='button' id='msgBtn3' tabIndex='7' href='javascript:void(0)' role='button' style='width:100px;'>&nbsp;</a></span></div></div></div><div id='lockDiv' style='z-index:100; position:absolute; left:0px; top:0px; height:0px; width:0px; visibility:hidden; background-color:#ffffff; opacity:0.0; filter:alpha(opacity=0);' oncontextmenu='return false;'></div><div id='dPrintMessage' style='display:none; position:absolute; top:1px; left:1px; cursor:default; z-index:300; overflow-x:display;'><table cellspacing='0' id='printMsgBodyTable' role='presentation'><tr class='printMsgTitle'><td class='titleLeft'>&nbsp;</td><td class='printMsgTitle' id='printMsgTitle'></td><td class='titleRight'>&nbsp;</td></tr><tr class='printMsgBody'><td id='printMsgBodyCol' valign='top' colspan='3'></td></tr><tr class='printMsgActions'><td class='actionsLeft'>&nbsp;</td><td id='printMsgActions'><span style='float:left;'><a class='button' id='printMsgBtn1' tabIndex='5' href='javascript:void(0)' role='button'>&nbsp;</a></span><span style='float:right;'><a class='button' id='printMsgBtn2' tabIndex='6' href='javascript:void(0)' role='button'>&nbsp;</a></span></td><td class='actionsRight'>&nbsp;</td></tr></table></div><div id='pageHeaderWrap'><div id='pageControlBar'><div id='controlBarLeft'><div id='pageTitle'><span ondblclick='displayInfo();'>File Maintenance</span></div></div><div id='controlBarRight'><ul role='toolbar'><li><a class='toolLink' id='link_locateStudent' href='javascript:openNewWindow("sstudbrws005.w",900,600,1,"");' alt='Find a student and view his or her daily schedule.' tooltip='Find a student and view his or her daily schedule.' tooltip-position='top'><img class='alt' aria-hidden='true' src='/webspeed/alt.gif' alt='Student Locator' />&nbsp;</a></li><li><a class='toolLink' id='link_capture' href='javascript:captureScreen();' alt='Send a printout of this screen to the print queue' tooltip='Send a printout of this screen to the print queue' tooltip-position='top'><img class='alt' aria-hidden='true' src='/webspeed/alt.gif' alt='Capture Screen' />&nbsp;</a></li><li><a alt='Release Notes' class='toolLink' id='link_CAIC' href="javascript:openCAI('11680','05.20.02.00.02')" tooltip='View release notes' tooltip-position='top'><img class='alt' aria-hidden='true' src='/webspeed/alt.gif' alt='Release Notes' />&nbsp;</a></li><li><a class='toolLink' id='link_newWindow' href='javascript:void("New Window")' onclick='newSessionWindow2()' alt='Create another session in a new window.' tooltip='Create another session in a new window.' tooltip-position='top'><img class='alt' aria-hidden='true' src='/webspeed/alt.gif' alt='New Window' />&nbsp;</a></li><li><a alt='My Print Queue' class='toolLink' id='link_printQueue' href='javascript:openMyPrintQueue()'><img class='alt' aria-hidden='true' src='/webspeed/alt.gif' alt='My Print Queue' />&nbsp;</a></li><li align='left' valign='middle' class='utilHelp'><div id='helpWrap' ><a alt='Help Menu' id='link_help' href='javascript:void(0)' onclick='getMenu("help",this).toggle();'><img class='alt' aria-hidden='true' src='/webspeed/alt.gif' alt='Help' />&nbsp;</a><div id='menu_help' class='menuList' onmouseover='getMenu("help",this).show();' onmouseout='getMenu("help",this).hide();' onclick='getMenu("help",this).hide();'><a href='javascript:openNewWindow("scscledit002.w",725,635,1,"");' id='sc' alt='Enter a new request for this application.' tooltip='Enter a new request for this application.'>Customer Access</a><a alt='Remote Assistance' href="javascript: gPostForm = false; openNewWindow('http://remote.skyward.com',1024,768,1,'',1,1);">Remote Assistance</a><hr /><a alt='SkyDoc - Skyward Documentation' href="javascript: openNewWindow('skydocredirect.html?MenuPath=WS*AD*SB*IM*TW',1024,738,1,'',0,1);" id='vt'>SkyDoc - Skyward Documentation</a><a alt='Skyward - www.skyward.com' href="javascript: gPostForm=false; openNewWindow('http://www.skyward.com/',1024,768,1,'',1,1);">Skyward - www.skyward.com</a><a alt='Submit Idea' href='https://sms.uservoice.com' target='_blank'>Submit Idea</a><hr /><a alt='Browser Performance Test' href="javascript: openNewWindow('qperftest001.w',600,768,1,'');">Browser Performance Test</a><a alt='PaC to Web Status Display' href="javascript: openNewWindow('ssecrbrws001.w?selectedValue=0x00000000003a440b,0x00000000000457a9',1024,768,1,'');">PaC to Web Status Display</a><a alt='View My Security' href="javascript: openNewWindow('qusrsecbrws001.w',1024,768,1);">View My Security</a><hr /><a alt='In-House Examples' href="javascript:openNewWindow('qskysupport.w',1024,400,1,'');">Support Accounts For Skyward</a></div></div></li></ul></div></div></div><div id='pageContentWrap'><table>
+  <tr>
+    <td>
+      <fieldset>
+      <legend class="FormTitle">Test Score Import File Options</legend>
+      <table>
+        <tr>
+          <td nowrap> 
+<label class='EditLabel'><div id='lblFileID' class='EditLabel'>&nbsp;&nbsp;File ID:</div></label>          </td>
+          <td>
+<input type='text' class='EditInputDisabled' name='tFileID' id='tFileID' value="TSI" tabIndex='-5' style='width:73px; ' aria-label='File ID' size='10' readonly='readonly'  aria-labelledby="lblFileID"  />          </td>
+          <td nowrap> 
+<label class='EditLabel'><div id='lblFileType' class='EditLabel'>&nbsp;&nbsp;File Type:</div></label>          </td>
+          <td colspan='2'>
+<select class='EditSelectFixed' name='sFileType' id='sFileType' tabIndex='10' pv-data='FILE-DEFN-MST.FILE-DEFN-REC-TYPE' onchange='ChangeFileType();' style='width:115px;' size='1'  aria-labelledby="lblFileType" ><option value="V" selected>Delimited</option><option value="F">Fixed Width</option></select>          </td>
+          <td id='lDelimiter1' style='visibility:hidden;'> 
+<label class='EditLabel'><div id='lblDelimiter' class='EditLabel'>&nbsp;&nbsp;Delimiter:</div></label>          </td>
+          <td colspan='2' id='lDelimiter2' style='visibility:hidden;'>
+<select class='EditSelectFixed' name='sDelimiter' id='sDelimiter' tabIndex='15' pv-data='FILE-DEFN-MST.FDM-DELIMITER'  style='width:100px;' size='1'  aria-labelledby="lblDelimiter" ><option value="C21">Chr(21)</option><option value="COL">Colon</option><option value="COM" selected>Comma</option><option value="PIP">Pipe</option><option value="SEM">Semicolon</option><option value="TAB">Tab</option><option value="TLD">Tilde</option></select>          </td>
+        </tr>
+        <tr>
+          <td> 
+<label class='EditLabelReq'><div id='lblDescription' class='EditLabelReq'>*&nbsp;Description:</div></label>          </td>
+          <td colspan='2'>
+<input type='text' class='EditInput' name='tDescription' id='tDescription' spellcheck='true'  autocomplete='off' value="Texas Success Initiative" tabIndex='20' pv-data='FILE-DEFN-MST.FDM-LONG-NAME' style='width:198px; ' maxlength='30' aria-label='Description' size='35'  aria-labelledby="lblDescription"  />          </td>
+          <td id='lDelimiter3' style='visibility:hidden;' nowrap> 
+<label class='EditLabel'><div id='lblTextQualifier' class='EditLabel'>&nbsp;&nbsp;Text Qualifier:</div></label>          </td>
+          <td id='lDelimiter4' style='visibility:hidden;'>
+<input type='text' class='EditInput' name='tTextQualifier' id='tTextQualifier' spellcheck='true'  autocomplete='off' tabIndex='21' pv-data='FILE-DEFN-MST.FDM-TEXT-QUALIFIER' style='width:28px; ' maxlength='1' aria-label='Text Qualifier' size='1'  aria-labelledby="lblTextQualifier"  />          </td>
+          <td nowrap> 
+<label class='EditLabel'><div id='lblStartatRow' class='EditLabel'>&nbsp;&nbsp;Start at Row:</div></label>          </td>
+          <td colspan='2'>
+<input type='text' class='EditInputNum' name='tStartRow' id='tStartRow' spellcheck='false' autocomplete='off' value="2" tabIndex='25' onfocus='removeCommas("tStartRow")' onKeyPress='return checkNumberKey(event,"tStartRow",">>>>9")' onblur='checkNumberBlur("tStartRow",">>>>9"); validateIntegerRange("tStartRow",1,99999,"Start at Row");' style='width:58px; ' maxlength='5' aria-label='Start at Row' size='7'  aria-labelledby="lblStartatRow"  />          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan='7'>
+<input type="checkbox" class="" name="cValidateStuLinks" id="cValidateStuLinks" tabIndex="30" checked="checked" /><label id="cValidateStuLinkslabel" for="cValidateStuLinks">Allow Correction of Invalid Student Links Prior to Import</label>&nbsp;<a alt='Help Info' href='javascript:ValidStuHelp();'><img src='/webspeed/wepque01.gif' alt='Help Info'></a>          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan='7'>
+<input type="checkbox" class="" name="cOverwrite" id="cOverwrite" tabIndex="31" pv-data="FILE-DEFN-MST.FDM-OVERWRITE" checked="checked" /><label id="cOverwritelabel" for="cOverwrite">Overwrite Existing Test Scores</label>            <img src='/webspeed/wepque01.gif' onclick='javascript: overwriteHelp();' />
+          </td>
+        </tr>
+        <tr>
+           <td colspan='2'>
+<label class='EditLabel'><div id='lblPreviewRecordstoDisplay' class='EditLabel'>&nbsp;&nbsp;Preview Records to Display:</div></label>           </td>
+           <td>
+<select class='EditSelectFixed' name='sPreviewRecords' id='sPreviewRecords' tabIndex='32' pv-data='FILE-DEFN-MST.FDM-TEXT-QUALIFIER'  style='width:75px;' size='1'  aria-labelledby="lblPreviewRecordstoDisplay" ><option value="5">5</option><option value="10" selected>10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option></select>           </td>
+        </tr>
+        <tr>
+          <td nowrap>
+<label class='EditLabel'><div id='lblFiletoImport' class='EditLabel'>&nbsp;&nbsp;File to Import:</div></label>          </td>
+          <td colspan='5' nowrap>
+<input type='text' class='EditInputDisabled' name='tFiles' id='tFiles' tabIndex='-35' style='width:423px; ' aria-label='File to Import' size='80' readonly='readonly'  aria-labelledby="lblFiletoImport"  />          </td>
+          <td rowspan='2' style='vertical-align: top;'>
+<a class='buttonDisabled' id='bView' tabIndex='40' href='javascript:if (cbs("bView")) {ViewAttach()}'>View<br>File</a>          </td>
+          <td rowspan='2' style='vertical-align: top;'>
+<a class='buttonDisabled' id='bDataPreview' tabIndex='45' href='javascript:if (cbs("bDataPreview")) {DisplayPreview()}'>Data Preview</a>          </td>
+        </tr>
+        <tr>
+          <td nowrap>
+<label class='EditLabel'><div id='lblLastUpload' class='EditLabel'>&nbsp;&nbsp;Last Upload:</div></label>          </td>
+          <td colspan='4' nowrap>
+<input type='text' class='EditInputDisabled' name='tDateTimeUpload' id='tDateTimeUpload' tabIndex='-50' style='width:163px; ' aria-label='Last Upload' size='28' readonly='readonly'  aria-labelledby="lblLastUpload"  />          </td>
+        </tr>
+        <tr>
+          <td colspan='8'>&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan='8'>
+            <fieldset>
+            <legend class="FormTitle">Import File Upload</legend>
+              <table>
+                <tr>
+                  <td>
+<label class='EditLabel'><div id='lblFileName' class='EditLabel'>&nbsp;&nbsp;File Name:</div></label>                  </td>
+                  <td>
+                    <table>
+                      <tr>
+                        <!-- File control goes in a div with the same id + 'Div' - this will allow the framework to clear the file control out after uploading a file -->
+                        <td>
+<input type='file' name='file1' id='file1' tabIndex='55' size=76 />                        </td>
+                       <td>
+<a class='button' id='bUpload' tabIndex='60' href='javascript:if (cbs("bUpload")) {Attach();}' role='button'>Upload</a>                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </td>
+        </tr>
+      </table>
+      </fieldset>
+    </td>
+    <td style='vertical-align: top; padding-top: 5px;'>
+<a class='button' id='bSave' tabIndex='500' href='javascript:if (cbs("bSave")) {checkSave("EditImport","simpthttp000.w","close");}' role='button'><span class='hkey'>S</span>ave</a><a class='button' id='bCancel' tabIndex='505' href='javascript:if (cbs("bCancel")) {checkBack();}' onkeydown='try{document.createEvent("MouseEvents").initEvent("mousedown",true,true);}catch(ex){}' onmousedown='gDoValidation=false; setTimeout(function(){gDoValidation=true;}, 200);' role='button'><span class='hkey'>B</span>ack</a>    </td>
+  </tr>
+</table>
+<iframe name='AttachTarget' id="AttachTarget" src='blank.html' height='0' width='0' frameborder='no'></iframe>
+<input type='button' role='button' id='bFakeClose' onClick='self.close();' style='height:0px; width:0px; display:none;' /><input type="hidden" name="dwd" id="dwd" value="7780113" /><input type="hidden" name="wfaacl" id="wfaacl" value="9584426" /><input type="hidden" name="encses" id="encses" value="dadvidIFldadkcbj" /><input type="hidden" name="encsec" id="encsec" value="" /><input type="hidden" name="entity" id="entity" value="001" /><input type="hidden" name="entities" id="entities" value="001" /><input type="hidden" name="SecurityMenuID" id="SecurityMenuID" value="11680" /><input type="hidden" name="HomePageMenuID" id="HomePageMenuID" value="11680" /><input type="hidden" name="LinkNames" id="LinkNames" value="" /><input type="hidden" name="nameid" id="nameid" value="151790" /><input type="hidden" name="MobileId" id="MobileId" value="" /><input type="hidden" name="hNavMenus" id="hNavMenus" value="" /><input type="hidden" name="hNavSubMenus" id="hNavSubMenus" value="#StudentScheduleGeneration##SMOFCWBuildCourseMaster##ReportCard##smTestScores#" /><input type="hidden" name="hNavSearchOption" id="hNavSearchOption" value="all" /><input type="hidden" name="hSecCache" id="hSecCache" value="1092 items in 23 entities" /><input type="hidden" name="showTracker" id="showTracker" value="false" /><input type="hidden" name="BrowseFillColumn" id="BrowseFillColumn" value="true" /><input type="hidden" name="LinkData" id="LinkData" value="Importssascitree001.wTest Score Import Wizardsimptbrws000.wFile Maintenancesimptedit000.w" /><input type="hidden" name="passedparams" id="passedparams" value="0x000000000008313b" /><input type="hidden" name="vMaintOption" id="vMaintOption" value="EditImport" /><input type="hidden" name="CurrentProgram" id="CurrentProgram" value="simptedit000.w" /><input type="hidden" name="CurrentVersion" id="CurrentVersion" value="010010" /><input type="hidden" name="SuperVersion" id="SuperVersion" value="012104" /><input type="hidden" name="PaCVersion" id="PaCVersion" value="05.20.02.00.02" /><input type="hidden" name="currentrecord" id="currentrecord" value="0x000000000008324e" /><input type="hidden" name="encrow" id="encrow" value="" /><input type="hidden" name="BrowseRowNumber" id="BrowseRowNumber" value="" /><input type="hidden" name="Browser" id="Browser" value="Chrome" /><input type="hidden" name="BrowserVersion" id="BrowserVersion" value="80" /><input type="hidden" name="BrowserPlatform" id="BrowserPlatform" value="Win32" /><input type="hidden" name="TouchDevice" id="TouchDevice" value="false" /><input type="hidden" name="OpenRow" id="OpenRow" value="" /><input type="hidden" name="OpenDetails" id="OpenDetails" value="" /><input type="hidden" name="PopupWidth" id="PopupWidth" value="795" /><input type="hidden" name="PopupHeight" id="PopupHeight" value="330" /><input type="hidden" name="noheader" id="noheader" value="yes" /><input type="hidden" name="vSelectMode" id="vSelectMode" value="N" /><input type="hidden" name="PreviousProgram" id="PreviousProgram" value="simptbrws000" /><input type="hidden" name="duserid" id="duserid" value="richard.barrett" /><input type="hidden" name="RefreshMode" id="RefreshMode" value="" /><input type="hidden" name="hExcelRandom" id="hExcelRandom" value="" /><input type="hidden" name="hCurrentPath" id="hCurrentPath" value="WSADSBIMTW" /><input type="hidden" name="hIPInfo" id="hIPInfo" value="172.16.77.41" /><input type="hidden" name="hBrowseFirstRowid" id="hBrowseFirstRowid" value="" /><input type="hidden" name="HomePage" id="HomePage" value="ssmhom01.w" /><input type="hidden" name="hApplyingFilter" id="hApplyingFilter" value="" /><input type="hidden" name="hRepositioning" id="hRepositioning" value="" /><input type="hidden" name="isPopup" id="isPopup" value="true" /><input type="hidden" name="loginID" id="loginID" value="151790" /><input type="hidden" name="pDesc" id="pDesc" value="" /><input type="hidden" name="pProgram" id="pProgram" value="" /><input type="hidden" name="pParams" id="pParams" value="" /><input type="hidden" name="pPath" id="pPath" value="" /><input type="hidden" name="pInfo" id="pInfo" value="" /><input type="hidden" name="pType" id="pType" value="" /><input type="hidden" name="pSrpplmIn" id="pSrpplmIn" value="" /><input type="hidden" name="pPriority" id="pPriority" value="" /><input type="hidden" name="pButtons" id="pButtons" value="" /><input type="hidden" name="fileUploadLimit" id="fileUploadLimit" value="" /><input type="hidden" name="blobid" id="blobid" value="" /><input type="hidden" name="pEnc" id="pEnc" value="" /><input type="hidden" name="fileInputId" id="fileInputId" value="" /><input type="hidden" name="delAttachReturn" id="delAttachReturn" value="" /><input type='hidden' id='hUseCGIIP' name='hUseCGIIP' value='yes'/><input type="hidden" name="hScrollBarWidth" id="hScrollBarWidth" value="17" /><input type="hidden" name="UserSecLevel" id="UserSecLevel" value="5" /><input type="hidden" name="UserLookupLevel" id="UserLookupLevel" value="5" /><input type="hidden" name="AllowSpecial" id="AllowSpecial" value="false" /><input type="hidden" name="AppType" id="AppType" value="Desktop" /><input type="hidden" name="hNotificationsJSON" id="hNotificationsJSON" value="[]" /><input type="hidden" name="hIdleMax" id="hIdleMax" value="10" /><input type="hidden" name="pState" id="pState" value="TX" /><input type="hidden" name="pCountry" id="pCountry" value="US" /><input type="hidden" name="hDisplayBorder" id="hDisplayBorder" value="true" /><input type="hidden" name="hAlternateColors" id="hAlternateColors" value="true" /><input type="hidden" name="hCurrentRec" id="hCurrentRec" value="0x000000000008324e" /><input type="hidden" name="hCurrentBlobID" id="hCurrentBlobID" value="" /><input type="hidden" name="hBlobList" id="hBlobList" value="" /><input type="hidden" name="hAreaManager" id="hAreaManager" value="Keaven O" /><input type="hidden" name="hMenuPathFW" id="hMenuPathFW" value="WS\AD\SB\IM\TW" /><input type="hidden" name="ButtonID" id="ButtonID" value="SMADASCIIImports" /><input type="hidden" name="recordLimit" id="recordLimit" value="30" /><input type="hidden" name="hFilterOpen" id="hFilterOpen" value="" /><input type="hidden" name="filterElementList" id="filterElementList" value="" /><input type="hidden" name="currentbrowse" id="currentbrowse" value="brTestScoreImport" /><input type="hidden" name="vSelectedColumn" id="vSelectedColumn" value="1" /><input type="hidden" name="vSelectedColumnDirection" id="vSelectedColumnDirection" value="D" /><input type="hidden" name="disableAnimations" id="disableAnimations" value="yes" /><input type="hidden" name="hOpenSave" id="hOpenSave" value="no" /><input type="hidden" name="hAutoOpenPref" id="hAutoOpenPref" value="no" /><input type="hidden" name="hButtonHotKeyIDs" id="hButtonHotKeyIDs" value="bSave,bCancel" /><input type="hidden" name="hButtonHotKeys" id="hButtonHotKeys" value="S,B" /><script type="text/javascript">
+gUpArrow='wsmarw01.gif'; 
+gDownArrow='wsmarw02.gif'; 
+function loadFramework(){
+if (document.title == 'Skyward: Loading page... (05.20.02.00.02)' || document.title == ''){
+document.title=Encoder.htmlDecode("File Maintenance - Entity 001 - WS\\AD\\SB\\IM\\TW - 11680 - 05.20.02.00.02"); 
+}
+attachCleanup('tDescription,tTextQualifier,tStartRow,'); 
+if (!window.resetFilter && document.getElementById('resetTd')) { 
+document.getElementById('resetTd').innerHTML='';} 
+if (!window.resetFilter && document.getElementById('bfilterReset')) {  
+document.getElementById('bfilterReset').style.display='none'; }
+window.gHeadsUp = false;
+checkOrigValues(); window.gExpandDetails = [];gDisplayColors = true; 
+gHighlightChanges = true; 
+gColor = '#d0b0ff'; 
+gChangeColor = '#d0ffb0'; 
+loadColors(); 
+addEvent(document.detailform, 'submit', cancelEvent); 
+vAttchFile[vAttchFile.length] = new FwAttachment(1687163, 'KSkskbaOgUDaVwIm', 'CustomNameNeedsFormatting_02_24_2020_20_14_12_richardbarrett.csv', false, new Date(2020,1,25,11, 4,04)); gEnterField = 'sFileType'; 
+applyFocus(); 
+window.setTimeout(applyFocus, 100); 
+try { loadEnterTab(); } catch(er) {} 
+doOnReady();
+}
+</script> 
+<div id='requiredFieldMessage'>&nbsp;Asterisk (*) denotes a required field</div></div></div></div><input type="hidden" name="hLoadTime" id="hLoadTime" value=".029" /></form><form style='display:none;' name='navform' method='post' action='ssmhom01.w'> <input type="hidden" name="nameid" id="nameid" value="151790" /><input type="hidden" name="dwd" id="dwd" value="7780113" /><input type="hidden" name="wfaacl" id="wfaacl" value="9584426" /><input type="hidden" name="encses" id="encses" value="dadvidIFldadkcbj" /><input type="hidden" name="encsec" id="encsec" value="" /><input type="hidden" name="rawprog" id="rawprog" value="" /><input type="hidden" name="encprog" id="encprog" value="" /><input type="hidden" name="back" id="back" value="x" /><input type="hidden" name="entity" id="entity" value="001" /><input type="hidden" name="entities" id="entities" value="001" /><input type="hidden" name="vProgramId" id="vProgramId" value="" /><input type="hidden" name="whereto" id="whereto" value="" /><input type="hidden" name="Browser" id="Browser" value="Chrome" /><input type="hidden" name="BrowserVersion" id="BrowserVersion" value="80" /><input type="hidden" name="BrowserPlatform" id="BrowserPlatform" value="Win32" /><input type="hidden" name="BrowserName" id="BrowserName" value="Chrome" /><input type="hidden" name="TouchDevice" id="TouchDevice" value="false" /><input type="hidden" name="HomePage" id="HomePage" value="ssmhom01.w" /><input type="hidden" name="HomePageMenuID" id="HomePageMenuID" value="" /><input type="hidden" name="FromHomePage" id="FromHomePage" value="true" /><input type="hidden" name="FromRecent" id="FromRecent" value="false" /><input type="hidden" name="ButtonID" id="ButtonID" value="" /><input type="hidden" name="RecentString" id="RecentString" value="" /><input type="hidden" name="showTracker" id="showTracker" value="false" /></form><script type="text/javascript">addEvent(window,'load',function(){
+endOfBody(); 
+window.setTimeout(hideMessage, 250);
+});
+</script></body></html>
+
+<!-- Generated by Webspeed: http://www.webspeed.com/ -->
