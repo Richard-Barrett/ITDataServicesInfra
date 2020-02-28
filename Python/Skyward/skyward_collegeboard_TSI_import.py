@@ -21,6 +21,7 @@ import logging
 import time 
 from pynput.keyboard import Key, Controller
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
@@ -57,6 +58,9 @@ username = getpass.getuser()
 version = platform.version()
 keyboard = Controller()
 
+# Upload Path Variables 
+file_input_tsi = os.path.abspath("C:\Imports\CustomNameNeedsFormatting_02_24_2020_20_14_12_richardbarrett")
+
 # URL Variables 
 login_url = ''
 redirect_url = ''
@@ -78,8 +82,17 @@ elif platform.system() == ('Darwin'):
 else:
     print("Are you sure you have the Selenium Webdriver installed in the correct path?")
       
+# tearDown Method
+def tearDown(self):
+    self.browser.close()
+
+# shutDown Method 
+def shutDown(self):
+    self.browser.quit()
+
 # Parent URL
 browser.get("https://skyward-student.del-valle.k12.tx.us/scripts/wsisa.dll/WService=wsEAplus/seplog01.w?nopopup=true")
+time.sleep(5)
 
 # Credentials NEEDS UNIT TEST
 username = browser.find_element_by_id("login")
@@ -121,31 +134,55 @@ browser.switch_to.window(browser.window_handles[-1])
 # Field XPATH = //*[@id='brTestScoreImportLookupInput']
 test_lookup = browser.find_element_by_id("brTestScoreImportLookupInput")
 test_lookup.send_keys(test_upload)
-
-# Press and Release Enter Key
-keyboard.press(Key.enter)
-keyboard.release(Key.enter)
+test_lookup.send_keys(Keys.RETURN)
 
 # Click on the TSI Master Test Upload Utility in Test Wizard
 # TSI Master Upload Utility XPATH = //*[@id='0x000000000008324e']/td[2]/div
-element = WebDriverWait(browser, 20).until(
+element = WebDriverWait(browser, 10).until(
     EC.element_to_be_clickable((By.XPATH, "//*[@id='0x000000000008324e']/td[2]/div")))
 element.click();
 
 # Click on Edit Button, Switch to New Popup
 # Edit Button XPATH = //*[@id='bEdit']
-element = WebDriverWait(browser, 20).until(
+element = WebDriverWait(browser, 10).until(
     EC.element_to_be_clickable((By.XPATH, "//*[@id='bEdit']")))
 element.click();
 
 # Upload Test File
 # Choose File Button XPATH = //*[@id='file1']
-element = WebDriverWait(browser, 20).until(
-            EC.element_to_be_clickable((By.ID, "file1")))
-element.click();
+# Window Page Address that Opens = https://skyward-student.del-valle.k12.tx.us/scripts/wsisa.dll/WService=wsEAplus/simptedit000.w?isPopup=true
+# Browser Switches to Window
+WebDriverWait(browser,20).until(EC.number_of_windows_to_be(3))
+browser.switch_to.window(browser.window_handles[-1])
+
+# CSS Selector = #file1 
+# Fulll XPATH = /html/body/form[1]/div/div/div[5]/table/tbody/tr/td[1]/fieldset/table/tbody/tr[9]/td/fieldset/table/tbody/tr/td[2]/table/tbody/tr/td[1]/input
+#wd.find_element_by_css_selector('a[onclick*="uploadDocument"]').click()
+#wd.find_element_by_css_selector('div#UploadDocumentPopup input#documentfile').send_keys(os.getcwd()+"/<filename>")
+#wd.find_element_by_css_selector('div#UploadDocumentPopup input[value="Upload"]').click()
+element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/form[1]/div/div/div[5]/table/tbody/tr/td[1]/fieldset/table/tbody/tr[9]/td/fieldset/table/tbody/tr/td[2]/table/tbody/tr/td[1]/input")))
+element.send_keys(file_input_tsi)
+
+#file_input = browser.find_element_by_id("file1")
+#file_input.send_keys(file_input_tsi)
+
+#element = WebDriverWait(browser, 30).until(
+#            EC.element_to_be_clickable((By.XPATH, "//*[@id='file1']")))
+#element.send_keys(file_input_tsi);
+
+#element.send_keys("C:\Imports\CustomNameNeedsFormatting_02_24_2020_20_14_12_richardbarrett");
+
+#upload = browser.find_element_by_xpath("//*[@id='file1']")
+#upload.click();
+
+
+#upload.send_keys(Keys.RETURN)
+
+#element = WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='file1']")))
+#element.send_keys("C:\Imports\CustomNameNeedsFormatting_02_24_2020_20_14_12_richardbarrett")
 
 # File Selection = (Specify Path)
-browser.findElement(By.id("file1")).sendKeys(r'C:\Users\richard.barrett\Downloads\CustomNameNeedsFormatting_02_24_2020_20_14_12_richardbarrett')
+#browser.findElement(By.id("file1")).sendKeys(r'C:\Users\richard.barrett\Downloads\CustomNameNeedsFormatting_02_24_2020_20_14_12_richardbarrett')
 #WebElement fileInput = driver.findElement(By.name("file1"));
 #fileInput.sendKeys(r"C:\Users\richard.barrett\Downloads\CustomNameNeedsFormatting_02_24_2020_20_14_12_richardbarrett");
 
