@@ -1,3 +1,11 @@
+#!/bin/python 
+# ===========================================================
+# Created By: Richard Barrett
+# Organization: DVISD
+# DepartmenT: Data Services
+# Purpose: HREF Link Check for Websites
+# Date: 02/28/2020
+# ===========================================================
 from bs4 import BeautifulSoup,SoupStrainer
 import urllib.request
 import colorama,re,queue,threading
