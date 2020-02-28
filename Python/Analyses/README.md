@@ -1,4 +1,6 @@
 ## Analyses with Python 
+This place will be used to run categorical, comparative, and statistical analyses from a python perspective. 
+The main goal is to unify infrastructure under python and any system interactions via systems scripts such as Bash, Powershell, and Z-Shell scripts.
 
 ## Excel Diff
 The overall excel_diff.py will provide a template in python to create a diff between two excel files. 
