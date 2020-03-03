@@ -21,6 +21,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from datetime import date
 
+decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
+
+if os.path.exists("secrets.gpg"):
+      returned_value = subprocess.call(decrypt, shell=True)
+else:
+        print("The file does not exist")
+
 import json
 with open('secrets.json','r') as f:
           config = json.load(f)
@@ -60,3 +67,28 @@ with open('secrets.json','r') as f:
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='view4__SignInForm']/div[3]/button")))
           element.click();
+          
+          # Select School District from Drop Down and Click Sign In 
+          # For School District XPATH = //*[@id='orgId']/option[2]
+          # For Sign-In XPATH = //*[@id='view-holder']/div/div/div/div/form/button
+          element = WebDriverWait(browser, 20).until(
+                          EC.element_to_be_clickable((By.XPATH, "//*[@id='orgId']/option[2]")))
+          element.click();
+          
+          element = WebDriverWait(browser, 20).until(
+                          EC.element_to_be_clickable((By.XPATH, "//*[@id='view-holder']/div/div/div/div/form/button")))
+          element.click();
+
+          # NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
+          # Quit the Webbrowser
+          time.sleep(5)
+
+          # Delete the Encrypted File
+          if os.path.exists("secrets_test.json"):
+                    os.remove("secrets_test.json")
+                    print("The file was removed and everything is clean!")
+          else:
+                     print("The file does not exist")
+
+print("The download was successfull!")
+browser.quit()
