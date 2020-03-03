@@ -52,6 +52,7 @@ node = platform.node()
 system = platform.system()
 username = getpass.getuser()
 version = platform.version()
+current_directory = os.getcwd()
 
 # URL Variables 
 login_url = 'https://www.accuplacer.org/'
@@ -62,8 +63,8 @@ custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 # Check for Version of Chrome
 
 # Options 
-options = Options()
-options.add_argument("--headless")
+options = webdriver.ChromeOptions() 
+options.add_argument("download.default_directory=current_directory", "--headless")
 
 # WebDriver Path for System
 if platform.system() == ('Windows'):
