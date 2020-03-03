@@ -47,16 +47,16 @@ with open('secrets.json','r') as f:
           browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 
           # Parent URL
-          browser.get("")
+          browser.get("https://k12reports.collegeboard.org/login")
 
           # Credentials NEEDS TO BE ENCRYPTED AND NOT BAKED INTO THE SCRIPT NEEDS UNIT TEST
-          username = browser.find_element_by_id("Username")
-          password = browser.find_element_by_id("Password")
+          username = browser.find_element_by_id("view4__username_pro")
+          password = browser.find_element_by_id("view4__password_pro")
           username.send_keys(config['user']['name'])
           password.send_keys(config['user']['password'])
 
           # Authentication submit.click()
-          # For XPATH = //*[@id='qa-button-login']
+          # For XPATH = //*[@id='view4__SignInForm']/div[3]/button
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='qa-button-login']")))
           element.click();
