@@ -95,4 +95,4 @@ with open('secrets.json','r') as f:
                      print("The file does not exist")
 
 print("The download was successfull!")
-browser.quit()
+#browser.quit()
