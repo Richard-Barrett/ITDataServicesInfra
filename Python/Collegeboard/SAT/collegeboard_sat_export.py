@@ -58,5 +58,5 @@ with open('secrets.json','r') as f:
           # Authentication submit.click()
           # For XPATH = //*[@id='view4__SignInForm']/div[3]/button
           element = WebDriverWait(browser, 20).until(
-                          EC.element_to_be_clickable((By.XPATH, "//*[@id='qa-button-login']")))
+                          EC.element_to_be_clickable((By.XPATH, "//*[@id='view4__SignInForm']/div[3]/button")))
           element.click();
