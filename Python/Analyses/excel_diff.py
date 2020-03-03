@@ -30,6 +30,7 @@ system = platform.system()
 username = getpass.getuser()
 version = platform.version()
 working_directory = os.getcwd()
+pd.set_option('display.max_rows', None)
 
 # File Variables on Relative Path within CWD
 file_1 = "ExportPOSStudents.xlsx"
