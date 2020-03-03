@@ -85,13 +85,13 @@ with open('secrets.json','r') as f:
       
           # Click on the Downloads Menu and Select Raw Data Files for Your System 
           # Downloads Drop Down XPATH = //*[@id='navigation-region']/div/nav[1]/div/div/div/ul/li[2]/a
-          # Select RAW Data Files for System XPATH = //*[@id='navigation-region']/div/nav[1]/div/div/div/ul/li[2]/ul/li[3]/a
+          # Select RAW Data Files for System XPATH = //*[@id='navigation-region']/div/nav/div/div/div/ul/li[2]/ul/li[3]/a/span
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='navigation-region']/div/nav[1]/div/div/div/ul/li[2]/a")))
           element.click();
           
           element = WebDriverWait(browser, 20).until(
-                          EC.element_to_be_clickable((By.XPATH, "//*[@id='navigation-region']/div/nav[1]/div/div/div/ul/li[2]/ul/li[3]/a")))
+                          EC.element_to_be_clickable((By.XPATH, "//*[@id='navigation-region']/div/nav/div/div/div/ul/li[2]/ul/li[3]/a/span")))
           element.click();
       
           # NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
