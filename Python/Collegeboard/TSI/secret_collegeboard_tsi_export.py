@@ -63,8 +63,8 @@ custom_reports_url = 'https://www.accuplacer.org/api/home.html#/customReports'
 # Check for Version of Chrome
 
 # Options 
-options = webdriver.ChromeOptions() 
-options.add_argument("download.default_directory=current_directory", "--headless")
+#options = webdriver.ChromeOptions() 
+#options.add_argument("download.default_directory=current_directory", "--headless")
 
 # WebDriver Path for System
 if platform.system() == ('Windows'):
