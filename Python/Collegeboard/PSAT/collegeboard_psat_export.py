@@ -49,6 +49,7 @@ with open('secrets.json','r') as f:
           today = date.today()
           date = today.strftime("%m/%d/%Y")
           username = getpass.getuser()
+          
 
           # URL Variables 
           login_url = ''
@@ -56,6 +57,10 @@ with open('secrets.json','r') as f:
 
           # WebDriver Path for Windows 10 
           browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
+            
+          # Option Variables
+          alert_obj = browser.switch_to.alert
+
 
           # Parent URL
           browser.get("https://k12reports.collegeboard.org/login")
@@ -89,8 +94,11 @@ with open('secrets.json','r') as f:
           # Don't Show Again Checkbox XPATH = //*[@id='dontShowTour'], ID = dontShowTour
           # Close Button XPATH = //*[@id='start_tour_container']/div/div/div[2]/button
           # Browser Switches to Window
-          WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
-          browser.switch_to.window(browser.window_handles[-1])
+          #WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
+          #browser.switch_to.window(browser.window_handles[-1])
+          alert__obj.accept();
+          time.sleep(2)
+      
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='dontShowTour']")))
           element.click();
