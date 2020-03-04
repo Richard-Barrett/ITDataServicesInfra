@@ -1,4 +1,3 @@
-Learn more or give us feedback
 #!/bin/python 
 # ===========================================================
 # Created By: Richard Barrett
