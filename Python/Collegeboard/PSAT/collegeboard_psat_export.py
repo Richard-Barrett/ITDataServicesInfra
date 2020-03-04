@@ -71,7 +71,20 @@ with open('secrets.json','r') as f:
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='view4__SignInForm']/div[3]/button")))
           element.click();
-          
+          time.sleep(5)
+      
+          # Handle Tour Pop Up Window Click Don't Show Again Checkbox and Click Close Button
+          # Don't Show Again Checkbox XPATH = //*[@id='dontShowTour'], ID = dontShowTour
+          # Close Button XPATH = //*[@id='start_tour_container']/div/div/div[2]/button
+          element = WebDriverWait(browser, 20).until(
+                          EC.element_to_be_clickable((By.XPATH, "//*[@id='dontShowTour']")))
+          element.click();
+          time.sleep(1)
+          element = WebDriverWait(browser, 20).until(
+                          EC.element_to_be_clickable((By.XPATH, "//*[@id='start_tour_container']/div/div/div[2]/button")))
+          element.click();
+          time.sleep(2)
+            
           # Select School District from Drop Down and Click Sign In 
           # For School District XPATH = //*[@id='orgId']/option[2]
           # For Sign-In XPATH = //*[@id='view-holder']/div/div/div/div/form/button
