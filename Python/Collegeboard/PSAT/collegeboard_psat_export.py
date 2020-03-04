@@ -86,11 +86,10 @@ with open('secrets.json','r') as f:
           #                EC.element_to_be_clickable((By.XPATH, "//*[@id='orgId']/option[2]")))
           #element.click();
           
-          element = WebDriverWait(browser, 10).until(
+          element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='view-holder']/div/div/div/div/form/button")))
           element.click();
-          time.sleep(05)
-          print("School District Successfully Chosen.")
+          #print("School District Successfully Chosen.")
 
           # Handle Tour Pop Up Window Click Don't Show Again Checkbox and Click Close Button
           # Don't Show Again Checkbox XPATH = //*[@id='dontShowTour'], ID = dontShowTour
@@ -99,14 +98,13 @@ with open('secrets.json','r') as f:
           element = WebDriverWait(browser, 10).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='dontShowTour']")))
           element.click();
-          time.sleep(1)
-          print("Checkbox has been selected.")
+          #print("Checkbox has been selected.")
 
           element = WebDriverWait(browser, 10).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='start_tour_container']/div/div/div[2]/button")))
           element.click();
           time.sleep(1)
-          print("Close Button Succesfully Clicked")
+          #print("Close Button Succesfully Clicked")
       
           # Click on the Downloads Menu and Select Raw Data Files for Your System 
           # Downloads Drop Down XPATH = //*[@id='navigation-region']/div/nav[1]/div/div/div/ul/li[2]/a
@@ -118,7 +116,7 @@ with open('secrets.json','r') as f:
           element = WebDriverWait(browser, 10).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='navigation-region']/div/nav/div/div/div/ul/li[2]/ul/li[3]/a/span")))
           element.click();
-          print("Process to Click on Downloads Menu and Select Raw Data Files Href.")
+          #print("Process to Click on Downloads Menu and Select Raw Data Files Href.")
 
           # NEED TO PUT AN IF FUNCION AND UNIT TEST FOR SESSION TIMEOUTS!!!
           # Quit the Webbrowser
