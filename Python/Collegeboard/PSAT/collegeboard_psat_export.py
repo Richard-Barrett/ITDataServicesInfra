@@ -59,7 +59,7 @@ with open('secrets.json','r') as f:
           browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
             
           # Option Variables
-          alert_obj = browser.switch_to.alert
+          #alert_obj = browser.switch_to.alert
 
 
           # Parent URL
@@ -96,8 +96,8 @@ with open('secrets.json','r') as f:
           # Browser Switches to Window
           #WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
           #browser.switch_to.window(browser.window_handles[-1])
-          alert__obj.accept();
-          time.sleep(2)
+          #alert__obj.accept();
+          #time.sleep(2)
       
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='dontShowTour']")))
