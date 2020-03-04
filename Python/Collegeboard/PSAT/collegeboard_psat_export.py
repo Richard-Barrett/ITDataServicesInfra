@@ -25,7 +25,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait 
 from datetime import date
 
-decrypt = "gpg --output secrets_test.json --decrypt secrets.gpg" 
+decrypt = "gpg --output secrets.json --decrypt secrets.gpg" 
 
 if os.path.exists("secrets.gpg"):
       returned_value = subprocess.call(decrypt, shell=True)
@@ -99,8 +99,8 @@ with open('secrets.json','r') as f:
           time.sleep(5)
 
           # Delete the Encrypted File
-          if os.path.exists("secrets_test.json"):
-                    os.remove("secrets_test.json")
+          if os.path.exists("secrets.json"):
+                    os.remove("secrets.json")
                     print("The file was removed and everything is clean!")
           else:
                      print("The file does not exist")
