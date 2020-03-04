@@ -83,14 +83,18 @@ with open('secrets.json','r') as f:
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='view-holder']/div/div/div/div/form/button")))
           element.click();
+          time.sleep(3)
       
           # Handle Tour Pop Up Window Click Don't Show Again Checkbox and Click Close Button
           # Don't Show Again Checkbox XPATH = //*[@id='dontShowTour'], ID = dontShowTour
           # Close Button XPATH = //*[@id='start_tour_container']/div/div/div[2]/button
+          # Browser Switches to Window
+          WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
+          browser.switch_to.window(browser.window_handles[-1])
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='dontShowTour']")))
           element.click();
-          time.sleep(1)
+          time.sleep(2)
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='start_tour_container']/div/div/div[2]/button")))
           element.click();
