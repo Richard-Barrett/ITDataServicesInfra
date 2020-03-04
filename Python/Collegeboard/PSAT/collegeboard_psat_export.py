@@ -81,9 +81,9 @@ with open('secrets.json','r') as f:
           # Select School District from Drop Down and Click Sign In 
           # For School District XPATH = //*[@id='orgId']/option[2]
           # For Sign-In XPATH = //*[@id='view-holder']/div/div/div/div/form/button
-          element = WebDriverWait(browser, 20).until(
-                          EC.element_to_be_clickable((By.XPATH, "//*[@id='orgId']/option[2]")))
-          element.click();
+          #element = WebDriverWait(browser, 20).until(
+          #                EC.element_to_be_clickable((By.XPATH, "//*[@id='orgId']/option[2]")))
+          #element.click();
           
           element = WebDriverWait(browser, 20).until(
                           EC.element_to_be_clickable((By.XPATH, "//*[@id='view-holder']/div/div/div/div/form/button")))
