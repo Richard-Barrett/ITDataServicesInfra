@@ -59,13 +59,13 @@ print(df2)
 
 # Check to See if Files are Same Size
 df1.equals(df2)
-if print(df1.equals(df2)) is False:
+if print(df1.equals(df2)) != False:
     print("Dataframes are not the same size.")
 else:
     print("Dataframes are the same size.")
 
 df1[e_date].equals(df2[e_date])
-if print(df1[e_date].equals(df2[e_date])) is False:
+if print(df1[e_date].equals(df2[e_date])) != False:
     print("The Entries are not the same within column for e_date.")
 else:
     print("The Entries are the same within the columns for e_date.")
