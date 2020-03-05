@@ -16,7 +16,7 @@ If you wish to install a package one at a time you do the following to help you 
 **NOTE: THE SCRIPTS IN THIS DIRECTORY INSTALL ALL PACKAGES RESPECTIVE TO THE FILE DEVELOPER, LOCAL, AND SERVER**
 
 **References**
-- **[Chocolatey Packages Available](https://chocolatey.org/packages)
+- **[Chocolatey Packages Available](https://chocolatey.org/packages)**
 - **[Chocolatey Security](https://chocolatey.org/docs/security)**
 
 ## Install Packages
