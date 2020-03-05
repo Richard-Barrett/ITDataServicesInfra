@@ -4,6 +4,12 @@ As a result, you can find a list of all of the packages available via the follow
 
 - **[Chocolatey Packages](https://chocolatey.org/packages)**
 
+## References
+Some people may be unfamilliar with Chocolatey. 
+As a result, I have included the following link to helo you better understand how to use choclatey within Powershell. 
+
+- **[Chocolatey Commands Cheatsheet](https://chocolatey.org/docs/commandslist)**
+
 ## Security 
 Chocolatey by default does not work with Git in terms of Checking Auomtated Security. 
 As a result, there are some python scripts that will check all packages installed and within the repsosiotry. 
