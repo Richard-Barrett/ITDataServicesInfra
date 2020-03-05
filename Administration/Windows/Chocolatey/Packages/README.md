@@ -15,3 +15,24 @@ If you wish to install a package one at a time you do the following to help you 
 
 **NOTE: THE SCRIPTS IN THIS DIRECTORY INSTALL ALL PACKAGES RESPECTIVE TO THE FILE DEVELOPER, LOCAL, AND SERVER**
 
+## Install Packages
+To install packages use the script that will help you provision your machine to what you want to use.
+The machine you are provisoning may be a machine used by a devloper. 
+Or, the machine you are provisioning may be used for your local and/or a server. 
+Provision Accordingly, and use the proper script with a security and minimal perspective in mind. 
+Also, if you do not want to install any of those packages you can make own **`Packages.txt`** file.
+By default any **`.txt`** file is set to be ignored.
+However, the script **`Choco_Install_Packages.ps1`** will account for the **`Packages.txt`** file. 
+
+**To Install Developer Packages**
+- **`./Choco_Developer_Pacakages.ps1`**
+
+**To Install Local Packages**
+- **`./Choco_Local_Pacakages.ps1`**
+
+**To Install Personal Packages**
+- **`./Choco_Personal_Pacakages.ps1`**
+
+**To Install Sever Packages**
+- **`./Choco_Server_Pacakages.ps1`**
+
