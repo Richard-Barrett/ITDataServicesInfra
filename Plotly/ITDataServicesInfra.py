@@ -26,33 +26,6 @@ else:
 with open('secrets.json','r') as f:
         config = json.load(f)
         
-# Salesforce User Session and Fields
-# ==================================
-from simple_salesforce import SalesforceAPI
-sf = SalesforceAPI((config['username']),
-                   (config['password']),
-                   (config['token')])
-
-Fields = ['isMosAlert__c',
-              'Milestone_violated__c',
-              'First_Reply__c',
-              'CaseNumber',
-              'Environment2__r.Name',
-	            'Owner.Name',
-              'Severity_Level__c',
-              'Status',
-              'Subject',
-              'URL_for_support__c'
-]
-
-Items = str(Fields[1:10]).strip('[]')
-print(Items).replace("'", "")
-sf.query("SELECT %s from Case"% ','.join(Fields)  )
-
-Query = sf.query("SELECT Milestone_violated__c, First_Reply__c, CaseNumber, Environment2__r.Name, Owner.Name, Severity_Level__c, Status, Subject, URL_for_support__c from Case")
-
-# End Salesforce User Functions, Sessions and Fields
-# ==================================================
 
 #PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 PLOTLY_LOGO = "https://triking-creative.s3.amazonaws.com/Logos/Miradashboard/Screen+Shot+2019-08-20+at+1.39.07+PM.png"
@@ -78,13 +51,13 @@ colors = {
 
 # Dataframes
 # ===================
-df_salesforce = Query
+#df_salesforce = Query
 
 server = app.server
 
 # make a reuseable navitem for the different examples
 nav_item = dbc.NavItem(dbc.NavLink("Helpdesk", href="#"))
-nav_item2 = dbc.NavItem(dbc.NavLink("Useful Links", href="#"))
+nav_item2 = dbc.NavItem(dbc.NavLink("Links", href="#"))
 nav_item3 = dbc.NavItem(dbc.NavLink("Rundeck", href="#"))
 nav_item4 =dbc.NavItem(dbc.NavLink("Labs", href="#"))
 
@@ -102,15 +75,11 @@ nav_item4 =dbc.NavItem(dbc.NavLink("Labs", href="#"))
 dropdown = dbc.DropdownMenu(
     label="Menu",
     children=[
-        dbc.DropdownMenuItem("A"),
-        dbc.DropdownMenuItem("B"),
-        dbc.DropdownMenuItem("C"),
-        dbc.DropdownMenuItem("D"),
-        dbc.DropdownMenuItem("E"),
-        dbc.DropdownMenuItem("F"),
-        dbc.DropdownMenuItem("H"),
-        dbc.DropdownMenuItem("I"),
-    ],
+        dbc.DropdownMenuItem("nav_item"),
+        dbc.DropdownMenuItem("nav_item2"),
+        dbc.DropdownMenuItem("nav_item3"),
+        dbc.DropdownMenuItem("nav_item4"),
+    ]
 )
 
 # Drop Down Admin Menu
@@ -120,11 +89,11 @@ dropdown2 = dbc.DropdownMenu(
     children=[
         dbc.DropdownMenuItem("User"),
         dbc.DropdownMenuItem("layout"),
-        #dbc.DropdownMenuItem(divider=True),
+        dbc.DropdownMenuItem(divider=True),
         dbc.DropdownMenuItem("Info"),
         dbc.DropdownMenuItem("Themes"),
         dbc.DropdownMenuItem("Views")
-    ],
+    ]
 )
 
 # Drop Down Menu for Useful Links
@@ -223,19 +192,19 @@ app.layout = html.Div(
 
     # Top Oriented Sparkchart
     # -----------------------
-    html.H1(style={'color': 'black'},children='Miradashboard'),
+    html.H1(style={'color': 'black'},children='ITDataServicesInfra'),
     dcc.Graph(),
 
     # Top Interactive Oriented Dataframe
     # ----------------------------------
-    html.H1(children='Dataframe'),
+    html.H1(children='Body Content 2'),
     dash_table.DataTable(
 		id='table',
     		columns=[{"name": i, "id": i} for i in df.columns],
 		data=df.to_dict("rows"),
 		),
 
-    html.H1(children='Salesforce Dataframe'),
+    html.H1(children='Body Content 3'),
     dash_table.DataTable(
                 id='df_salesforce',
                 ),
