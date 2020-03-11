@@ -1,6 +1,6 @@
 param (
-    $localPath = 'E:\FTP\TalentEd\SkywardApplicantExportSQL.txt',
-    $remotePath = '/SkywardApplicantExportSQL.txt'
+    Get-Content .\files.txt | Select-String "localPath"
+    Get-Content .\files.txt | Select-String "remotePath"
 )
  
 try
@@ -10,11 +10,11 @@ try
  
     # Setup session options
     $sessionOptions = New-Object WinSCP.SessionOptions -Property @{
-        Protocol = [WinSCP.Protocol]::Sftp
-        HostName = "<domain>"
-        UserName = "<username>"
-        Password = "<password>"
-        SshHostKeyFingerprint = "<sha_fingerprint>"
+        Get-Content .\secrets.txt | select-string "Protocol"
+        Get-Content .\secrets.txt | select-string "HostName"
+        Get-Content .\secrets.txt | select-string "UserName"
+        Get-Content .\secrets.txt | select-string "Password"
+        Get-Content .\secrets.txt | select-string "SshHostKeyFingerprint"
     }
  
     $session = New-Object WinSCP.Session
