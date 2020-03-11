@@ -14,7 +14,7 @@ The **secrets.json** file should look similar to this template:
     "host": "<hostname>",
     "username": "<username>",
     "password": "password",
-    "port_num": "<port>"
+    "port_num": "<port>",
     "key_file": "<direct_path>"
   }
 }
