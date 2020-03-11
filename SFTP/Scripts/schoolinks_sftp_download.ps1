@@ -10,11 +10,11 @@ try
  
     # Setup session options
     $sessionOptions = New-Object WinSCP.SessionOptions -Property @{
-        Protocol = [WinSCP.Protocol]::Sftp
-        HostName = "<domain_name>"
-        UserName = "<username>"
-        Password = "<password>"
-        SshHostKeyFingerprint = "<fingerprint>"
+        Get-Content .\secrets.txt | select-string "Protocol"
+        Get-Content .\secrets.txt | select-string "HostName"
+        Get-Content .\secrets.txt | select-string "UserName"
+        Get-Content .\secrets.txt | select-string "Password"
+        Get-Content .\secrets.txt | select-string "SshHostKeyFingerprint"
     }
  
     $session = New-Object WinSCP.Session
