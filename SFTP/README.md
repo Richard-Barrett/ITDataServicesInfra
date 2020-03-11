@@ -16,6 +16,73 @@ Password = "<password>"
 SshHostKeyFingerprint = "ssh-rsa <encryption_type> <fingerprint_string>"
 ```
 
+The **files.txt** file should look similar to this template:
+```powershell
+$localPath = '<absolute_path>',
+$remotePath = '<absolute_path>'
+```
+
+The commands that pull out the information and pass it into the script are `Get-Content <file> | Select-String "<parsing_string>"`
+
+**Powershell SFTP Template**
+```powershell
+param (
+    Get-Content .\files.txt | Select-String "localPath"
+    Get-Content .\files.txt | Select-String "remotePath"
+)
+ 
+try
+{
+    # Load WinSCP .NET assembly
+    Add-Type -Path "C:\Program Files (x86)\WinSCP\WinSCPnet.dll"
+ 
+    # Setup session options
+    $sessionOptions = New-Object WinSCP.SessionOptions -Property @{
+        Get-Content .\secrets.txt | select-string "Protocol"
+        Get-Content .\secrets.txt | select-string "HostName"
+        Get-Content .\secrets.txt | select-string "UserName"
+        Get-Content .\secrets.txt | select-string "Password"
+        Get-Content .\secrets.txt | select-string "SshHostKeyFingerprint"
+    }
+ 
+    $session = New-Object WinSCP.Session
+ 
+    try
+    {
+        # Connect
+        $session.Open($sessionOptions)
+ 
+        # Upload files
+        $transferOptions = New-Object WinSCP.TransferOptions
+        $transferOptions.TransferMode = [WinSCP.TransferMode]::Binary
+ 
+        $transferResult =
+            $session.GetFiles($remotePath, $localPath, $False, $transferOptions)
+ 
+        # Throw on any error
+        $transferResult.Check()
+ 
+        # Print results
+        foreach ($transfer in $transferResult.Transfers)
+        {
+            Write-Host "Download of $($transfer.FileName) succeeded"
+        }
+    }
+    finally
+    {
+        # Disconnect, clean up
+        $session.Dispose()
+    }
+ 
+    exit 0
+}
+catch
+{
+    Write-Host "Error: $($_.Exception.Message)"
+    exit 1
+}
+```
+
 ## Python
 A common Python template to help with sending files to SFTP locations. 
 The main key is that you call two files here **secrets.json** and **files.json** within the code to pass off files and/or passwords without exposing file locations and credentials over Internet Traffic and/or as an exposed process often due to hardcoded information within code. 
@@ -47,6 +114,7 @@ The **files.json** should look similar to the following:
 The overall goal is to not expose file locations or system paths within the process. 
 The other part is to call the password from either an encrypted or non-encrypted file, instead of hardcoding it to the script. 
 
+**Python SFTP Template**
 ```python
 import os
 import paramiko
