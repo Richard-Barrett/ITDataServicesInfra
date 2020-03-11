@@ -52,9 +52,9 @@ with open('files.json','r') as f:
 # sftp.put('schools.csv','schools.csv')
 # sftp.put('sections.csv','sections.csv')
 
-sftp.put((file['files']['file_1']), 
-         (file['files']['file_2']),
-         (file['files']['file_3']),
+sftp.put((file['put_files']['file_1']), 
+         (file['put_files']['file_2']),
+         (file['put_files']['file_3']),
         )
 
 make_ssh_connexion.close()
