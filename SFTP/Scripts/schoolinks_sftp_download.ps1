@@ -1,6 +1,6 @@
 param (
-    $localPath = 'E:\FTP\SchooLinks\course_requests.csv',
-    $remotePath = '/schoolinks_exports/course_planning/course_requests.csv'
+    Get-Content .\files.txt | Select-String "localPath"
+    Get-Content .\files.txt | Select-String "remotePath"
 )
  
 try
