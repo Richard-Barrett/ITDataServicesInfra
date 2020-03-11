@@ -121,7 +121,14 @@ The **secrets.json** file should look similar to this template:
 The **files.json** should look similar to the following:
 ```json
 {
-  "files": {
+  "get_files": {
+    "file_1": "<absolute_path>",
+    "file_2": "<absolute_path>",
+    "file_3": "<absolute_path>",
+    "file_4": "<absolute_path>",
+    "file_5": "<absolute_path>"
+  },
+  "put_files": {
     "file_1": "<absolute_path>",
     "file_2": "<absolute_path>",
     "file_3": "<absolute_path>",
