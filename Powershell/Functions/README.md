@@ -5,7 +5,7 @@ This is a module that contains the Get-StoredCredentials cmdlet. Use this cmdlet
 
 Getting Started:
 ```powershell
-Import-Module Get-StoredCredntial.psm1
+Import-Module Get-StoredCredential.psm1
 ```
 
 To get help, type:
