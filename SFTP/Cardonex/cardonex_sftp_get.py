@@ -44,9 +44,9 @@ with open('files.json','r') as f:
 # After Files: File_1 should be nested as "file_1":"/Directory/Path/Filename"
 # You can Change the files.json File by enumerating with file_# as an index.
 
-sftp.get((file['files']['file_1']), 
-         (file['files']['file_2']),
-         (file['files']['file_3']),
+sftp.get((file['get_files']['file_1']), 
+         (file['get_files']['file_2']),
+         (file['get_files']['file_3']),
         )
 
 make_ssh_connexion.close()
