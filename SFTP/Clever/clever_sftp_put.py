@@ -1,7 +1,10 @@
 import os
 import paramiko
 import sys
-
+import json
+with open('secrets.json','r') as f:
+      config = json.load(f)
+    
 # set up logging
 from paramiko.py3compat import input
 
@@ -10,28 +13,49 @@ paramiko.util.log_to_file('clever_ftp_log')
 make_ssh_connexion = paramiko.SSHClient()
 make_ssh_connexion.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-host = "<host>"
-user_name = "<username>"
-pass_word = "<password>"
-port_num = "<port>?"
-# print("Connecting...")
-# print(host)
-# print(key_file)
-make_ssh_connexion.connect(hostname = host, username = user_name, password = pass_word)
+# JSON File Should Contain the Folling Information
+# File should be named as secrets.json
+# Category should be sftp_credential
+
+# Nested Objects
+# host= '<hostname>'
+# username="<username>"
+# password="<password>"
+# port_num="<port>"
+# key_file="<direct_path>"
+
+print("Connecting...")
+print((config['sftp_crentential']['host']))
+print((config['sftp_crentential']['key_file']))
+
+make_ssh_connexion.connect(hostname = (config['sftp_crentential']['host']), 
+                           username = (config['sftp_crentential']['username']), 
+                           password = (config['sftp_crentential']['password']))
 
 # print("connected!")
 sftp = make_ssh_connexion.open_sftp()
 
-sftp.put('admins.csv','admins.csv')
-sftp.put('teachers.csv','teachers.csv')
-sftp.put('students.csv','students.csv')
-sftp.put('enrollments.csv','enrollments.csv')
-sftp.put('schools.csv','schools.csv')
-sftp.put('sections.csv','sections.csv')
+with open('files.json','r') as f:
+      file = json.load(f)
+ 
+# JSON File Should Contain the Folling Information
+# File Should be named files.json
+# File should be referenced as Files:
+# After Files: File_1 should be nested as "file_1":"/Directory/Path/Filename"
+# You can Change the files.json File by enumerating with file_# as an index.
 
-# source='/admin.csv'
-# destination='/admin.csv'
+# Example Files to Submit:
+# sftp.put('admins.csv','admins.csv')
+# sftp.put('teachers.csv','teachers.csv')
+# sftp.put('students.csv','students.csv')
+# sftp.put('enrollments.csv','enrollments.csv')
+# sftp.put('schools.csv','schools.csv')
+# sftp.put('sections.csv','sections.csv')
+
+sftp.put((file['files']['file_1']), 
+         (file['files']['file_2']),
+         (file['files']['file_3']),
+        )
 
 make_ssh_connexion.close()
-
-# print("Closed and quitting. Dan is the most awesome!")
+print("Process Complete!")
