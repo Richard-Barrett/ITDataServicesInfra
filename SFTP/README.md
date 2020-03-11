@@ -7,6 +7,33 @@ The main thing is security. As such I am including several templates that work w
 A common Python template to help with sending files to SFTP locations. 
 The main key is that you call two files here **secrets.json** and **files.json** within the code to pass off files and/or passwords without exposing file locations and credentials over Internet Traffic and/or as an exposed process often due to hardcoded information within code. 
 
+The **secrets.json** file should look similar to this template:
+```json
+{
+  "sftp_credential": {
+    "host": "<hostname>",
+    "username": "<username>",
+    "password": "password",
+    "port_num": "<port>"
+    "key_file": "<direct_path>"
+  }
+}
+```
+The **files.json** should look similar to the following:
+```json
+{
+  "files": {
+    "file_1": "<absolute_path>",
+    "file_2": "<absolute_path>",
+    "file_3": "<absolute_path>",
+    "file_4": "<absolute_path>",
+    "file_5": "<absolute_path>"
+  }
+}
+```
+The overall goal is to not expose file locations or system paths within the process. 
+The other part is to call the password from either an encrypted or non-encrypted file, instead of hardcoding it to the script. 
+
 ```python
 import os
 import paramiko
