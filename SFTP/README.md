@@ -3,6 +3,19 @@ SFTP is a common protocol used to send vendors information.
 As a result, I have included some common scripts that might help school districts with their overall code infrastructure. 
 The main thing is security. As such I am including several templates that work with Bash, Powershell, and Python to help users send files securely to and from SFTP locations external and internal to their own inrastructure. 
 
+## Powershell
+A common Powershell Template to help with sending files to SFTP locations.
+The main key is that you call two files here **secrets.txt** and **files.txt** within the code to pass off files and/or passwords without exposing file locations and credentials over Internet Traffic and/or as an exposed process often due to hardcoded information within code. Another method is calling it using GnuPG Encrypted files using the Get-Content command from **secrets.gpg** and a **files.gpg** file. Also the scripts are dependent on WinSCP. 
+
+The **secrets.txt** file should look similar to this template:
+```powershell
+Protocol = [WinSCP.Protocol]::Sftp
+HostName = "<hostname>"
+UserName = "<username>"
+Password = "<password>"
+SshHostKeyFingerprint = "ssh-rsa <encryption_type> <fingerprint_string>"
+```
+
 ## Python
 A common Python template to help with sending files to SFTP locations. 
 The main key is that you call two files here **secrets.json** and **files.json** within the code to pass off files and/or passwords without exposing file locations and credentials over Internet Traffic and/or as an exposed process often due to hardcoded information within code. 
