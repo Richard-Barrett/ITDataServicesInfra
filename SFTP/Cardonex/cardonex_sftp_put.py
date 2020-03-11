@@ -22,7 +22,8 @@ make_ssh_connexion.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 # username="<username>"
 # password="<password>"
 # port_num="<port>"
-# key_file=c
+# token="<token>"
+# key_file="<absolute_file_path>"
 
 print("Connecting...")
 print((config['sftp_crentential']['host']))
