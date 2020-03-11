@@ -41,5 +41,6 @@ ITDataServicesInfra/Python/Skyward/secrets.yaml
 
 ITDataServicesInfra/Scripts/*
 ITDataServicesInfra/Projects/*
+ITDataServicesInfra/SFTP/Secrets/*
 
 # Specific File Extensions That Should Alway be ignored
