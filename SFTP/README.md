@@ -3,6 +3,25 @@ SFTP is a common protocol used to send vendors information.
 As a result, I have included some common scripts that might help school districts with their overall code infrastructure. 
 The main thing is security. As such I am including several templates that work with Bash, Powershell, and Python to help users send files securely to and from SFTP locations external and internal to their own inrastructure. 
 
+How does the SFTP Directory work?
+The SFTP Directory works by allowing you to store a script and/or any relevant files without having them exposed to the Repository and/or the internet, while keeping track of your code. It also allows you to store credentials within each working directory you need for SFTP. For Example, in the following:
+```
+PS C:\Users\richard.barrett\Git\ITDataServicesInfra\SFTP> tree
+Folder PATH listing for volume OS
+Volume serial number is 1E07-4DEE
+C:.
+├───Aesop
+├───Cardonex
+├───Clever
+├───Frontline
+├───Renaissance
+├───SchooLinks
+├───Scripts
+├───Skyward
+└───TalentEd
+```
+In each directory you can store a **files.json** or **files.txt**, a **secrets.json** or **secrets.txt**, and any relvant files **.csv**, **.xlsx**, **.pdf** within each directory. It also makes it easy for you to replace SFTP credentials given to you by third party vendors that you use for operational programs throughout your organization. 
+
 ## Powershell
 A common Powershell Template to help with sending files to SFTP locations.
 The main key is that you call two files here **secrets.txt** and **files.txt** within the code to pass off files and/or passwords without exposing file locations and credentials over Internet Traffic and/or as an exposed process often due to hardcoded information within code. Another method is calling it using GnuPG Encrypted files using the Get-Content command from **secrets.gpg** and a **files.gpg** file. Also the scripts are dependent on WinSCP. 
