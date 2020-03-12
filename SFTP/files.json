@@ -1,0 +1,18 @@
+{
+  "get_files": {
+    "file_1": "<absolute_path>",
+    "file_2": "<absolute_path>",
+    "file_3": "<absolute_path>",
+    "file_4": "<absolute_path>",
+    "file_5": "<absolute_path>"
+  },
+  "put_files": {
+    "file_1": "<absolute_path>",
+    "file_2": "<absolute_path>",
+    "file_3": "<absolute_path>",
+    "file_4": "<absolute_path>",
+    "file_5": "<absolute_path>"
+  }
+}
+
+## File Template for files.json
