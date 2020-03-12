@@ -1,0 +1,30 @@
+# https://raw.githubusercontent.com/kubernetes/kubernetes.github.io/release-1.3/docs/user-guide/pods/pod-sample.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: redis-django
+spec:
+  selector:
+    app: web
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8000
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-django
+  labels:
+    app: web
+spec:
+  containers:
+  - name: key-value-store
+    image: redis
+    ports:
+      - containerPort: 6379
+  - name: frontend
+    image: django-redis:lab
+    ports:
+      - containerPort: 8000
