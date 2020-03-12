@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-internal
+spec:
+  ports: 
+    - port: 3306
+      protocol: TCP
+      targetPort: 3306
+  selector:
+    app: mysql
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: mysql
+        track: production
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - mountPath: "/var/lib/mysql"
+          name: mysql-pv
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: admin-password
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: dbname
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: username
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: password
+      volumes:
+        - name: mysql-pv
+          persistentVolumeClaim:
+            claimName: ghost-pv-claim
+

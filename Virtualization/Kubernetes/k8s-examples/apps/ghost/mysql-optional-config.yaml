@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: mysql
+        track: production
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - mountPath: "/var/lib/mysql"
+          name: mysql-pv
+        - mountPath: "/tmp/scripts"
+          name: create-db-script
+        - mountPath: "/tmp/data"
+          name: mysql-db-config
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: admin-password
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: username
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: password
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: dbname
+      volumes:
+      - name: mysql-pv
+        persistentVolumeClaim:
+          claimName: ghost-pv-claim
+      - name: create-db-script
+        configMap:
+          name: mysql-db-creation-script
+          defaultMode: 0777
+          optional: true
+          #items:
+          #- key: create-db.sh
+          #  path: create-db.sh
+      - name: mysql-db-config
+        secret:
+          secretName: mysql-db-creation-secret
+          optional: true
+          items:
+          - key: ghost-secrets.txt
+            path: ghost-secrets.txt
+      nodeSelector:
+        kubernetes.io/hostname: node2
