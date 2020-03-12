@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: echoserver
+  labels:
+    name: echoserver
+spec:
+  selector:
+    matchLabels:
+      name: echoserver
+  template:
+    metadata:
+      labels:
+        name: echoserver
+    spec:
+      containers:
+      - name: echoserver
+        image: k8s.gcr.io/echoserver:1.4
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: echoserver
+  labels:
+    app: echoserver
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  clusterIP: None
+  selector:
+    app: echoserver
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: echoserver
+spec:
+  serviceName: echoserver
+  replicas: 3
+  selector:
+    matchLabels:
+      app: echoserver
+  podManagementPolicy: OrderedReady
+  template:
+    metadata:
+      labels:
+        app: echoserver
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: echoserver
+        image: k8s.gcr.io/echoserver:1.4
+        ports:
+        - containerPort: 8080

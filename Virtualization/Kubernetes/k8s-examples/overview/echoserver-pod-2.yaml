@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echoserver2     # Change 'echoserver' to 'echoserver2'
+  labels:               # Add a new 'labels' key
+    mylabel1: value1    # Add a new 'mylabel1' label
+spec:
+  containers:
+  - name: echoserver
+    image: k8s.gcr.io/echoserver:1.4
+    ports:
+    - containerPort: 8080
