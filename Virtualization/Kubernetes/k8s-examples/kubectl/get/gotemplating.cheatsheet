@@ -1,0 +1,59 @@
+# https://golang.org/pkg/text/template/
+
+# Basics
+docker inspect -f 'Hello from container {{.Name}}' ${CONT}
+docker inspect -f '{{.}}' ${CONT}
+
+# Indexing maps
+docker inspect -f '{{.State.Pid}}' ${CONT}
+docker inspect -f '{{with .State}} {{.Pid}} {{end}}' ${CONT}
+docker inspect -f '{{index .Volumes "/var/jenkins_home"}}' ${CONT}-data
+
+# Indexing arrays
+docker inspect -f '{{.HostConfig.Binds}}' ${CONT}
+docker inspect -f '{{index .HostConfig.Binds 1}}' ${CONT}
+# https://stackoverflow.com/questions/30342796/how-to-get-env-variable-when-doing-docker-inspect/30353018#30353018
+docker inspect -f '{{ (index (index .NetworkSettings.Ports "5000/tcp") 0).HostPort }}' ${CONT}
+docker inspect -f "{{ index .Config.Cmd $[$(docker inspect -f '{{ len .Config.Cmd }}' ${CONT})-1]}}" ${CONT}
+
+# Functions
+docker inspect -f '{{eq "abc" "abc"}}' ${CONT}
+docker inspect -f '{{gt .State.Pid 1}}' ${CONT}
+docker inspect -f '{{lt 4.5 4.6}}' ${CONT}
+docker inspect -f '{{ne 4.5 4.5}}' ${CONT}
+
+# Tests
+docker inspect -f '{{and true false}}' ${CONT}
+docker inspect -f '{{or true false}}' ${CONT}
+docker inspect -f '{{if ne 0 .State.ExitCode }}{{.Name}} {{.State.ExitCode}}{{ end }}' $(docker ps -aq)
+
+docker inspect -f '{{if eq .State.ExitCode 0}} 
+Normal Exit
+{{else if eq .State.ExitCode 1}} 
+Not a Normal Exit 
+{{else}} 
+Still Not a Normal Exit 
+{{end}}' ${CONT}
+
+# json and combine with jq
+docker inspect ${CONT} -f '{{json .Config}}' | jq .
+docker inspect -f '{{json .NetworkSettings.Ports}}' ${CONT}
+docker inspect -f '{{json .State}}' ${CONT}-data | jq '.StartedAt'
+docker inspect ${CONT}-data | jq '.[] | .State.StartedAt'
+
+# https://gohugo.io/templates/introduction/#iteration
+# range
+docker inspect -f “{{range .Config.Env}}{{ if eq (index (split . \”=\”) 0) \”MARATHON_APP_ID\”}}{{(index (split . \”=\”) 1)}}{{end}}{{end}}” ${CONT}
+
+docker inspect webapp -f '{{range $k,$v := .HostConfig }}{{$k}}={{$v}}
+{{end}}'
+
+docker inspect webapp -f '{{range $k,$v := .HostConfig.PortBindings }}{{$k}}={{$v}}
+{{end}}'
+
+docker inspect webapp -f '{{range $k,$v := .HostConfig.PortBindings }}{{printf "Key %q == Value %q\n" $k $v}}{{end}}'
+
+# Miscellaneous
+docker inspect -f '{{.ExecIDs}}' ${CONT}
+docker inspect -f '{{eq .ExecIDs .ExecIDs}}' ${CONT}
+docker inspect -f '{{eq .State.Pid .State.Pid}}' ${CONT}
