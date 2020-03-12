@@ -1,4 +1,6 @@
 <Configuration>
+  <LocalPath>insert_local_file_path</LocalPath>
+  <RemotePath>insert_remote_file_path</RemotePath>
   <Protocol>[WinSCP.Protocol]::Sftp</Protocol>
   <HostName>insert_hostname</HostName>
   <UserName>username</UserName>
