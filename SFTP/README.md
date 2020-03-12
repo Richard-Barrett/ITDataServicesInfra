@@ -23,6 +23,7 @@ C:.
 In each directory you can store a **files.json** or **files.txt**, a **secrets.json** or **secrets.txt**, and any relvant files **.csv**, **.xlsx**, **.pdf** within each directory. It also makes it easy for you to replace SFTP credentials given to you by third party vendors that you use for operational programs throughout your organization. 
 
 ## Powershell
+![Image](https://docs.microsoft.com/en-us/powershell/media/index/powershell_128.svg)
 A common Powershell Template to help with sending files to SFTP locations.
 The main key is that you call two files here **secrets.txt** and **files.txt** within the code to pass off files and/or passwords without exposing file locations and credentials over Internet Traffic and/or as an exposed process often due to hardcoded information within code. Another method is calling it using GnuPG Encrypted files using the Get-Content command from **secrets.gpg** and a **files.gpg** file. Also the scripts are dependent on WinSCP. 
 
