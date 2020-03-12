@@ -103,6 +103,9 @@ catch
 ```
 ## **Powershell SFTP Template without Encryption Using `config.xml`**
 ```powershell
+# Read XML configuration file
+[xml]$config = Get-Content ".\config.xml"
+
 param (
     $localPath = $config.Configuration.localPath
     $remotePath = $config.Configuration.remotePath
