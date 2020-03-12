@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nonroot-echoserver
+spec:
+  securityContext:
+    runAsNonRoot: true
+  containers:
+  - name: echoserver
+    image: rezroo/echoserver:1.10
+    ports:
+    - containerPort: 8080

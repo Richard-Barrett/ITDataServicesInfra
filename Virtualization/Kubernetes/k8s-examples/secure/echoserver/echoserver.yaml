@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myes
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: master
+  tolerations:
+  - key: node-role.kubernetes.io/master
+    operator: Exists
+    #effect: NoSchedule
+  containers:
+  - name: echoserver
+    image: rezroo/echoserver:1.10
+    ports:
+    - containerPort: 8080
+
