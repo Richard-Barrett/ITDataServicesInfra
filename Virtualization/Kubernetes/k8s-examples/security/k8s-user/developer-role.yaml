@@ -1,0 +1,16 @@
+  kind: ClusterRole
+  apiVersion: rbac.authorization.k8s.io/v1beta1
+  metadata:
+    name: developer
+  rules:
+  - apiGroups: ["", "batch", "autoscaling", "extensions", "apps"]
+    resources:
+    - "statefulsets"
+    - "horizontalpodautoscalers"
+    - "jobs"
+    - "replicationcontrollers"
+    - "services"
+    - "deployments"
+    - "replicasets"
+    - "pods"
+    verbs:  ["*"]
