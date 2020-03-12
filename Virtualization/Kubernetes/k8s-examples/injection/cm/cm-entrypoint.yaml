@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: loop-echo-sh
+data:
+  entrypoint.sh: |
+    #!/bin/sh
+    sigterm() {
+      time=$(date)
+      echo "SIGTERM(15) received, application ending at $time"
+      exit 0
+    }
+    trap 'sigterm' TERM
+    while :
+    do
+      time=$(date)
+      echo "Hello from the container. It's now $time"
+      sleep 10
+    done
