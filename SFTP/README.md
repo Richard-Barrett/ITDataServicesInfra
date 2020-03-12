@@ -1,5 +1,5 @@
 # SFTP
-![Image](https://www.carlsonmc.com/wp-content/uploads/2017/06/sftp-logo-400-250-300x188.jpg)
+![Image](https://i1.wp.com/vassox.com/wp-content/uploads/2019/02/sftp.png?fit=256%2C256)
 SFTP is a common protocol used to send vendors information. 
 As a result, I have included some common scripts that might help school districts with their overall code infrastructure. 
 The main thing is security. As such I am including several templates that work with Bash, Powershell, and Python to help users send files securely to and from SFTP locations external and internal to their own inrastructure. 
