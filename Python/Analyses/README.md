@@ -14,9 +14,9 @@ To compare two text files to see if they match you can run the following:
 python md5_checksum.py [Arg_1] [Arg_2]
 ```
 
-The Arguments should be **`.txt.`** files. 
+The Arguments should be **`.txt`** files. 
 You should see something similar to this:
-```python
+```powershell
 PS C:\Users\richard.barrett\Git\ITDataServicesInfra\Python\Analyses> python .\md5_checksum.py .\ExportPOSStudents.txt .\ExportNutrikidsSkywardCompare.txt
 Comparing Files: .\ExportPOSStudents.txt and .\ExportNutrikidsSkywardCompare.txt
 Not Matched
