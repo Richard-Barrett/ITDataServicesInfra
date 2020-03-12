@@ -1,0 +1,52 @@
+# https://github.com/kubernetes-incubator/metrics-server/issues/86
+# https://github.com/kubernetes-incubator/metrics-server/issues/77
+# https://github.com/kubernetes-incubator/metrics-server/pull/65
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: metrics-server
+  namespace: kube-system
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: metrics-server
+  namespace: kube-system
+  labels:
+    k8s-app: metrics-server
+spec:
+  selector:
+    matchLabels:
+      k8s-app: metrics-server
+  template:
+    metadata:
+      name: metrics-server
+      labels:
+        k8s-app: metrics-server
+    spec:
+      serviceAccountName: metrics-server
+      volumes:
+      # mount in tmp so we can safely use from-scratch images and/or read-only containers
+      - name: tmp-dir
+        emptyDir: {}
+      containers:
+      - name: metrics-server
+        image: k8s.gcr.io/metrics-server-amd64:v0.3.0
+        imagePullPolicy: Always
+        command:
+        - /metrics-server
+        # https://github.com/kubernetes-incubator/metrics-server/issues/131
+        args:
+        - --kubelet-insecure-tls
+        - --kubelet-preferred-address-types=InternalIP
+        volumeMounts:
+        - name: tmp-dir
+          mountPath: /tmp
+      nodeSelector:
+        kubernetes.io/hostname: master
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: Exists
+        # NoSchedule
+
