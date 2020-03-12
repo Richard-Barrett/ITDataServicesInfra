@@ -1,0 +1,7 @@
+<Configuration>
+  <Protocol>[WinSCP.Protocol]::Sftp</Protocol>
+  <HostName>insert_hostname</HostName>
+  <UserName>username</UserName>
+  <Password>mypassword</Password>
+  <SshHostKeyFingerPrint>fingerprint</SshHostKeyFingerPrint>
+</Configuration>
