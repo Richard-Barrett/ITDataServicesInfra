@@ -1,0 +1,107 @@
+# http://goessner.net/articles/JsonPath/
+# https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+# https://kubernetes.io/docs/reference/kubectl/jsonpath/
+
+# Get the password for the e2e user
+$ kubectl config view -o jsonpath='{.users[?(@.name == "e2e")].user.password}'
+
+# Get the version label of all pods with label app=cassandra
+$ kubectl get pods --selector=app=cassandra rc -o jsonpath='{.items[*].metadata.labels.version}'
+
+# Get ExternalIPs of all nodes
+$ kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="ExternalIP")].address}'
+
+# Get InternalIPs of all nodes
+kubectl get nodes -o jsonpath='{.items[:].status.addresses[?(@.type=="InternalIP")].address}'
+
+# Check which nodes are ready
+JSONPATH='{range .items[*]}{@.metadata.name}:{range @.status.conditions[*]}{@.type}={@.status};{end}{end}' \
+ && kubectl get nodes -o jsonpath="$JSONPATH" 
+
+kubectl get pod echoserver -o jsonpath='{.metadata.labels}'
+
+kubectl get pod echoserver -o jsonpath="{.metadata.annotations.description}"
+
+kubectl get service echoserver -o jsonpath='{.spec.ports[0].nodePort}'
+
+kubectl get node master -o jsonpath="{.spec.taints}"
+
+secret=$(kubectl get serviceaccount -n kube-system namespace-controller -o jsonpath='{.secrets[0].name}')
+
+token=$(kubectl get secret $secret -nkube-system -ojsonpath='{.data.token}' | base64 --decode)
+
+# get map of node addresses:
+addresses=$(kubectl get no -o jsonpath='{..addresses}')
+
+
+# get name ip and hostname of each node:
+kubectl get no -o=jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.addresses[:].address}{"\n"}{end}'
+
+# Just ip and hostname
+kubectl get no -o=jsonpath='{range .items[*]}{.status.addresses[:].address}{"\n"}{end}'
+
+# ip and hostname of worker nodes
+kubectl get no -o=jsonpath='{range .items[*]}{.status.addresses[?(@.address!="master")].address}{"\n"}{end}'
+
+# all images in the cluster:
+kubectl get pods --all-namespaces -o jsonpath="{..image}" |\
+tr -s '[[:space:]]' '\n' |\
+sort |\
+uniq -c
+
+kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}"
+
+# list containers by pod:
+kubectl get pods --all-namespaces -o=jsonpath='{range .items[*]}{"\n"}{.metadata.name}{":\t"}{range .spec.containers[*]}{.image}{", "}{end}{end}' | sort
+
+# List Containers filtering by Pod label
+kubectl get pods --all-namespaces -o=jsonpath="{..image}" -l app=nginx
+
+# List Containers filtering by Pod namespace
+kubectl get pods --namespace kube-system -o jsonpath="{..image}"
+
+# Get the actual name of the pod
+kubectl get pods -n kube-system -l k8s-app=kubernetes-dashboard -o=jsonpath="{..metadata.name}"
+
+# Get name of the containers in a pod
+kubectl get pods -n kube-system -l k8s-app=kube-dns -o jsonpath="{..containers[:].name}"
+kubectl get pods -n kube-system -l k8s-app=kube-dns -o jsonpath='{..containers[:].name}{"\n"}{..containers[:].image}{"\n"}'
+
+--------------------------------------------------------------------------------
+# List Names of Pods that belong to Particular RC
+# "jq" command useful for transformations that are too complex for jsonpath, it can be found at https://stedolan.github.io/jq/
+sel=${$(kubectl get rc my-rc --output=json | jq -j '.spec.selector | to_entries | .[] | "\(.key)=\(.value),"')%?}
+echo $(kubectl get pods --selector=$sel --output=jsonpath={.items..metadata.name})
+
+# List all Secrets currently in use by a pod
+kubectl get pods -o json | jq '.items[].spec.containers[].env[]?.valueFrom.secretKeyRef.name' | grep -v null | sort | uniq
+
+--------------------------------------------------------------------------------
+$ SERVER='localhost:8001'
+
+$ PODS=$(kubectl --server $SERVER get pods -o json | jq \
+'.items[] | select(.spec.schedulerName == "my-scheduler") | select(.spec.nodeName == null) | .metadata.name' | \
+tr -d '"')
+
+
+$ NODE="master"
+
+$ for PODNAME in $PODS; do
+    curl --header "Content-Type:application/json" --request POST --data \
+    '{"apiVersion":"v1", "kind": "Binding", "metadata": {"name": "'$PODNAME'"},
+    "target": {"apiVersion": "v1", "kind": "Node", "name": "'$NODE'"}}' \
+    http://$SERVER/api/v1/namespaces/default/pods/$PODNAME/binding/
+done
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+# List Containers using a go-template
+kubectl get pods --all-namespaces -o go-template --template="{{range .items}}{{range .spec.containers}}{{.image}} {{end}}{{end}}"
+
+# List pod names and status using a go-template
+kubectl get pods -o go-template --template="{{range .items}}{{.metadata.name}} | {{.status.phase}}
+{{end}}"
+
+# Print container names and status for a pod
+kubectl get pod -o go-template='{{range.status.containerStatuses}}{{"Container Name: "}}{{.name}}{{"\r\nLastState: "}}{{.lastState}}{{end}}' pod
