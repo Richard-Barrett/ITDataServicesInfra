@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+data:
+  frontend.conf: |-
+    upstream hello {
+        server hello;
+    }
+
+    server {
+        listen 80;
+
+        location / {
+            proxy_pass http://hello;
+        }
+    }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend2
+spec:
+  selector:
+    matchLabels:
+      app: hello
+      tier: frontend
+      track: new
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello
+        tier: frontend
+        track: new
+    spec:
+      containers:
+      - name: nginx
+        image: "gcr.io/google-samples/hello-frontend:1.0"
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/usr/sbin/nginx","-s","quit"]
+        volumeMounts:
+        - name: frontend-config
+          mountPath: /etc/nginx/conf.d
+      volumes:
+      - name: frontend-config
+        configMap:
+          name: frontend-config
+          items:
+            - key: frontend.conf
+              path: frontend.conf
