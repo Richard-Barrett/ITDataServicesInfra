@@ -13,6 +13,7 @@ textpattern/
 *.doc
 *.pdf
 *.xlsx
+*.xml
 *.TXT
 *.xlsm
 *.xltx
