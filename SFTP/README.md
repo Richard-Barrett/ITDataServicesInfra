@@ -43,7 +43,7 @@ $remotePath = '<absolute_path>'
 
 The commands that pull out the information and pass it into the script are `Get-Content <file> | Select-String "<parsing_string>"`
 
-**Powershell SFTP Template**
+**Powershell SFTP Template without Encryption Using `secrets.txt`**
 ```powershell
 param (
     Get-Content .\files.txt | Select-String "localPath"
