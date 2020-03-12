@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bb-server-default
+  labels:
+    app: dns-check
+spec:
+  restartPolicy: Never
+  containers:
+  - name: busybox-server
+    image: busybox
+    volumeMounts:
+    - name: entrypoint
+      mountPath: /entrypoint
+    command: ["/bin/sh"]
+    args: ["/entrypoint/entrypoint.sh"]
+  volumes:
+  - name: entrypoint
+    configMap:
+      name: loop-echo-sh
