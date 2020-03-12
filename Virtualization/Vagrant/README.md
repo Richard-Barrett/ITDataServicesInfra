@@ -1,6 +1,7 @@
 ## Vagrant
 
 **Vagrantfile Template**
+
 ```
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
