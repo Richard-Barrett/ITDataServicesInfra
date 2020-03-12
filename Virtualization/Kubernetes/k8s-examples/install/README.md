@@ -1,4 +1,4 @@
-# Link to various topics of interest related to installation
+# Link to Various Topics of Interest Related to Installation
 
 ### Running in Multiple Zones
 * https://kubernetes.io/docs/admin/multiple-zones/
