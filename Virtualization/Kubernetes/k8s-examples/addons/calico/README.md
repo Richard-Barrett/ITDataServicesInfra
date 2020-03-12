@@ -1,3 +1,6 @@
+## Calico
+
+```
 kubectl get node -o yaml | grep IP -A 1 -B 1
 kubectl get pod -n kube-system -l k8s-app=calico-node -o json | jq ".items[] | select(.status.podIP == \"$PrivateIP\") | .metadata.name" | tr -d '"'
 POD=$(kubectl get pod -n kube-system -l k8s-app=calico-node -o json | jq ".items[] | select(.status.podIP == \"$PrivateIP\") | .metadata.name" | tr -d '"')
@@ -47,3 +50,5 @@ kubectl get -n kube-system pods -l k8s-app=calico-etcd -o wide
 
 --------------------------------------------------
 sudo route del -net 172.19.0.0 netmask 255.255.0.0
+
+```
