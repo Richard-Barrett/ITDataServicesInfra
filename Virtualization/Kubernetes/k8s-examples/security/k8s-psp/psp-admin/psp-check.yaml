@@ -1,0 +1,13 @@
+# https://kubernetes.io/docs/reference/access-authn-authz/authorization/#authorization-modules
+apiVersion: authorization.k8s.io/v1
+kind: SubjectAccessReview
+spec:
+  resourceAttributes:
+    group: extensions
+    namespace: development
+    resource: podsecuritypolicies
+    name: restricted
+    verb: use
+  user: system:serviceaccount:development:default
+  groups:
+  - system:serviceaccounts:development
