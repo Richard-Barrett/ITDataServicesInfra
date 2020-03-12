@@ -164,6 +164,7 @@ catch
 ```
 
 ## Python
+![Image](https://www.python.org/static/img/python-logo@2x.png)
 A common Python template to help with sending files to SFTP locations. 
 The main key is that you call two files here **secrets.json** and **files.json** within the code to pass off files and/or passwords without exposing file locations and credentials over Internet Traffic and/or as an exposed process often due to hardcoded information within code. 
 
