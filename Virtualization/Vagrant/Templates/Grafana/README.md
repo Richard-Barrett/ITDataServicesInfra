@@ -1,4 +1,4 @@
-# vagrant-influxdb-grafana
+# Vagrant Influxdb Grafana
 
 This Vagrantfile purpose is to quickly setup an Ubuntu box with InfluxDB, Grafana, Telegraf and Chronograf installed. It gives the opportunity to easily prototype ideas.
 
