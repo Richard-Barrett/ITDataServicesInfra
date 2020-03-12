@@ -1,0 +1,15 @@
+# https://kubernetes.io/docs/concepts/workloads/pods/pod/#privileged-mode-for-pod-containers
+apiVersion: v1
+kind: Pod
+metadata:
+  name: privileged-pod
+spec:
+  hostNetwork: true
+  containers:
+  - name:  privileged-container
+    image: gcr.io/google-containers/busybox
+    command: ["sleep"]
+    args: ["86400"]
+    securityContext:
+      privileged: true
+
