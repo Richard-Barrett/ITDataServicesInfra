@@ -1,0 +1,46 @@
+# Ingress example code by Jay Gorrell
+# https://medium.com/@cashisclay/kubernetes-ingress-82aa960f658e
+# To test:
+#    curl -H 'Host:mysite.com' [NODE_IP]:[NODE_PORT]
+#    curl [NODE_IP]:[NODE_PORT] will get a 404 response
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: jayc-demo
+spec:
+  rules:
+  - host: mysite.com
+    http:
+      paths:
+      - backend:
+          serviceName: jayc-demo
+          servicePort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jayc-demo
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: nginx
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jayc-demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: echoserver
+        image: nginx
+        ports:
+        - containerPort: 80
