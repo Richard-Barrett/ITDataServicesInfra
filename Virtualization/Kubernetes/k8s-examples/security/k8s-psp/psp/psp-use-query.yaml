@@ -1,0 +1,11 @@
+apiVersion: authorization.k8s.io/v1
+kind: SubjectAccessReview
+spec:
+  resourceAttributes:
+    group: extensions
+    resource: podsecuritypolicies
+    name: privileged
+    verb: use
+  user: system:node:master
+  groups:
+  - system:nodes
