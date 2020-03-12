@@ -11,7 +11,7 @@ You will be able to specify the overall data structures that you wish to highlig
 ## How To Compare Two Files with md5 Checksum
 To compare two text files to see if they match you can run the following:
 ```python 
-python md5_checksum.py [Arg_1] [Ard_2]
+python md5_checksum.py [Arg_1] [Arg_2]
 ```
 
 The Arguments should be **`.txt.`** files. 
@@ -23,5 +23,11 @@ Not Matched
 ```
 
 Both **`[Arg_1]`** and **`[Arg_2]`** should be used as files. 
+
+## How To Compare Two Excel Files Using [excel_diff](https://github.com/Richard-Barrett/ITDataServicesInfra/blob/master/Python/Analyses/excel_diff.py)
+
+## How To Compare Two Excel Files Using [excel_diff_equal_shape.py](https://github.com/Richard-Barrett/ITDataServicesInfra/blob/master/Python/Analyses/excel_diff_equal_shape.py)
+
+## How To Compare Two Excel Files Using [excel_diff_nonequal_shape.py](https://github.com/Richard-Barrett/ITDataServicesInfra/blob/master/Python/Analyses/excel_diff_nonequal_shape.py)
 
 
