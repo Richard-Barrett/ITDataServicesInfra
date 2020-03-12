@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghost-v0.11
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ghost
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: ghost
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.15
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: nginx-conf
+          mountPath: /etc/nginx/conf.d
+      - name: ghost
+        # https://hub.docker.com/_/ghost/
+        # image: ghost:0.11-alpine
+        image: ghost:0.11
+        ports:
+        - containerPort: 2368
+        env:
+        - name: GHOST_DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: username
+        - name: GHOST_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: password
+        - name: GHOST_DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: ghost-secrets
+              key: dbname
+        volumeMounts:
+        - name: config-js
+          mountPath: /var/lib/ghost
+          #mountPath: /tmp/myconfig
+        # for debugging
+#       args:
+#       - sleep
+#       - 365d
+
+      volumes:
+      - name: nginx-conf
+        configMap:
+          name: ghost-v0.11-config
+          items:
+          - key: nginx-ghost.conf
+            path: ghost.conf
+      - name: config-js
+        configMap:
+          name: ghost-v0.11-config
+          defaultMode: 0777
+          optional: true
+          items:
+          - key: ghost-config.js
+            path: config.js
+
