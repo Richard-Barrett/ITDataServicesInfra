@@ -1,0 +1,30 @@
+{
+  "url": "http://localhost:2369/",
+  "server": {
+    "port": 2369,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": process.env.MYSQL_INTERNAL_SERVICE_HOST,
+      "user": process.env.GHOST_DB_USER,
+      "password": process.env.GHOST_DB_PASSWORD,
+      "database": process.env.GHOST_DB_NAME,
+      charset : 'utf8'
+    }
+  },
+  "mail": {
+    "transport": "Direct"
+  },
+  "logging": {
+    "transports": [
+      "file",
+      "stdout"
+    ]
+  },
+  "process": "systemd",
+  "paths": {
+    "contentPath": "/var/lib/ghost/content"
+  }
+}
