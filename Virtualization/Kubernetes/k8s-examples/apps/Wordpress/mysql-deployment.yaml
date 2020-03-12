@@ -1,0 +1,62 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mysql-pv-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  selector:
+    matchLabels:
+      vol: "mysql"
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: mysql
+        track: production
+    spec:
+      containers:
+      - name: "mysql"
+        image: "mysql:5.6"
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - mountPath: "/var/lib/mysql"
+          name: mysql-pd
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-db-secrets
+              key: mysqlrootpassword
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-db-secrets
+              key: dbuser
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-db-secrets
+              key: dbpassword
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-db-secrets
+              key: dbname
+      volumes:
+        - name: mysql-pd
+          persistentVolumeClaim:
+            claimName: mysql-pv-claim
+

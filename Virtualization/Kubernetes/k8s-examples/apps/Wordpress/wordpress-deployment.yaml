@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wordpress-deployment
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+        track: production
+    spec:
+      containers:
+      - name: "wordpress"
+        image: "wordpress:4.5-apache"
+        ports:
+        - containerPort: 80
+        env:
+        - name: WORDPRESS_DB_HOST
+          value: "mysql-internal"
+        - name: WORDPRESS_DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-db-secrets
+              key: dbuser
+        - name: WORDPRESS_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-db-secrets
+              key: dbpassword
+        - name: WORDPRESS_DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-db-secrets
+              key: dbname
+
