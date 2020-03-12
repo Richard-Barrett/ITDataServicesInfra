@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+  namespace: kube-system
+  annotations:
+    ingress.kubernetes.io/ssl-passthrough: "true"
+    ingress.kubernetes.io/secure-backends: "true"
+spec:
+  rules:
+  - host: master
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kubernetes-dashboard
+          servicePort: 443
