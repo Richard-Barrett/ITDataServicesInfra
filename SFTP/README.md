@@ -101,6 +101,64 @@ catch
     exit 1
 }
 ```
+## **Powershell SFTP Template without Encryption Using `config.xml`**
+```powershell
+param (
+    $localPath = $config.Configuration.localPath
+    $remotePath = $config.Configuration.remotePath
+)
+ 
+try
+{
+    # Load WinSCP .NET assembly
+    Add-Type -Path "C:\Program Files (x86)\WinSCP\WinSCPnet.dll"
+ 
+    # Setup session options
+    $sessionOptions = New-Object WinSCP.SessionOptions -Property @{
+        Protocol = $config.Configuration.Protocol
+        HostName = $config.Configuration.HostName
+        UserName = $config.Configuration.UserName
+        Password = $config.Configuration.Password 
+        SshHostKeyFingerprint = $config.Configuration.SshHostKeyFingerprint
+    }
+ 
+    $session = New-Object WinSCP.Session
+ 
+    try
+    {
+        # Connect
+        $session.Open($sessionOptions)
+ 
+        # Upload files
+        $transferOptions = New-Object WinSCP.TransferOptions
+        $transferOptions.TransferMode = [WinSCP.TransferMode]::Binary
+ 
+        $transferResult =
+            $session.GetFiles($remotePath, $localPath, $False, $transferOptions)
+ 
+        # Throw on any error
+        $transferResult.Check()
+ 
+        # Print results
+        foreach ($transfer in $transferResult.Transfers)
+        {
+            Write-Host "Download of $($transfer.FileName) succeeded"
+        }
+    }
+    finally
+    {
+        # Disconnect, clean up
+        $session.Dispose()
+    }
+ 
+    exit 0
+}
+catch
+{
+    Write-Host "Error: $($_.Exception.Message)"
+    exit 1
+}
+```
 
 ## Python
 A common Python template to help with sending files to SFTP locations. 
