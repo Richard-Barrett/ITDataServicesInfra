@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bb-server-default-policy
+  labels:
+    app: dns-check
+spec:
+  restartPolicy: Never
+  containers:
+  - name: busybox-server
+    image: gcr.io/google-containers/busybox
+    command:
+      - sleep
+      - "3600"
