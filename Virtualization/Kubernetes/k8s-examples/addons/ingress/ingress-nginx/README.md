@@ -1,8 +1,8 @@
 Docs:
-https://github.com/kubernetes/ingress-nginx/tree/master/docs
-https://github.com/kubernetes/ingress-nginx/tree/master/docs/user-guide
-https://github.com/kubernetes/ingress-nginx/blob/master/docs/examples/external-auth/README.md
-https://docs.giantswarm.io/guides/advanced-ingress-configuration/
+- https://github.com/kubernetes/ingress-nginx/tree/master/docs
+- https://github.com/kubernetes/ingress-nginx/tree/master/docs/user-guide
+- https://github.com/kubernetes/ingress-nginx/blob/master/docs/examples/external-auth/README.md
+- https://docs.giantswarm.io/guides/advanced-ingress-configuration/
 
 Deployment:
 ```
