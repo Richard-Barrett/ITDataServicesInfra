@@ -51,29 +51,29 @@ To create the docker group and add your user:
 
 Command | Description
 --- | ---
-docker version | provides full description of docker version
-docker -v | provides a short description of docker version
-docker info | display system wide information
-docker info --format '{{.DriverStatus}}' | display 'DriverStatus' fragment from docker information
-docker info --format '{{json .DriverStatus}}' | display 'DriverStatus' fragment from docker information in JSON format
+`docker version` | provides full description of docker version
+`docker -v` | provides a short description of docker version
+`docker info` | display system wide information
+`docker info --format '{{.DriverStatus}}'` | display 'DriverStatus' fragment from docker information
+`docker info --format '{{json .DriverStatus}}'` | display 'DriverStatus' fragment from docker information in JSON format
 
 ### Manage Images
 
 Command | Description
 --- | ---
-docker image ls | shows all local images
-docker image ls --filter 'reference=ubuntu:16.04' | show images filtered by name and tag
-docker image pull [image-name] | pull specified image from registry
-docker image rm [image-name] | remove image for specified _image-name_
-docker image rm [image-id] | remove image for specified _image-id_
-docker image prune | remove unused images
+`docker image ls` | shows all local images
+`docker image ls --filter 'reference=ubuntu:16.04'` | show images filtered by name and tag
+`docker image pull [image-name]` | pull specified image from registry
+`docker image rm [image-name]` | remove image for specified _image-name_
+`docker image rm [image-id]` | remove image for specified _image-id_
+`docker image prune` | remove unused images
 
 ### Search Images
 
 Command | Description
 --- | ---
-docker search [image-name] --filter "is-official=true" | find only official images having *[image-name]*
-docker search [image-name] -- filter "stars=1000" | find only images having specified *[image-name]* and 1000 or more stars
+`docker search [image-name] --filter "is-official=true"` | find only official images having *[image-name]*
+`docker search [image-name] -- filter "stars=1000"` | find only images having specified *[image-name]* and 1000 or more stars
 
 ### Manage Containers
 
@@ -92,16 +92,16 @@ Command | Description
 
 Command | Description
 --- | ---
-docker container run [image-name] | run container based on specified image
-docker container run --rm [image-name] | run container based on specified imaged and immediately remove it once it stops
-docker container run --name fuzzy-box [image-name] | assign name and run container based on specified image
+`docker container run [image-name]` | run container based on specified image
+`docker container run --rm [image-name]` | run container based on specified imaged and immediately remove it once it stops
+`docker container run --name fuzzy-box [image-name]` | assign name and run container based on specified image
 
 #### Remove Container
 
 Command | Description
 --- | ---
-docker container rm [container-name] | remove specified container
-docker container rm $(docker container ls --filter "status=exited" --filter "ancestor=ubuntu" -q) | remove all containers whose id's are returned from *'$(...)'* list
+`docker container rm [container-name]` | remove specified container
+`docker container rm $(docker container ls --filter "status=exited" --filter "ancestor=ubuntu" -q)` | remove all containers whose id's are returned from *'$(...)'* list
 
 ### Manage Volumes
 
@@ -109,16 +109,16 @@ docker container rm $(docker container ls --filter "status=exited" --filter "anc
 
 Command | Description
 --- | ---
-docker volume ls | show all volumes
-docker volume ls --filter "dangling=true" | display all volumes not referenced by any containers
-docker volume inspect [volume-name] | display detailed information on *[volume-name]*
+`docker volume ls` | show all volumes
+`docker volume ls --filter "dangling=true"` | display all volumes not referenced by any containers
+`docker volume inspect [volume-name]` | display detailed information on *[volume-name]*
 
 #### Remove Volumes
 
 Command | Description
 --- | ---
-docker volume rm [volume-name] | remove specified volume
-docker volume rm $(docker volume ls --filter "dangling=true" -q) | remove all volumes having an id equal to any of the id's returned from *'$(...)'* list
+`docker volume rm [volume-name]` | remove specified volume
+`docker volume rm $(docker volume ls --filter "dangling=true" -q)` | remove all volumes having an id equal to any of the id's returned from *'$(...)'* list
 
 ---
 
@@ -180,10 +180,10 @@ docker run --rm --name mongo-dev -v mongo-dev-db:/data/db -d mongo
 
 CLI Command | Description
 --- | ---
---rm | remove container when stopped
---name mongo-dev | give container a custom name
--v mongo-dev-db/data/db | map the container volume 'data/db' to a custom name 'mongo-dev-db'
--d mongo | run mongo container as a daemon in the background
+`--rm` | remove container when stopped
+`--name mongo-dev` | give container a custom name
+`-v mongo-dev-db/data/db` | map the container volume 'data/db' to a custom name 'mongo-dev-db'
+`-d mongo` | run mongo container as a daemon in the background
 
 #### Run MongoDB Using Bind Mount
 
@@ -195,10 +195,10 @@ docker run --rm --name mongo-dev -v ~/mongodb/data/db:/data/db -d mongo
 
 CLI Command | Description
 --- | ---
---rm | remove container when stopped
---name mongo-dev | give container a custom name
--v ~/mongodb/data/db/data/db | map the container volume 'data/db' to a bind mount '~/mongodb/data/db'
--d mongo | run mongo container as a daemon in the background
+`--rm` | remove container when stopped
+`--name mongo-dev` | give container a custom name
+`-v ~/mongodb/data/db/data/db` | map the container volume 'data/db' to a bind mount '~/mongodb/data/db'
+`-d mongo` | run mongo container as a daemon in the background
 
 ### Access MongoDB
 
