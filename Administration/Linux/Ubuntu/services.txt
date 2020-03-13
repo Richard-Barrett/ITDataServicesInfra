@@ -1,6 +1,7 @@
 ssh
 nginx
 logrotate
+cron
 ufw
 vagrant 
 virtualbox
