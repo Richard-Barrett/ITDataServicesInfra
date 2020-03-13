@@ -81,12 +81,12 @@ docker search [image-name] -- filter "stars=1000" | find only images having spec
 
 Command | Description
 --- | ---
-docker container ls | show all running containers
-docker container ls -a | show all containers regardless of state
-docker container ls --filter "status=exited" --filter "ancestor=ubuntu" | show all container instances of the ubuntu image that have exited
-docker container inspect [container-name] | display detailed information about specified container
-docker container inspect --format '{{.NetworkSettings.IPAddress}}' [container-name] | display detailed information about specified container using specified format
-docker container inspect --format '{{json .NetworkSettings}}' [container-name] | display detailed information about specified container using specified format
+`docker container ls` | show all running containers
+`docker container ls -a` | show all containers regardless of state
+`docker container ls --filter "status=exited" --filter "ancestor=ubuntu"` | show all container instances of the ubuntu image that have exited
+`docker container inspect [container-name]` | display detailed information about specified container
+`docker container inspect --format '{{.NetworkSettings.IPAddress}}' [container-name]` | display detailed information about specified container using specified format
+`docker container inspect --format '{{json .NetworkSettings}}' [container-name]` | display detailed information about specified container using specified format
 
 #### Run Container
 
