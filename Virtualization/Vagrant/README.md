@@ -1,5 +1,5 @@
 ## Vagrant
-![Image](http://www.w3.org/2000/svg)
+![Image](https://banner2.cleanpng.com/20180808/it/kisspng-vagrant-hashicorp-logo-open-source-software-brand-5b6aa2e4816681.83977882153371517253.jpg)
 
 ## Installing Vagrant
 
