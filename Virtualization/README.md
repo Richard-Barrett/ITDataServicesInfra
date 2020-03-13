@@ -13,10 +13,10 @@ After setup is complete, run the following commands to verify the success of ins
 
 ### _PLEASE NOTE POST INSTALLATION STEPS BELOW IF YOU HAVE TO PREPEND SUDO TO EVERY COMMAND_
 
-* **docker version** - provides full description of docker version
-* **docker info** - display system wide information
-* **docker -v** - provides a short description of docker version
-* **docker run hello-world** - pull hello-world container from registry and run it
+* **`docker version`** - provides full description of docker version
+* **`docker info`** - display system wide information
+* **`docker -v`** - provides a short description of docker version
+* **`docker run hello-world`** - pull hello-world container from registry and run it
 
 Have a look at the [free training] offered by Docker.
 
