@@ -1,0 +1,7 @@
+ssh
+nginx
+logrotate
+ufw
+vagrant 
+virtualbox
+docker
