@@ -10,6 +10,7 @@ golang-go
 hping3
 htop
 iperf
+logrotate
 unrar 
 zip 
 unzip 
