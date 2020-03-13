@@ -2,12 +2,15 @@ default-jdk
 fping
 git
 expect
+gawk
 gdebi-core
 golang-go
 hping3
 htop
 iperf
 iftop
+jq
+libjs-jquery
 qemu-kvm 
 libvirt-daemon-system
 lshw
@@ -25,6 +28,7 @@ rsyslog-dbgsym
 ruby-full
 samba 
 cifs-utils 
+sed
 smbclient
 software-properties-common
 sysstat
