@@ -32,6 +32,7 @@ rsyslog
 rsyslog-dbgsym
 ruby-full
 samba 
+smartmontools
 cifs-utils 
 sed
 smbclient
