@@ -9,7 +9,7 @@ If you are already familiar with the basics of Vagrant, the documentation provid
 ## Installing Vagrant
 
 - **[Installing Vagrant](https://www.vagrantup.com/intro/getting-started/install.html)**
-- **[Installing Vagrant on Windows 10](https://medium.com/@botdotcom/installing-virtualbox-and-vagrant-on-windows-10-2e5cbc6bd6ad]**
+- **[Installing Vagrant on Windows 10](https://medium.com/@botdotcom/installing-virtualbox-and-vagrant-on-windows-10-2e5cbc6bd6ad)**
 - **[Installing Vagrant on Ubuntu](https://linuxize.com/post/how-to-install-vagrant-on-ubuntu-18-04/)**
 - **[Installing Vagrant on Centos 7](https://phoenixnap.com/kb/how-to-install-vagrant-on-centos-7)**
 - **[Installing Vagrant on Centos 8](https://linuxize.com/post/how-to-install-vagrant-on-centos-8/)**
