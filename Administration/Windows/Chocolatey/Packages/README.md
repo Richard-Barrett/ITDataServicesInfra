@@ -7,10 +7,10 @@ If you wish to install a package one at a time you do the following to help you 
 **Get Help Instructions Similar to a Man Page**
 - **`<choco --help`** or **`choco -h`**
 
-**Install a Package with Prompt to Install**
+**Install a Package Manually with Prompt to Install**
 - **`choco install <package>`**
 
-**Install a Package without a Prompt to Install**
+**Install a Package Manually without a Prompt to Install**
 - **`choco install <package> -y`**
 
 **NOTE: THE SCRIPTS IN THIS DIRECTORY INSTALL ALL PACKAGES RESPECTIVE TO THE FILE DEVELOPER, LOCAL, AND SERVER**
