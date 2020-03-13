@@ -76,10 +76,9 @@ sudo apt-get autoclean -y
 
 # Check If UFW Firewall Is Active and Set Up Firewall 
 sudo ufw status verbose
-  sudo ufw allow ssh
-  sudo ufw allow 'Nginx HTTP'
-  sudo ufw allow http
-  sudo ufw allow 80/tcp
+  for i in $(cat ITDataServicesInfra/tree/master/Administration/Linux/Ubuntu/firewall.txt;
+          do sudo ufw allow $i;
+  done
 sudo ufw enable 
 
 # Enable Certain Essential System Services for Start on Bootup
