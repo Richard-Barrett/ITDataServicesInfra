@@ -1,7 +1,18 @@
 ## Vagrant
 ![Image](https://miro.medium.com/max/902/1*IRkiOHO3keB9x-GNLYSQRg.png)
 
+What is Vagrant? 
+Vagrant is a tool for building and managing virtual machine environments in a single workflow. 
+With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.
+If you are already familiar with the basics of Vagrant, the documentation provides a better reference build for all available features and internals.
+
 ## Installing Vagrant
+
+- **[Installing Vagrant](https://www.vagrantup.com/intro/getting-started/install.html)**
+- **[Installing Vagrant on Windows 10](https://medium.com/@botdotcom/installing-virtualbox-and-vagrant-on-windows-10-2e5cbc6bd6ad]**
+- **[Installing Vagrant on Ubuntu](https://linuxize.com/post/how-to-install-vagrant-on-ubuntu-18-04/)**
+- **[Installing Vagrant on Centos 7](https://phoenixnap.com/kb/how-to-install-vagrant-on-centos-7)**
+- **[Installing Vagrant on Centos 8](https://linuxize.com/post/how-to-install-vagrant-on-centos-8/)**
 
 ## Using Vagrant
 In order to use Vagrant you first have to install it, see the above on how to install Vagrant.
