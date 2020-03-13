@@ -49,3 +49,4 @@ vagrant
 vim
 virtualbox
 wget
+ufw
