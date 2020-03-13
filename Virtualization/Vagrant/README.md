@@ -1,4 +1,5 @@
 ## Vagrant
+![Image](http://www.w3.org/2000/svg)
 
 ## Installing Vagrant
 
