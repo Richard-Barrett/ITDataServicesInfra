@@ -1,4 +1,5 @@
 default-jdk
+docker.io
 fping
 git
 expect
@@ -8,6 +9,9 @@ golang-go
 hping3
 htop
 iperf
+bridge-utils 
+qemu-kvm 
+virtinst
 iftop
 jq
 libjs-jquery
