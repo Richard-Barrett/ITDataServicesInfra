@@ -24,29 +24,29 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 - `vagrant reload`              -- restarts vagrant machine, loads new Vagrantfile configuration
 - `vagrant reload --provision`  -- restart the virtual machine and force provisioning
 
-# Getting into a VM
+## Getting into a VM
 - `vagrant ssh`           -- connects to machine via SSH
 - `vagrant ssh <boxname>` -- If you give your box a name in your Vagrantfile, you can ssh into it with boxname. Works from any directory.
 
-# Stopping a VM
+## Stopping a VM
 - `vagrant halt`        -- stops the vagrant machine
 - `vagrant suspend`     -- suspends a virtual machine (remembers state)
 
-# Cleaning Up a VM
+## Cleaning Up a VM
 - `vagrant destroy`     -- stops and deletes all traces of the vagrant machine
 - `vagrant destroy -f`   -- same as above, without confirmation
 
-# Boxes
+## Boxes
 - `vagrant box list`              -- see a list of all installed boxes on your computer
 - `vagrant box add <name> <url>`  -- download a box image to your computer
 - `vagrant box outdated`          -- check for updates vagrant box update
 - `vagrant boxes remove <name>`   -- deletes a box from the machine
 - `vagrant package`               -- packages a running virtualbox env in a reusable box
 
-# Saving Progress
+## Saving Progress
 -`vagrant snapshot save [options] [vm-name] <name>` -- vm-name is often `default`. Allows us to save so that we can rollback at a later time
 
-# Tips
+## Tips
 - `vagrant -v`                    -- get the vagrant version
 - `vagrant status`                -- outputs status of the vagrant machine
 - `vagrant global-status`         -- outputs status of all vagrant machines
@@ -55,8 +55,8 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 - `vagrant push`                  -- yes, vagrant can be configured to [deploy code](http://docs.vagrantup.com/v2/push/index.html)!
 - `vagrant up --provision | tee provision.log`  -- Runs `vagrant up`, forces provisioning and logs all output to a file
 
-# Plugins
+## Plugins
 - [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` file automatically each time you start/stop your vagrant box.
 
-# Notes
+## Notes
 - If you are using [VVV](https://github.com/varying-vagrant-vagrants/vvv/), you can enable xdebug by running `vagrant ssh` and then `xdebug_on` from the virtual machine's CLI.
