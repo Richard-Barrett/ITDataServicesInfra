@@ -77,8 +77,3 @@ BSD
 
 Author Information
 ------------------
-
-Larry Smith Jr.
-- @mrlesmithjr
-- http://everythingshouldbevirtual.com
-- mrlesmithjr [at] gmail.com
