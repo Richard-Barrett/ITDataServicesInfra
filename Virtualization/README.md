@@ -3,7 +3,7 @@
 # Docker
 - **[What is Docker?]()**
 - **[Download Docker Desktop](https://hub.docker.com/search?q=&type=edition&offering=community&sort=updated_at&order=desc)**
--- **[Download Docker Desktop on Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)**
+- **[Download Docker Desktop on Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)**
 - **[Installing Docker]()**
 - **[Docker Documentation](https://docs.docker.com/)**
 
