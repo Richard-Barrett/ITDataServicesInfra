@@ -10,6 +10,12 @@ golang-go
 hping3
 htop
 iperf
+unrar 
+zip 
+unzip 
+p7zip-full 
+p7zip-rar 
+rar
 bridge-utils 
 qemu-kvm 
 virtinst
