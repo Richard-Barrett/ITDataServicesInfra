@@ -1,45 +1,44 @@
 # Server Packages that Need to Be Installed for Server Repository Administration
-choco install googlechrome
-choco install firefox
-choco install openssh
-choco install git
-choco install 7zip
-choco install putty.install
-choco install vim
-choco install vagrant
-choco install python
-choco install dotnetcore-sdk
-choco install ruby
-choco install winscp
-choco install awscli
-choco install cygwin
-choco install virtualbox
-choco install chocolateygui
-choco install azure-cli
-choco install golang
-choco install keepass
-choco install sourcetree
-choco install openssl.light
-choco install prometheus-wmi-exporter.install
-choco install windirstat
-choco install citrix-receiver
-choco install sqlserver-odbcdriver
-choco install kubernetes-cli
-choco install openvpn
-choco install postman
-choco install mysql.workbench
-choco install gpg4win
-choco install mongodb
-choco install jenkins-x
-choco install powerbi
-choco install postgresql
-choco install rabbitmq
-choco install flashplayerppapi
-choco install flashplayerplugin
-choco install flashplayeractivex
-choco install windows-admin-center
-choco install anaconda3
-choco install wget
-choco install curl
-choco install filezilla.server
-
+choco install googlechrome -y
+choco install firefox -y
+choco install openssh -y
+choco install git -y
+choco install 7zip -y
+choco install putty.install -y
+choco install vim -y
+choco install vagrant -y
+choco install python -y
+choco install dotnetcore-sdk -y
+choco install ruby -y
+choco install winscp -y
+choco install awscli -y
+choco install cygwin -y
+choco install virtualbox -y
+choco install chocolateygui -y
+choco install azure-cli -y
+choco install golang -y
+choco install keepass -y
+choco install sourcetree -y
+choco install openssl.light -y
+choco install prometheus-wmi-exporter.install -y
+choco install windirstat -y
+choco install citrix-receiver -y
+choco install sqlserver-odbcdriver -y
+choco install kubernetes-cli -y
+choco install openvpn -y
+choco install postman -y
+choco install mysql.workbench -y
+choco install gpg4win -y
+choco install mongodb -y
+choco install jenkins-x -y
+choco install powerbi -y
+choco install postgresql -y
+choco install rabbitmq -y
+choco install flashplayerppapi -y
+choco install flashplayerplugin -y
+choco install flashplayeractivex -y
+choco install windows-admin-center -y
+choco install anaconda3 -y
+choco install wget -y
+choco install curl -y
+choco install filezilla.server -y
