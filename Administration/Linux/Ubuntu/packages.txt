@@ -11,6 +11,8 @@ golang-go
 hping3
 htop
 iperf
+ca-certificates
+postfix 
 logrotate
 unrar 
 zip 
