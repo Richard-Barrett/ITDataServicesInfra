@@ -1,5 +1,5 @@
 # Ubuntu
 
-# Installing Packages
+## Installing Packages
 
-# Using the **`packages.txt`** for Recursive Install
+## Using the **`packages.txt`** for Recursive Install
