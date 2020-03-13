@@ -94,7 +94,7 @@ vagrant box list
 
 Expected Output:
 ```
- jessicarey@Jessicas-MacBook-Pro  ~/Git/ITDataServicesInfra/Virtualization/Vagrant/Ubuntu/bionic64   master  vagrant box list
+jessicarey@Jessicas-MacBook-Pro  ~/Git/ITDataServicesInfra/Virtualization/Vagrant/Ubuntu/bionic64   master  vagrant box list
 ubuntu/bionic64 (virtualbox, 20200311.0.0)
 ```
 
