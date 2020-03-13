@@ -8,6 +8,7 @@ sites/site*/public/setup/
 sites/site*/public/theme/
 textpattern/
 *.json
+*.log
 *.yaml
 *.yml
 *.doc
@@ -430,3 +431,16 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Editor swapfiles
+.*.sw?
+*~
+
+# Vagrant stuff
+acceptance_config.yml
+boxes/*
+/.vagrant
+/website/.vagrant
+/website/build
+/vagrant-spec.config.rb
+test/vagrant-spec/.vagrant/
