@@ -27,6 +27,7 @@ libvirt-daemon-system
 lshw
 mysql-server
 net-tools
+nginx
 nmap
 openvpn
 openssh-server 
