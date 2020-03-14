@@ -28,6 +28,18 @@ For **Linux/Mac Users** please make sure that you make the directory **Git** and
 2. For Serving and Storing the Repository on a Server/VM as the **Master Branch** Under the **Service_Account and/or Root User** for data interaction:
 - **`/srv/Git/ITDataServicesInfra/`**
 
+## Administration
+This directory houses all of the provisioning scripts for machines. 
+It contains scripts to set up and install packages, configure a package manager for Windows, and install the initial set-up. 
+The scripts also contain setting up server, developer, and local components to help you work with the repository faster. 
+
+## Python
+This directory contains all of the Python Scripts an organization within public education could ever need to scrape data and export and import data in and out of an SIS system. Furthermore, it will help automate a lot of tasks that users within Educational Administration such as test administration uploads for many of the national tests such as ACT, AP, SAT, TSI, PSAT, and State Standard Tets.
+
+## Virtualization
+This directory contains a lot of information and virtualization techniques that are used throughout the industry. 
+You can create Vagrant Boxes, Libvirt Machines, and set up labs easily to help you develop locally as well as pull down containers and get started with Docker and Kubernetes. 
+
 ## Using Git 
 
 You can add files to git within your terminal, while you are coding. 
@@ -61,11 +73,9 @@ Review and/or Push the Change:
 - **`git push`** - If you are the maintainer, you can push changes. 
 
 ## Working with Git
-
 Git gives you the capability to see what changes were made, check the status, make branches to develop, checkout different branches, and look at what changes were added to specifc commits. 
 
 ## Understanding Git Security
-
 Git has the ability to ignore certain files for commit. 
 What this means is that certain files that have certain extensions defined within the **`.gitignore`** file will not be added into the repository. They do not exist within the repository. These files instead exist on the local machine. If they are defined within the **`.gitignore`** file, then they are never staged to be commited to the repository. Certain file extensions have been specifically ignored for this repository with security in mind. The following files are set to be ignored:
 
@@ -95,7 +105,7 @@ The **`.gitignore`** file is a text file that tells Git which files or folders t
 The **`.dockerignore`** file allows you to exclude files from the context like a **`.gitignore`** file allow you to exclude files from your git repository. It helps to make build faster and lighter by excluding from the context big files or repository that are not used in the build. The **`.dockerignore`** file is similar to hte **`.gitignore`** file used in Git. 
 
 ## Web Scraping
-Web scraping is a mean in which you can automate a lot of your data export and imports. What this means is that you can use the repository in the following manner to help aid you in this process. Please see the following image to understand how Web Scraping works in terms of the overall process flow. 
+Web scraping is a means in which you can automate a lot of your data export and imports. What this means is that you can use the repository in the following manner to help aid you in this process. Please see the following image to understand how Web Scraping works in terms of the overall process flow. 
 
 ![Image](https://www.lucidchart.com/publicSegments/view/55833c2f-f932-4b14-8d16-9748c609e03e/image.jpeg)
 
