@@ -50,6 +50,23 @@ C:.
     ├───18.04
     └───19.04
 ```
+# macOS
+This section contains administrative scripts to get started across the various versions of macOS. 
+The scripts range from Installation, Administration, an Provisioning the Initial Setup of a macOS Desktop.
+The Current Release contains the following Directories and Sub-Directories.
+```
+└── macOS
+    ├── Catalina
+    │   └── README.md
+    ├── HighSierra
+    │   └── README.md
+    ├── Mojave
+    │   └── README.md
+    ├── README.md
+    └── Sierra
+        └── README.md
+```
+
 # Windows
 This section contains scripts use for setting up the repository on a windows based machine. 
 It will allow you to work across a variety of versions including Windows 2016 and versions of Windows 10 1803+. 
