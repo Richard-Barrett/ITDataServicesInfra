@@ -1,1 +1,1 @@
-# Flavors of Linux
+# Flavors of Ubuntu Based Linux
