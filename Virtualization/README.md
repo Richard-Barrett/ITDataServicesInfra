@@ -300,8 +300,19 @@ db.messages.find()
 # Gitlab
 
 # Keycloak
+Keycloak is a Single Sign On Solution (SSO).
+You can use this for your organization to make System Wide Authentication more efficient across your organization.
+- **[Keycloak](https://www.keycloak.org/)**
+- **[Keycloak Docs](https://www.keycloak.org/documentation.html)**
+- **[Keycloak Download](https://www.keycloak.org/downloads.html)**
+- **[Keycloak Information](https://www.keycloak.org/about.html)**
 
 # Kubernetes
+Kubernetes is all the rage right now as it allows you to manage a containerize architecture with containerized orchestration that is self healing and self replicating. 
+- **[Kubernetes](https://kubernetes.io/)**
+- **[Kubernetes Documentation](https://kubernetes.io/docs/home/)**
+- **[Kubernetes Basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/)**
+- **[Kubernetes Tutorials](https://kubernetes.io/docs/tutorials/)**
 
 # Vagrant
 Typing `vagrant` from the command line will display a list of all available commands.
