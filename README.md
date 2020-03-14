@@ -80,6 +80,7 @@ What this means is that certain files that have certain extensions defined withi
 - **`.xlsx`** - Microsoft Exel File Format
 - **`.xltm`** - Microsoft Exel File Format
 - **`.xltx`** - Microsoft Exel File Format
+- **`.vagrant`**
 
 Other file extensions will be added overtime and will be defined within the **`.gitignore`** file. 
 Microsoft Office files for Documents and/or Spreadsheets containing sensitive information are set to be ignored by default. 
