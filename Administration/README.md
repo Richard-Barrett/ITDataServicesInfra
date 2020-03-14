@@ -73,3 +73,6 @@ C:.
 
 Documentation and Articles for Windows Administration:
 - **[Installing AD RSAT Tool and Pulling Out Email and User Information](http://woshub.com/get-aduser-getting-active-directory-users-data-via-powershell/)**
+- **[Intalling Chocolatey for Package Management](https://chocolatey.org/install)**
+- **[What is Chocolatey](https://chocolatey.org/why-chocolatey)**
+- **[What is Nuget](https://docs.microsoft.com/en-us/nuget/what-is-nuget)**
