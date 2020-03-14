@@ -70,3 +70,6 @@ C:.
     ├───Windows1903
     └───WindowsIP
 ```
+
+Documentation and Articles for Windows Administration:
+- **[Installing AD RSAT Tool and Pulling Out Email and User Information](http://woshub.com/get-aduser-getting-active-directory-users-data-via-powershell/)**
