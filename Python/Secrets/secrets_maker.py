@@ -3,8 +3,18 @@
 import json
 
 # example dictionary that contains data like you want to have in json
-dic={'User': 100, 'name': 'mkyong.com', 'messages': ['msg 1', 'msg 2', 'msg 3']}
+details = {
+  "user": {
+    "name": "yourname",
+    "password": "password"
+  }
+}
+
+with open('secrets.json', 'w') as json_file:
+    json.dump(details, json_file, indent=4)
 
 # get json string from that dictionary
-json=json.dumps(dic, indent=4)
+json = json.dumps(details, indent=4)
+print("JSON will be STD.OUT to secrets.json")
+print("Please check the current working directory for the file.")
 print json
