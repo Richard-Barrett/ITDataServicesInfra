@@ -9,15 +9,25 @@
 
 # System Variables
 webhook_url=$(cat secrets.json | jq ".slack_config.slack_target_url" | tr -d \")
+echo $webhook_url
+printf "Webhook Variable is Working.\n"
+
+message_1=$(cat secrets.json | jq ".slack_messages.message_1" | tr -d \")
+message_2=$(cat secrets.json | jq ".slack_messages.message_2" | tr -d \")
+message_3=$(cat secrets.json | jq ".slack_messages.message_3" | tr -d \")
 
 # Use Messages in this command syntax
-# curl -X POST -H 'Content-type: application/json' --data '{"text":"MESSAGE TO INSERT"}' $webhook_url
+# Example without using the secrets.json file to hold messages
+# curl -X POST -H 'Content-type: application/json' --data '{"text":"TEST TEXT BODY"}' $webhook_url
 
-# General Message:
-curl -X POST -H 'Content-type: application/json' --data '{"text":"INSERT MESSAGE"}' $webhook_url
+# Usage with secrets.json
+# curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message_#\"}" $webhook_url
 
-# Messages for Handover:
-curl -X POST -H 'Content-type: application/json' --data '{"text":"INSERT MESSAGE"}' $webhook_url
+# Messages for message_1:
+curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message_1\"}" $webhook_url
 
-# Message for All Change Requests:
-curl -X POST -H 'Content-type: application/json' --data '{"text":"INSERT MESSAGE"}' $webhook_url
+# Messages for message_2:
+curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message_2\"}" $webhook_url
+
+# Messages for message_3:
+curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message_3\"}" $webhook_ur
