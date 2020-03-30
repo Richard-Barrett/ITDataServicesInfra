@@ -42,4 +42,4 @@ However, the script **`Choco_Install_Packages.ps1`** will account for the **`Pac
 
 ## Important Directories 
 
-## How Are The Packages Installed with The Included Scripts?
+## How Are The Packages Installed with The Included Scripts
