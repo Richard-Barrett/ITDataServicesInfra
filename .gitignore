@@ -24,6 +24,13 @@ textpattern/
 HISTORY.txt
 README.txt
 
+# Custom Direcotories to Igrnoe Contents
+/ITDataServicesInfra/tree/master/Administration/Windows/Chocolatey/Packages/Custom/*
+ITDataServicesInfra/Scripts/*
+ITDataServicesInfra/Projects/*
+ITDataServicesInfra/Python/Secrets/*
+ITDataServicesInfra/SFTP/Secrets/*
+
 # Additional File Paths for Git Ignore for Added Security
 # If Yaml Files are Chosen to Hold Secrets
 ITDataServicesInfra/Python/ACT/secrets.yaml
@@ -41,9 +48,6 @@ ITDataServicesInfra/Python/Collegeboard/SAT/secrets.json
 ITDataServicesInfra/Python/Collegeboard/TSI/secrets.json
 ITDataServicesInfra/Python/Skyward/secrets.yaml
 
-ITDataServicesInfra/Scripts/*
-ITDataServicesInfra/Projects/*
-ITDataServicesInfra/SFTP/Secrets/*
 
 # Specific File Extensions That Should Alway be ignored
 # Secrets
