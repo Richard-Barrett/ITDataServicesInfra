@@ -41,5 +41,31 @@ However, the script **`Choco_Install_Packages.ps1`** will account for the **`Pac
 - **`./Choco_Server_Pacakages.ps1`**
 
 ## Important Directories 
+There are 5 directories within this area. 
+```bash
+├───Custom
+├───Developer
+├───Local
+├───Personal
+└───Server
+```
+
+These five directories allow you to recursively install packages and iterate over a **`Packages.txt`** file within each corresponding directory. You can look at the following directory links to get a better idea of what would be installed. 
+
+- **[Custom](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Administration/Windows/Chocolatey/Packages/Custom)**
+- **[Developer](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Administration/Windows/Chocolatey/Packages/Developer)**
+- **[Local](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Administration/Windows/Chocolatey/Packages/Local)**
+- **[Personal](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Administration/Windows/Chocolatey/Packages/Personal)**
+- **[Server](https://github.com/Richard-Barrett/ITDataServicesInfra/tree/master/Administration/Windows/Chocolatey/Packages/Server)**
+
+Each directory is named accordingly and you should only install what you want and need. 
+I have designed these directories as templates with a particular group in mind that would need specific stuff installed on their machines. Furthermore the **`Custom`** directory allows you to make your own **`Custom_Packages.txt`** that will be completely ignored by git, so any changes you make won't impact commits or pulls. 
 
 ## How Are The Packages Installed with The Included Scripts
+The packages are installed via a Powershell Script within the Directory:
+
+- **`Choco_<DirectoryName>_Packages_Install.ps1`**
+
+This allows users to iterate over a **`Packages.txt`** file with the following procedure that instantiates a forloop to install via the **`choco instal <package> -y`** command. The scripts contain the following to iterate over package names. 
+
+- **`<package output command> | Foreach-Object { choc install $_ -y }`**
