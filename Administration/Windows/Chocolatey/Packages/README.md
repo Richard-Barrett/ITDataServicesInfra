@@ -40,3 +40,6 @@ However, the script **`Choco_Install_Packages.ps1`** will account for the **`Pac
 **To Install Sever Packages**
 - **`./Choco_Server_Pacakages.ps1`**
 
+## Important Directories 
+
+## How Are The Packages Installed with The Included Scripts?
