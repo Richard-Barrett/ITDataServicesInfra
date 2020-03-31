@@ -1,3 +1,4 @@
 #!/bin/bash
-cd ~/Git/ITDataServicesInfra
-git pull
+
+cd ~/Git/
+for i in $(ls); do cd $i && git pull && cd .. ; done
