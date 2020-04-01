@@ -3,8 +3,8 @@
 # Created By: Richard Barrett
 # Organization: DVISD
 # DepartmenT: Data Services
-# Purpose: Test Score & 3rd Party Website Data Pull Automation
-# Date: 02/11/2020
+# Purpose: Skyward Administration
+# Date: 04/01/2020
 # ===========================================================
 
 import selenium
@@ -104,3 +104,49 @@ element = WebDriverWait(browser, 20).until(
 element.click();
 print("Logging into <insert_program>!")
 print("Authenticated")
+
+# Click and Span Skyward Contact Access
+# Adminsitration XPATH = //*[@id='nav_ContactAccess']/span
+element = WebDriverWait(browser, 20).until(
+            EC.element_to_be_clickable((By.XPATH, "//*[@id='nav_ContactAccess']/span")))
+element.click();
+
+# Click on Secured Users
+# XPATH = //a[@id='nav_SecuredUsers']/span
+element = WebDriverWait(browser, 20).until(
+            EC.element_to_be_clickable((By.XPATH, "//a[@id='nav_SecuredUsers']/span")))
+element.click();
+
+# Load users.json File 
+with open('users.json','r') as f:
+          config = json.load(f)
+
+# Send Keys to Lookup 
+# XPATH = //*[@id='brSecuredUsersLookupInput']
+target_user = WebDriverWait(browser, 20).until(
+                    EC.element_to_be_clickable((By.XPATH, "//*[@id='brSecuredUsersLookupInput']")))
+target_user.send_keys(config['sec_group_removal']['name_key']);
+target_user.send_keys(Keys.RETURN);
+
+# Expand Button on Element Needing Sec Group Removal
+# Class "bd_open"
+element = WebDriverWait(browser, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "bd_closed")))
+element.click()
+
+# Click on Remove All Groups By Link Text
+# find_elements_by_link_text
+element = WebDriverWait(browser, 20).until(
+                    EC.element_to_be_clickable((By.LINK_TEXT, "Remove All Groups")))
+element.click()
+
+# Browser Switches to New Window Alert for Verification
+# Browser Switches to Window
+WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
+browser.switch_to.window(browser.window_handles[-1])
+
+# Click Ok by ID
+# XPATH //*[@id='msgBtn1'] 
+element = WebDriverWait(browser, 20).until(
+                            EC.element_to_be_clickable((By.XPATH, "//*[@id='msgBtn1']")))
+element.click()
