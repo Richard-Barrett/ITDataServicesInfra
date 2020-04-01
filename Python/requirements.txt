@@ -135,7 +135,7 @@ patsy==0.5.0
 pbr==4.1.0
 pexpect==4.6.0
 pickleshare==0.7.4
-Pillow==6.2.0
+Pillow==6.2.2
 plotly==4.1.0
 powerline-status==2.6.dev9999+git.6257332372bf9f64d928b6a3b53d2842d9c7e01f
 prettytable==0.7.2
