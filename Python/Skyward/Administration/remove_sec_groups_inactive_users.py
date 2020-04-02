@@ -121,6 +121,7 @@ element.click();
 with open('users.json','r') as f:
           config = json.load(f)
 
+# Start Forlopp
 # Send Keys to Lookup 
 # XPATH = //*[@id='brSecuredUsersLookupInput']
 target_user = WebDriverWait(browser, 20).until(
@@ -140,13 +141,9 @@ element = WebDriverWait(browser, 20).until(
                     EC.element_to_be_clickable((By.LINK_TEXT, "Remove All Groups")))
 element.click()
 
-# Browser Switches to New Window Alert for Verification
-# Browser Switches to Window
-WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
-browser.switch_to.window(browser.window_handles[-1])
-
 # Click Ok by ID
 # XPATH //*[@id='msgBtn1'] 
 element = WebDriverWait(browser, 20).until(
                             EC.element_to_be_clickable((By.XPATH, "//*[@id='msgBtn1']")))
 element.click()
+# End For Loop 
