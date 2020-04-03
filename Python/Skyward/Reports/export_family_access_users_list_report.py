@@ -122,7 +122,13 @@ element.click();
 print("Logging into Skyward!")
 print("Authenticated")
 
-# Click and Span Skyward Contact Family Access
+# Click and Span Skyward Contact Access
+# Adminsitration XPATH = //*[@id='nav_ContactAccess']/span
+element = WebDriverWait(browser, 20).until(
+            EC.element_to_be_clickable((By.XPATH, "//*[@id='nav_ContactAccess']/span")))
+element.click();
+
+# Click on Family Access
 # Adminsitration XPATH = //*[@id='nav_ContactAccess']/span
 element = WebDriverWait(browser, 20).until(
             EC.element_to_be_clickable((By.XPATH, "//*[@id='nav_FamilyAccessSuperUser']/span")))
