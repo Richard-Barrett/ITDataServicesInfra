@@ -165,7 +165,6 @@ time.sleep(2)
 element = WebDriverWait(browser, 20).until(
                     EC.element_to_be_clickable((By.LINK_TEXT, "Remove All Groups")))
 element.click()
-<<<<<<< HEAD
 time.sleep(2)
 print("post fault 2")
 time.sleep(2)
@@ -173,8 +172,6 @@ time.sleep(2)
 # Browser Switches to Window
 #WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
 #browser.switch_to.window(browser.window_handles[-1])
-=======
->>>>>>> e02b22608a551eb8aab5312c63f6dc8b9b59212a
 
 # Click Ok by ID
 # XPATH //*[@id='msgBtn1'] 
@@ -182,8 +179,5 @@ time.sleep(2)
 element = WebDriverWait(browser, 20).until(
                             EC.element_to_be_clickable((By.XPATH, "//*[@id='msgBtn1']")))
 element.click()
-<<<<<<< HEAD
 time.sleep(2)
-=======
 # End For Loop 
->>>>>>> e02b22608a551eb8aab5312c63f6dc8b9b59212a
