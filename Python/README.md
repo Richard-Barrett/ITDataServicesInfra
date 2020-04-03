@@ -50,7 +50,7 @@ If you wat to use a specific module you must have a **`secrets.gpg`** file withi
 3. Make a passwordless encryption key with gpg at 2048 or 4096 bit encryption
 4. Encrypt the secrets.json with a passwordless encryption key
 
-**`gpg --output secrets.json --encrypt secrets.json`**
+**`gpg --output secrets.gpg --encrypt secrets.json`**
 
 5. Remove the secrets.json file, if you are using encryption. 
 
