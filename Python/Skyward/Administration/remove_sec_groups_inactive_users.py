@@ -16,6 +16,8 @@ import requests
 import subprocess
 import getpass
 import platform
+import socket
+import ssl
 import pynput
 import logging
 import time 
@@ -88,8 +90,23 @@ def shutDown(self):
     self.browser.quit()
 
 # Parent URL
-browser.get("https://skyward-student.del-valle.k12.tx.us/scripts/wsisa.dll/WService=wsEAplus/seplog01.w?nopopup=true")
+#browser.get("https://skyward-student.del-valle.k12.tx.us/scripts/wsisa.dll/WService=wsEAplus/seplog01.w?nopopup=true")
+#options.addArguments("--ignore-certificate-errors")
+browser.get("https://skyward-dev.del-valle.k12.tx.us/scripts/wsisa.dll/WService=wsEAplusTrn/seplog01.w?nopopup=true")
 time.sleep(5)
+
+# Click on Advanced Button for Certificate Error
+# XPATH //*[@id='details-button']
+element = WebDriverWait(browser, 20).until(
+            EC.element_to_be_clickable((By.XPATH, "//*[@id='details-button']")))
+element.click();
+
+# Click on Proceed
+# XPATH //*[@id'proceed-link']
+element = WebDriverWait(browser, 20).until(
+                    EC.element_to_be_clickable((By.ID, "proceed-link")))
+element.click();
+time.sleep(10)
 
 # Credentials NEEDS UNIT TEST
 username = browser.find_element_by_id("login")
@@ -127,26 +144,38 @@ target_user = WebDriverWait(browser, 20).until(
                     EC.element_to_be_clickable((By.XPATH, "//*[@id='brSecuredUsersLookupInput']")))
 target_user.send_keys(config['sec_group_removal']['name_key']);
 target_user.send_keys(Keys.RETURN);
+time.sleep(2)
 
 # Expand Button on Element Needing Sec Group Removal
 # Class "bd_open"
+print("fault 1")
+time.sleep(2)
 element = WebDriverWait(browser, 20).until(
             EC.element_to_be_clickable((By.CLASS_NAME, "bd_closed")))
 element.click()
+time.sleep(2)
+print("post fault 1")
+time.sleep(2)
 
 # Click on Remove All Groups By Link Text
 # find_elements_by_link_text
+print("fault 2")
+time.sleep(2)
 element = WebDriverWait(browser, 20).until(
                     EC.element_to_be_clickable((By.LINK_TEXT, "Remove All Groups")))
 element.click()
-
+time.sleep(2)
+print("post fault 2")
+time.sleep(2)
 # Browser Switches to New Window Alert for Verification
 # Browser Switches to Window
-WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
-browser.switch_to.window(browser.window_handles[-1])
+#WebDriverWait(browser,10).until(EC.number_of_windows_to_be(2))
+#browser.switch_to.window(browser.window_handles[-1])
 
 # Click Ok by ID
 # XPATH //*[@id='msgBtn1'] 
+time.sleep(2)
 element = WebDriverWait(browser, 20).until(
                             EC.element_to_be_clickable((By.XPATH, "//*[@id='msgBtn1']")))
 element.click()
+time.sleep(2)
