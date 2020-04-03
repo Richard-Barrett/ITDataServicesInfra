@@ -122,6 +122,12 @@ element.click();
 print("Logging into Skyward!")
 print("Authenticated")
 
+# Click and Span Skyward Contact Access
+# Adminsitration XPATH = //*[@id='nav_ContactAccess']/span
+element = WebDriverWait(browser, 20).until(
+            EC.element_to_be_clickable((By.XPATH, "//*[@id='nav_ContactAccess']/span")))
+element.click();
+
 # Click on id="browsetool_export"
 # Opens Options to Download Report
 # XPATH = //*[@id='browsetool_export']
