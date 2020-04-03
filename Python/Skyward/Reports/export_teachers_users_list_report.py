@@ -171,6 +171,13 @@ element = WebDriverWait(browser, 20).until(
     EC.element_to_be_clickable((By.XPATH, "//*[@id='bExport']")))
 element.click();
 
+
+# Click on Download Export Button
+# XPATH = //*[@id='printMsgBtn1']
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='printMsgBtn1']")))
+element.click();
+
 # Click on Run Button 
 # Run Button XPATH = 
 # Delete Unencrypted JSON File
