@@ -128,6 +128,12 @@ element = WebDriverWait(browser, 20).until(
             EC.element_to_be_clickable((By.XPATH, "//*[@id='nav_ContactAccess']/span")))
 element.click();
 
+# Click on Secured Users Access
+# Adminsitration XPATH = //*[@id='nav_SecuredUserSuperUser']/span
+element = WebDriverWait(browser, 20).until(
+            EC.element_to_be_clickable((By.XPATH, "//*[@id='nav_SecuredUserSuperUser']/span")))
+element.click();
+
 # Click on id="browsetool_export"
 # Opens Options to Download Report
 # XPATH = //*[@id='browsetool_export']
