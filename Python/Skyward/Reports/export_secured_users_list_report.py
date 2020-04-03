@@ -1,4 +1,3 @@
-
 #!/bin/usr/env python
 # ===========================================================
 # Created By: Richard Barrett
