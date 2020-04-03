@@ -134,3 +134,61 @@ element.click();
 element = WebDriverWait(browser, 20).until(
             EC.element_to_be_clickable((By.XPATH, "//*[@id='nav_StudentAccessSuperUser']/span")))
 element.click();
+
+# Click on id="browsetool_export"
+# Opens Options to Download Report
+# XPATH = //*[@id='browsetool_export']
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='browsetool_export']")))
+element.click();
+
+# Click on .CSV Radio Button
+# XPATH = //*[@id='ExCOptCSV']
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='ExCOptCSV']")))
+element.click();
+
+# Click on Export Button
+# XPATH = //*[@id='bExport']
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='bExport']")))
+element.click();
+
+# Click on id="browsetool_export"
+# Opens Options to Download Report
+# XPATH = //*[@id='browsetool_export']
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='browsetool_export']")))
+element.click();
+
+# Click on .xlsx Radio Button
+# XPATH = //*[@id='ExCOptXLSX']
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='ExCOptXLSX']")))
+element.click();
+
+# Click on Export Button 
+# XPATH  = //*[@id='bExport']
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='bExport']")))
+element.click();
+
+# Click on Download Export Button
+# XPATH = //*[@id='printMsgBtn1']
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='printMsgBtn1']")))
+element.click();
+
+# Click on Run Button 
+# Run Button XPATH = 
+# Delete Unencrypted JSON File
+if os.path.exists("secrets.json"):
+  os.remove("secrets.json")
+  print("The file was removed and everything is clean!")
+else:
+  print("The file does not exist")
+
+              
+# Close Browser Session Gracefully              
+print("The Export was successfull!")
+#browser.quit()
