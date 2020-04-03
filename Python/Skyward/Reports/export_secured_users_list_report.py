@@ -171,7 +171,7 @@ element.click();
 element = WebDriverWait(browser, 20).until(
     EC.element_to_be_clickable((By.XPATH, "//*[@id='bExport']")))
 element.click();
-time.sleep(10)
+time.sleep(20)
 
 # Click on Download Export Button
 # XPATH = //*[@id='printMsgBtn1']
