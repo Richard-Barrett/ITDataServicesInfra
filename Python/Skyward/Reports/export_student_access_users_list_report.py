@@ -178,6 +178,7 @@ element.click();
 element = WebDriverWait(browser, 20).until(
     EC.element_to_be_clickable((By.XPATH, "//*[@id='printMsgBtn1']")))
 element.click();
+time.sleep(10)
 
 # Click on Run Button 
 # Run Button XPATH = 
