@@ -153,6 +153,12 @@ element = WebDriverWait(browser, 20).until(
     EC.element_to_be_clickable((By.XPATH, "//*[@id='bExport']")))
 element.click();
 
+# Click on Download Export Button
+# XPATH = //*[@id='printMsgBtn1']
+element = WebDriverWait(browser, 20).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='printMsgBtn1']")))
+element.click();
+
 # Click on id="browsetool_export"
 # Opens Options to Download Report
 # XPATH = //*[@id='browsetool_export']
