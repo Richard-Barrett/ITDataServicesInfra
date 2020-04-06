@@ -200,4 +200,6 @@ else:
               
 # Close Browser Session Gracefully              
 print("The Export was successfull!")
+
 #browser.quit()
+shutDown(self)
