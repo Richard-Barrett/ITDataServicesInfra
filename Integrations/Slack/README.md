@@ -1,5 +1,5 @@
-# Slack Integrations and Automations
 # ![Image](https://brandpalettes.com/wp-content/uploads/2019/03/slack_logo_colors-300x77.png)
+# Slack Integrations and Automations
 In order to integrate with Slack you will need to generate a JSON payload in order to send particular messages to your desired channel destination. 
 
 **secrets.json**
