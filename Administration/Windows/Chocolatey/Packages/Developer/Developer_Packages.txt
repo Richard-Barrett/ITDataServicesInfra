@@ -1,3 +1,6 @@
+7zip.install
+7zip
+7zip.portable
 Chocolatey 
 androidstudio
 atom 
