@@ -1,0 +1,297 @@
+{
+  "id": "a5981733-8571-43af-884a-0669d50c5cf8",
+  "version": "2.0",
+  "name": "staff_download.py",
+  "url": "https://skyward-student.del-valle.k12.tx.us",
+  "tests": [{
+    "id": "ad44921f-5c2d-4b8d-8415-317833d05518",
+    "name": "student_staff_download.py",
+    "commands": [{
+      "id": "d2ae7b6d-8fc1-42a5-baea-797176e66056",
+      "comment": "",
+      "command": "open",
+      "target": "/scripts/wsisa.dll/WService=wsEAplus/seplog01.w",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7051d1f-e8f3-4a60-9c39-bdf54a85b7e3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1268x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fcacf82-6684-4b44-bacc-7eb738e0dd24",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "484dbadc-86c4-4eab-8c0d-0f1ebe671c94",
+      "comment": "",
+      "command": "type",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "USERNAME"
+    }, {
+      "id": "1a8e6080-7760-481b-b0d4-0834e9f1cb25",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6062a9f6-06cd-4edf-ba9a-89855a0fecd4",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "PASSWORD"
+    }, {
+      "id": "08d2c737-720f-414f-9572-24385dbe2dc8",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}",
+      "opensWindow": true,
+      "windowHandleName": "win668",
+      "windowTimeout": 2000
+    }, {
+      "id": "c92ca517-5084-40ae-9044-01b48c86e7b9",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c322776-81c2-4385-bbe2-02e69949ea55",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win668}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19058070-1857-4264-b5cc-8b97cf75737d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=em",
+      "targets": [
+        ["css=em", "css:finder"],
+        ["xpath=//a[@id='nav_systems']/span/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"],
+        ["xpath=//em[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db3ab248-0b16-45b2-9afb-53f76b98275e",
+      "comment": "",
+      "command": "click",
+      "target": "css=em",
+      "targets": [
+        ["css=em", "css:finder"],
+        ["xpath=//a[@id='nav_systems']/span/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"],
+        ["xpath=//em[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ec9dbb5-2190-4079-b4a4-78d7fed10b92",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=em",
+      "targets": [
+        ["css=em", "css:finder"],
+        ["xpath=//a[@id='nav_systems']/span/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"],
+        ["xpath=//em[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aeb177b3-9c71-4efe-bead-1ed27ebb23ad",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Student Management",
+      "targets": [
+        ["linkText=Student Management", "linkText"],
+        ["css=#menu_navSystems .icon_sm", "css:finder"],
+        ["xpath=//a[contains(text(),'Student Management')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"changeSystem('sm');\"]", "xpath:attributes"],
+        ["xpath=//div[@id='menu_navSystems']/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:void('Student Management');\")]", "xpath:href"],
+        ["xpath=//div[6]/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Student Management')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0117771b-6f45-44fa-bab4-cc54fd45b78b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav_FolderStaff > span",
+      "targets": [
+        ["css=#nav_FolderStaff > span", "css:finder"],
+        ["xpath=//a[@id='nav_FolderStaff']/span", "xpath:idRelative"],
+        ["xpath=//a[5]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Staff')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "514a82ab-2d37-421a-b480-1bb34b0da722",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.titleArea",
+      "targets": [
+        ["css=.titleArea", "css:finder"],
+        ["xpath=//div[@id='navMenu_FolderStaff']/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77db2a01-7f0c-4c6b-b988-b05307b7ca79",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.titleArea",
+      "targets": [
+        ["css=.titleArea", "css:finder"],
+        ["xpath=//div[@id='navMenu_FolderStaff']/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "774531b8-ca42-4118-b85b-17961c0458cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav_Staff > span",
+      "targets": [
+        ["css=#nav_Staff > span", "css:finder"],
+        ["xpath=//a[@id='nav_Staff']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a3c8d84-a5e1-4765-86b1-5daabc914ef4",
+      "comment": "",
+      "command": "click",
+      "target": "id=browsetool_export",
+      "targets": [
+        ["id=browsetool_export", "id"],
+        ["css=#browsetool_export", "css:finder"],
+        ["xpath=//a[@id='browsetool_export']", "xpath:attributes"],
+        ["xpath=//ul[@id='brStaffTitleButtonTable']/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:getMenu('export',this).toggle()\")]", "xpath:href"],
+        ["xpath=//td[2]/div/ul/li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2c170ac-2372-4b67-a9c7-bc87a495fb72",
+      "comment": "",
+      "command": "click",
+      "target": "id=bExport",
+      "targets": [
+        ["id=bExport", "id"],
+        ["linkText=Export", "linkText"],
+        ["css=#bExport", "css:finder"],
+        ["xpath=//a[contains(text(),'Export')]", "xpath:link"],
+        ["xpath=//a[@id='bExport']", "xpath:attributes"],
+        ["xpath=//div[@id='menu_export']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:if (cbs(\"bExport\")) {exportToExcelPQ();}')]", "xpath:href"],
+        ["xpath=//td[2]/div/ul/li[5]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Export')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2eda5965-e0d5-4d97-bc9e-962e4a13ff42",
+      "comment": "",
+      "command": "click",
+      "target": "id=printMsgBtn1",
+      "targets": [
+        ["id=printMsgBtn1", "id"],
+        ["linkText=Download Export File", "linkText"],
+        ["css=#printMsgBtn1", "css:finder"],
+        ["xpath=//a[contains(text(),'Download Export File')]", "xpath:link"],
+        ["xpath=//a[@id='printMsgBtn1']", "xpath:attributes"],
+        ["xpath=//td[@id='printMsgActions']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:if (cbs('printMsgBtn1')) {vQPSetup.cancelCheckQueue(); closeMessage(false, 'dPrintMessage'); window.location.replace('qdirconfig002.p?isExcel=true&fileId=1650252&duserid=richard.barrett&dwd=8476928&pEnc=jicMudlidasyjdid'); cancelEvent();}\")]", "xpath:href"],
+        ["xpath=//td[2]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Download Export File')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4821dd0-f888-4271-9618-52c7cceceecd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Exit",
+      "targets": [
+        ["linkText=Exit", "linkText"],
+        ["css=.utilLink:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Exit')]", "xpath:link"],
+        ["xpath=//a[@onclick='logout()']", "xpath:attributes"],
+        ["xpath=//ul[@id='utilityTable']/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:void('Exit')\")]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Exit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b101a5d-07e9-4ff4-9d07-10d406c78624",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc245ae8-cd72-43bb-92c3-ff6a3002c4a0",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b3bef5e5-7d4c-4842-b1ee-6542aa04f318",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ad44921f-5c2d-4b8d-8415-317833d05518"]
+  }],
+  "urls": ["https://skyward-student.del-valle.k12.tx.us/"],
+  "plugins": []
+}
