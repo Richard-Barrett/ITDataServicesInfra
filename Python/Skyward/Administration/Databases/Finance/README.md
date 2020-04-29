@@ -1,1 +1,1 @@
-# Finance Database Adminstration
+# Finance Database Administration
