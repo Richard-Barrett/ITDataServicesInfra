@@ -1,0 +1,179 @@
+{
+  "id": "c52f5bd8-2dc6-4a91-a1db-58aadcb3c3b2",
+  "version": "2.0",
+  "name": "district_login_history_download",
+  "url": "https://skyward-finance.del-valle.k12.tx.us",
+  "tests": [{
+    "id": "ff826c3a-2a28-45f5-ab71-32de45871208",
+    "name": "district_login_history ",
+    "commands": [{
+      "id": "ca025ede-92a8-467f-a1ad-50290b235c22",
+      "comment": "",
+      "command": "open",
+      "target": "/scripts/wsisa.dll/WService=wsFin/seplog01.w",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69e49f76-98e4-44ef-b946-4c5b7aa16d31",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1268x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54e816e4-56d6-4772-beab-c9b2a54ab6b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80ef2e17-01ca-475f-bd6b-bbc0a3444d97",
+      "comment": "",
+      "command": "type",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "USERNAME"
+    }, {
+      "id": "9bd2f960-9329-4709-b811-accab3204547",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8470ae33-a86a-4d31-ac6d-0d3548a88b98",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "PASSWORD"
+    }, {
+      "id": "1ff2673d-b672-427c-a67c-775b33baf6ef",
+      "comment": "",
+      "command": "click",
+      "target": "id=bLogin",
+      "targets": [
+        ["id=bLogin", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#bLogin", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='bLogin']", "xpath:attributes"],
+        ["xpath=//div[@id='loginBody']/table/tbody/tr[3]/td/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:if (cbs(\"bLogin\")) {tryLogin();}')]", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5825",
+      "windowTimeout": 2000
+    }, {
+      "id": "08551d95-4acf-4e36-b09b-f4337e77df67",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5825}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6505335d-a1f1-4dc3-8ac0-29f432e7c140",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav_ContactAccess > span",
+      "targets": [
+        ["css=#nav_ContactAccess > span", "css:finder"],
+        ["xpath=//a[@id='nav_ContactAccess']/span", "xpath:idRelative"],
+        ["xpath=//a[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f141692a-fc72-4d29-85e2-dc3ed4fef6e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav_DistrictLoginHistory > span",
+      "targets": [
+        ["css=#nav_DistrictLoginHistory > span", "css:finder"],
+        ["xpath=//a[@id='nav_DistrictLoginHistory']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'District Login History')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "946cbc02-2bfb-4159-956f-0503f1e7ab71",
+      "comment": "",
+      "command": "click",
+      "target": "id=browsetool_export",
+      "targets": [
+        ["id=browsetool_export", "id"],
+        ["css=#browsetool_export", "css:finder"],
+        ["xpath=//a[@id='browsetool_export']", "xpath:attributes"],
+        ["xpath=//ul[@id='brLoginsTitleButtonTable']/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:getMenu('export',this).toggle()\")]", "xpath:href"],
+        ["xpath=//td[2]/div/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "804ef79e-6048-4fc0-9f09-3e4066ef7ad5",
+      "comment": "",
+      "command": "click",
+      "target": "id=bExport",
+      "targets": [
+        ["id=bExport", "id"],
+        ["linkText=Export", "linkText"],
+        ["css=#bExport", "css:finder"],
+        ["xpath=//a[contains(text(),'Export')]", "xpath:link"],
+        ["xpath=//a[@id='bExport']", "xpath:attributes"],
+        ["xpath=//div[@id='menu_export']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:if (cbs(\"bExport\")) {exportToExcelPQ();}')]", "xpath:href"],
+        ["xpath=//li[4]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Export')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6db29d84-b3a9-499b-a268-88291ad83d4f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "15d9c2de-0ede-4a18-afce-7b6a0e7d6e15",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ff826c3a-2a28-45f5-ab71-32de45871208"]
+  }],
+  "urls": ["https://skyward-finance.del-valle.k12.tx.us/"],
+  "plugins": []
+}
