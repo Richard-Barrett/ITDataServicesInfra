@@ -48,7 +48,7 @@ dash-table==4.1.0
 dash-table-experiments==0.6.0
 debtcollector==1.22.0
 decorator==4.3.0
-Django==3.0.7
+Django==3.1.6
 docutils==0.14
 dogpile.cache==0.8.0
 enum34==1.1.6
