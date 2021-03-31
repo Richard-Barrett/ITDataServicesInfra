@@ -163,7 +163,7 @@ python-keystoneclient==3.21.0
 python-novaclient==15.1.0
 python-openstackclient==4.0.0
 pytz==2018.5
-PyYAML==5.1.2
+PyYAML==5.4
 pyzmq==17.0.0
 qrcode==6.1
 qrtools==0.0.2
