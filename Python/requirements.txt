@@ -175,7 +175,7 @@ requests-oauthlib==1.2.0
 requestsexceptions==1.4.0
 retrying==1.3.3
 rfc3986==1.3.2
-rsa==4.0
+rsa==4.7
 s3transfer==0.1.13
 salesforce-pandas==0.1
 salesforce-reporting==0.1.3
